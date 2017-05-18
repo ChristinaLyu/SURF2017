@@ -34,15 +34,16 @@ def main():
     outPath = sys.argv[2]
     file = open(filename, 'r')
     file = file.read()
-    while file.find('M
-    index_1 = file.find('MODEL        ')
-    index_2 = file.find('ENDMDL')
-    file = file[index_1 + 31 : index_2]
-    index_4 = file.find('#')
-    file = file[:index_4]
-    file = file.splitlines()
-    nrAtoms = len(file)
-    
+    nrAtoms = 0
+    while file.find('MODEL        ') != -1 and file.find('ENDMDL') != -1:        
+        index_1 = file.find('MODEL        ')
+        index_2 = file.find('ENDMDL')
+        cut = file[index_1: index_2 + 8]
+        cut = cut.splitlines()
+        cut = cut[1:-2]
+        nrAtoms = nrAtoms + len(cut)
+        file = file[index_2 + 8: ]
+           
     nrFile = open(outPath, 'w')
     nrFile.write(str(nrAtoms))
     nrFile.close()
