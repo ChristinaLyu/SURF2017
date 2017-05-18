@@ -1,0 +1,2 @@
+python ../Python/pdb_jmol_to_bnd.py ../Data/1hhp.pdb Output/1hhp.bnd
+

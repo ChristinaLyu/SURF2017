@@ -1,0 +1,1 @@
+python /Users/ChristinaLyu/Desktop/ChristinaCode/Python/myatom.py /Users/ChristinaLyu/Desktop/ChristinaCode/Data/1hhp.pdb > /Users/ChristinaLyu/Desktop/ChristinaCode/Data/output.txt  
