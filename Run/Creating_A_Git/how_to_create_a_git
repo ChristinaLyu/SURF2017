@@ -1,0 +1,33 @@
+How to create a git
+1) Go to the BitBucket website: https://bitbucket.org/
+2) Sign up / log in
+3) Click “add” button on the left column, choose “create a new repository”
+4) Type in a repository name, and click “Create repository”
+5) On the homepage of the repository, click “Overview”
+6) Copy the https link on the Overview page
+7) Go to terminal, choose a folder where you want to put the git files
+8) Type “git clone “ + the copied link on the command line
+9) Put the files you want to push to the git into the git folder
+10) Check the changes by typing “git status” on the command line
+11) Add files by typing “git add -A”
+12) Once again check the changes by typing “git status”, the added files should appear green
+13) Commit all changes by typing “git commit -m “ + the commit message to indicate the files you committed
+14) Check the status again, then push the committed changes to the git by typing “git push” on the command line
+15) Pull the changed files from the git by typing “git pull”
+16) To invite another person to edit the files, go to the Overview page on the website
+17) Click the “share” button on the right
+18) Type in the email address of the people you want to share the git files with, click the “add” button on the right
+19) Choose the level of power you want them to have over the files
+20) Click “share”
+
+For the people receiving a shared repository
+1) Go to the inbox of your email account, check for emails sent by “bitbucket” with the keywords like “xxx shared a repository with you”
+2) Click on the link, go to the repository homepage, copy the https link at the top
+3) In terminal, open the directory to the folder you want the git files to be
+4) Type “git clone “ + the copied link from homepage
+5) Then you have the latest version of the files on the repository. 
+6) After modifying a file from your own computer, add files by typing “git add -A”
+7) Once again check the changes by typing “git status”, the added files should appear green
+8) Commit all changes by typing “git commit -m “ + the commit message to indicate the files you committed
+9) Check the status again, then push the committed changes to the git by typing “git push” on the command line
+10) Want to pull an updated file from the git, type “git pull” on the command line.
