@@ -14,24 +14,23 @@ import os
 import sys
 import subprocess
 
-inputFile = sys.argv[1]
-folder = sys.argv[2]
-outPath = sys.argv[3]
-k = 0
-if not os.path.exists(outPath):
-    os.system('mkdir '+ outPath)
-outPath = outPath + '/temp'
-if not os.path.exists(outPath):
-    os.system('mkdir '+ outPath)
+inputPythonFilePath = sys.argv[1]
+inputDataFolderPath = sys.argv[2]
+outputFolderPath = sys.argv[3]
+
+if not os.path.exists(outputFolderPath):
+    os.system('mkdir '+ outputFolderPath)
 
 print "Testing start:"
-for file in os.listdir(folder):
-    print "testing file: " + file
+
+k = 0
+for crtInputFile in os.listdir(inputDataFolderPath):
+    print "testing file: " + crtInputFile
     k = k + 1
-    testFile = folder + '/' + file + ' '
-    first = file.split('.')[0]
-    outFile = outPath + '/test' + first + '.txt'
-    command = 'python ' + inputFile + ' ' + testFile + outFile
+    crtInputFilePath = inputDataFolderPath + '/' + crtInputFilePath + ' '
+    fileName = crtInputFile.split('.')[0]
+    outFilePath = outputFolderPath + '/test' + fileName + '.txt'
+    command = 'python ' + inputPythonFilePath + ' ' + crtInputFilePath + outFilePath
 
     err = subprocess.check_output(command, stderr = subprocess.STDOUT, shell = True)
     if err != "":
