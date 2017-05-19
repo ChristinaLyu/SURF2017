@@ -1,0 +1,2 @@
+#Run command for tester.py
+python ../Python/tester.py ../Python/count_atoms_xml_lines.py ../Data/Test_xml Output/Xml

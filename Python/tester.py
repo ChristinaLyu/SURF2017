@@ -27,7 +27,7 @@ k = 0
 for crtInputFile in os.listdir(inputDataFolderPath):
     print "testing file: " + crtInputFile
     k = k + 1
-    crtInputFilePath = inputDataFolderPath + '/' + crtInputFilePath + ' '
+    crtInputFilePath = inputDataFolderPath + '/' + crtInputFile + ' '
     fileName = crtInputFile.split('.')[0]
     outFilePath = outputFolderPath + '/test' + fileName + '.txt'
     command = 'python ' + inputPythonFilePath + ' ' + crtInputFilePath + outFilePath

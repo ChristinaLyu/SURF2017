@@ -31,8 +31,10 @@ def debugVar(var,val):
 #------------------------------------------------------------------ main
 def main():
     filename = sys.argv[1]
+    print "filename = " + filename
     outPath = sys.argv[2]
     extension = filename.split('.')[1]
+    
     if extension == 'xml':
         listtttt = []
         file = open(filename, 'r')
