@@ -32,16 +32,20 @@ def debugVar(var,val):
 def main():
     filename = sys.argv[1]
     outPath = sys.argv[2]
-    listtttt = []
-    file = open(filename, 'r')
-    file = file.read()
-    index_1 = file.find('<PDBx:atom_site id="')
-    index_2 = file.find('</PDBx:atom_siteCategory>')
-    file = file[index_1 : index_2]
-    lis = file.split('<PDBx:atom_site id="')
-    nrAtom = len(lis)
-    outFile = open(outPath, 'w')
-    outFile.write(str(nrAtom))
+    extension = filename.split('.')[1]
+    if extension == 'xml':
+        listtttt = []
+        file = open(filename, 'r')
+        file = file.read()
+        index_1 = file.find('<PDBx:atom_site id="')
+        index_2 = file.find('</PDBx:atom_siteCategory>')
+        file = file[index_1 : index_2]
+        lis = file.split('<PDBx:atom_site id="')
+        nrAtom = len(lis)
+        outFile = open(outPath, 'w')
+        outFile.write(str(nrAtom))
+    else:
+        sys.stderr.write("Given file type wrong!")
 
 main()
                 

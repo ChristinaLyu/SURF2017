@@ -32,20 +32,25 @@ def debugVar(var,val):
 def main():
     filename = sys.argv[1]
     outPath = sys.argv[2]
-    file = open(filename, 'r')
-    file = file.read()
-    index_1 = file.find('_atom_site.pdbx_PDB_model_num ')
-    index_2 = file.find('_pdbx_poly_seq_scheme.asym_id')
-    file = file[index_1 : index_2]
-    index_4 = file.find('#')
-    file = file[:index_4]
-    file = file.splitlines()
-    lastAtom = file[-1]
-    nrAtoms = lastAtom.split()[1]
-    
-    nrFile = open(outPath, 'w')
-    nrFile.write(nrAtoms)
-    nrFile.close()
+    extension = filename.split('.')[1]
+    if extension == 'cif':
+        file = open(filename, 'r')
+        file = file.read()
+        index_1 = file.find('_atom_site.pdbx_PDB_model_num ')
+        index_2 = file.find('_pdbx_poly_seq_scheme.asym_id')
+        file = file[index_1 : index_2]
+        index_4 = file.find('#')
+        file = file[:index_4]
+        file = file.splitlines()
+        lastAtom = file[-1]
+        nrAtoms = lastAtom.split()[1]
+        
+        nrFile = open(outPath, 'w')
+        nrFile.write(nrAtoms)
+        nrFile.close()
+    else:
+        sys.stderr.write("Given file type wrong!")
+        
 main()
     
     
