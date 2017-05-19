@@ -32,21 +32,25 @@ def debugVar(var,val):
 def main():
     filename = sys.argv[1]
     outPath = sys.argv[2]
-    file = open(filename, 'r')
-    file = file.read()
-    nrAtoms = 0
-    while file.find('MODEL        ') != -1 and file.find('ENDMDL') != -1:        
-        index_1 = file.find('MODEL        ')
-        index_2 = file.find('ENDMDL')
-        cut = file[index_1: index_2 + 8]
-        cut = cut.splitlines()
-        cut = cut[1:-2]
-        nrAtoms = nrAtoms + len(cut)
-        file = file[index_2 + 8: ]
-           
-    nrFile = open(outPath, 'w')
-    nrFile.write(str(nrAtoms))
-    nrFile.close()
+    extension = filename.split('.')[1]
+    if extension.find('pdb') != -1:
+        file = open(filename, 'r')
+        file = file.read()
+        nrAtoms = 0
+        while file.find('MODEL        ') != -1 and file.find('ENDMDL') != -1:        
+            index_1 = file.find('MODEL        ')
+            index_2 = file.find('ENDMDL')
+            cut = file[index_1: index_2 + 8]
+            cut = cut.splitlines()
+            cut = cut[1:-2]
+            nrAtoms = nrAtoms + len(cut)
+            file = file[index_2 + 8: ]
+               
+        nrFile = open(outPath, 'w')
+        nrFile.write(str(nrAtoms))
+        nrFile.close()
+    else:
+        sys.stderr.write('Given file type wrong!')
 main()
     
     
