@@ -32,7 +32,7 @@ def debugVar(var,val):
 def main():
     filename = sys.argv[1]
     outPath = sys.argv[2]
-    extension = filename.split('.')[1]
+    extension = filename.split('.')[-1]
     if extension.find('pdb') != -1:
         file = open(filename, 'r')
         file = file.read()
