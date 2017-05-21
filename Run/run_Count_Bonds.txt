@@ -1,0 +1,2 @@
+#run to count the bonds in file
+python ../Python/count_bonds.py ../Run/Output/test.xml
