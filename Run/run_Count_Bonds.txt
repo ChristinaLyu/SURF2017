@@ -1,2 +1,2 @@
 #run to count the bonds in file
-python ../Python/count_bonds.py ../Run/Output/test.xml
+python ../Python/count_bonds.py ../Data/Test_xml/1hhp.cif ../Run/Output/test.xml
