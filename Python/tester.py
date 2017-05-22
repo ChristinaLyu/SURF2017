@@ -38,7 +38,7 @@ for crtInputFile in os.listdir(inputDataFolderPath):
     rc = child.returncode
     testerResultFile.write(crtInputFile + ',' + str(rc) + '\n')
     if rc != 0:
-        badResultFile.write(crtInputFile + '\n')
+        badResultFile.write(crtInputFile + ',' + str(rc) + '\n')
 
 print "Testing finished"
 testerResultFile.close()

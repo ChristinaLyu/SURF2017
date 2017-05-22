@@ -33,7 +33,8 @@ def main():
     filename = sys.argv[1]
     outPath = sys.argv[2]
     extension = filename.split('.')[-1]
-    if extension == 'cif':
+    try:
+
         file = open(filename, 'r')
         file = file.read()
         index_1 = file.find('_atom_site.pdbx_PDB_model_num ')
@@ -48,7 +49,7 @@ def main():
         nrFile = open(outPath, 'w')
         nrFile.write(nrAtoms)
         nrFile.close()
-    else:
+    except extension != 'cif':
         sys.stderr.write("Given file type wrong!")
         sys.exit(1)
         

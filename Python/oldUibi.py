@@ -95,51 +95,55 @@ root = Element('molecule')
 
 #bond.bnd
 bondInfo = bondInfofile.read()
-indS = 0
-indE = 0
-bondInfo = bondInfo.splitlines()
-startlineb = 0
-indexb = 0
-nrBonds = 0
-for line in bondInfo:
-    indexb = indexb + 1
-    if line.find('*List') != -1:
-        bondnum = SubElement(root, "BondList")
-        string = 'bondInfo	*List['
-        string2 = ']'
-        line = line.replace(string, '')
-        line = line.replace(string2, '')
-        bondnum.set('nrBonds', line)
-        nrBonds = int(line)
+try:
 
-        startlineb = indexb
-    if line.find('bondInfo[1].colix') != -1:
-        indS = indexb-1
-    if line.find('bondInfo[2].colix') != -1:
-        indE = indexb -1
-bondInfo = bondInfo[startlineb:]
-nrItems = indE - indS
+    indS = 0
+    indE = 0
+    bondInfo = bondInfo.splitlines()
+    startlineb = 0
+    indexb = 0
+    nrBonds = 0
+    for line in bondInfo:
+        indexb = indexb + 1
+        if line.find('*List') != -1:
+            bondnum = SubElement(root, "BondList")
+            string = 'bondInfo	*List['
+            string2 = ']'
+            line = line.replace(string, '')
+            line = line.replace(string2, '')
+            bondnum.set('nrBonds', line)
+            nrBonds = int(line)
 
-for k in range(nrBonds):
-   
-    atom2n = 'bondInfo[' + str(k + 1) + '].atom2.atomno	'
-    atom1n = 'bondInfo[' + str(k + 1) + '].atom1.atomno	'
-    atom2in = 'bondInfo[' + str(k + 1) + '].atom2.atomIndex	'
-    atom1in = 'bondInfo[' + str(k + 1) + '].atom1.atomIndex	'
-    
-    atom2no = bondInfo[5].replace(atom2n, '')
-    atom2ind = bondInfo[6].replace(atom2in, '')
-    atom1no = bondInfo[10].replace(atom1n, '')
-    atom1ind = bondInfo[11].replace(atom1in, '')
-    bondBIn = SubElement( bondnum, 'bond')
-    bondIn = SubElement(bondBIn, 'bond')
-    bondIn.set('atomNo1', atom1no)
-    bondIn.set('atomNo2', atom2no)
-    bondIn.set('atom1ind', atom1ind)
-    bondIn.set('atom2ind', atom2ind)
-    if len(bondInfo) > nrItems - 1:
-        bondInfo = bondInfo[nrItems:]
+            startlineb = indexb
+        if line.find('bondInfo[1].colix') != -1:
+            indS = indexb-1
+        if line.find('bondInfo[2].colix') != -1:
+            indE = indexb -1
+    bondInfo = bondInfo[startlineb:]
+    nrItems = indE - indS
 
+    for k in range(nrBonds):
+       
+        atom2n = 'bondInfo[' + str(k + 1) + '].atom2.atomno	'
+        atom1n = 'bondInfo[' + str(k + 1) + '].atom1.atomno	'
+        atom2in = 'bondInfo[' + str(k + 1) + '].atom2.atomIndex	'
+        atom1in = 'bondInfo[' + str(k + 1) + '].atom1.atomIndex	'
+        
+        atom2no = bondInfo[5].replace(atom2n, '')
+        atom2ind = bondInfo[6].replace(atom2in, '')
+        atom1no = bondInfo[10].replace(atom1n, '')
+        atom1ind = bondInfo[11].replace(atom1in, '')
+        bondBIn = SubElement( bondnum, 'bond')
+        bondIn = SubElement(bondBIn, 'bond')
+        bondIn.set('atomNo1', atom1no)
+        bondIn.set('atomNo2', atom2no)
+        bondIn.set('atom1ind', atom1ind)
+        bondIn.set('atom2ind', atom2ind)
+        if len(bondInfo) > nrItems - 1:
+            bondInfo = bondInfo[nrItems:]
+except bondInfo.find('*List') == -1:
+    sys.stderr.write("empty bond list")
+    sys.exit(1)
 
 
 ##atomInfofile.close()
