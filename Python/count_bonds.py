@@ -12,7 +12,7 @@
 '''
 import os
 import sys
-
+ 
 inputFileName = sys.argv[1]
 outputFileName = sys.argv[2]
 
