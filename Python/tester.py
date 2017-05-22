@@ -17,12 +17,13 @@ import subprocess
 inputPythonFilePath = sys.argv[1]
 inputDataFolderPath = sys.argv[2]
 outputFolderPath = sys.argv[3]
-
+testerResult = outputFolderPath + '/testerResult.csv'
+badResult = outputFolderPath + '/badResult.csv'
 if not os.path.exists(outputFolderPath):
     os.system('mkdir '+ outputFolderPath)
-
+testerResultFile = open(testerResult, 'w')
+badResultFile = open(badResult, 'w')
 print "Testing start:"
-
 
 for crtInputFile in os.listdir(inputDataFolderPath):
     print "testing file: " + crtInputFile
@@ -35,7 +36,10 @@ for crtInputFile in os.listdir(inputDataFolderPath):
     child = subprocess.Popen(command, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, shell=True)
     streamdata = child.communicate()[0]
     rc = child.returncode
-
-    print 'exit code = ' + str(rc)
+    testerResultFile.write(crtInputFile + ',' + str(rc) + '\n')
+    if rc != 0:
+        badResultFile.write(crtInputFile + '\n')
 
 print "Testing finished"
+testerResultFile.close()
+badResultFile.close()
