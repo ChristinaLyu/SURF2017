@@ -35,7 +35,7 @@ for crtInputFile in os.listdir(inputDataFolderPath):
     child = subprocess.Popen(command, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, shell=True)
     streamdata = child.communicate()[0]
     rc = child.returncode
-    print streamdata
+
     print 'exit code = ' + str(rc)
 
 print "Testing finished"
