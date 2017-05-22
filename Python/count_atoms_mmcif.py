@@ -50,6 +50,7 @@ def main():
         nrFile.close()
     else:
         sys.stderr.write("Given file type wrong!")
+        sys.exit(1)
         
 main()
     

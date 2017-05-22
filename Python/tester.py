@@ -23,18 +23,19 @@ if not os.path.exists(outputFolderPath):
 
 print "Testing start:"
 
-k = 0
+
 for crtInputFile in os.listdir(inputDataFolderPath):
     print "testing file: " + crtInputFile
-    k = k + 1
+    
     crtInputFilePath = inputDataFolderPath + '/' + crtInputFile + ' '
     fileName = crtInputFile.split('.')[0]
     outFilePath = outputFolderPath + '/test' + fileName + '.txt'
     command = 'python ' + inputPythonFilePath + ' ' + crtInputFilePath + outFilePath
 
-    err = subprocess.check_output(command, stderr = subprocess.STDOUT, shell = True)
-    if err != "":
-        print "Output:" + err
-    else:
-        print "no error!"
+    child = subprocess.Popen(command, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, shell=True)
+    streamdata = child.communicate()[0]
+    rc = child.returncode
+    print streamdata
+    print 'exit code = ' + str(rc)
 
+print "Testing finished"

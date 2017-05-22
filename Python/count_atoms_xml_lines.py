@@ -29,10 +29,7 @@ def debugVar(var,val):
         print(var + " = " + val)
         
 #------------------------------------------------------------------ main
-def main():
-    filename = sys.argv[1]
-
-    outPath = sys.argv[2]
+def main(filename, outPath):
     extension = filename.split('.')[-1]
     
     if extension == 'xml':
@@ -47,7 +44,11 @@ def main():
         outFile = open(outPath, 'w')
         outFile.write(str(nrAtom))
     else:
-        sys.stderr.write("Given file type wrong!")
+        raise ValueError('Wrong extension')
+        #sys.stderr.write("Given file type wrong!")
 
-main()
+if __name__ == '__main__':
+    filename = sys.argv[1]
+    outPath = sys.argv[2]
+    main(filename, outPath)
                 
