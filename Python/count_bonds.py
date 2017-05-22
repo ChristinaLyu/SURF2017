@@ -22,7 +22,7 @@ if not os.path.exists(tempFolderPath):
     os.mkdir(tempFolderPath)
 
 
-command = 'java -jar ' + jmolPath + '-no -j "load ' + inputFileName + ' ; select protein; getproperty bondInfo;: > ' + tempFolderPath + 'bondInfo.txt'
+command = 'java -jar ' + jmolPath + '-no -j "load ' + inputFileName + ' ; select protein; getproperty bondInfo;" > ' + tempFolderPath + '/bondInfo.txt'
 os.system(command)
 command2 = 'python ../Python/oldUibi.py ' + tempFolderPath + '/bondInfo.txt ' + outputFileName
 os.system(command2)

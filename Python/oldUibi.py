@@ -94,7 +94,10 @@ root = Element('molecule')
 ##        atomInfo = atomInfo[33:]
 
 #bond.bnd
-bondInfo = bondInfofile.read().splitlines()
+bondInfo = bondInfofile.read()
+indS = 0
+indE = 0
+bondInfo = bondInfo.splitlines()
 startlineb = 0
 indexb = 0
 nrBonds = 0
@@ -110,9 +113,15 @@ for line in bondInfo:
         nrBonds = int(line)
 
         startlineb = indexb
+    if line.find('bondInfo[1].colix') != -1:
+        indS = indexb-1
+    if line.find('bondInfo[2].colix') != -1:
+        indE = indexb -1
 bondInfo = bondInfo[startlineb:]
+nrItems = indE - indS
 
 for k in range(nrBonds):
+   
     atom2n = 'bondInfo[' + str(k + 1) + '].atom2.atomno	'
     atom1n = 'bondInfo[' + str(k + 1) + '].atom1.atomno	'
     atom2in = 'bondInfo[' + str(k + 1) + '].atom2.atomIndex	'
@@ -128,8 +137,8 @@ for k in range(nrBonds):
     bondIn.set('atomNo2', atom2no)
     bondIn.set('atom1ind', atom1ind)
     bondIn.set('atom2ind', atom2ind)
-    if len(bondInfo) > 18:
-        bondInfo = bondInfo[17:]
+    if len(bondInfo) > nrItems - 1:
+        bondInfo = bondInfo[nrItems:]
 
 
 
