@@ -120,6 +120,8 @@ if bondInfo.find('*List') != -1:
     bondInfo = bondInfo[startlineb:]
     nrItems = indE - indS
     for k in range(nrBonds):
+        if k % 1000 == 0:
+            print k
         atom2n = 'bondInfo[' + str(k + 1) + '].atom2.atomno	'
         atom1n = 'bondInfo[' + str(k + 1) + '].atom1.atomno	'
         atom2in = 'bondInfo[' + str(k + 1) + '].atom2.atomIndex	'
