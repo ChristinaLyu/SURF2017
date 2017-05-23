@@ -1,36 +1,36 @@
-(C) 2012 Jmol Development
-Jmol Version: 14.2.9_2014.11.23  2014-11-23 16:45
+JmolData using command options ["-no", "-j", "load ../Data/Test_xml/1hhp.cif ; select protein; getproperty bondInfo;"]
+{noDisplay=true, noConsole=true, exit=true, JmolData=true, isDataOnly=true}
+Operating headless display=null nographicsallowed=true
+(C) 2015 Jmol Development
+Jmol Version: 14.8.0  2016-12-17 13:10
 java.vendor: Java: Oracle Corporation
-java.version: Java 1.8.0_111
+java.version: Java 1.8.0_121
 os.name: Mac OS X
 Access: ALL
-memory: 22.9/129.0
+memory: 22.4/129.0
 processors available: 4
 useCommandThread: false
-Executing script: load ../Data/1hhp.pdb ; select protein; getproperty bondInfo;;exitJmol;
+Executing script: load ../Data/Test_xml/1hhp.cif ; select protein; getproperty bondInfo;;exitJmol;
 
-FileManager.getAtomSetCollectionFromFile(../Data/1hhp.pdb)
-cacheGet file://Users/ileana/KinariSvr/Christina/Summer2017/Run/../Data/1hhp.pdb false
-cacheGet file://Users/ileana/KinariSvr/Christina/Summer2017/Run/../Data/1hhp.pdb false
-FileManager opening 2 /Users/ileana/KinariSvr/Christina/Summer2017/Run/../Data/1hhp.pdb
-The Resolver thinks Pdb
-HYDROLASE(ACID PROTEINASE)              27-MAY-92   1HHP
-THE THREE-DIMENSIONAL STRUCTURE OF THE ASPARTYL PROTEASE FROM THE HIV-
-1 ISOLATE BRU
+FileManager.getAtomSetCollectionFromFile(../Data/Test_xml/1hhp.cif)
+FileManager opening file /Users/ChristinaLyu/Git/christina_summer_2017/Run/../Data/Test_xml/1hhp.cif
+The Resolver thinks MMCif
+ID: 1HHP
+TITLE: The three-dimensional structure of the aspartyl protease from the HIV-1 isolate BRU.
+Setting space group name to HM:P 41 21 2
+1HHP
+biomolecule 1 operators 1,2 ASYM_IDs A
 found biomolecule 1: A
-biomolecule 1: number of transforms: 2
-Time for openFile(../Data/1hhp.pdb): 83 ms
+assembly operator 1 x,y,z
+assembly operator 2 y,x,-z
+Time for openFile(../Data/Test_xml/1hhp.cif): 108 ms
 reading 758 atoms
-ModelSet: haveSymmetry:false haveUnitcells:false haveFractionalCoord:false
+ModelSet: haveSymmetry:false haveUnitcells:true haveFractionalCoord:false
 1 model in this collection. Use getProperty "modelInfo" or getProperty "auxiliaryInfo" to inspect them.
 Default Van der Waals type for model set to Jmol
 758 atoms created
 ModelSet: autobonding; use  autobond=false  to not generate bonds automatically
-HYDROLASE(ACID PROTEINASE)              27-MAY-92   1HHP
-THE THREE-DIMENSIONAL STRUCTURE OF THE ASPARTYL PROTEASE FROM THE HIV-
-1 ISOLATE BRU
-found biomolecule 1: A
-
+Time for creating model: 43 ms
 
 bondInfo	*List[771]	
 bondInfo[1].colix	0
@@ -50,6 +50,7 @@ bondInfo[1].atom1.info	"[PRO]1:A.CA #2"
 bondInfo[1]._bpt	0
 bondInfo[1].radius	0.15
 bondInfo[1].type	"single"
+bondInfo[1].jmol_order	"0x1"
 bondInfo[2].colix	0
 bondInfo[2].visible	true
 bondInfo[2].order	1.0
@@ -67,6 +68,7 @@ bondInfo[2].atom1.info	"[PRO]1:A.CA #2"
 bondInfo[2]._bpt	1
 bondInfo[2].radius	0.15
 bondInfo[2].type	"single"
+bondInfo[2].jmol_order	"0x1"
 bondInfo[3].colix	0
 bondInfo[3].visible	true
 bondInfo[3].order	1.0
@@ -84,6 +86,7 @@ bondInfo[3].atom1.info	"[PRO]1:A.C #3"
 bondInfo[3]._bpt	2
 bondInfo[3].radius	0.15
 bondInfo[3].type	"single"
+bondInfo[3].jmol_order	"0x1"
 bondInfo[4].colix	0
 bondInfo[4].visible	true
 bondInfo[4].order	1.0
@@ -101,6 +104,7 @@ bondInfo[4].atom1.info	"[PRO]1:A.CB #5"
 bondInfo[4]._bpt	3
 bondInfo[4].radius	0.15
 bondInfo[4].type	"single"
+bondInfo[4].jmol_order	"0x1"
 bondInfo[5].colix	0
 bondInfo[5].visible	true
 bondInfo[5].order	1.0
@@ -118,6 +122,7 @@ bondInfo[5].atom1.info	"[PRO]1:A.CG #6"
 bondInfo[5]._bpt	4
 bondInfo[5].radius	0.15
 bondInfo[5].type	"single"
+bondInfo[5].jmol_order	"0x1"
 bondInfo[6].colix	0
 bondInfo[6].visible	true
 bondInfo[6].order	1.0
@@ -135,6 +140,7 @@ bondInfo[6].atom1.info	"[PRO]1:A.CG #6"
 bondInfo[6]._bpt	5
 bondInfo[6].radius	0.15
 bondInfo[6].type	"single"
+bondInfo[6].jmol_order	"0x1"
 bondInfo[7].colix	0
 bondInfo[7].visible	true
 bondInfo[7].order	1.0
@@ -152,6 +158,7 @@ bondInfo[7].atom1.info	"[PRO]1:A.CD #7"
 bondInfo[7]._bpt	6
 bondInfo[7].radius	0.15
 bondInfo[7].type	"single"
+bondInfo[7].jmol_order	"0x1"
 bondInfo[8].colix	0
 bondInfo[8].visible	true
 bondInfo[8].order	1.0
@@ -169,6 +176,7 @@ bondInfo[8].atom1.info	"[GLN]2:A.N #8"
 bondInfo[8]._bpt	7
 bondInfo[8].radius	0.15
 bondInfo[8].type	"single"
+bondInfo[8].jmol_order	"0x1"
 bondInfo[9].colix	0
 bondInfo[9].visible	true
 bondInfo[9].order	1.0
@@ -186,6 +194,7 @@ bondInfo[9].atom1.info	"[GLN]2:A.N #8"
 bondInfo[9]._bpt	8
 bondInfo[9].radius	0.15
 bondInfo[9].type	"single"
+bondInfo[9].jmol_order	"0x1"
 bondInfo[10].colix	0
 bondInfo[10].visible	true
 bondInfo[10].order	1.0
@@ -203,6 +212,7 @@ bondInfo[10].atom1.info	"[GLN]2:A.CA #9"
 bondInfo[10]._bpt	9
 bondInfo[10].radius	0.15
 bondInfo[10].type	"single"
+bondInfo[10].jmol_order	"0x1"
 bondInfo[11].colix	0
 bondInfo[11].visible	true
 bondInfo[11].order	1.0
@@ -220,6 +230,7 @@ bondInfo[11].atom1.info	"[GLN]2:A.C #10"
 bondInfo[11]._bpt	10
 bondInfo[11].radius	0.15
 bondInfo[11].type	"single"
+bondInfo[11].jmol_order	"0x1"
 bondInfo[12].colix	0
 bondInfo[12].visible	true
 bondInfo[12].order	1.0
@@ -237,6 +248,7 @@ bondInfo[12].atom1.info	"[GLN]2:A.O #11"
 bondInfo[12]._bpt	11
 bondInfo[12].radius	0.15
 bondInfo[12].type	"single"
+bondInfo[12].jmol_order	"0x1"
 bondInfo[13].colix	0
 bondInfo[13].visible	true
 bondInfo[13].order	1.0
@@ -254,6 +266,7 @@ bondInfo[13].atom1.info	"[GLN]2:A.CG #13"
 bondInfo[13]._bpt	12
 bondInfo[13].radius	0.15
 bondInfo[13].type	"single"
+bondInfo[13].jmol_order	"0x1"
 bondInfo[14].colix	0
 bondInfo[14].visible	true
 bondInfo[14].order	1.0
@@ -271,6 +284,7 @@ bondInfo[14].atom1.info	"[GLN]2:A.CG #13"
 bondInfo[14]._bpt	13
 bondInfo[14].radius	0.15
 bondInfo[14].type	"single"
+bondInfo[14].jmol_order	"0x1"
 bondInfo[15].colix	0
 bondInfo[15].visible	true
 bondInfo[15].order	1.0
@@ -288,6 +302,7 @@ bondInfo[15].atom1.info	"[GLN]2:A.CD #14"
 bondInfo[15]._bpt	14
 bondInfo[15].radius	0.15
 bondInfo[15].type	"single"
+bondInfo[15].jmol_order	"0x1"
 bondInfo[16].colix	0
 bondInfo[16].visible	true
 bondInfo[16].order	1.0
@@ -305,6 +320,7 @@ bondInfo[16].atom1.info	"[GLN]2:A.NE2 #16"
 bondInfo[16]._bpt	15
 bondInfo[16].radius	0.15
 bondInfo[16].type	"single"
+bondInfo[16].jmol_order	"0x1"
 bondInfo[17].colix	0
 bondInfo[17].visible	true
 bondInfo[17].order	1.0
@@ -322,6 +338,7 @@ bondInfo[17].atom1.info	"[ILE]3:A.N #17"
 bondInfo[17]._bpt	16
 bondInfo[17].radius	0.15
 bondInfo[17].type	"single"
+bondInfo[17].jmol_order	"0x1"
 bondInfo[18].colix	0
 bondInfo[18].visible	true
 bondInfo[18].order	1.0
@@ -339,6 +356,7 @@ bondInfo[18].atom1.info	"[ILE]3:A.CA #18"
 bondInfo[18]._bpt	17
 bondInfo[18].radius	0.15
 bondInfo[18].type	"single"
+bondInfo[18].jmol_order	"0x1"
 bondInfo[19].colix	0
 bondInfo[19].visible	true
 bondInfo[19].order	1.0
@@ -356,6 +374,7 @@ bondInfo[19].atom1.info	"[ILE]3:A.C #19"
 bondInfo[19]._bpt	18
 bondInfo[19].radius	0.15
 bondInfo[19].type	"single"
+bondInfo[19].jmol_order	"0x1"
 bondInfo[20].colix	0
 bondInfo[20].visible	true
 bondInfo[20].order	1.0
@@ -373,6 +392,7 @@ bondInfo[20].atom1.info	"[ILE]3:A.C #19"
 bondInfo[20]._bpt	19
 bondInfo[20].radius	0.15
 bondInfo[20].type	"single"
+bondInfo[20].jmol_order	"0x1"
 bondInfo[21].colix	0
 bondInfo[21].visible	true
 bondInfo[21].order	1.0
@@ -390,6 +410,7 @@ bondInfo[21].atom1.info	"[ILE]3:A.CB #21"
 bondInfo[21]._bpt	20
 bondInfo[21].radius	0.15
 bondInfo[21].type	"single"
+bondInfo[21].jmol_order	"0x1"
 bondInfo[22].colix	0
 bondInfo[22].visible	true
 bondInfo[22].order	1.0
@@ -407,6 +428,7 @@ bondInfo[22].atom1.info	"[ILE]3:A.CB #21"
 bondInfo[22]._bpt	21
 bondInfo[22].radius	0.15
 bondInfo[22].type	"single"
+bondInfo[22].jmol_order	"0x1"
 bondInfo[23].colix	0
 bondInfo[23].visible	true
 bondInfo[23].order	1.0
@@ -424,6 +446,7 @@ bondInfo[23].atom1.info	"[ILE]3:A.CG2 #23"
 bondInfo[23]._bpt	22
 bondInfo[23].radius	0.15
 bondInfo[23].type	"single"
+bondInfo[23].jmol_order	"0x1"
 bondInfo[24].colix	0
 bondInfo[24].visible	true
 bondInfo[24].order	1.0
@@ -441,6 +464,7 @@ bondInfo[24].atom1.info	"[ILE]3:A.CD1 #24"
 bondInfo[24]._bpt	23
 bondInfo[24].radius	0.15
 bondInfo[24].type	"single"
+bondInfo[24].jmol_order	"0x1"
 bondInfo[25].colix	0
 bondInfo[25].visible	true
 bondInfo[25].order	1.0
@@ -458,6 +482,7 @@ bondInfo[25].atom1.info	"[THR]4:A.N #25"
 bondInfo[25]._bpt	24
 bondInfo[25].radius	0.15
 bondInfo[25].type	"single"
+bondInfo[25].jmol_order	"0x1"
 bondInfo[26].colix	0
 bondInfo[26].visible	true
 bondInfo[26].order	1.0
@@ -475,6 +500,7 @@ bondInfo[26].atom1.info	"[THR]4:A.CA #26"
 bondInfo[26]._bpt	25
 bondInfo[26].radius	0.15
 bondInfo[26].type	"single"
+bondInfo[26].jmol_order	"0x1"
 bondInfo[27].colix	0
 bondInfo[27].visible	true
 bondInfo[27].order	1.0
@@ -492,6 +518,7 @@ bondInfo[27].atom1.info	"[THR]4:A.C #27"
 bondInfo[27]._bpt	26
 bondInfo[27].radius	0.15
 bondInfo[27].type	"single"
+bondInfo[27].jmol_order	"0x1"
 bondInfo[28].colix	0
 bondInfo[28].visible	true
 bondInfo[28].order	1.0
@@ -509,6 +536,7 @@ bondInfo[28].atom1.info	"[THR]4:A.O #28"
 bondInfo[28]._bpt	27
 bondInfo[28].radius	0.15
 bondInfo[28].type	"single"
+bondInfo[28].jmol_order	"0x1"
 bondInfo[29].colix	0
 bondInfo[29].visible	true
 bondInfo[29].order	1.0
@@ -526,6 +554,7 @@ bondInfo[29].atom1.info	"[THR]4:A.CB #29"
 bondInfo[29]._bpt	28
 bondInfo[29].radius	0.15
 bondInfo[29].type	"single"
+bondInfo[29].jmol_order	"0x1"
 bondInfo[30].colix	0
 bondInfo[30].visible	true
 bondInfo[30].order	1.0
@@ -543,6 +572,7 @@ bondInfo[30].atom1.info	"[THR]4:A.CB #29"
 bondInfo[30]._bpt	29
 bondInfo[30].radius	0.15
 bondInfo[30].type	"single"
+bondInfo[30].jmol_order	"0x1"
 bondInfo[31].colix	0
 bondInfo[31].visible	true
 bondInfo[31].order	1.0
@@ -560,6 +590,7 @@ bondInfo[31].atom1.info	"[THR]4:A.OG1 #30"
 bondInfo[31]._bpt	30
 bondInfo[31].radius	0.15
 bondInfo[31].type	"single"
+bondInfo[31].jmol_order	"0x1"
 bondInfo[32].colix	0
 bondInfo[32].visible	true
 bondInfo[32].order	1.0
@@ -577,6 +608,7 @@ bondInfo[32].atom1.info	"[LEU]5:A.N #32"
 bondInfo[32]._bpt	31
 bondInfo[32].radius	0.15
 bondInfo[32].type	"single"
+bondInfo[32].jmol_order	"0x1"
 bondInfo[33].colix	0
 bondInfo[33].visible	true
 bondInfo[33].order	1.0
@@ -594,6 +626,7 @@ bondInfo[33].atom1.info	"[LEU]5:A.CA #33"
 bondInfo[33]._bpt	32
 bondInfo[33].radius	0.15
 bondInfo[33].type	"single"
+bondInfo[33].jmol_order	"0x1"
 bondInfo[34].colix	0
 bondInfo[34].visible	true
 bondInfo[34].order	1.0
@@ -611,6 +644,7 @@ bondInfo[34].atom1.info	"[LEU]5:A.CA #33"
 bondInfo[34]._bpt	33
 bondInfo[34].radius	0.15
 bondInfo[34].type	"single"
+bondInfo[34].jmol_order	"0x1"
 bondInfo[35].colix	0
 bondInfo[35].visible	true
 bondInfo[35].order	1.0
@@ -628,6 +662,7 @@ bondInfo[35].atom1.info	"[LEU]5:A.C #34"
 bondInfo[35]._bpt	34
 bondInfo[35].radius	0.15
 bondInfo[35].type	"single"
+bondInfo[35].jmol_order	"0x1"
 bondInfo[36].colix	0
 bondInfo[36].visible	true
 bondInfo[36].order	1.0
@@ -645,6 +680,7 @@ bondInfo[36].atom1.info	"[LEU]5:A.O #35"
 bondInfo[36]._bpt	35
 bondInfo[36].radius	0.15
 bondInfo[36].type	"single"
+bondInfo[36].jmol_order	"0x1"
 bondInfo[37].colix	0
 bondInfo[37].visible	true
 bondInfo[37].order	1.0
@@ -662,6 +698,7 @@ bondInfo[37].atom1.info	"[LEU]5:A.CB #36"
 bondInfo[37]._bpt	36
 bondInfo[37].radius	0.15
 bondInfo[37].type	"single"
+bondInfo[37].jmol_order	"0x1"
 bondInfo[38].colix	0
 bondInfo[38].visible	true
 bondInfo[38].order	1.0
@@ -679,6 +716,7 @@ bondInfo[38].atom1.info	"[LEU]5:A.CG #37"
 bondInfo[38]._bpt	37
 bondInfo[38].radius	0.15
 bondInfo[38].type	"single"
+bondInfo[38].jmol_order	"0x1"
 bondInfo[39].colix	0
 bondInfo[39].visible	true
 bondInfo[39].order	1.0
@@ -696,6 +734,7 @@ bondInfo[39].atom1.info	"[LEU]5:A.CG #37"
 bondInfo[39]._bpt	38
 bondInfo[39].radius	0.15
 bondInfo[39].type	"single"
+bondInfo[39].jmol_order	"0x1"
 bondInfo[40].colix	0
 bondInfo[40].visible	true
 bondInfo[40].order	1.0
@@ -713,6 +752,7 @@ bondInfo[40].atom1.info	"[TRP]6:A.N #40"
 bondInfo[40]._bpt	39
 bondInfo[40].radius	0.15
 bondInfo[40].type	"single"
+bondInfo[40].jmol_order	"0x1"
 bondInfo[41].colix	0
 bondInfo[41].visible	true
 bondInfo[41].order	1.0
@@ -730,6 +770,7 @@ bondInfo[41].atom1.info	"[TRP]6:A.CA #41"
 bondInfo[41]._bpt	40
 bondInfo[41].radius	0.15
 bondInfo[41].type	"single"
+bondInfo[41].jmol_order	"0x1"
 bondInfo[42].colix	0
 bondInfo[42].visible	true
 bondInfo[42].order	1.0
@@ -747,6 +788,7 @@ bondInfo[42].atom1.info	"[TRP]6:A.C #42"
 bondInfo[42]._bpt	41
 bondInfo[42].radius	0.15
 bondInfo[42].type	"single"
+bondInfo[42].jmol_order	"0x1"
 bondInfo[43].colix	0
 bondInfo[43].visible	true
 bondInfo[43].order	1.0
@@ -764,6 +806,7 @@ bondInfo[43].atom1.info	"[TRP]6:A.C #42"
 bondInfo[43]._bpt	42
 bondInfo[43].radius	0.15
 bondInfo[43].type	"single"
+bondInfo[43].jmol_order	"0x1"
 bondInfo[44].colix	0
 bondInfo[44].visible	true
 bondInfo[44].order	1.0
@@ -781,6 +824,7 @@ bondInfo[44].atom1.info	"[TRP]6:A.O #43"
 bondInfo[44]._bpt	43
 bondInfo[44].radius	0.15
 bondInfo[44].type	"single"
+bondInfo[44].jmol_order	"0x1"
 bondInfo[45].colix	0
 bondInfo[45].visible	true
 bondInfo[45].order	1.0
@@ -798,6 +842,7 @@ bondInfo[45].atom1.info	"[TRP]6:A.CB #44"
 bondInfo[45]._bpt	44
 bondInfo[45].radius	0.15
 bondInfo[45].type	"single"
+bondInfo[45].jmol_order	"0x1"
 bondInfo[46].colix	0
 bondInfo[46].visible	true
 bondInfo[46].order	1.0
@@ -815,6 +860,7 @@ bondInfo[46].atom1.info	"[TRP]6:A.CB #44"
 bondInfo[46]._bpt	45
 bondInfo[46].radius	0.15
 bondInfo[46].type	"single"
+bondInfo[46].jmol_order	"0x1"
 bondInfo[47].colix	0
 bondInfo[47].visible	true
 bondInfo[47].order	1.0
@@ -832,6 +878,7 @@ bondInfo[47].atom1.info	"[TRP]6:A.CG #45"
 bondInfo[47]._bpt	46
 bondInfo[47].radius	0.15
 bondInfo[47].type	"single"
+bondInfo[47].jmol_order	"0x1"
 bondInfo[48].colix	0
 bondInfo[48].visible	true
 bondInfo[48].order	1.0
@@ -849,6 +896,7 @@ bondInfo[48].atom1.info	"[TRP]6:A.CD1 #46"
 bondInfo[48]._bpt	47
 bondInfo[48].radius	0.15
 bondInfo[48].type	"single"
+bondInfo[48].jmol_order	"0x1"
 bondInfo[49].colix	0
 bondInfo[49].visible	true
 bondInfo[49].order	1.0
@@ -866,6 +914,7 @@ bondInfo[49].atom1.info	"[TRP]6:A.CD2 #47"
 bondInfo[49]._bpt	48
 bondInfo[49].radius	0.15
 bondInfo[49].type	"single"
+bondInfo[49].jmol_order	"0x1"
 bondInfo[50].colix	0
 bondInfo[50].visible	true
 bondInfo[50].order	1.0
@@ -883,6 +932,7 @@ bondInfo[50].atom1.info	"[TRP]6:A.CD2 #47"
 bondInfo[50]._bpt	49
 bondInfo[50].radius	0.15
 bondInfo[50].type	"single"
+bondInfo[50].jmol_order	"0x1"
 bondInfo[51].colix	0
 bondInfo[51].visible	true
 bondInfo[51].order	1.0
@@ -900,6 +950,7 @@ bondInfo[51].atom1.info	"[TRP]6:A.CE2 #49"
 bondInfo[51]._bpt	50
 bondInfo[51].radius	0.15
 bondInfo[51].type	"single"
+bondInfo[51].jmol_order	"0x1"
 bondInfo[52].colix	0
 bondInfo[52].visible	true
 bondInfo[52].order	1.0
@@ -917,6 +968,7 @@ bondInfo[52].atom1.info	"[TRP]6:A.CE2 #49"
 bondInfo[52]._bpt	51
 bondInfo[52].radius	0.15
 bondInfo[52].type	"single"
+bondInfo[52].jmol_order	"0x1"
 bondInfo[53].colix	0
 bondInfo[53].visible	true
 bondInfo[53].order	1.0
@@ -934,6 +986,7 @@ bondInfo[53].atom1.info	"[TRP]6:A.CE3 #50"
 bondInfo[53]._bpt	52
 bondInfo[53].radius	0.15
 bondInfo[53].type	"single"
+bondInfo[53].jmol_order	"0x1"
 bondInfo[54].colix	0
 bondInfo[54].visible	true
 bondInfo[54].order	1.0
@@ -951,6 +1004,7 @@ bondInfo[54].atom1.info	"[TRP]6:A.CE3 #50"
 bondInfo[54]._bpt	53
 bondInfo[54].radius	0.15
 bondInfo[54].type	"single"
+bondInfo[54].jmol_order	"0x1"
 bondInfo[55].colix	0
 bondInfo[55].visible	true
 bondInfo[55].order	1.0
@@ -968,6 +1022,7 @@ bondInfo[55].atom1.info	"[TRP]6:A.CZ3 #52"
 bondInfo[55]._bpt	54
 bondInfo[55].radius	0.15
 bondInfo[55].type	"single"
+bondInfo[55].jmol_order	"0x1"
 bondInfo[56].colix	0
 bondInfo[56].visible	true
 bondInfo[56].order	1.0
@@ -985,6 +1040,7 @@ bondInfo[56].atom1.info	"[TRP]6:A.CH2 #53"
 bondInfo[56]._bpt	55
 bondInfo[56].radius	0.15
 bondInfo[56].type	"single"
+bondInfo[56].jmol_order	"0x1"
 bondInfo[57].colix	0
 bondInfo[57].visible	true
 bondInfo[57].order	1.0
@@ -1002,6 +1058,7 @@ bondInfo[57].atom1.info	"[GLN]7:A.CA #55"
 bondInfo[57]._bpt	56
 bondInfo[57].radius	0.15
 bondInfo[57].type	"single"
+bondInfo[57].jmol_order	"0x1"
 bondInfo[58].colix	0
 bondInfo[58].visible	true
 bondInfo[58].order	1.0
@@ -1019,6 +1076,7 @@ bondInfo[58].atom1.info	"[GLN]7:A.CA #55"
 bondInfo[58]._bpt	57
 bondInfo[58].radius	0.15
 bondInfo[58].type	"single"
+bondInfo[58].jmol_order	"0x1"
 bondInfo[59].colix	0
 bondInfo[59].visible	true
 bondInfo[59].order	1.0
@@ -1036,6 +1094,7 @@ bondInfo[59].atom1.info	"[GLN]7:A.C #56"
 bondInfo[59]._bpt	58
 bondInfo[59].radius	0.15
 bondInfo[59].type	"single"
+bondInfo[59].jmol_order	"0x1"
 bondInfo[60].colix	0
 bondInfo[60].visible	true
 bondInfo[60].order	1.0
@@ -1053,6 +1112,7 @@ bondInfo[60].atom1.info	"[GLN]7:A.CB #58"
 bondInfo[60]._bpt	59
 bondInfo[60].radius	0.15
 bondInfo[60].type	"single"
+bondInfo[60].jmol_order	"0x1"
 bondInfo[61].colix	0
 bondInfo[61].visible	true
 bondInfo[61].order	1.0
@@ -1070,6 +1130,7 @@ bondInfo[61].atom1.info	"[GLN]7:A.CG #59"
 bondInfo[61]._bpt	60
 bondInfo[61].radius	0.15
 bondInfo[61].type	"single"
+bondInfo[61].jmol_order	"0x1"
 bondInfo[62].colix	0
 bondInfo[62].visible	true
 bondInfo[62].order	1.0
@@ -1087,6 +1148,7 @@ bondInfo[62].atom1.info	"[GLN]7:A.CD #60"
 bondInfo[62]._bpt	61
 bondInfo[62].radius	0.15
 bondInfo[62].type	"single"
+bondInfo[62].jmol_order	"0x1"
 bondInfo[63].colix	0
 bondInfo[63].visible	true
 bondInfo[63].order	1.0
@@ -1104,6 +1166,7 @@ bondInfo[63].atom1.info	"[GLN]7:A.CD #60"
 bondInfo[63]._bpt	62
 bondInfo[63].radius	0.15
 bondInfo[63].type	"single"
+bondInfo[63].jmol_order	"0x1"
 bondInfo[64].colix	0
 bondInfo[64].visible	true
 bondInfo[64].order	1.0
@@ -1121,6 +1184,7 @@ bondInfo[64].atom1.info	"[GLN]7:A.NE2 #62"
 bondInfo[64]._bpt	63
 bondInfo[64].radius	0.15
 bondInfo[64].type	"single"
+bondInfo[64].jmol_order	"0x1"
 bondInfo[65].colix	0
 bondInfo[65].visible	true
 bondInfo[65].order	1.0
@@ -1138,6 +1202,7 @@ bondInfo[65].atom1.info	"[ARG]8:A.N #63"
 bondInfo[65]._bpt	64
 bondInfo[65].radius	0.15
 bondInfo[65].type	"single"
+bondInfo[65].jmol_order	"0x1"
 bondInfo[66].colix	0
 bondInfo[66].visible	true
 bondInfo[66].order	1.0
@@ -1155,6 +1220,7 @@ bondInfo[66].atom1.info	"[ARG]8:A.N #63"
 bondInfo[66]._bpt	65
 bondInfo[66].radius	0.15
 bondInfo[66].type	"single"
+bondInfo[66].jmol_order	"0x1"
 bondInfo[67].colix	0
 bondInfo[67].visible	true
 bondInfo[67].order	1.0
@@ -1172,6 +1238,7 @@ bondInfo[67].atom1.info	"[ARG]8:A.CA #64"
 bondInfo[67]._bpt	66
 bondInfo[67].radius	0.15
 bondInfo[67].type	"single"
+bondInfo[67].jmol_order	"0x1"
 bondInfo[68].colix	0
 bondInfo[68].visible	true
 bondInfo[68].order	1.0
@@ -1189,6 +1256,7 @@ bondInfo[68].atom1.info	"[ARG]8:A.C #65"
 bondInfo[68]._bpt	67
 bondInfo[68].radius	0.15
 bondInfo[68].type	"single"
+bondInfo[68].jmol_order	"0x1"
 bondInfo[69].colix	0
 bondInfo[69].visible	true
 bondInfo[69].order	1.0
@@ -1206,6 +1274,7 @@ bondInfo[69].atom1.info	"[ARG]8:A.O #66"
 bondInfo[69]._bpt	68
 bondInfo[69].radius	0.15
 bondInfo[69].type	"single"
+bondInfo[69].jmol_order	"0x1"
 bondInfo[70].colix	0
 bondInfo[70].visible	true
 bondInfo[70].order	1.0
@@ -1223,6 +1292,7 @@ bondInfo[70].atom1.info	"[ARG]8:A.CB #67"
 bondInfo[70]._bpt	69
 bondInfo[70].radius	0.15
 bondInfo[70].type	"single"
+bondInfo[70].jmol_order	"0x1"
 bondInfo[71].colix	0
 bondInfo[71].visible	true
 bondInfo[71].order	1.0
@@ -1240,6 +1310,7 @@ bondInfo[71].atom1.info	"[ARG]8:A.CG #68"
 bondInfo[71]._bpt	70
 bondInfo[71].radius	0.15
 bondInfo[71].type	"single"
+bondInfo[71].jmol_order	"0x1"
 bondInfo[72].colix	0
 bondInfo[72].visible	true
 bondInfo[72].order	1.0
@@ -1257,6 +1328,7 @@ bondInfo[72].atom1.info	"[ARG]8:A.CD #69"
 bondInfo[72]._bpt	71
 bondInfo[72].radius	0.15
 bondInfo[72].type	"single"
+bondInfo[72].jmol_order	"0x1"
 bondInfo[73].colix	0
 bondInfo[73].visible	true
 bondInfo[73].order	1.0
@@ -1274,6 +1346,7 @@ bondInfo[73].atom1.info	"[ARG]8:A.NE #70"
 bondInfo[73]._bpt	72
 bondInfo[73].radius	0.15
 bondInfo[73].type	"single"
+bondInfo[73].jmol_order	"0x1"
 bondInfo[74].colix	0
 bondInfo[74].visible	true
 bondInfo[74].order	1.0
@@ -1291,6 +1364,7 @@ bondInfo[74].atom1.info	"[ARG]8:A.CZ #71"
 bondInfo[74]._bpt	73
 bondInfo[74].radius	0.15
 bondInfo[74].type	"single"
+bondInfo[74].jmol_order	"0x1"
 bondInfo[75].colix	0
 bondInfo[75].visible	true
 bondInfo[75].order	1.0
@@ -1308,6 +1382,7 @@ bondInfo[75].atom1.info	"[ARG]8:A.NH1 #72"
 bondInfo[75]._bpt	74
 bondInfo[75].radius	0.15
 bondInfo[75].type	"single"
+bondInfo[75].jmol_order	"0x1"
 bondInfo[76].colix	0
 bondInfo[76].visible	true
 bondInfo[76].order	1.0
@@ -1325,6 +1400,7 @@ bondInfo[76].atom1.info	"[ARG]8:A.NH2 #73"
 bondInfo[76]._bpt	75
 bondInfo[76].radius	0.15
 bondInfo[76].type	"single"
+bondInfo[76].jmol_order	"0x1"
 bondInfo[77].colix	0
 bondInfo[77].visible	true
 bondInfo[77].order	1.0
@@ -1342,6 +1418,7 @@ bondInfo[77].atom1.info	"[PRO]9:A.N #74"
 bondInfo[77]._bpt	76
 bondInfo[77].radius	0.15
 bondInfo[77].type	"single"
+bondInfo[77].jmol_order	"0x1"
 bondInfo[78].colix	0
 bondInfo[78].visible	true
 bondInfo[78].order	1.0
@@ -1359,6 +1436,7 @@ bondInfo[78].atom1.info	"[PRO]9:A.N #74"
 bondInfo[78]._bpt	77
 bondInfo[78].radius	0.15
 bondInfo[78].type	"single"
+bondInfo[78].jmol_order	"0x1"
 bondInfo[79].colix	0
 bondInfo[79].visible	true
 bondInfo[79].order	1.0
@@ -1376,6 +1454,7 @@ bondInfo[79].atom1.info	"[PRO]9:A.CA #75"
 bondInfo[79]._bpt	78
 bondInfo[79].radius	0.15
 bondInfo[79].type	"single"
+bondInfo[79].jmol_order	"0x1"
 bondInfo[80].colix	0
 bondInfo[80].visible	true
 bondInfo[80].order	1.0
@@ -1393,6 +1472,7 @@ bondInfo[80].atom1.info	"[PRO]9:A.C #76"
 bondInfo[80]._bpt	79
 bondInfo[80].radius	0.15
 bondInfo[80].type	"single"
+bondInfo[80].jmol_order	"0x1"
 bondInfo[81].colix	0
 bondInfo[81].visible	true
 bondInfo[81].order	1.0
@@ -1410,6 +1490,7 @@ bondInfo[81].atom1.info	"[PRO]9:A.C #76"
 bondInfo[81]._bpt	80
 bondInfo[81].radius	0.15
 bondInfo[81].type	"single"
+bondInfo[81].jmol_order	"0x1"
 bondInfo[82].colix	0
 bondInfo[82].visible	true
 bondInfo[82].order	1.0
@@ -1427,6 +1508,7 @@ bondInfo[82].atom1.info	"[PRO]9:A.CG #79"
 bondInfo[82]._bpt	81
 bondInfo[82].radius	0.15
 bondInfo[82].type	"single"
+bondInfo[82].jmol_order	"0x1"
 bondInfo[83].colix	0
 bondInfo[83].visible	true
 bondInfo[83].order	1.0
@@ -1444,6 +1526,7 @@ bondInfo[83].atom1.info	"[PRO]9:A.CD #80"
 bondInfo[83]._bpt	82
 bondInfo[83].radius	0.15
 bondInfo[83].type	"single"
+bondInfo[83].jmol_order	"0x1"
 bondInfo[84].colix	0
 bondInfo[84].visible	true
 bondInfo[84].order	1.0
@@ -1461,6 +1544,7 @@ bondInfo[84].atom1.info	"[LEU]10:A.N #81"
 bondInfo[84]._bpt	83
 bondInfo[84].radius	0.15
 bondInfo[84].type	"single"
+bondInfo[84].jmol_order	"0x1"
 bondInfo[85].colix	0
 bondInfo[85].visible	true
 bondInfo[85].order	1.0
@@ -1478,6 +1562,7 @@ bondInfo[85].atom1.info	"[LEU]10:A.CA #82"
 bondInfo[85]._bpt	84
 bondInfo[85].radius	0.15
 bondInfo[85].type	"single"
+bondInfo[85].jmol_order	"0x1"
 bondInfo[86].colix	0
 bondInfo[86].visible	true
 bondInfo[86].order	1.0
@@ -1495,6 +1580,7 @@ bondInfo[86].atom1.info	"[LEU]10:A.CA #82"
 bondInfo[86]._bpt	85
 bondInfo[86].radius	0.15
 bondInfo[86].type	"single"
+bondInfo[86].jmol_order	"0x1"
 bondInfo[87].colix	0
 bondInfo[87].visible	true
 bondInfo[87].order	1.0
@@ -1512,6 +1598,7 @@ bondInfo[87].atom1.info	"[LEU]10:A.C #83"
 bondInfo[87]._bpt	86
 bondInfo[87].radius	0.15
 bondInfo[87].type	"single"
+bondInfo[87].jmol_order	"0x1"
 bondInfo[88].colix	0
 bondInfo[88].visible	true
 bondInfo[88].order	1.0
@@ -1529,6 +1616,7 @@ bondInfo[88].atom1.info	"[LEU]10:A.C #83"
 bondInfo[88]._bpt	87
 bondInfo[88].radius	0.15
 bondInfo[88].type	"single"
+bondInfo[88].jmol_order	"0x1"
 bondInfo[89].colix	0
 bondInfo[89].visible	true
 bondInfo[89].order	1.0
@@ -1546,6 +1634,7 @@ bondInfo[89].atom1.info	"[LEU]10:A.CB #85"
 bondInfo[89]._bpt	88
 bondInfo[89].radius	0.15
 bondInfo[89].type	"single"
+bondInfo[89].jmol_order	"0x1"
 bondInfo[90].colix	0
 bondInfo[90].visible	true
 bondInfo[90].order	1.0
@@ -1563,6 +1652,7 @@ bondInfo[90].atom1.info	"[LEU]10:A.CG #86"
 bondInfo[90]._bpt	89
 bondInfo[90].radius	0.15
 bondInfo[90].type	"single"
+bondInfo[90].jmol_order	"0x1"
 bondInfo[91].colix	0
 bondInfo[91].visible	true
 bondInfo[91].order	1.0
@@ -1580,6 +1670,7 @@ bondInfo[91].atom1.info	"[LEU]10:A.CG #86"
 bondInfo[91]._bpt	90
 bondInfo[91].radius	0.15
 bondInfo[91].type	"single"
+bondInfo[91].jmol_order	"0x1"
 bondInfo[92].colix	0
 bondInfo[92].visible	true
 bondInfo[92].order	1.0
@@ -1597,6 +1688,7 @@ bondInfo[92].atom1.info	"[LEU]10:A.CD2 #88"
 bondInfo[92]._bpt	91
 bondInfo[92].radius	0.15
 bondInfo[92].type	"single"
+bondInfo[92].jmol_order	"0x1"
 bondInfo[93].colix	0
 bondInfo[93].visible	true
 bondInfo[93].order	1.0
@@ -1614,6 +1706,7 @@ bondInfo[93].atom1.info	"[VAL]11:A.N #89"
 bondInfo[93]._bpt	92
 bondInfo[93].radius	0.15
 bondInfo[93].type	"single"
+bondInfo[93].jmol_order	"0x1"
 bondInfo[94].colix	0
 bondInfo[94].visible	true
 bondInfo[94].order	1.0
@@ -1631,6 +1724,7 @@ bondInfo[94].atom1.info	"[VAL]11:A.CA #90"
 bondInfo[94]._bpt	93
 bondInfo[94].radius	0.15
 bondInfo[94].type	"single"
+bondInfo[94].jmol_order	"0x1"
 bondInfo[95].colix	0
 bondInfo[95].visible	true
 bondInfo[95].order	1.0
@@ -1648,6 +1742,7 @@ bondInfo[95].atom1.info	"[VAL]11:A.C #91"
 bondInfo[95]._bpt	94
 bondInfo[95].radius	0.15
 bondInfo[95].type	"single"
+bondInfo[95].jmol_order	"0x1"
 bondInfo[96].colix	0
 bondInfo[96].visible	true
 bondInfo[96].order	1.0
@@ -1665,6 +1760,7 @@ bondInfo[96].atom1.info	"[VAL]11:A.C #91"
 bondInfo[96]._bpt	95
 bondInfo[96].radius	0.15
 bondInfo[96].type	"single"
+bondInfo[96].jmol_order	"0x1"
 bondInfo[97].colix	0
 bondInfo[97].visible	true
 bondInfo[97].order	1.0
@@ -1682,6 +1778,7 @@ bondInfo[97].atom1.info	"[VAL]11:A.O #92"
 bondInfo[97]._bpt	96
 bondInfo[97].radius	0.15
 bondInfo[97].type	"single"
+bondInfo[97].jmol_order	"0x1"
 bondInfo[98].colix	0
 bondInfo[98].visible	true
 bondInfo[98].order	1.0
@@ -1699,6 +1796,7 @@ bondInfo[98].atom1.info	"[VAL]11:A.CB #93"
 bondInfo[98]._bpt	97
 bondInfo[98].radius	0.15
 bondInfo[98].type	"single"
+bondInfo[98].jmol_order	"0x1"
 bondInfo[99].colix	0
 bondInfo[99].visible	true
 bondInfo[99].order	1.0
@@ -1716,6 +1814,7 @@ bondInfo[99].atom1.info	"[VAL]11:A.CB #93"
 bondInfo[99]._bpt	98
 bondInfo[99].radius	0.15
 bondInfo[99].type	"single"
+bondInfo[99].jmol_order	"0x1"
 bondInfo[100].colix	0
 bondInfo[100].visible	true
 bondInfo[100].order	1.0
@@ -1733,6 +1832,7 @@ bondInfo[100].atom1.info	"[THR]12:A.CA #97"
 bondInfo[100]._bpt	99
 bondInfo[100].radius	0.15
 bondInfo[100].type	"single"
+bondInfo[100].jmol_order	"0x1"
 bondInfo[101].colix	0
 bondInfo[101].visible	true
 bondInfo[101].order	1.0
@@ -1750,6 +1850,7 @@ bondInfo[101].atom1.info	"[THR]12:A.CA #97"
 bondInfo[101]._bpt	100
 bondInfo[101].radius	0.15
 bondInfo[101].type	"single"
+bondInfo[101].jmol_order	"0x1"
 bondInfo[102].colix	0
 bondInfo[102].visible	true
 bondInfo[102].order	1.0
@@ -1767,6 +1868,7 @@ bondInfo[102].atom1.info	"[THR]12:A.C #98"
 bondInfo[102]._bpt	101
 bondInfo[102].radius	0.15
 bondInfo[102].type	"single"
+bondInfo[102].jmol_order	"0x1"
 bondInfo[103].colix	0
 bondInfo[103].visible	true
 bondInfo[103].order	1.0
@@ -1784,6 +1886,7 @@ bondInfo[103].atom1.info	"[THR]12:A.CB #100"
 bondInfo[103]._bpt	102
 bondInfo[103].radius	0.15
 bondInfo[103].type	"single"
+bondInfo[103].jmol_order	"0x1"
 bondInfo[104].colix	0
 bondInfo[104].visible	true
 bondInfo[104].order	1.0
@@ -1801,6 +1904,7 @@ bondInfo[104].atom1.info	"[THR]12:A.CB #100"
 bondInfo[104]._bpt	103
 bondInfo[104].radius	0.15
 bondInfo[104].type	"single"
+bondInfo[104].jmol_order	"0x1"
 bondInfo[105].colix	0
 bondInfo[105].visible	true
 bondInfo[105].order	1.0
@@ -1818,6 +1922,7 @@ bondInfo[105].atom1.info	"[THR]12:A.OG1 #101"
 bondInfo[105]._bpt	104
 bondInfo[105].radius	0.15
 bondInfo[105].type	"single"
+bondInfo[105].jmol_order	"0x1"
 bondInfo[106].colix	0
 bondInfo[106].visible	true
 bondInfo[106].order	1.0
@@ -1835,6 +1940,7 @@ bondInfo[106].atom1.info	"[ILE]13:A.N #103"
 bondInfo[106]._bpt	105
 bondInfo[106].radius	0.15
 bondInfo[106].type	"single"
+bondInfo[106].jmol_order	"0x1"
 bondInfo[107].colix	0
 bondInfo[107].visible	true
 bondInfo[107].order	1.0
@@ -1852,6 +1958,7 @@ bondInfo[107].atom1.info	"[ILE]13:A.N #103"
 bondInfo[107]._bpt	106
 bondInfo[107].radius	0.15
 bondInfo[107].type	"single"
+bondInfo[107].jmol_order	"0x1"
 bondInfo[108].colix	0
 bondInfo[108].visible	true
 bondInfo[108].order	1.0
@@ -1869,6 +1976,7 @@ bondInfo[108].atom1.info	"[ILE]13:A.C #105"
 bondInfo[108]._bpt	107
 bondInfo[108].radius	0.15
 bondInfo[108].type	"single"
+bondInfo[108].jmol_order	"0x1"
 bondInfo[109].colix	0
 bondInfo[109].visible	true
 bondInfo[109].order	1.0
@@ -1886,6 +1994,7 @@ bondInfo[109].atom1.info	"[ILE]13:A.C #105"
 bondInfo[109]._bpt	108
 bondInfo[109].radius	0.15
 bondInfo[109].type	"single"
+bondInfo[109].jmol_order	"0x1"
 bondInfo[110].colix	0
 bondInfo[110].visible	true
 bondInfo[110].order	1.0
@@ -1903,6 +2012,7 @@ bondInfo[110].atom1.info	"[ILE]13:A.O #106"
 bondInfo[110]._bpt	109
 bondInfo[110].radius	0.15
 bondInfo[110].type	"single"
+bondInfo[110].jmol_order	"0x1"
 bondInfo[111].colix	0
 bondInfo[111].visible	true
 bondInfo[111].order	1.0
@@ -1920,6 +2030,7 @@ bondInfo[111].atom1.info	"[ILE]13:A.CB #107"
 bondInfo[111]._bpt	110
 bondInfo[111].radius	0.15
 bondInfo[111].type	"single"
+bondInfo[111].jmol_order	"0x1"
 bondInfo[112].colix	0
 bondInfo[112].visible	true
 bondInfo[112].order	1.0
@@ -1937,6 +2048,7 @@ bondInfo[112].atom1.info	"[ILE]13:A.CB #107"
 bondInfo[112]._bpt	111
 bondInfo[112].radius	0.15
 bondInfo[112].type	"single"
+bondInfo[112].jmol_order	"0x1"
 bondInfo[113].colix	0
 bondInfo[113].visible	true
 bondInfo[113].order	1.0
@@ -1954,6 +2066,7 @@ bondInfo[113].atom1.info	"[ILE]13:A.CG1 #108"
 bondInfo[113]._bpt	112
 bondInfo[113].radius	0.15
 bondInfo[113].type	"single"
+bondInfo[113].jmol_order	"0x1"
 bondInfo[114].colix	0
 bondInfo[114].visible	true
 bondInfo[114].order	1.0
@@ -1971,6 +2084,7 @@ bondInfo[114].atom1.info	"[ILE]13:A.CD1 #110"
 bondInfo[114]._bpt	113
 bondInfo[114].radius	0.15
 bondInfo[114].type	"single"
+bondInfo[114].jmol_order	"0x1"
 bondInfo[115].colix	0
 bondInfo[115].visible	true
 bondInfo[115].order	1.0
@@ -1988,6 +2102,7 @@ bondInfo[115].atom1.info	"[LYS]14:A.CA #112"
 bondInfo[115]._bpt	114
 bondInfo[115].radius	0.15
 bondInfo[115].type	"single"
+bondInfo[115].jmol_order	"0x1"
 bondInfo[116].colix	0
 bondInfo[116].visible	true
 bondInfo[116].order	1.0
@@ -2005,6 +2120,7 @@ bondInfo[116].atom1.info	"[LYS]14:A.CA #112"
 bondInfo[116]._bpt	115
 bondInfo[116].radius	0.15
 bondInfo[116].type	"single"
+bondInfo[116].jmol_order	"0x1"
 bondInfo[117].colix	0
 bondInfo[117].visible	true
 bondInfo[117].order	1.0
@@ -2022,6 +2138,7 @@ bondInfo[117].atom1.info	"[LYS]14:A.CA #112"
 bondInfo[117]._bpt	116
 bondInfo[117].radius	0.15
 bondInfo[117].type	"single"
+bondInfo[117].jmol_order	"0x1"
 bondInfo[118].colix	0
 bondInfo[118].visible	true
 bondInfo[118].order	1.0
@@ -2039,6 +2156,7 @@ bondInfo[118].atom1.info	"[LYS]14:A.C #113"
 bondInfo[118]._bpt	117
 bondInfo[118].radius	0.15
 bondInfo[118].type	"single"
+bondInfo[118].jmol_order	"0x1"
 bondInfo[119].colix	0
 bondInfo[119].visible	true
 bondInfo[119].order	1.0
@@ -2056,6 +2174,7 @@ bondInfo[119].atom1.info	"[LYS]14:A.CG #116"
 bondInfo[119]._bpt	118
 bondInfo[119].radius	0.15
 bondInfo[119].type	"single"
+bondInfo[119].jmol_order	"0x1"
 bondInfo[120].colix	0
 bondInfo[120].visible	true
 bondInfo[120].order	1.0
@@ -2073,6 +2192,7 @@ bondInfo[120].atom1.info	"[LYS]14:A.CG #116"
 bondInfo[120]._bpt	119
 bondInfo[120].radius	0.15
 bondInfo[120].type	"single"
+bondInfo[120].jmol_order	"0x1"
 bondInfo[121].colix	0
 bondInfo[121].visible	true
 bondInfo[121].order	1.0
@@ -2090,6 +2210,7 @@ bondInfo[121].atom1.info	"[LYS]14:A.CE #118"
 bondInfo[121]._bpt	120
 bondInfo[121].radius	0.15
 bondInfo[121].type	"single"
+bondInfo[121].jmol_order	"0x1"
 bondInfo[122].colix	0
 bondInfo[122].visible	true
 bondInfo[122].order	1.0
@@ -2107,6 +2228,7 @@ bondInfo[122].atom1.info	"[LYS]14:A.CE #118"
 bondInfo[122]._bpt	121
 bondInfo[122].radius	0.15
 bondInfo[122].type	"single"
+bondInfo[122].jmol_order	"0x1"
 bondInfo[123].colix	0
 bondInfo[123].visible	true
 bondInfo[123].order	1.0
@@ -2124,6 +2246,7 @@ bondInfo[123].atom1.info	"[ILE]15:A.N #120"
 bondInfo[123]._bpt	122
 bondInfo[123].radius	0.15
 bondInfo[123].type	"single"
+bondInfo[123].jmol_order	"0x1"
 bondInfo[124].colix	0
 bondInfo[124].visible	true
 bondInfo[124].order	1.0
@@ -2141,6 +2264,7 @@ bondInfo[124].atom1.info	"[ILE]15:A.N #120"
 bondInfo[124]._bpt	123
 bondInfo[124].radius	0.15
 bondInfo[124].type	"single"
+bondInfo[124].jmol_order	"0x1"
 bondInfo[125].colix	0
 bondInfo[125].visible	true
 bondInfo[125].order	1.0
@@ -2158,6 +2282,7 @@ bondInfo[125].atom1.info	"[ILE]15:A.C #122"
 bondInfo[125]._bpt	124
 bondInfo[125].radius	0.15
 bondInfo[125].type	"single"
+bondInfo[125].jmol_order	"0x1"
 bondInfo[126].colix	0
 bondInfo[126].visible	true
 bondInfo[126].order	1.0
@@ -2175,6 +2300,7 @@ bondInfo[126].atom1.info	"[ILE]15:A.C #122"
 bondInfo[126]._bpt	125
 bondInfo[126].radius	0.15
 bondInfo[126].type	"single"
+bondInfo[126].jmol_order	"0x1"
 bondInfo[127].colix	0
 bondInfo[127].visible	true
 bondInfo[127].order	1.0
@@ -2192,6 +2318,7 @@ bondInfo[127].atom1.info	"[ILE]15:A.O #123"
 bondInfo[127]._bpt	126
 bondInfo[127].radius	0.15
 bondInfo[127].type	"single"
+bondInfo[127].jmol_order	"0x1"
 bondInfo[128].colix	0
 bondInfo[128].visible	true
 bondInfo[128].order	1.0
@@ -2209,6 +2336,7 @@ bondInfo[128].atom1.info	"[ILE]15:A.CB #124"
 bondInfo[128]._bpt	127
 bondInfo[128].radius	0.15
 bondInfo[128].type	"single"
+bondInfo[128].jmol_order	"0x1"
 bondInfo[129].colix	0
 bondInfo[129].visible	true
 bondInfo[129].order	1.0
@@ -2226,6 +2354,7 @@ bondInfo[129].atom1.info	"[ILE]15:A.CB #124"
 bondInfo[129]._bpt	128
 bondInfo[129].radius	0.15
 bondInfo[129].type	"single"
+bondInfo[129].jmol_order	"0x1"
 bondInfo[130].colix	0
 bondInfo[130].visible	true
 bondInfo[130].order	1.0
@@ -2243,6 +2372,7 @@ bondInfo[130].atom1.info	"[ILE]15:A.CG1 #125"
 bondInfo[130]._bpt	129
 bondInfo[130].radius	0.15
 bondInfo[130].type	"single"
+bondInfo[130].jmol_order	"0x1"
 bondInfo[131].colix	0
 bondInfo[131].visible	true
 bondInfo[131].order	1.0
@@ -2260,6 +2390,7 @@ bondInfo[131].atom1.info	"[ILE]15:A.CG2 #126"
 bondInfo[131]._bpt	130
 bondInfo[131].radius	0.15
 bondInfo[131].type	"single"
+bondInfo[131].jmol_order	"0x1"
 bondInfo[132].colix	0
 bondInfo[132].visible	true
 bondInfo[132].order	1.0
@@ -2277,6 +2408,7 @@ bondInfo[132].atom1.info	"[GLY]16:A.CA #129"
 bondInfo[132]._bpt	131
 bondInfo[132].radius	0.15
 bondInfo[132].type	"single"
+bondInfo[132].jmol_order	"0x1"
 bondInfo[133].colix	0
 bondInfo[133].visible	true
 bondInfo[133].order	1.0
@@ -2294,6 +2426,7 @@ bondInfo[133].atom1.info	"[GLY]16:A.C #130"
 bondInfo[133]._bpt	132
 bondInfo[133].radius	0.15
 bondInfo[133].type	"single"
+bondInfo[133].jmol_order	"0x1"
 bondInfo[134].colix	0
 bondInfo[134].visible	true
 bondInfo[134].order	1.0
@@ -2311,6 +2444,7 @@ bondInfo[134].atom1.info	"[GLY]16:A.C #130"
 bondInfo[134]._bpt	133
 bondInfo[134].radius	0.15
 bondInfo[134].type	"single"
+bondInfo[134].jmol_order	"0x1"
 bondInfo[135].colix	0
 bondInfo[135].visible	true
 bondInfo[135].order	1.0
@@ -2328,6 +2462,7 @@ bondInfo[135].atom1.info	"[GLY]16:A.O #131"
 bondInfo[135]._bpt	134
 bondInfo[135].radius	0.15
 bondInfo[135].type	"single"
+bondInfo[135].jmol_order	"0x1"
 bondInfo[136].colix	0
 bondInfo[136].visible	true
 bondInfo[136].order	1.0
@@ -2345,6 +2480,7 @@ bondInfo[136].atom1.info	"[GLY]17:A.CA #133"
 bondInfo[136]._bpt	135
 bondInfo[136].radius	0.15
 bondInfo[136].type	"single"
+bondInfo[136].jmol_order	"0x1"
 bondInfo[137].colix	0
 bondInfo[137].visible	true
 bondInfo[137].order	1.0
@@ -2362,6 +2498,7 @@ bondInfo[137].atom1.info	"[GLY]17:A.C #134"
 bondInfo[137]._bpt	136
 bondInfo[137].radius	0.15
 bondInfo[137].type	"single"
+bondInfo[137].jmol_order	"0x1"
 bondInfo[138].colix	0
 bondInfo[138].visible	true
 bondInfo[138].order	1.0
@@ -2379,6 +2516,7 @@ bondInfo[138].atom1.info	"[GLY]17:A.O #135"
 bondInfo[138]._bpt	137
 bondInfo[138].radius	0.15
 bondInfo[138].type	"single"
+bondInfo[138].jmol_order	"0x1"
 bondInfo[139].colix	0
 bondInfo[139].visible	true
 bondInfo[139].order	1.0
@@ -2396,6 +2534,7 @@ bondInfo[139].atom1.info	"[GLN]18:A.N #136"
 bondInfo[139]._bpt	138
 bondInfo[139].radius	0.15
 bondInfo[139].type	"single"
+bondInfo[139].jmol_order	"0x1"
 bondInfo[140].colix	0
 bondInfo[140].visible	true
 bondInfo[140].order	1.0
@@ -2413,6 +2552,7 @@ bondInfo[140].atom1.info	"[GLN]18:A.CA #137"
 bondInfo[140]._bpt	139
 bondInfo[140].radius	0.15
 bondInfo[140].type	"single"
+bondInfo[140].jmol_order	"0x1"
 bondInfo[141].colix	0
 bondInfo[141].visible	true
 bondInfo[141].order	1.0
@@ -2430,6 +2570,7 @@ bondInfo[141].atom1.info	"[GLN]18:A.CA #137"
 bondInfo[141]._bpt	140
 bondInfo[141].radius	0.15
 bondInfo[141].type	"single"
+bondInfo[141].jmol_order	"0x1"
 bondInfo[142].colix	0
 bondInfo[142].visible	true
 bondInfo[142].order	1.0
@@ -2447,6 +2588,7 @@ bondInfo[142].atom1.info	"[GLN]18:A.C #138"
 bondInfo[142]._bpt	141
 bondInfo[142].radius	0.15
 bondInfo[142].type	"single"
+bondInfo[142].jmol_order	"0x1"
 bondInfo[143].colix	0
 bondInfo[143].visible	true
 bondInfo[143].order	1.0
@@ -2464,6 +2606,7 @@ bondInfo[143].atom1.info	"[GLN]18:A.CB #140"
 bondInfo[143]._bpt	142
 bondInfo[143].radius	0.15
 bondInfo[143].type	"single"
+bondInfo[143].jmol_order	"0x1"
 bondInfo[144].colix	0
 bondInfo[144].visible	true
 bondInfo[144].order	1.0
@@ -2481,6 +2624,7 @@ bondInfo[144].atom1.info	"[GLN]18:A.CG #141"
 bondInfo[144]._bpt	143
 bondInfo[144].radius	0.15
 bondInfo[144].type	"single"
+bondInfo[144].jmol_order	"0x1"
 bondInfo[145].colix	0
 bondInfo[145].visible	true
 bondInfo[145].order	1.0
@@ -2498,6 +2642,7 @@ bondInfo[145].atom1.info	"[GLN]18:A.CG #141"
 bondInfo[145]._bpt	144
 bondInfo[145].radius	0.15
 bondInfo[145].type	"single"
+bondInfo[145].jmol_order	"0x1"
 bondInfo[146].colix	0
 bondInfo[146].visible	true
 bondInfo[146].order	1.0
@@ -2515,6 +2660,7 @@ bondInfo[146].atom1.info	"[GLN]18:A.CD #142"
 bondInfo[146]._bpt	145
 bondInfo[146].radius	0.15
 bondInfo[146].type	"single"
+bondInfo[146].jmol_order	"0x1"
 bondInfo[147].colix	0
 bondInfo[147].visible	true
 bondInfo[147].order	1.0
@@ -2532,6 +2678,7 @@ bondInfo[147].atom1.info	"[GLN]18:A.OE1 #143"
 bondInfo[147]._bpt	146
 bondInfo[147].radius	0.15
 bondInfo[147].type	"single"
+bondInfo[147].jmol_order	"0x1"
 bondInfo[148].colix	0
 bondInfo[148].visible	true
 bondInfo[148].order	1.0
@@ -2549,6 +2696,7 @@ bondInfo[148].atom1.info	"[LEU]19:A.N #145"
 bondInfo[148]._bpt	147
 bondInfo[148].radius	0.15
 bondInfo[148].type	"single"
+bondInfo[148].jmol_order	"0x1"
 bondInfo[149].colix	0
 bondInfo[149].visible	true
 bondInfo[149].order	1.0
@@ -2566,6 +2714,7 @@ bondInfo[149].atom1.info	"[LEU]19:A.N #145"
 bondInfo[149]._bpt	148
 bondInfo[149].radius	0.15
 bondInfo[149].type	"single"
+bondInfo[149].jmol_order	"0x1"
 bondInfo[150].colix	0
 bondInfo[150].visible	true
 bondInfo[150].order	1.0
@@ -2583,6 +2732,7 @@ bondInfo[150].atom1.info	"[LEU]19:A.C #147"
 bondInfo[150]._bpt	149
 bondInfo[150].radius	0.15
 bondInfo[150].type	"single"
+bondInfo[150].jmol_order	"0x1"
 bondInfo[151].colix	0
 bondInfo[151].visible	true
 bondInfo[151].order	1.0
@@ -2600,6 +2750,7 @@ bondInfo[151].atom1.info	"[LEU]19:A.C #147"
 bondInfo[151]._bpt	150
 bondInfo[151].radius	0.15
 bondInfo[151].type	"single"
+bondInfo[151].jmol_order	"0x1"
 bondInfo[152].colix	0
 bondInfo[152].visible	true
 bondInfo[152].order	1.0
@@ -2617,6 +2768,7 @@ bondInfo[152].atom1.info	"[LEU]19:A.O #148"
 bondInfo[152]._bpt	151
 bondInfo[152].radius	0.15
 bondInfo[152].type	"single"
+bondInfo[152].jmol_order	"0x1"
 bondInfo[153].colix	0
 bondInfo[153].visible	true
 bondInfo[153].order	1.0
@@ -2634,6 +2786,7 @@ bondInfo[153].atom1.info	"[LEU]19:A.CB #149"
 bondInfo[153]._bpt	152
 bondInfo[153].radius	0.15
 bondInfo[153].type	"single"
+bondInfo[153].jmol_order	"0x1"
 bondInfo[154].colix	0
 bondInfo[154].visible	true
 bondInfo[154].order	1.0
@@ -2651,6 +2804,7 @@ bondInfo[154].atom1.info	"[LEU]19:A.CB #149"
 bondInfo[154]._bpt	153
 bondInfo[154].radius	0.15
 bondInfo[154].type	"single"
+bondInfo[154].jmol_order	"0x1"
 bondInfo[155].colix	0
 bondInfo[155].visible	true
 bondInfo[155].order	1.0
@@ -2668,6 +2822,7 @@ bondInfo[155].atom1.info	"[LEU]19:A.CG #150"
 bondInfo[155]._bpt	154
 bondInfo[155].radius	0.15
 bondInfo[155].type	"single"
+bondInfo[155].jmol_order	"0x1"
 bondInfo[156].colix	0
 bondInfo[156].visible	true
 bondInfo[156].order	1.0
@@ -2685,6 +2840,7 @@ bondInfo[156].atom1.info	"[LEU]19:A.CD2 #152"
 bondInfo[156]._bpt	155
 bondInfo[156].radius	0.15
 bondInfo[156].type	"single"
+bondInfo[156].jmol_order	"0x1"
 bondInfo[157].colix	0
 bondInfo[157].visible	true
 bondInfo[157].order	1.0
@@ -2702,6 +2858,7 @@ bondInfo[157].atom1.info	"[LYS]20:A.CA #154"
 bondInfo[157]._bpt	156
 bondInfo[157].radius	0.15
 bondInfo[157].type	"single"
+bondInfo[157].jmol_order	"0x1"
 bondInfo[158].colix	0
 bondInfo[158].visible	true
 bondInfo[158].order	1.0
@@ -2719,6 +2876,7 @@ bondInfo[158].atom1.info	"[LYS]20:A.CA #154"
 bondInfo[158]._bpt	157
 bondInfo[158].radius	0.15
 bondInfo[158].type	"single"
+bondInfo[158].jmol_order	"0x1"
 bondInfo[159].colix	0
 bondInfo[159].visible	true
 bondInfo[159].order	1.0
@@ -2736,6 +2894,7 @@ bondInfo[159].atom1.info	"[LYS]20:A.CA #154"
 bondInfo[159]._bpt	158
 bondInfo[159].radius	0.15
 bondInfo[159].type	"single"
+bondInfo[159].jmol_order	"0x1"
 bondInfo[160].colix	0
 bondInfo[160].visible	true
 bondInfo[160].order	1.0
@@ -2753,6 +2912,7 @@ bondInfo[160].atom1.info	"[LYS]20:A.C #155"
 bondInfo[160]._bpt	159
 bondInfo[160].radius	0.15
 bondInfo[160].type	"single"
+bondInfo[160].jmol_order	"0x1"
 bondInfo[161].colix	0
 bondInfo[161].visible	true
 bondInfo[161].order	1.0
@@ -2770,6 +2930,7 @@ bondInfo[161].atom1.info	"[LYS]20:A.CG #158"
 bondInfo[161]._bpt	160
 bondInfo[161].radius	0.15
 bondInfo[161].type	"single"
+bondInfo[161].jmol_order	"0x1"
 bondInfo[162].colix	0
 bondInfo[162].visible	true
 bondInfo[162].order	1.0
@@ -2787,6 +2948,7 @@ bondInfo[162].atom1.info	"[LYS]20:A.CG #158"
 bondInfo[162]._bpt	161
 bondInfo[162].radius	0.15
 bondInfo[162].type	"single"
+bondInfo[162].jmol_order	"0x1"
 bondInfo[163].colix	0
 bondInfo[163].visible	true
 bondInfo[163].order	1.0
@@ -2804,6 +2966,7 @@ bondInfo[163].atom1.info	"[LYS]20:A.CE #160"
 bondInfo[163]._bpt	162
 bondInfo[163].radius	0.15
 bondInfo[163].type	"single"
+bondInfo[163].jmol_order	"0x1"
 bondInfo[164].colix	0
 bondInfo[164].visible	true
 bondInfo[164].order	1.0
@@ -2821,6 +2984,7 @@ bondInfo[164].atom1.info	"[LYS]20:A.NZ #161"
 bondInfo[164]._bpt	163
 bondInfo[164].radius	0.15
 bondInfo[164].type	"single"
+bondInfo[164].jmol_order	"0x1"
 bondInfo[165].colix	0
 bondInfo[165].visible	true
 bondInfo[165].order	1.0
@@ -2838,6 +3002,7 @@ bondInfo[165].atom1.info	"[GLU]21:A.N #162"
 bondInfo[165]._bpt	164
 bondInfo[165].radius	0.15
 bondInfo[165].type	"single"
+bondInfo[165].jmol_order	"0x1"
 bondInfo[166].colix	0
 bondInfo[166].visible	true
 bondInfo[166].order	1.0
@@ -2855,6 +3020,7 @@ bondInfo[166].atom1.info	"[GLU]21:A.N #162"
 bondInfo[166]._bpt	165
 bondInfo[166].radius	0.15
 bondInfo[166].type	"single"
+bondInfo[166].jmol_order	"0x1"
 bondInfo[167].colix	0
 bondInfo[167].visible	true
 bondInfo[167].order	1.0
@@ -2872,6 +3038,7 @@ bondInfo[167].atom1.info	"[GLU]21:A.CA #163"
 bondInfo[167]._bpt	166
 bondInfo[167].radius	0.15
 bondInfo[167].type	"single"
+bondInfo[167].jmol_order	"0x1"
 bondInfo[168].colix	0
 bondInfo[168].visible	true
 bondInfo[168].order	1.0
@@ -2889,6 +3056,7 @@ bondInfo[168].atom1.info	"[GLU]21:A.C #164"
 bondInfo[168]._bpt	167
 bondInfo[168].radius	0.15
 bondInfo[168].type	"single"
+bondInfo[168].jmol_order	"0x1"
 bondInfo[169].colix	0
 bondInfo[169].visible	true
 bondInfo[169].order	1.0
@@ -2906,6 +3074,7 @@ bondInfo[169].atom1.info	"[GLU]21:A.O #165"
 bondInfo[169]._bpt	168
 bondInfo[169].radius	0.15
 bondInfo[169].type	"single"
+bondInfo[169].jmol_order	"0x1"
 bondInfo[170].colix	0
 bondInfo[170].visible	true
 bondInfo[170].order	1.0
@@ -2923,6 +3092,7 @@ bondInfo[170].atom1.info	"[GLU]21:A.CB #166"
 bondInfo[170]._bpt	169
 bondInfo[170].radius	0.15
 bondInfo[170].type	"single"
+bondInfo[170].jmol_order	"0x1"
 bondInfo[171].colix	0
 bondInfo[171].visible	true
 bondInfo[171].order	1.0
@@ -2940,6 +3110,7 @@ bondInfo[171].atom1.info	"[GLU]21:A.CG #167"
 bondInfo[171]._bpt	170
 bondInfo[171].radius	0.15
 bondInfo[171].type	"single"
+bondInfo[171].jmol_order	"0x1"
 bondInfo[172].colix	0
 bondInfo[172].visible	true
 bondInfo[172].order	1.0
@@ -2957,6 +3128,7 @@ bondInfo[172].atom1.info	"[GLU]21:A.CD #168"
 bondInfo[172]._bpt	171
 bondInfo[172].radius	0.15
 bondInfo[172].type	"single"
+bondInfo[172].jmol_order	"0x1"
 bondInfo[173].colix	0
 bondInfo[173].visible	true
 bondInfo[173].order	1.0
@@ -2974,6 +3146,7 @@ bondInfo[173].atom1.info	"[GLU]21:A.CD #168"
 bondInfo[173]._bpt	172
 bondInfo[173].radius	0.15
 bondInfo[173].type	"single"
+bondInfo[173].jmol_order	"0x1"
 bondInfo[174].colix	0
 bondInfo[174].visible	true
 bondInfo[174].order	1.0
@@ -2991,6 +3164,7 @@ bondInfo[174].atom1.info	"[GLU]21:A.OE2 #170"
 bondInfo[174]._bpt	173
 bondInfo[174].radius	0.15
 bondInfo[174].type	"single"
+bondInfo[174].jmol_order	"0x1"
 bondInfo[175].colix	0
 bondInfo[175].visible	true
 bondInfo[175].order	1.0
@@ -3008,6 +3182,7 @@ bondInfo[175].atom1.info	"[ALA]22:A.N #171"
 bondInfo[175]._bpt	174
 bondInfo[175].radius	0.15
 bondInfo[175].type	"single"
+bondInfo[175].jmol_order	"0x1"
 bondInfo[176].colix	0
 bondInfo[176].visible	true
 bondInfo[176].order	1.0
@@ -3025,6 +3200,7 @@ bondInfo[176].atom1.info	"[ALA]22:A.CA #172"
 bondInfo[176]._bpt	175
 bondInfo[176].radius	0.15
 bondInfo[176].type	"single"
+bondInfo[176].jmol_order	"0x1"
 bondInfo[177].colix	0
 bondInfo[177].visible	true
 bondInfo[177].order	1.0
@@ -3042,6 +3218,7 @@ bondInfo[177].atom1.info	"[ALA]22:A.CA #172"
 bondInfo[177]._bpt	176
 bondInfo[177].radius	0.15
 bondInfo[177].type	"single"
+bondInfo[177].jmol_order	"0x1"
 bondInfo[178].colix	0
 bondInfo[178].visible	true
 bondInfo[178].order	1.0
@@ -3059,6 +3236,7 @@ bondInfo[178].atom1.info	"[ALA]22:A.C #173"
 bondInfo[178]._bpt	177
 bondInfo[178].radius	0.15
 bondInfo[178].type	"single"
+bondInfo[178].jmol_order	"0x1"
 bondInfo[179].colix	0
 bondInfo[179].visible	true
 bondInfo[179].order	1.0
@@ -3076,6 +3254,7 @@ bondInfo[179].atom1.info	"[LEU]23:A.N #176"
 bondInfo[179]._bpt	178
 bondInfo[179].radius	0.15
 bondInfo[179].type	"single"
+bondInfo[179].jmol_order	"0x1"
 bondInfo[180].colix	0
 bondInfo[180].visible	true
 bondInfo[180].order	1.0
@@ -3093,6 +3272,7 @@ bondInfo[180].atom1.info	"[LEU]23:A.N #176"
 bondInfo[180]._bpt	179
 bondInfo[180].radius	0.15
 bondInfo[180].type	"single"
+bondInfo[180].jmol_order	"0x1"
 bondInfo[181].colix	0
 bondInfo[181].visible	true
 bondInfo[181].order	1.0
@@ -3110,6 +3290,7 @@ bondInfo[181].atom1.info	"[LEU]23:A.CA #177"
 bondInfo[181]._bpt	180
 bondInfo[181].radius	0.15
 bondInfo[181].type	"single"
+bondInfo[181].jmol_order	"0x1"
 bondInfo[182].colix	0
 bondInfo[182].visible	true
 bondInfo[182].order	1.0
@@ -3127,6 +3308,7 @@ bondInfo[182].atom1.info	"[LEU]23:A.C #178"
 bondInfo[182]._bpt	181
 bondInfo[182].radius	0.15
 bondInfo[182].type	"single"
+bondInfo[182].jmol_order	"0x1"
 bondInfo[183].colix	0
 bondInfo[183].visible	true
 bondInfo[183].order	1.0
@@ -3144,6 +3326,7 @@ bondInfo[183].atom1.info	"[LEU]23:A.C #178"
 bondInfo[183]._bpt	182
 bondInfo[183].radius	0.15
 bondInfo[183].type	"single"
+bondInfo[183].jmol_order	"0x1"
 bondInfo[184].colix	0
 bondInfo[184].visible	true
 bondInfo[184].order	1.0
@@ -3161,6 +3344,7 @@ bondInfo[184].atom1.info	"[LEU]23:A.CB #180"
 bondInfo[184]._bpt	183
 bondInfo[184].radius	0.15
 bondInfo[184].type	"single"
+bondInfo[184].jmol_order	"0x1"
 bondInfo[185].colix	0
 bondInfo[185].visible	true
 bondInfo[185].order	1.0
@@ -3178,6 +3362,7 @@ bondInfo[185].atom1.info	"[LEU]23:A.CB #180"
 bondInfo[185]._bpt	184
 bondInfo[185].radius	0.15
 bondInfo[185].type	"single"
+bondInfo[185].jmol_order	"0x1"
 bondInfo[186].colix	0
 bondInfo[186].visible	true
 bondInfo[186].order	1.0
@@ -3195,6 +3380,7 @@ bondInfo[186].atom1.info	"[LEU]23:A.CD1 #182"
 bondInfo[186]._bpt	185
 bondInfo[186].radius	0.15
 bondInfo[186].type	"single"
+bondInfo[186].jmol_order	"0x1"
 bondInfo[187].colix	0
 bondInfo[187].visible	true
 bondInfo[187].order	1.0
@@ -3212,6 +3398,7 @@ bondInfo[187].atom1.info	"[LEU]23:A.CD2 #183"
 bondInfo[187]._bpt	186
 bondInfo[187].radius	0.15
 bondInfo[187].type	"single"
+bondInfo[187].jmol_order	"0x1"
 bondInfo[188].colix	0
 bondInfo[188].visible	true
 bondInfo[188].order	1.0
@@ -3229,6 +3416,7 @@ bondInfo[188].atom1.info	"[LEU]24:A.N #184"
 bondInfo[188]._bpt	187
 bondInfo[188].radius	0.15
 bondInfo[188].type	"single"
+bondInfo[188].jmol_order	"0x1"
 bondInfo[189].colix	0
 bondInfo[189].visible	true
 bondInfo[189].order	1.0
@@ -3246,6 +3434,7 @@ bondInfo[189].atom1.info	"[LEU]24:A.CA #185"
 bondInfo[189]._bpt	188
 bondInfo[189].radius	0.15
 bondInfo[189].type	"single"
+bondInfo[189].jmol_order	"0x1"
 bondInfo[190].colix	0
 bondInfo[190].visible	true
 bondInfo[190].order	1.0
@@ -3263,6 +3452,7 @@ bondInfo[190].atom1.info	"[LEU]24:A.C #186"
 bondInfo[190]._bpt	189
 bondInfo[190].radius	0.15
 bondInfo[190].type	"single"
+bondInfo[190].jmol_order	"0x1"
 bondInfo[191].colix	0
 bondInfo[191].visible	true
 bondInfo[191].order	1.0
@@ -3280,6 +3470,7 @@ bondInfo[191].atom1.info	"[LEU]24:A.C #186"
 bondInfo[191]._bpt	190
 bondInfo[191].radius	0.15
 bondInfo[191].type	"single"
+bondInfo[191].jmol_order	"0x1"
 bondInfo[192].colix	0
 bondInfo[192].visible	true
 bondInfo[192].order	1.0
@@ -3297,6 +3488,7 @@ bondInfo[192].atom1.info	"[LEU]24:A.O #187"
 bondInfo[192]._bpt	191
 bondInfo[192].radius	0.15
 bondInfo[192].type	"single"
+bondInfo[192].jmol_order	"0x1"
 bondInfo[193].colix	0
 bondInfo[193].visible	true
 bondInfo[193].order	1.0
@@ -3314,6 +3506,7 @@ bondInfo[193].atom1.info	"[LEU]24:A.CG #189"
 bondInfo[193]._bpt	192
 bondInfo[193].radius	0.15
 bondInfo[193].type	"single"
+bondInfo[193].jmol_order	"0x1"
 bondInfo[194].colix	0
 bondInfo[194].visible	true
 bondInfo[194].order	1.0
@@ -3331,6 +3524,7 @@ bondInfo[194].atom1.info	"[LEU]24:A.CG #189"
 bondInfo[194]._bpt	193
 bondInfo[194].radius	0.15
 bondInfo[194].type	"single"
+bondInfo[194].jmol_order	"0x1"
 bondInfo[195].colix	0
 bondInfo[195].visible	true
 bondInfo[195].order	1.0
@@ -3348,6 +3542,7 @@ bondInfo[195].atom1.info	"[LEU]24:A.CG #189"
 bondInfo[195]._bpt	194
 bondInfo[195].radius	0.15
 bondInfo[195].type	"single"
+bondInfo[195].jmol_order	"0x1"
 bondInfo[196].colix	0
 bondInfo[196].visible	true
 bondInfo[196].order	1.0
@@ -3365,6 +3560,7 @@ bondInfo[196].atom1.info	"[ASP]25:A.CA #193"
 bondInfo[196]._bpt	195
 bondInfo[196].radius	0.15
 bondInfo[196].type	"single"
+bondInfo[196].jmol_order	"0x1"
 bondInfo[197].colix	0
 bondInfo[197].visible	true
 bondInfo[197].order	1.0
@@ -3382,6 +3578,7 @@ bondInfo[197].atom1.info	"[ASP]25:A.CA #193"
 bondInfo[197]._bpt	196
 bondInfo[197].radius	0.15
 bondInfo[197].type	"single"
+bondInfo[197].jmol_order	"0x1"
 bondInfo[198].colix	0
 bondInfo[198].visible	true
 bondInfo[198].order	1.0
@@ -3399,6 +3596,7 @@ bondInfo[198].atom1.info	"[ASP]25:A.C #194"
 bondInfo[198]._bpt	197
 bondInfo[198].radius	0.15
 bondInfo[198].type	"single"
+bondInfo[198].jmol_order	"0x1"
 bondInfo[199].colix	0
 bondInfo[199].visible	true
 bondInfo[199].order	1.0
@@ -3416,6 +3614,7 @@ bondInfo[199].atom1.info	"[ASP]25:A.C #194"
 bondInfo[199]._bpt	198
 bondInfo[199].radius	0.15
 bondInfo[199].type	"single"
+bondInfo[199].jmol_order	"0x1"
 bondInfo[200].colix	0
 bondInfo[200].visible	true
 bondInfo[200].order	1.0
@@ -3433,6 +3632,7 @@ bondInfo[200].atom1.info	"[ASP]25:A.CB #196"
 bondInfo[200]._bpt	199
 bondInfo[200].radius	0.15
 bondInfo[200].type	"single"
+bondInfo[200].jmol_order	"0x1"
 bondInfo[201].colix	0
 bondInfo[201].visible	true
 bondInfo[201].order	1.0
@@ -3450,6 +3650,7 @@ bondInfo[201].atom1.info	"[ASP]25:A.CG #197"
 bondInfo[201]._bpt	200
 bondInfo[201].radius	0.15
 bondInfo[201].type	"single"
+bondInfo[201].jmol_order	"0x1"
 bondInfo[202].colix	0
 bondInfo[202].visible	true
 bondInfo[202].order	1.0
@@ -3467,6 +3668,7 @@ bondInfo[202].atom1.info	"[ASP]25:A.CG #197"
 bondInfo[202]._bpt	201
 bondInfo[202].radius	0.15
 bondInfo[202].type	"single"
+bondInfo[202].jmol_order	"0x1"
 bondInfo[203].colix	0
 bondInfo[203].visible	true
 bondInfo[203].order	1.0
@@ -3484,6 +3686,7 @@ bondInfo[203].atom1.info	"[ASP]25:A.OD2 #199"
 bondInfo[203]._bpt	202
 bondInfo[203].radius	0.15
 bondInfo[203].type	"single"
+bondInfo[203].jmol_order	"0x1"
 bondInfo[204].colix	0
 bondInfo[204].visible	true
 bondInfo[204].order	1.0
@@ -3501,6 +3704,7 @@ bondInfo[204].atom1.info	"[THR]26:A.N #200"
 bondInfo[204]._bpt	203
 bondInfo[204].radius	0.15
 bondInfo[204].type	"single"
+bondInfo[204].jmol_order	"0x1"
 bondInfo[205].colix	0
 bondInfo[205].visible	true
 bondInfo[205].order	1.0
@@ -3518,6 +3722,7 @@ bondInfo[205].atom1.info	"[THR]26:A.CA #201"
 bondInfo[205]._bpt	204
 bondInfo[205].radius	0.15
 bondInfo[205].type	"single"
+bondInfo[205].jmol_order	"0x1"
 bondInfo[206].colix	0
 bondInfo[206].visible	true
 bondInfo[206].order	1.0
@@ -3535,6 +3740,7 @@ bondInfo[206].atom1.info	"[THR]26:A.C #202"
 bondInfo[206]._bpt	205
 bondInfo[206].radius	0.15
 bondInfo[206].type	"single"
+bondInfo[206].jmol_order	"0x1"
 bondInfo[207].colix	0
 bondInfo[207].visible	true
 bondInfo[207].order	1.0
@@ -3552,6 +3758,7 @@ bondInfo[207].atom1.info	"[THR]26:A.C #202"
 bondInfo[207]._bpt	206
 bondInfo[207].radius	0.15
 bondInfo[207].type	"single"
+bondInfo[207].jmol_order	"0x1"
 bondInfo[208].colix	0
 bondInfo[208].visible	true
 bondInfo[208].order	1.0
@@ -3569,6 +3776,7 @@ bondInfo[208].atom1.info	"[THR]26:A.CB #204"
 bondInfo[208]._bpt	207
 bondInfo[208].radius	0.15
 bondInfo[208].type	"single"
+bondInfo[208].jmol_order	"0x1"
 bondInfo[209].colix	0
 bondInfo[209].visible	true
 bondInfo[209].order	1.0
@@ -3586,6 +3794,7 @@ bondInfo[209].atom1.info	"[THR]26:A.OG1 #205"
 bondInfo[209]._bpt	208
 bondInfo[209].radius	0.15
 bondInfo[209].type	"single"
+bondInfo[209].jmol_order	"0x1"
 bondInfo[210].colix	0
 bondInfo[210].visible	true
 bondInfo[210].order	1.0
@@ -3603,6 +3812,7 @@ bondInfo[210].atom1.info	"[GLY]27:A.N #207"
 bondInfo[210]._bpt	209
 bondInfo[210].radius	0.15
 bondInfo[210].type	"single"
+bondInfo[210].jmol_order	"0x1"
 bondInfo[211].colix	0
 bondInfo[211].visible	true
 bondInfo[211].order	1.0
@@ -3620,6 +3830,7 @@ bondInfo[211].atom1.info	"[GLY]27:A.CA #208"
 bondInfo[211]._bpt	210
 bondInfo[211].radius	0.15
 bondInfo[211].type	"single"
+bondInfo[211].jmol_order	"0x1"
 bondInfo[212].colix	0
 bondInfo[212].visible	true
 bondInfo[212].order	1.0
@@ -3637,6 +3848,7 @@ bondInfo[212].atom1.info	"[GLY]27:A.C #209"
 bondInfo[212]._bpt	211
 bondInfo[212].radius	0.15
 bondInfo[212].type	"single"
+bondInfo[212].jmol_order	"0x1"
 bondInfo[213].colix	0
 bondInfo[213].visible	true
 bondInfo[213].order	1.0
@@ -3654,6 +3866,7 @@ bondInfo[213].atom1.info	"[GLY]27:A.O #210"
 bondInfo[213]._bpt	212
 bondInfo[213].radius	0.15
 bondInfo[213].type	"single"
+bondInfo[213].jmol_order	"0x1"
 bondInfo[214].colix	0
 bondInfo[214].visible	true
 bondInfo[214].order	1.0
@@ -3671,6 +3884,7 @@ bondInfo[214].atom1.info	"[ALA]28:A.N #211"
 bondInfo[214]._bpt	213
 bondInfo[214].radius	0.15
 bondInfo[214].type	"single"
+bondInfo[214].jmol_order	"0x1"
 bondInfo[215].colix	0
 bondInfo[215].visible	true
 bondInfo[215].order	1.0
@@ -3688,6 +3902,7 @@ bondInfo[215].atom1.info	"[ALA]28:A.CA #212"
 bondInfo[215]._bpt	214
 bondInfo[215].radius	0.15
 bondInfo[215].type	"single"
+bondInfo[215].jmol_order	"0x1"
 bondInfo[216].colix	0
 bondInfo[216].visible	true
 bondInfo[216].order	1.0
@@ -3705,6 +3920,7 @@ bondInfo[216].atom1.info	"[ALA]28:A.CA #212"
 bondInfo[216]._bpt	215
 bondInfo[216].radius	0.15
 bondInfo[216].type	"single"
+bondInfo[216].jmol_order	"0x1"
 bondInfo[217].colix	0
 bondInfo[217].visible	true
 bondInfo[217].order	1.0
@@ -3722,6 +3938,7 @@ bondInfo[217].atom1.info	"[ALA]28:A.C #213"
 bondInfo[217]._bpt	216
 bondInfo[217].radius	0.15
 bondInfo[217].type	"single"
+bondInfo[217].jmol_order	"0x1"
 bondInfo[218].colix	0
 bondInfo[218].visible	true
 bondInfo[218].order	1.0
@@ -3739,6 +3956,7 @@ bondInfo[218].atom1.info	"[ALA]28:A.C #213"
 bondInfo[218]._bpt	217
 bondInfo[218].radius	0.15
 bondInfo[218].type	"single"
+bondInfo[218].jmol_order	"0x1"
 bondInfo[219].colix	0
 bondInfo[219].visible	true
 bondInfo[219].order	1.0
@@ -3756,6 +3974,7 @@ bondInfo[219].atom1.info	"[ALA]28:A.CB #215"
 bondInfo[219]._bpt	218
 bondInfo[219].radius	0.15
 bondInfo[219].type	"single"
+bondInfo[219].jmol_order	"0x1"
 bondInfo[220].colix	0
 bondInfo[220].visible	true
 bondInfo[220].order	1.0
@@ -3773,6 +3992,7 @@ bondInfo[220].atom1.info	"[ASP]29:A.N #216"
 bondInfo[220]._bpt	219
 bondInfo[220].radius	0.15
 bondInfo[220].type	"single"
+bondInfo[220].jmol_order	"0x1"
 bondInfo[221].colix	0
 bondInfo[221].visible	true
 bondInfo[221].order	1.0
@@ -3790,6 +4010,7 @@ bondInfo[221].atom1.info	"[ASP]29:A.CA #217"
 bondInfo[221]._bpt	220
 bondInfo[221].radius	0.15
 bondInfo[221].type	"single"
+bondInfo[221].jmol_order	"0x1"
 bondInfo[222].colix	0
 bondInfo[222].visible	true
 bondInfo[222].order	1.0
@@ -3807,6 +4028,7 @@ bondInfo[222].atom1.info	"[ASP]29:A.C #218"
 bondInfo[222]._bpt	221
 bondInfo[222].radius	0.15
 bondInfo[222].type	"single"
+bondInfo[222].jmol_order	"0x1"
 bondInfo[223].colix	0
 bondInfo[223].visible	true
 bondInfo[223].order	1.0
@@ -3824,6 +4046,7 @@ bondInfo[223].atom1.info	"[ASP]29:A.C #218"
 bondInfo[223]._bpt	222
 bondInfo[223].radius	0.15
 bondInfo[223].type	"single"
+bondInfo[223].jmol_order	"0x1"
 bondInfo[224].colix	0
 bondInfo[224].visible	true
 bondInfo[224].order	1.0
@@ -3841,6 +4064,7 @@ bondInfo[224].atom1.info	"[ASP]29:A.CB #220"
 bondInfo[224]._bpt	223
 bondInfo[224].radius	0.15
 bondInfo[224].type	"single"
+bondInfo[224].jmol_order	"0x1"
 bondInfo[225].colix	0
 bondInfo[225].visible	true
 bondInfo[225].order	1.0
@@ -3858,6 +4082,7 @@ bondInfo[225].atom1.info	"[ASP]29:A.CG #221"
 bondInfo[225]._bpt	224
 bondInfo[225].radius	0.15
 bondInfo[225].type	"single"
+bondInfo[225].jmol_order	"0x1"
 bondInfo[226].colix	0
 bondInfo[226].visible	true
 bondInfo[226].order	1.0
@@ -3875,6 +4100,7 @@ bondInfo[226].atom1.info	"[ASP]29:A.OD2 #223"
 bondInfo[226]._bpt	225
 bondInfo[226].radius	0.15
 bondInfo[226].type	"single"
+bondInfo[226].jmol_order	"0x1"
 bondInfo[227].colix	0
 bondInfo[227].visible	true
 bondInfo[227].order	1.0
@@ -3892,6 +4118,7 @@ bondInfo[227].atom1.info	"[ASP]30:A.N #224"
 bondInfo[227]._bpt	226
 bondInfo[227].radius	0.15
 bondInfo[227].type	"single"
+bondInfo[227].jmol_order	"0x1"
 bondInfo[228].colix	0
 bondInfo[228].visible	true
 bondInfo[228].order	1.0
@@ -3909,6 +4136,7 @@ bondInfo[228].atom1.info	"[ASP]30:A.CA #225"
 bondInfo[228]._bpt	227
 bondInfo[228].radius	0.15
 bondInfo[228].type	"single"
+bondInfo[228].jmol_order	"0x1"
 bondInfo[229].colix	0
 bondInfo[229].visible	true
 bondInfo[229].order	1.0
@@ -3926,6 +4154,7 @@ bondInfo[229].atom1.info	"[ASP]30:A.C #226"
 bondInfo[229]._bpt	228
 bondInfo[229].radius	0.15
 bondInfo[229].type	"single"
+bondInfo[229].jmol_order	"0x1"
 bondInfo[230].colix	0
 bondInfo[230].visible	true
 bondInfo[230].order	1.0
@@ -3943,6 +4172,7 @@ bondInfo[230].atom1.info	"[ASP]30:A.O #227"
 bondInfo[230]._bpt	229
 bondInfo[230].radius	0.15
 bondInfo[230].type	"single"
+bondInfo[230].jmol_order	"0x1"
 bondInfo[231].colix	0
 bondInfo[231].visible	true
 bondInfo[231].order	1.0
@@ -3960,6 +4190,7 @@ bondInfo[231].atom1.info	"[ASP]30:A.CB #228"
 bondInfo[231]._bpt	230
 bondInfo[231].radius	0.15
 bondInfo[231].type	"single"
+bondInfo[231].jmol_order	"0x1"
 bondInfo[232].colix	0
 bondInfo[232].visible	true
 bondInfo[232].order	1.0
@@ -3977,6 +4208,7 @@ bondInfo[232].atom1.info	"[ASP]30:A.CB #228"
 bondInfo[232]._bpt	231
 bondInfo[232].radius	0.15
 bondInfo[232].type	"single"
+bondInfo[232].jmol_order	"0x1"
 bondInfo[233].colix	0
 bondInfo[233].visible	true
 bondInfo[233].order	1.0
@@ -3994,6 +4226,7 @@ bondInfo[233].atom1.info	"[ASP]30:A.CG #229"
 bondInfo[233]._bpt	232
 bondInfo[233].radius	0.15
 bondInfo[233].type	"single"
+bondInfo[233].jmol_order	"0x1"
 bondInfo[234].colix	0
 bondInfo[234].visible	true
 bondInfo[234].order	1.0
@@ -4011,6 +4244,7 @@ bondInfo[234].atom1.info	"[ASP]30:A.OD2 #231"
 bondInfo[234]._bpt	233
 bondInfo[234].radius	0.15
 bondInfo[234].type	"single"
+bondInfo[234].jmol_order	"0x1"
 bondInfo[235].colix	0
 bondInfo[235].visible	true
 bondInfo[235].order	1.0
@@ -4028,6 +4262,7 @@ bondInfo[235].atom1.info	"[THR]31:A.N #232"
 bondInfo[235]._bpt	234
 bondInfo[235].radius	0.15
 bondInfo[235].type	"single"
+bondInfo[235].jmol_order	"0x1"
 bondInfo[236].colix	0
 bondInfo[236].visible	true
 bondInfo[236].order	1.0
@@ -4045,6 +4280,7 @@ bondInfo[236].atom1.info	"[THR]31:A.CA #233"
 bondInfo[236]._bpt	235
 bondInfo[236].radius	0.15
 bondInfo[236].type	"single"
+bondInfo[236].jmol_order	"0x1"
 bondInfo[237].colix	0
 bondInfo[237].visible	true
 bondInfo[237].order	1.0
@@ -4062,6 +4298,7 @@ bondInfo[237].atom1.info	"[THR]31:A.CA #233"
 bondInfo[237]._bpt	236
 bondInfo[237].radius	0.15
 bondInfo[237].type	"single"
+bondInfo[237].jmol_order	"0x1"
 bondInfo[238].colix	0
 bondInfo[238].visible	true
 bondInfo[238].order	1.0
@@ -4079,6 +4316,7 @@ bondInfo[238].atom1.info	"[THR]31:A.C #234"
 bondInfo[238]._bpt	237
 bondInfo[238].radius	0.15
 bondInfo[238].type	"single"
+bondInfo[238].jmol_order	"0x1"
 bondInfo[239].colix	0
 bondInfo[239].visible	true
 bondInfo[239].order	1.0
@@ -4096,6 +4334,7 @@ bondInfo[239].atom1.info	"[THR]31:A.C #234"
 bondInfo[239]._bpt	238
 bondInfo[239].radius	0.15
 bondInfo[239].type	"single"
+bondInfo[239].jmol_order	"0x1"
 bondInfo[240].colix	0
 bondInfo[240].visible	true
 bondInfo[240].order	1.0
@@ -4113,6 +4352,7 @@ bondInfo[240].atom1.info	"[THR]31:A.CB #236"
 bondInfo[240]._bpt	239
 bondInfo[240].radius	0.15
 bondInfo[240].type	"single"
+bondInfo[240].jmol_order	"0x1"
 bondInfo[241].colix	0
 bondInfo[241].visible	true
 bondInfo[241].order	1.0
@@ -4130,6 +4370,7 @@ bondInfo[241].atom1.info	"[THR]31:A.CG2 #238"
 bondInfo[241]._bpt	240
 bondInfo[241].radius	0.15
 bondInfo[241].type	"single"
+bondInfo[241].jmol_order	"0x1"
 bondInfo[242].colix	0
 bondInfo[242].visible	true
 bondInfo[242].order	1.0
@@ -4147,6 +4388,7 @@ bondInfo[242].atom1.info	"[VAL]32:A.N #239"
 bondInfo[242]._bpt	241
 bondInfo[242].radius	0.15
 bondInfo[242].type	"single"
+bondInfo[242].jmol_order	"0x1"
 bondInfo[243].colix	0
 bondInfo[243].visible	true
 bondInfo[243].order	1.0
@@ -4164,6 +4406,7 @@ bondInfo[243].atom1.info	"[VAL]32:A.CA #240"
 bondInfo[243]._bpt	242
 bondInfo[243].radius	0.15
 bondInfo[243].type	"single"
+bondInfo[243].jmol_order	"0x1"
 bondInfo[244].colix	0
 bondInfo[244].visible	true
 bondInfo[244].order	1.0
@@ -4181,6 +4424,7 @@ bondInfo[244].atom1.info	"[VAL]32:A.C #241"
 bondInfo[244]._bpt	243
 bondInfo[244].radius	0.15
 bondInfo[244].type	"single"
+bondInfo[244].jmol_order	"0x1"
 bondInfo[245].colix	0
 bondInfo[245].visible	true
 bondInfo[245].order	1.0
@@ -4198,6 +4442,7 @@ bondInfo[245].atom1.info	"[VAL]32:A.O #242"
 bondInfo[245]._bpt	244
 bondInfo[245].radius	0.15
 bondInfo[245].type	"single"
+bondInfo[245].jmol_order	"0x1"
 bondInfo[246].colix	0
 bondInfo[246].visible	true
 bondInfo[246].order	1.0
@@ -4215,6 +4460,7 @@ bondInfo[246].atom1.info	"[VAL]32:A.CB #243"
 bondInfo[246]._bpt	245
 bondInfo[246].radius	0.15
 bondInfo[246].type	"single"
+bondInfo[246].jmol_order	"0x1"
 bondInfo[247].colix	0
 bondInfo[247].visible	true
 bondInfo[247].order	1.0
@@ -4232,6 +4478,7 @@ bondInfo[247].atom1.info	"[VAL]32:A.CB #243"
 bondInfo[247]._bpt	246
 bondInfo[247].radius	0.15
 bondInfo[247].type	"single"
+bondInfo[247].jmol_order	"0x1"
 bondInfo[248].colix	0
 bondInfo[248].visible	true
 bondInfo[248].order	1.0
@@ -4249,6 +4496,7 @@ bondInfo[248].atom1.info	"[VAL]32:A.CG1 #244"
 bondInfo[248]._bpt	247
 bondInfo[248].radius	0.15
 bondInfo[248].type	"single"
+bondInfo[248].jmol_order	"0x1"
 bondInfo[249].colix	0
 bondInfo[249].visible	true
 bondInfo[249].order	1.0
@@ -4266,6 +4514,7 @@ bondInfo[249].atom1.info	"[LEU]33:A.N #246"
 bondInfo[249]._bpt	248
 bondInfo[249].radius	0.15
 bondInfo[249].type	"single"
+bondInfo[249].jmol_order	"0x1"
 bondInfo[250].colix	0
 bondInfo[250].visible	true
 bondInfo[250].order	1.0
@@ -4283,6 +4532,7 @@ bondInfo[250].atom1.info	"[LEU]33:A.CA #247"
 bondInfo[250]._bpt	249
 bondInfo[250].radius	0.15
 bondInfo[250].type	"single"
+bondInfo[250].jmol_order	"0x1"
 bondInfo[251].colix	0
 bondInfo[251].visible	true
 bondInfo[251].order	1.0
@@ -4300,6 +4550,7 @@ bondInfo[251].atom1.info	"[LEU]33:A.CA #247"
 bondInfo[251]._bpt	250
 bondInfo[251].radius	0.15
 bondInfo[251].type	"single"
+bondInfo[251].jmol_order	"0x1"
 bondInfo[252].colix	0
 bondInfo[252].visible	true
 bondInfo[252].order	1.0
@@ -4317,6 +4568,7 @@ bondInfo[252].atom1.info	"[LEU]33:A.C #248"
 bondInfo[252]._bpt	251
 bondInfo[252].radius	0.15
 bondInfo[252].type	"single"
+bondInfo[252].jmol_order	"0x1"
 bondInfo[253].colix	0
 bondInfo[253].visible	true
 bondInfo[253].order	1.0
@@ -4334,6 +4586,7 @@ bondInfo[253].atom1.info	"[LEU]33:A.O #249"
 bondInfo[253]._bpt	252
 bondInfo[253].radius	0.15
 bondInfo[253].type	"single"
+bondInfo[253].jmol_order	"0x1"
 bondInfo[254].colix	0
 bondInfo[254].visible	true
 bondInfo[254].order	1.0
@@ -4351,6 +4604,7 @@ bondInfo[254].atom1.info	"[LEU]33:A.CB #250"
 bondInfo[254]._bpt	253
 bondInfo[254].radius	0.15
 bondInfo[254].type	"single"
+bondInfo[254].jmol_order	"0x1"
 bondInfo[255].colix	0
 bondInfo[255].visible	true
 bondInfo[255].order	1.0
@@ -4368,6 +4622,7 @@ bondInfo[255].atom1.info	"[LEU]33:A.CG #251"
 bondInfo[255]._bpt	254
 bondInfo[255].radius	0.15
 bondInfo[255].type	"single"
+bondInfo[255].jmol_order	"0x1"
 bondInfo[256].colix	0
 bondInfo[256].visible	true
 bondInfo[256].order	1.0
@@ -4385,6 +4640,7 @@ bondInfo[256].atom1.info	"[LEU]33:A.CD2 #253"
 bondInfo[256]._bpt	255
 bondInfo[256].radius	0.15
 bondInfo[256].type	"single"
+bondInfo[256].jmol_order	"0x1"
 bondInfo[257].colix	0
 bondInfo[257].visible	true
 bondInfo[257].order	1.0
@@ -4402,6 +4658,7 @@ bondInfo[257].atom1.info	"[GLU]34:A.N #254"
 bondInfo[257]._bpt	256
 bondInfo[257].radius	0.15
 bondInfo[257].type	"single"
+bondInfo[257].jmol_order	"0x1"
 bondInfo[258].colix	0
 bondInfo[258].visible	true
 bondInfo[258].order	1.0
@@ -4419,6 +4676,7 @@ bondInfo[258].atom1.info	"[GLU]34:A.CA #255"
 bondInfo[258]._bpt	257
 bondInfo[258].radius	0.15
 bondInfo[258].type	"single"
+bondInfo[258].jmol_order	"0x1"
 bondInfo[259].colix	0
 bondInfo[259].visible	true
 bondInfo[259].order	1.0
@@ -4436,6 +4694,7 @@ bondInfo[259].atom1.info	"[GLU]34:A.CA #255"
 bondInfo[259]._bpt	258
 bondInfo[259].radius	0.15
 bondInfo[259].type	"single"
+bondInfo[259].jmol_order	"0x1"
 bondInfo[260].colix	0
 bondInfo[260].visible	true
 bondInfo[260].order	1.0
@@ -4453,6 +4712,7 @@ bondInfo[260].atom1.info	"[GLU]34:A.C #256"
 bondInfo[260]._bpt	259
 bondInfo[260].radius	0.15
 bondInfo[260].type	"single"
+bondInfo[260].jmol_order	"0x1"
 bondInfo[261].colix	0
 bondInfo[261].visible	true
 bondInfo[261].order	1.0
@@ -4470,6 +4730,7 @@ bondInfo[261].atom1.info	"[GLU]34:A.CB #258"
 bondInfo[261]._bpt	260
 bondInfo[261].radius	0.15
 bondInfo[261].type	"single"
+bondInfo[261].jmol_order	"0x1"
 bondInfo[262].colix	0
 bondInfo[262].visible	true
 bondInfo[262].order	1.0
@@ -4487,6 +4748,7 @@ bondInfo[262].atom1.info	"[GLU]34:A.CB #258"
 bondInfo[262]._bpt	261
 bondInfo[262].radius	0.15
 bondInfo[262].type	"single"
+bondInfo[262].jmol_order	"0x1"
 bondInfo[263].colix	0
 bondInfo[263].visible	true
 bondInfo[263].order	1.0
@@ -4504,6 +4766,7 @@ bondInfo[263].atom1.info	"[GLU]34:A.CD #260"
 bondInfo[263]._bpt	262
 bondInfo[263].radius	0.15
 bondInfo[263].type	"single"
+bondInfo[263].jmol_order	"0x1"
 bondInfo[264].colix	0
 bondInfo[264].visible	true
 bondInfo[264].order	1.0
@@ -4521,6 +4784,7 @@ bondInfo[264].atom1.info	"[GLU]34:A.CD #260"
 bondInfo[264]._bpt	263
 bondInfo[264].radius	0.15
 bondInfo[264].type	"single"
+bondInfo[264].jmol_order	"0x1"
 bondInfo[265].colix	0
 bondInfo[265].visible	true
 bondInfo[265].order	1.0
@@ -4538,6 +4802,7 @@ bondInfo[265].atom1.info	"[GLU]34:A.OE1 #261"
 bondInfo[265]._bpt	264
 bondInfo[265].radius	0.15
 bondInfo[265].type	"single"
+bondInfo[265].jmol_order	"0x1"
 bondInfo[266].colix	0
 bondInfo[266].visible	true
 bondInfo[266].order	1.0
@@ -4555,6 +4820,7 @@ bondInfo[266].atom1.info	"[GLU]35:A.N #263"
 bondInfo[266]._bpt	265
 bondInfo[266].radius	0.15
 bondInfo[266].type	"single"
+bondInfo[266].jmol_order	"0x1"
 bondInfo[267].colix	0
 bondInfo[267].visible	true
 bondInfo[267].order	1.0
@@ -4572,6 +4838,7 @@ bondInfo[267].atom1.info	"[GLU]35:A.CA #264"
 bondInfo[267]._bpt	266
 bondInfo[267].radius	0.15
 bondInfo[267].type	"single"
+bondInfo[267].jmol_order	"0x1"
 bondInfo[268].colix	0
 bondInfo[268].visible	true
 bondInfo[268].order	1.0
@@ -4589,6 +4856,7 @@ bondInfo[268].atom1.info	"[GLU]35:A.CA #264"
 bondInfo[268]._bpt	267
 bondInfo[268].radius	0.15
 bondInfo[268].type	"single"
+bondInfo[268].jmol_order	"0x1"
 bondInfo[269].colix	0
 bondInfo[269].visible	true
 bondInfo[269].order	1.0
@@ -4606,6 +4874,7 @@ bondInfo[269].atom1.info	"[GLU]35:A.C #265"
 bondInfo[269]._bpt	268
 bondInfo[269].radius	0.15
 bondInfo[269].type	"single"
+bondInfo[269].jmol_order	"0x1"
 bondInfo[270].colix	0
 bondInfo[270].visible	true
 bondInfo[270].order	1.0
@@ -4623,6 +4892,7 @@ bondInfo[270].atom1.info	"[GLU]35:A.O #266"
 bondInfo[270]._bpt	269
 bondInfo[270].radius	0.15
 bondInfo[270].type	"single"
+bondInfo[270].jmol_order	"0x1"
 bondInfo[271].colix	0
 bondInfo[271].visible	true
 bondInfo[271].order	1.0
@@ -4640,6 +4910,7 @@ bondInfo[271].atom1.info	"[GLU]35:A.CB #267"
 bondInfo[271]._bpt	270
 bondInfo[271].radius	0.15
 bondInfo[271].type	"single"
+bondInfo[271].jmol_order	"0x1"
 bondInfo[272].colix	0
 bondInfo[272].visible	true
 bondInfo[272].order	1.0
@@ -4657,6 +4928,7 @@ bondInfo[272].atom1.info	"[GLU]35:A.CG #268"
 bondInfo[272]._bpt	271
 bondInfo[272].radius	0.15
 bondInfo[272].type	"single"
+bondInfo[272].jmol_order	"0x1"
 bondInfo[273].colix	0
 bondInfo[273].visible	true
 bondInfo[273].order	1.0
@@ -4674,6 +4946,7 @@ bondInfo[273].atom1.info	"[GLU]35:A.CG #268"
 bondInfo[273]._bpt	272
 bondInfo[273].radius	0.15
 bondInfo[273].type	"single"
+bondInfo[273].jmol_order	"0x1"
 bondInfo[274].colix	0
 bondInfo[274].visible	true
 bondInfo[274].order	1.0
@@ -4691,6 +4964,7 @@ bondInfo[274].atom1.info	"[GLU]35:A.CD #269"
 bondInfo[274]._bpt	273
 bondInfo[274].radius	0.15
 bondInfo[274].type	"single"
+bondInfo[274].jmol_order	"0x1"
 bondInfo[275].colix	0
 bondInfo[275].visible	true
 bondInfo[275].order	1.0
@@ -4708,6 +4982,7 @@ bondInfo[275].atom1.info	"[GLU]35:A.OE1 #270"
 bondInfo[275]._bpt	274
 bondInfo[275].radius	0.15
 bondInfo[275].type	"single"
+bondInfo[275].jmol_order	"0x1"
 bondInfo[276].colix	0
 bondInfo[276].visible	true
 bondInfo[276].order	1.0
@@ -4725,6 +5000,7 @@ bondInfo[276].atom1.info	"[MET]36:A.N #272"
 bondInfo[276]._bpt	275
 bondInfo[276].radius	0.15
 bondInfo[276].type	"single"
+bondInfo[276].jmol_order	"0x1"
 bondInfo[277].colix	0
 bondInfo[277].visible	true
 bondInfo[277].order	1.0
@@ -4742,6 +5018,7 @@ bondInfo[277].atom1.info	"[MET]36:A.CA #273"
 bondInfo[277]._bpt	276
 bondInfo[277].radius	0.15
 bondInfo[277].type	"single"
+bondInfo[277].jmol_order	"0x1"
 bondInfo[278].colix	0
 bondInfo[278].visible	true
 bondInfo[278].order	1.0
@@ -4759,6 +5036,7 @@ bondInfo[278].atom1.info	"[MET]36:A.CA #273"
 bondInfo[278]._bpt	277
 bondInfo[278].radius	0.15
 bondInfo[278].type	"single"
+bondInfo[278].jmol_order	"0x1"
 bondInfo[279].colix	0
 bondInfo[279].visible	true
 bondInfo[279].order	1.0
@@ -4776,6 +5054,7 @@ bondInfo[279].atom1.info	"[MET]36:A.C #274"
 bondInfo[279]._bpt	278
 bondInfo[279].radius	0.15
 bondInfo[279].type	"single"
+bondInfo[279].jmol_order	"0x1"
 bondInfo[280].colix	0
 bondInfo[280].visible	true
 bondInfo[280].order	1.0
@@ -4793,6 +5072,7 @@ bondInfo[280].atom1.info	"[MET]36:A.C #274"
 bondInfo[280]._bpt	279
 bondInfo[280].radius	0.15
 bondInfo[280].type	"single"
+bondInfo[280].jmol_order	"0x1"
 bondInfo[281].colix	0
 bondInfo[281].visible	true
 bondInfo[281].order	1.0
@@ -4810,6 +5090,7 @@ bondInfo[281].atom1.info	"[MET]36:A.CB #276"
 bondInfo[281]._bpt	280
 bondInfo[281].radius	0.15
 bondInfo[281].type	"single"
+bondInfo[281].jmol_order	"0x1"
 bondInfo[282].colix	0
 bondInfo[282].visible	true
 bondInfo[282].order	1.0
@@ -4827,6 +5108,7 @@ bondInfo[282].atom1.info	"[MET]36:A.CG #277"
 bondInfo[282]._bpt	281
 bondInfo[282].radius	0.15
 bondInfo[282].type	"single"
+bondInfo[282].jmol_order	"0x1"
 bondInfo[283].colix	0
 bondInfo[283].visible	true
 bondInfo[283].order	1.0
@@ -4844,6 +5126,7 @@ bondInfo[283].atom1.info	"[MET]36:A.SD #278"
 bondInfo[283]._bpt	282
 bondInfo[283].radius	0.15
 bondInfo[283].type	"single"
+bondInfo[283].jmol_order	"0x1"
 bondInfo[284].colix	0
 bondInfo[284].visible	true
 bondInfo[284].order	1.0
@@ -4861,6 +5144,7 @@ bondInfo[284].atom1.info	"[SER]37:A.N #280"
 bondInfo[284]._bpt	283
 bondInfo[284].radius	0.15
 bondInfo[284].type	"single"
+bondInfo[284].jmol_order	"0x1"
 bondInfo[285].colix	0
 bondInfo[285].visible	true
 bondInfo[285].order	1.0
@@ -4878,6 +5162,7 @@ bondInfo[285].atom1.info	"[SER]37:A.CA #281"
 bondInfo[285]._bpt	284
 bondInfo[285].radius	0.15
 bondInfo[285].type	"single"
+bondInfo[285].jmol_order	"0x1"
 bondInfo[286].colix	0
 bondInfo[286].visible	true
 bondInfo[286].order	1.0
@@ -4895,6 +5180,7 @@ bondInfo[286].atom1.info	"[SER]37:A.C #282"
 bondInfo[286]._bpt	285
 bondInfo[286].radius	0.15
 bondInfo[286].type	"single"
+bondInfo[286].jmol_order	"0x1"
 bondInfo[287].colix	0
 bondInfo[287].visible	true
 bondInfo[287].order	1.0
@@ -4912,6 +5198,7 @@ bondInfo[287].atom1.info	"[SER]37:A.C #282"
 bondInfo[287]._bpt	286
 bondInfo[287].radius	0.15
 bondInfo[287].type	"single"
+bondInfo[287].jmol_order	"0x1"
 bondInfo[288].colix	0
 bondInfo[288].visible	true
 bondInfo[288].order	1.0
@@ -4929,6 +5216,7 @@ bondInfo[288].atom1.info	"[SER]37:A.CB #284"
 bondInfo[288]._bpt	287
 bondInfo[288].radius	0.15
 bondInfo[288].type	"single"
+bondInfo[288].jmol_order	"0x1"
 bondInfo[289].colix	0
 bondInfo[289].visible	true
 bondInfo[289].order	1.0
@@ -4946,6 +5234,7 @@ bondInfo[289].atom1.info	"[SER]37:A.OG #285"
 bondInfo[289]._bpt	288
 bondInfo[289].radius	0.15
 bondInfo[289].type	"single"
+bondInfo[289].jmol_order	"0x1"
 bondInfo[290].colix	0
 bondInfo[290].visible	true
 bondInfo[290].order	1.0
@@ -4963,6 +5252,7 @@ bondInfo[290].atom1.info	"[LEU]38:A.N #286"
 bondInfo[290]._bpt	289
 bondInfo[290].radius	0.15
 bondInfo[290].type	"single"
+bondInfo[290].jmol_order	"0x1"
 bondInfo[291].colix	0
 bondInfo[291].visible	true
 bondInfo[291].order	1.0
@@ -4980,6 +5270,7 @@ bondInfo[291].atom1.info	"[LEU]38:A.CA #287"
 bondInfo[291]._bpt	290
 bondInfo[291].radius	0.15
 bondInfo[291].type	"single"
+bondInfo[291].jmol_order	"0x1"
 bondInfo[292].colix	0
 bondInfo[292].visible	true
 bondInfo[292].order	1.0
@@ -4997,6 +5288,7 @@ bondInfo[292].atom1.info	"[LEU]38:A.CA #287"
 bondInfo[292]._bpt	291
 bondInfo[292].radius	0.15
 bondInfo[292].type	"single"
+bondInfo[292].jmol_order	"0x1"
 bondInfo[293].colix	0
 bondInfo[293].visible	true
 bondInfo[293].order	1.0
@@ -5014,6 +5306,7 @@ bondInfo[293].atom1.info	"[LEU]38:A.C #288"
 bondInfo[293]._bpt	292
 bondInfo[293].radius	0.15
 bondInfo[293].type	"single"
+bondInfo[293].jmol_order	"0x1"
 bondInfo[294].colix	0
 bondInfo[294].visible	true
 bondInfo[294].order	1.0
@@ -5031,6 +5324,7 @@ bondInfo[294].atom1.info	"[LEU]38:A.O #289"
 bondInfo[294]._bpt	293
 bondInfo[294].radius	0.15
 bondInfo[294].type	"single"
+bondInfo[294].jmol_order	"0x1"
 bondInfo[295].colix	0
 bondInfo[295].visible	true
 bondInfo[295].order	1.0
@@ -5048,6 +5342,7 @@ bondInfo[295].atom1.info	"[LEU]38:A.CB #290"
 bondInfo[295]._bpt	294
 bondInfo[295].radius	0.15
 bondInfo[295].type	"single"
+bondInfo[295].jmol_order	"0x1"
 bondInfo[296].colix	0
 bondInfo[296].visible	true
 bondInfo[296].order	1.0
@@ -5065,6 +5360,7 @@ bondInfo[296].atom1.info	"[LEU]38:A.CG #291"
 bondInfo[296]._bpt	295
 bondInfo[296].radius	0.15
 bondInfo[296].type	"single"
+bondInfo[296].jmol_order	"0x1"
 bondInfo[297].colix	0
 bondInfo[297].visible	true
 bondInfo[297].order	1.0
@@ -5082,6 +5378,7 @@ bondInfo[297].atom1.info	"[LEU]38:A.CG #291"
 bondInfo[297]._bpt	296
 bondInfo[297].radius	0.15
 bondInfo[297].type	"single"
+bondInfo[297].jmol_order	"0x1"
 bondInfo[298].colix	0
 bondInfo[298].visible	true
 bondInfo[298].order	1.0
@@ -5099,6 +5396,7 @@ bondInfo[298].atom1.info	"[PRO]39:A.N #294"
 bondInfo[298]._bpt	297
 bondInfo[298].radius	0.15
 bondInfo[298].type	"single"
+bondInfo[298].jmol_order	"0x1"
 bondInfo[299].colix	0
 bondInfo[299].visible	true
 bondInfo[299].order	1.0
@@ -5116,6 +5414,7 @@ bondInfo[299].atom1.info	"[PRO]39:A.N #294"
 bondInfo[299]._bpt	298
 bondInfo[299].radius	0.15
 bondInfo[299].type	"single"
+bondInfo[299].jmol_order	"0x1"
 bondInfo[300].colix	0
 bondInfo[300].visible	true
 bondInfo[300].order	1.0
@@ -5133,6 +5432,7 @@ bondInfo[300].atom1.info	"[PRO]39:A.CA #295"
 bondInfo[300]._bpt	299
 bondInfo[300].radius	0.15
 bondInfo[300].type	"single"
+bondInfo[300].jmol_order	"0x1"
 bondInfo[301].colix	0
 bondInfo[301].visible	true
 bondInfo[301].order	1.0
@@ -5150,6 +5450,7 @@ bondInfo[301].atom1.info	"[PRO]39:A.CA #295"
 bondInfo[301]._bpt	300
 bondInfo[301].radius	0.15
 bondInfo[301].type	"single"
+bondInfo[301].jmol_order	"0x1"
 bondInfo[302].colix	0
 bondInfo[302].visible	true
 bondInfo[302].order	1.0
@@ -5167,6 +5468,7 @@ bondInfo[302].atom1.info	"[PRO]39:A.C #296"
 bondInfo[302]._bpt	301
 bondInfo[302].radius	0.15
 bondInfo[302].type	"single"
+bondInfo[302].jmol_order	"0x1"
 bondInfo[303].colix	0
 bondInfo[303].visible	true
 bondInfo[303].order	1.0
@@ -5184,6 +5486,7 @@ bondInfo[303].atom1.info	"[PRO]39:A.CB #298"
 bondInfo[303]._bpt	302
 bondInfo[303].radius	0.15
 bondInfo[303].type	"single"
+bondInfo[303].jmol_order	"0x1"
 bondInfo[304].colix	0
 bondInfo[304].visible	true
 bondInfo[304].order	1.0
@@ -5201,6 +5504,7 @@ bondInfo[304].atom1.info	"[PRO]39:A.CD #300"
 bondInfo[304]._bpt	303
 bondInfo[304].radius	0.15
 bondInfo[304].type	"single"
+bondInfo[304].jmol_order	"0x1"
 bondInfo[305].colix	0
 bondInfo[305].visible	true
 bondInfo[305].order	1.0
@@ -5218,6 +5522,7 @@ bondInfo[305].atom1.info	"[GLY]40:A.N #301"
 bondInfo[305]._bpt	304
 bondInfo[305].radius	0.15
 bondInfo[305].type	"single"
+bondInfo[305].jmol_order	"0x1"
 bondInfo[306].colix	0
 bondInfo[306].visible	true
 bondInfo[306].order	1.0
@@ -5235,6 +5540,7 @@ bondInfo[306].atom1.info	"[GLY]40:A.N #301"
 bondInfo[306]._bpt	305
 bondInfo[306].radius	0.15
 bondInfo[306].type	"single"
+bondInfo[306].jmol_order	"0x1"
 bondInfo[307].colix	0
 bondInfo[307].visible	true
 bondInfo[307].order	1.0
@@ -5252,6 +5558,7 @@ bondInfo[307].atom1.info	"[GLY]40:A.C #303"
 bondInfo[307]._bpt	306
 bondInfo[307].radius	0.15
 bondInfo[307].type	"single"
+bondInfo[307].jmol_order	"0x1"
 bondInfo[308].colix	0
 bondInfo[308].visible	true
 bondInfo[308].order	1.0
@@ -5269,6 +5576,7 @@ bondInfo[308].atom1.info	"[GLY]40:A.C #303"
 bondInfo[308]._bpt	307
 bondInfo[308].radius	0.15
 bondInfo[308].type	"single"
+bondInfo[308].jmol_order	"0x1"
 bondInfo[309].colix	0
 bondInfo[309].visible	true
 bondInfo[309].order	1.0
@@ -5286,6 +5594,7 @@ bondInfo[309].atom1.info	"[GLY]40:A.O #304"
 bondInfo[309]._bpt	308
 bondInfo[309].radius	0.15
 bondInfo[309].type	"single"
+bondInfo[309].jmol_order	"0x1"
 bondInfo[310].colix	0
 bondInfo[310].visible	true
 bondInfo[310].order	1.0
@@ -5303,6 +5612,7 @@ bondInfo[310].atom1.info	"[ARG]41:A.CA #306"
 bondInfo[310]._bpt	309
 bondInfo[310].radius	0.15
 bondInfo[310].type	"single"
+bondInfo[310].jmol_order	"0x1"
 bondInfo[311].colix	0
 bondInfo[311].visible	true
 bondInfo[311].order	1.0
@@ -5320,6 +5630,7 @@ bondInfo[311].atom1.info	"[ARG]41:A.CA #306"
 bondInfo[311]._bpt	310
 bondInfo[311].radius	0.15
 bondInfo[311].type	"single"
+bondInfo[311].jmol_order	"0x1"
 bondInfo[312].colix	0
 bondInfo[312].visible	true
 bondInfo[312].order	1.0
@@ -5337,6 +5648,7 @@ bondInfo[312].atom1.info	"[ARG]41:A.C #307"
 bondInfo[312]._bpt	311
 bondInfo[312].radius	0.15
 bondInfo[312].type	"single"
+bondInfo[312].jmol_order	"0x1"
 bondInfo[313].colix	0
 bondInfo[313].visible	true
 bondInfo[313].order	1.0
@@ -5354,6 +5666,7 @@ bondInfo[313].atom1.info	"[ARG]41:A.C #307"
 bondInfo[313]._bpt	312
 bondInfo[313].radius	0.15
 bondInfo[313].type	"single"
+bondInfo[313].jmol_order	"0x1"
 bondInfo[314].colix	0
 bondInfo[314].visible	true
 bondInfo[314].order	1.0
@@ -5371,6 +5684,7 @@ bondInfo[314].atom1.info	"[ARG]41:A.CG #310"
 bondInfo[314]._bpt	313
 bondInfo[314].radius	0.15
 bondInfo[314].type	"single"
+bondInfo[314].jmol_order	"0x1"
 bondInfo[315].colix	0
 bondInfo[315].visible	true
 bondInfo[315].order	1.0
@@ -5388,6 +5702,7 @@ bondInfo[315].atom1.info	"[ARG]41:A.CD #311"
 bondInfo[315]._bpt	314
 bondInfo[315].radius	0.15
 bondInfo[315].type	"single"
+bondInfo[315].jmol_order	"0x1"
 bondInfo[316].colix	0
 bondInfo[316].visible	true
 bondInfo[316].order	1.0
@@ -5405,6 +5720,7 @@ bondInfo[316].atom1.info	"[ARG]41:A.CD #311"
 bondInfo[316]._bpt	315
 bondInfo[316].radius	0.15
 bondInfo[316].type	"single"
+bondInfo[316].jmol_order	"0x1"
 bondInfo[317].colix	0
 bondInfo[317].visible	true
 bondInfo[317].order	1.0
@@ -5422,6 +5738,7 @@ bondInfo[317].atom1.info	"[ARG]41:A.NE #312"
 bondInfo[317]._bpt	316
 bondInfo[317].radius	0.15
 bondInfo[317].type	"single"
+bondInfo[317].jmol_order	"0x1"
 bondInfo[318].colix	0
 bondInfo[318].visible	true
 bondInfo[318].order	1.0
@@ -5439,6 +5756,7 @@ bondInfo[318].atom1.info	"[ARG]41:A.CZ #313"
 bondInfo[318]._bpt	317
 bondInfo[318].radius	0.15
 bondInfo[318].type	"single"
+bondInfo[318].jmol_order	"0x1"
 bondInfo[319].colix	0
 bondInfo[319].visible	true
 bondInfo[319].order	1.0
@@ -5456,6 +5774,7 @@ bondInfo[319].atom1.info	"[ARG]41:A.CZ #313"
 bondInfo[319]._bpt	318
 bondInfo[319].radius	0.15
 bondInfo[319].type	"single"
+bondInfo[319].jmol_order	"0x1"
 bondInfo[320].colix	0
 bondInfo[320].visible	true
 bondInfo[320].order	1.0
@@ -5473,6 +5792,7 @@ bondInfo[320].atom1.info	"[TRP]42:A.N #316"
 bondInfo[320]._bpt	319
 bondInfo[320].radius	0.15
 bondInfo[320].type	"single"
+bondInfo[320].jmol_order	"0x1"
 bondInfo[321].colix	0
 bondInfo[321].visible	true
 bondInfo[321].order	1.0
@@ -5490,6 +5810,7 @@ bondInfo[321].atom1.info	"[TRP]42:A.CA #317"
 bondInfo[321]._bpt	320
 bondInfo[321].radius	0.15
 bondInfo[321].type	"single"
+bondInfo[321].jmol_order	"0x1"
 bondInfo[322].colix	0
 bondInfo[322].visible	true
 bondInfo[322].order	1.0
@@ -5507,6 +5828,7 @@ bondInfo[322].atom1.info	"[TRP]42:A.CA #317"
 bondInfo[322]._bpt	321
 bondInfo[322].radius	0.15
 bondInfo[322].type	"single"
+bondInfo[322].jmol_order	"0x1"
 bondInfo[323].colix	0
 bondInfo[323].visible	true
 bondInfo[323].order	1.0
@@ -5524,6 +5846,7 @@ bondInfo[323].atom1.info	"[TRP]42:A.C #318"
 bondInfo[323]._bpt	322
 bondInfo[323].radius	0.15
 bondInfo[323].type	"single"
+bondInfo[323].jmol_order	"0x1"
 bondInfo[324].colix	0
 bondInfo[324].visible	true
 bondInfo[324].order	1.0
@@ -5541,6 +5864,7 @@ bondInfo[324].atom1.info	"[TRP]42:A.C #318"
 bondInfo[324]._bpt	323
 bondInfo[324].radius	0.15
 bondInfo[324].type	"single"
+bondInfo[324].jmol_order	"0x1"
 bondInfo[325].colix	0
 bondInfo[325].visible	true
 bondInfo[325].order	1.0
@@ -5558,6 +5882,7 @@ bondInfo[325].atom1.info	"[TRP]42:A.CB #320"
 bondInfo[325]._bpt	324
 bondInfo[325].radius	0.15
 bondInfo[325].type	"single"
+bondInfo[325].jmol_order	"0x1"
 bondInfo[326].colix	0
 bondInfo[326].visible	true
 bondInfo[326].order	1.0
@@ -5575,6 +5900,7 @@ bondInfo[326].atom1.info	"[TRP]42:A.CG #321"
 bondInfo[326]._bpt	325
 bondInfo[326].radius	0.15
 bondInfo[326].type	"single"
+bondInfo[326].jmol_order	"0x1"
 bondInfo[327].colix	0
 bondInfo[327].visible	true
 bondInfo[327].order	1.0
@@ -5592,6 +5918,7 @@ bondInfo[327].atom1.info	"[TRP]42:A.CD1 #322"
 bondInfo[327]._bpt	326
 bondInfo[327].radius	0.15
 bondInfo[327].type	"single"
+bondInfo[327].jmol_order	"0x1"
 bondInfo[328].colix	0
 bondInfo[328].visible	true
 bondInfo[328].order	1.0
@@ -5609,6 +5936,7 @@ bondInfo[328].atom1.info	"[TRP]42:A.CD2 #323"
 bondInfo[328]._bpt	327
 bondInfo[328].radius	0.15
 bondInfo[328].type	"single"
+bondInfo[328].jmol_order	"0x1"
 bondInfo[329].colix	0
 bondInfo[329].visible	true
 bondInfo[329].order	1.0
@@ -5626,6 +5954,7 @@ bondInfo[329].atom1.info	"[TRP]42:A.CD2 #323"
 bondInfo[329]._bpt	328
 bondInfo[329].radius	0.15
 bondInfo[329].type	"single"
+bondInfo[329].jmol_order	"0x1"
 bondInfo[330].colix	0
 bondInfo[330].visible	true
 bondInfo[330].order	1.0
@@ -5643,6 +5972,7 @@ bondInfo[330].atom1.info	"[TRP]42:A.NE1 #324"
 bondInfo[330]._bpt	329
 bondInfo[330].radius	0.15
 bondInfo[330].type	"single"
+bondInfo[330].jmol_order	"0x1"
 bondInfo[331].colix	0
 bondInfo[331].visible	true
 bondInfo[331].order	1.0
@@ -5660,6 +5990,7 @@ bondInfo[331].atom1.info	"[TRP]42:A.CE2 #325"
 bondInfo[331]._bpt	330
 bondInfo[331].radius	0.15
 bondInfo[331].type	"single"
+bondInfo[331].jmol_order	"0x1"
 bondInfo[332].colix	0
 bondInfo[332].visible	true
 bondInfo[332].order	1.0
@@ -5677,6 +6008,7 @@ bondInfo[332].atom1.info	"[TRP]42:A.CE2 #325"
 bondInfo[332]._bpt	331
 bondInfo[332].radius	0.15
 bondInfo[332].type	"single"
+bondInfo[332].jmol_order	"0x1"
 bondInfo[333].colix	0
 bondInfo[333].visible	true
 bondInfo[333].order	1.0
@@ -5694,6 +6026,7 @@ bondInfo[333].atom1.info	"[TRP]42:A.CZ2 #327"
 bondInfo[333]._bpt	332
 bondInfo[333].radius	0.15
 bondInfo[333].type	"single"
+bondInfo[333].jmol_order	"0x1"
 bondInfo[334].colix	0
 bondInfo[334].visible	true
 bondInfo[334].order	1.0
@@ -5711,6 +6044,7 @@ bondInfo[334].atom1.info	"[TRP]42:A.CZ2 #327"
 bondInfo[334]._bpt	333
 bondInfo[334].radius	0.15
 bondInfo[334].type	"single"
+bondInfo[334].jmol_order	"0x1"
 bondInfo[335].colix	0
 bondInfo[335].visible	true
 bondInfo[335].order	1.0
@@ -5728,6 +6062,7 @@ bondInfo[335].atom1.info	"[TRP]42:A.CZ3 #328"
 bondInfo[335]._bpt	334
 bondInfo[335].radius	0.15
 bondInfo[335].type	"single"
+bondInfo[335].jmol_order	"0x1"
 bondInfo[336].colix	0
 bondInfo[336].visible	true
 bondInfo[336].order	1.0
@@ -5745,6 +6080,7 @@ bondInfo[336].atom1.info	"[TRP]42:A.CH2 #329"
 bondInfo[336]._bpt	335
 bondInfo[336].radius	0.15
 bondInfo[336].type	"single"
+bondInfo[336].jmol_order	"0x1"
 bondInfo[337].colix	0
 bondInfo[337].visible	true
 bondInfo[337].order	1.0
@@ -5762,6 +6098,7 @@ bondInfo[337].atom1.info	"[LYS]43:A.CA #331"
 bondInfo[337]._bpt	336
 bondInfo[337].radius	0.15
 bondInfo[337].type	"single"
+bondInfo[337].jmol_order	"0x1"
 bondInfo[338].colix	0
 bondInfo[338].visible	true
 bondInfo[338].order	1.0
@@ -5779,6 +6116,7 @@ bondInfo[338].atom1.info	"[LYS]43:A.CA #331"
 bondInfo[338]._bpt	337
 bondInfo[338].radius	0.15
 bondInfo[338].type	"single"
+bondInfo[338].jmol_order	"0x1"
 bondInfo[339].colix	0
 bondInfo[339].visible	true
 bondInfo[339].order	1.0
@@ -5796,6 +6134,7 @@ bondInfo[339].atom1.info	"[LYS]43:A.C #332"
 bondInfo[339]._bpt	338
 bondInfo[339].radius	0.15
 bondInfo[339].type	"single"
+bondInfo[339].jmol_order	"0x1"
 bondInfo[340].colix	0
 bondInfo[340].visible	true
 bondInfo[340].order	1.0
@@ -5813,6 +6152,7 @@ bondInfo[340].atom1.info	"[LYS]43:A.O #333"
 bondInfo[340]._bpt	339
 bondInfo[340].radius	0.15
 bondInfo[340].type	"single"
+bondInfo[340].jmol_order	"0x1"
 bondInfo[341].colix	0
 bondInfo[341].visible	true
 bondInfo[341].order	1.0
@@ -5830,6 +6170,7 @@ bondInfo[341].atom1.info	"[LYS]43:A.CB #334"
 bondInfo[341]._bpt	340
 bondInfo[341].radius	0.15
 bondInfo[341].type	"single"
+bondInfo[341].jmol_order	"0x1"
 bondInfo[342].colix	0
 bondInfo[342].visible	true
 bondInfo[342].order	1.0
@@ -5847,6 +6188,7 @@ bondInfo[342].atom1.info	"[LYS]43:A.CG #335"
 bondInfo[342]._bpt	341
 bondInfo[342].radius	0.15
 bondInfo[342].type	"single"
+bondInfo[342].jmol_order	"0x1"
 bondInfo[343].colix	0
 bondInfo[343].visible	true
 bondInfo[343].order	1.0
@@ -5864,6 +6206,7 @@ bondInfo[343].atom1.info	"[LYS]43:A.CE #337"
 bondInfo[343]._bpt	342
 bondInfo[343].radius	0.15
 bondInfo[343].type	"single"
+bondInfo[343].jmol_order	"0x1"
 bondInfo[344].colix	0
 bondInfo[344].visible	true
 bondInfo[344].order	1.0
@@ -5881,6 +6224,7 @@ bondInfo[344].atom1.info	"[LYS]43:A.CE #337"
 bondInfo[344]._bpt	343
 bondInfo[344].radius	0.15
 bondInfo[344].type	"single"
+bondInfo[344].jmol_order	"0x1"
 bondInfo[345].colix	0
 bondInfo[345].visible	true
 bondInfo[345].order	1.0
@@ -5898,6 +6242,7 @@ bondInfo[345].atom1.info	"[PRO]44:A.N #339"
 bondInfo[345]._bpt	344
 bondInfo[345].radius	0.15
 bondInfo[345].type	"single"
+bondInfo[345].jmol_order	"0x1"
 bondInfo[346].colix	0
 bondInfo[346].visible	true
 bondInfo[346].order	1.0
@@ -5915,6 +6260,7 @@ bondInfo[346].atom1.info	"[PRO]44:A.CA #340"
 bondInfo[346]._bpt	345
 bondInfo[346].radius	0.15
 bondInfo[346].type	"single"
+bondInfo[346].jmol_order	"0x1"
 bondInfo[347].colix	0
 bondInfo[347].visible	true
 bondInfo[347].order	1.0
@@ -5932,6 +6278,7 @@ bondInfo[347].atom1.info	"[PRO]44:A.CA #340"
 bondInfo[347]._bpt	346
 bondInfo[347].radius	0.15
 bondInfo[347].type	"single"
+bondInfo[347].jmol_order	"0x1"
 bondInfo[348].colix	0
 bondInfo[348].visible	true
 bondInfo[348].order	1.0
@@ -5949,6 +6296,7 @@ bondInfo[348].atom1.info	"[PRO]44:A.C #341"
 bondInfo[348]._bpt	347
 bondInfo[348].radius	0.15
 bondInfo[348].type	"single"
+bondInfo[348].jmol_order	"0x1"
 bondInfo[349].colix	0
 bondInfo[349].visible	true
 bondInfo[349].order	1.0
@@ -5966,6 +6314,7 @@ bondInfo[349].atom1.info	"[PRO]44:A.CB #343"
 bondInfo[349]._bpt	348
 bondInfo[349].radius	0.15
 bondInfo[349].type	"single"
+bondInfo[349].jmol_order	"0x1"
 bondInfo[350].colix	0
 bondInfo[350].visible	true
 bondInfo[350].order	1.0
@@ -5983,6 +6332,7 @@ bondInfo[350].atom1.info	"[PRO]44:A.CG #344"
 bondInfo[350]._bpt	349
 bondInfo[350].radius	0.15
 bondInfo[350].type	"single"
+bondInfo[350].jmol_order	"0x1"
 bondInfo[351].colix	0
 bondInfo[351].visible	true
 bondInfo[351].order	1.0
@@ -6000,6 +6350,7 @@ bondInfo[351].atom1.info	"[PRO]44:A.CG #344"
 bondInfo[351]._bpt	350
 bondInfo[351].radius	0.15
 bondInfo[351].type	"single"
+bondInfo[351].jmol_order	"0x1"
 bondInfo[352].colix	0
 bondInfo[352].visible	true
 bondInfo[352].order	1.0
@@ -6017,6 +6368,7 @@ bondInfo[352].atom1.info	"[PRO]44:A.CD #345"
 bondInfo[352]._bpt	351
 bondInfo[352].radius	0.15
 bondInfo[352].type	"single"
+bondInfo[352].jmol_order	"0x1"
 bondInfo[353].colix	0
 bondInfo[353].visible	true
 bondInfo[353].order	1.0
@@ -6034,6 +6386,7 @@ bondInfo[353].atom1.info	"[LYS]45:A.N #346"
 bondInfo[353]._bpt	352
 bondInfo[353].radius	0.15
 bondInfo[353].type	"single"
+bondInfo[353].jmol_order	"0x1"
 bondInfo[354].colix	0
 bondInfo[354].visible	true
 bondInfo[354].order	1.0
@@ -6051,6 +6404,7 @@ bondInfo[354].atom1.info	"[LYS]45:A.N #346"
 bondInfo[354]._bpt	353
 bondInfo[354].radius	0.15
 bondInfo[354].type	"single"
+bondInfo[354].jmol_order	"0x1"
 bondInfo[355].colix	0
 bondInfo[355].visible	true
 bondInfo[355].order	1.0
@@ -6068,6 +6422,7 @@ bondInfo[355].atom1.info	"[LYS]45:A.CA #347"
 bondInfo[355]._bpt	354
 bondInfo[355].radius	0.15
 bondInfo[355].type	"single"
+bondInfo[355].jmol_order	"0x1"
 bondInfo[356].colix	0
 bondInfo[356].visible	true
 bondInfo[356].order	1.0
@@ -6085,6 +6440,7 @@ bondInfo[356].atom1.info	"[LYS]45:A.C #348"
 bondInfo[356]._bpt	355
 bondInfo[356].radius	0.15
 bondInfo[356].type	"single"
+bondInfo[356].jmol_order	"0x1"
 bondInfo[357].colix	0
 bondInfo[357].visible	true
 bondInfo[357].order	1.0
@@ -6102,6 +6458,7 @@ bondInfo[357].atom1.info	"[LYS]45:A.O #349"
 bondInfo[357]._bpt	356
 bondInfo[357].radius	0.15
 bondInfo[357].type	"single"
+bondInfo[357].jmol_order	"0x1"
 bondInfo[358].colix	0
 bondInfo[358].visible	true
 bondInfo[358].order	1.0
@@ -6119,6 +6476,7 @@ bondInfo[358].atom1.info	"[LYS]45:A.CB #350"
 bondInfo[358]._bpt	357
 bondInfo[358].radius	0.15
 bondInfo[358].type	"single"
+bondInfo[358].jmol_order	"0x1"
 bondInfo[359].colix	0
 bondInfo[359].visible	true
 bondInfo[359].order	1.0
@@ -6136,6 +6494,7 @@ bondInfo[359].atom1.info	"[LYS]45:A.CG #351"
 bondInfo[359]._bpt	358
 bondInfo[359].radius	0.15
 bondInfo[359].type	"single"
+bondInfo[359].jmol_order	"0x1"
 bondInfo[360].colix	0
 bondInfo[360].visible	true
 bondInfo[360].order	1.0
@@ -6153,6 +6512,7 @@ bondInfo[360].atom1.info	"[LYS]45:A.CD #352"
 bondInfo[360]._bpt	359
 bondInfo[360].radius	0.15
 bondInfo[360].type	"single"
+bondInfo[360].jmol_order	"0x1"
 bondInfo[361].colix	0
 bondInfo[361].visible	true
 bondInfo[361].order	1.0
@@ -6170,6 +6530,7 @@ bondInfo[361].atom1.info	"[LYS]45:A.CE #353"
 bondInfo[361]._bpt	360
 bondInfo[361].radius	0.15
 bondInfo[361].type	"single"
+bondInfo[361].jmol_order	"0x1"
 bondInfo[362].colix	0
 bondInfo[362].visible	true
 bondInfo[362].order	1.0
@@ -6187,6 +6548,7 @@ bondInfo[362].atom1.info	"[MET]46:A.N #355"
 bondInfo[362]._bpt	361
 bondInfo[362].radius	0.15
 bondInfo[362].type	"single"
+bondInfo[362].jmol_order	"0x1"
 bondInfo[363].colix	0
 bondInfo[363].visible	true
 bondInfo[363].order	1.0
@@ -6204,6 +6566,7 @@ bondInfo[363].atom1.info	"[MET]46:A.CA #356"
 bondInfo[363]._bpt	362
 bondInfo[363].radius	0.15
 bondInfo[363].type	"single"
+bondInfo[363].jmol_order	"0x1"
 bondInfo[364].colix	0
 bondInfo[364].visible	true
 bondInfo[364].order	1.0
@@ -6221,6 +6584,7 @@ bondInfo[364].atom1.info	"[MET]46:A.CA #356"
 bondInfo[364]._bpt	363
 bondInfo[364].radius	0.15
 bondInfo[364].type	"single"
+bondInfo[364].jmol_order	"0x1"
 bondInfo[365].colix	0
 bondInfo[365].visible	true
 bondInfo[365].order	1.0
@@ -6238,6 +6602,7 @@ bondInfo[365].atom1.info	"[MET]46:A.C #357"
 bondInfo[365]._bpt	364
 bondInfo[365].radius	0.15
 bondInfo[365].type	"single"
+bondInfo[365].jmol_order	"0x1"
 bondInfo[366].colix	0
 bondInfo[366].visible	true
 bondInfo[366].order	1.0
@@ -6255,6 +6620,7 @@ bondInfo[366].atom1.info	"[MET]46:A.CB #359"
 bondInfo[366]._bpt	365
 bondInfo[366].radius	0.15
 bondInfo[366].type	"single"
+bondInfo[366].jmol_order	"0x1"
 bondInfo[367].colix	0
 bondInfo[367].visible	true
 bondInfo[367].order	1.0
@@ -6272,6 +6638,7 @@ bondInfo[367].atom1.info	"[MET]46:A.CG #360"
 bondInfo[367]._bpt	366
 bondInfo[367].radius	0.15
 bondInfo[367].type	"single"
+bondInfo[367].jmol_order	"0x1"
 bondInfo[368].colix	0
 bondInfo[368].visible	true
 bondInfo[368].order	1.0
@@ -6289,6 +6656,7 @@ bondInfo[368].atom1.info	"[MET]46:A.SD #361"
 bondInfo[368]._bpt	367
 bondInfo[368].radius	0.15
 bondInfo[368].type	"single"
+bondInfo[368].jmol_order	"0x1"
 bondInfo[369].colix	0
 bondInfo[369].visible	true
 bondInfo[369].order	1.0
@@ -6306,6 +6674,7 @@ bondInfo[369].atom1.info	"[MET]46:A.SD #361"
 bondInfo[369]._bpt	368
 bondInfo[369].radius	0.15
 bondInfo[369].type	"single"
+bondInfo[369].jmol_order	"0x1"
 bondInfo[370].colix	0
 bondInfo[370].visible	true
 bondInfo[370].order	1.0
@@ -6323,6 +6692,7 @@ bondInfo[370].atom1.info	"[ILE]47:A.N #363"
 bondInfo[370]._bpt	369
 bondInfo[370].radius	0.15
 bondInfo[370].type	"single"
+bondInfo[370].jmol_order	"0x1"
 bondInfo[371].colix	0
 bondInfo[371].visible	true
 bondInfo[371].order	1.0
@@ -6340,6 +6710,7 @@ bondInfo[371].atom1.info	"[ILE]47:A.N #363"
 bondInfo[371]._bpt	370
 bondInfo[371].radius	0.15
 bondInfo[371].type	"single"
+bondInfo[371].jmol_order	"0x1"
 bondInfo[372].colix	0
 bondInfo[372].visible	true
 bondInfo[372].order	1.0
@@ -6357,6 +6728,7 @@ bondInfo[372].atom1.info	"[ILE]47:A.CA #364"
 bondInfo[372]._bpt	371
 bondInfo[372].radius	0.15
 bondInfo[372].type	"single"
+bondInfo[372].jmol_order	"0x1"
 bondInfo[373].colix	0
 bondInfo[373].visible	true
 bondInfo[373].order	1.0
@@ -6374,6 +6746,7 @@ bondInfo[373].atom1.info	"[ILE]47:A.C #365"
 bondInfo[373]._bpt	372
 bondInfo[373].radius	0.15
 bondInfo[373].type	"single"
+bondInfo[373].jmol_order	"0x1"
 bondInfo[374].colix	0
 bondInfo[374].visible	true
 bondInfo[374].order	1.0
@@ -6391,6 +6764,7 @@ bondInfo[374].atom1.info	"[ILE]47:A.C #365"
 bondInfo[374]._bpt	373
 bondInfo[374].radius	0.15
 bondInfo[374].type	"single"
+bondInfo[374].jmol_order	"0x1"
 bondInfo[375].colix	0
 bondInfo[375].visible	true
 bondInfo[375].order	1.0
@@ -6408,6 +6782,7 @@ bondInfo[375].atom1.info	"[ILE]47:A.O #366"
 bondInfo[375]._bpt	374
 bondInfo[375].radius	0.15
 bondInfo[375].type	"single"
+bondInfo[375].jmol_order	"0x1"
 bondInfo[376].colix	0
 bondInfo[376].visible	true
 bondInfo[376].order	1.0
@@ -6425,6 +6800,7 @@ bondInfo[376].atom1.info	"[ILE]47:A.CB #367"
 bondInfo[376]._bpt	375
 bondInfo[376].radius	0.15
 bondInfo[376].type	"single"
+bondInfo[376].jmol_order	"0x1"
 bondInfo[377].colix	0
 bondInfo[377].visible	true
 bondInfo[377].order	1.0
@@ -6442,6 +6818,7 @@ bondInfo[377].atom1.info	"[ILE]47:A.CG1 #368"
 bondInfo[377]._bpt	376
 bondInfo[377].radius	0.15
 bondInfo[377].type	"single"
+bondInfo[377].jmol_order	"0x1"
 bondInfo[378].colix	0
 bondInfo[378].visible	true
 bondInfo[378].order	1.0
@@ -6459,6 +6836,7 @@ bondInfo[378].atom1.info	"[ILE]47:A.CG1 #368"
 bondInfo[378]._bpt	377
 bondInfo[378].radius	0.15
 bondInfo[378].type	"single"
+bondInfo[378].jmol_order	"0x1"
 bondInfo[379].colix	0
 bondInfo[379].visible	true
 bondInfo[379].order	1.0
@@ -6476,6 +6854,7 @@ bondInfo[379].atom1.info	"[GLY]48:A.CA #372"
 bondInfo[379]._bpt	378
 bondInfo[379].radius	0.15
 bondInfo[379].type	"single"
+bondInfo[379].jmol_order	"0x1"
 bondInfo[380].colix	0
 bondInfo[380].visible	true
 bondInfo[380].order	1.0
@@ -6493,6 +6872,7 @@ bondInfo[380].atom1.info	"[GLY]48:A.C #373"
 bondInfo[380]._bpt	379
 bondInfo[380].radius	0.15
 bondInfo[380].type	"single"
+bondInfo[380].jmol_order	"0x1"
 bondInfo[381].colix	0
 bondInfo[381].visible	true
 bondInfo[381].order	1.0
@@ -6510,6 +6890,7 @@ bondInfo[381].atom1.info	"[GLY]48:A.C #373"
 bondInfo[381]._bpt	380
 bondInfo[381].radius	0.15
 bondInfo[381].type	"single"
+bondInfo[381].jmol_order	"0x1"
 bondInfo[382].colix	0
 bondInfo[382].visible	true
 bondInfo[382].order	1.0
@@ -6527,6 +6908,7 @@ bondInfo[382].atom1.info	"[GLY]49:A.N #375"
 bondInfo[382]._bpt	381
 bondInfo[382].radius	0.15
 bondInfo[382].type	"single"
+bondInfo[382].jmol_order	"0x1"
 bondInfo[383].colix	0
 bondInfo[383].visible	true
 bondInfo[383].order	1.0
@@ -6544,6 +6926,7 @@ bondInfo[383].atom1.info	"[GLY]49:A.CA #376"
 bondInfo[383]._bpt	382
 bondInfo[383].radius	0.15
 bondInfo[383].type	"single"
+bondInfo[383].jmol_order	"0x1"
 bondInfo[384].colix	0
 bondInfo[384].visible	true
 bondInfo[384].order	1.0
@@ -6561,6 +6944,7 @@ bondInfo[384].atom1.info	"[GLY]49:A.C #377"
 bondInfo[384]._bpt	383
 bondInfo[384].radius	0.15
 bondInfo[384].type	"single"
+bondInfo[384].jmol_order	"0x1"
 bondInfo[385].colix	0
 bondInfo[385].visible	true
 bondInfo[385].order	1.0
@@ -6578,6 +6962,7 @@ bondInfo[385].atom1.info	"[GLY]49:A.O #378"
 bondInfo[385]._bpt	384
 bondInfo[385].radius	0.15
 bondInfo[385].type	"single"
+bondInfo[385].jmol_order	"0x1"
 bondInfo[386].colix	0
 bondInfo[386].visible	true
 bondInfo[386].order	1.0
@@ -6595,6 +6980,7 @@ bondInfo[386].atom1.info	"[ILE]50:A.N #379"
 bondInfo[386]._bpt	385
 bondInfo[386].radius	0.15
 bondInfo[386].type	"single"
+bondInfo[386].jmol_order	"0x1"
 bondInfo[387].colix	0
 bondInfo[387].visible	true
 bondInfo[387].order	1.0
@@ -6612,6 +6998,7 @@ bondInfo[387].atom1.info	"[ILE]50:A.CA #380"
 bondInfo[387]._bpt	386
 bondInfo[387].radius	0.15
 bondInfo[387].type	"single"
+bondInfo[387].jmol_order	"0x1"
 bondInfo[388].colix	0
 bondInfo[388].visible	true
 bondInfo[388].order	1.0
@@ -6629,6 +7016,7 @@ bondInfo[388].atom1.info	"[ILE]50:A.C #381"
 bondInfo[388]._bpt	387
 bondInfo[388].radius	0.15
 bondInfo[388].type	"single"
+bondInfo[388].jmol_order	"0x1"
 bondInfo[389].colix	0
 bondInfo[389].visible	true
 bondInfo[389].order	1.0
@@ -6646,6 +7034,7 @@ bondInfo[389].atom1.info	"[ILE]50:A.O #382"
 bondInfo[389]._bpt	388
 bondInfo[389].radius	0.15
 bondInfo[389].type	"single"
+bondInfo[389].jmol_order	"0x1"
 bondInfo[390].colix	0
 bondInfo[390].visible	true
 bondInfo[390].order	1.0
@@ -6663,6 +7052,7 @@ bondInfo[390].atom1.info	"[ILE]50:A.CB #383"
 bondInfo[390]._bpt	389
 bondInfo[390].radius	0.15
 bondInfo[390].type	"single"
+bondInfo[390].jmol_order	"0x1"
 bondInfo[391].colix	0
 bondInfo[391].visible	true
 bondInfo[391].order	1.0
@@ -6680,6 +7070,7 @@ bondInfo[391].atom1.info	"[ILE]50:A.CG1 #384"
 bondInfo[391]._bpt	390
 bondInfo[391].radius	0.15
 bondInfo[391].type	"single"
+bondInfo[391].jmol_order	"0x1"
 bondInfo[392].colix	0
 bondInfo[392].visible	true
 bondInfo[392].order	1.0
@@ -6697,6 +7088,7 @@ bondInfo[392].atom1.info	"[ILE]50:A.CG1 #384"
 bondInfo[392]._bpt	391
 bondInfo[392].radius	0.15
 bondInfo[392].type	"single"
+bondInfo[392].jmol_order	"0x1"
 bondInfo[393].colix	0
 bondInfo[393].visible	true
 bondInfo[393].order	1.0
@@ -6714,6 +7106,7 @@ bondInfo[393].atom1.info	"[ILE]50:A.CG2 #385"
 bondInfo[393]._bpt	392
 bondInfo[393].radius	0.15
 bondInfo[393].type	"single"
+bondInfo[393].jmol_order	"0x1"
 bondInfo[394].colix	0
 bondInfo[394].visible	true
 bondInfo[394].order	1.0
@@ -6731,6 +7124,7 @@ bondInfo[394].atom1.info	"[GLY]51:A.N #387"
 bondInfo[394]._bpt	393
 bondInfo[394].radius	0.15
 bondInfo[394].type	"single"
+bondInfo[394].jmol_order	"0x1"
 bondInfo[395].colix	0
 bondInfo[395].visible	true
 bondInfo[395].order	1.0
@@ -6748,6 +7142,7 @@ bondInfo[395].atom1.info	"[GLY]51:A.CA #388"
 bondInfo[395]._bpt	394
 bondInfo[395].radius	0.15
 bondInfo[395].type	"single"
+bondInfo[395].jmol_order	"0x1"
 bondInfo[396].colix	0
 bondInfo[396].visible	true
 bondInfo[396].order	1.0
@@ -6765,6 +7160,7 @@ bondInfo[396].atom1.info	"[GLY]51:A.CA #388"
 bondInfo[396]._bpt	395
 bondInfo[396].radius	0.15
 bondInfo[396].type	"single"
+bondInfo[396].jmol_order	"0x1"
 bondInfo[397].colix	0
 bondInfo[397].visible	true
 bondInfo[397].order	1.0
@@ -6782,6 +7178,7 @@ bondInfo[397].atom1.info	"[GLY]51:A.C #389"
 bondInfo[397]._bpt	396
 bondInfo[397].radius	0.15
 bondInfo[397].type	"single"
+bondInfo[397].jmol_order	"0x1"
 bondInfo[398].colix	0
 bondInfo[398].visible	true
 bondInfo[398].order	1.0
@@ -6799,6 +7196,7 @@ bondInfo[398].atom1.info	"[GLY]51:A.O #390"
 bondInfo[398]._bpt	397
 bondInfo[398].radius	0.15
 bondInfo[398].type	"single"
+bondInfo[398].jmol_order	"0x1"
 bondInfo[399].colix	0
 bondInfo[399].visible	true
 bondInfo[399].order	1.0
@@ -6816,6 +7214,7 @@ bondInfo[399].atom1.info	"[GLY]52:A.N #391"
 bondInfo[399]._bpt	398
 bondInfo[399].radius	0.15
 bondInfo[399].type	"single"
+bondInfo[399].jmol_order	"0x1"
 bondInfo[400].colix	0
 bondInfo[400].visible	true
 bondInfo[400].order	1.0
@@ -6833,6 +7232,7 @@ bondInfo[400].atom1.info	"[GLY]52:A.CA #392"
 bondInfo[400]._bpt	399
 bondInfo[400].radius	0.15
 bondInfo[400].type	"single"
+bondInfo[400].jmol_order	"0x1"
 bondInfo[401].colix	0
 bondInfo[401].visible	true
 bondInfo[401].order	1.0
@@ -6850,6 +7250,7 @@ bondInfo[401].atom1.info	"[GLY]52:A.C #393"
 bondInfo[401]._bpt	400
 bondInfo[401].radius	0.15
 bondInfo[401].type	"single"
+bondInfo[401].jmol_order	"0x1"
 bondInfo[402].colix	0
 bondInfo[402].visible	true
 bondInfo[402].order	1.0
@@ -6867,6 +7268,7 @@ bondInfo[402].atom1.info	"[GLY]52:A.C #393"
 bondInfo[402]._bpt	401
 bondInfo[402].radius	0.15
 bondInfo[402].type	"single"
+bondInfo[402].jmol_order	"0x1"
 bondInfo[403].colix	0
 bondInfo[403].visible	true
 bondInfo[403].order	1.0
@@ -6884,6 +7286,7 @@ bondInfo[403].atom1.info	"[PHE]53:A.N #395"
 bondInfo[403]._bpt	402
 bondInfo[403].radius	0.15
 bondInfo[403].type	"single"
+bondInfo[403].jmol_order	"0x1"
 bondInfo[404].colix	0
 bondInfo[404].visible	true
 bondInfo[404].order	1.0
@@ -6901,6 +7304,7 @@ bondInfo[404].atom1.info	"[PHE]53:A.CA #396"
 bondInfo[404]._bpt	403
 bondInfo[404].radius	0.15
 bondInfo[404].type	"single"
+bondInfo[404].jmol_order	"0x1"
 bondInfo[405].colix	0
 bondInfo[405].visible	true
 bondInfo[405].order	1.0
@@ -6918,6 +7322,7 @@ bondInfo[405].atom1.info	"[PHE]53:A.C #397"
 bondInfo[405]._bpt	404
 bondInfo[405].radius	0.15
 bondInfo[405].type	"single"
+bondInfo[405].jmol_order	"0x1"
 bondInfo[406].colix	0
 bondInfo[406].visible	true
 bondInfo[406].order	1.0
@@ -6935,6 +7340,7 @@ bondInfo[406].atom1.info	"[PHE]53:A.C #397"
 bondInfo[406]._bpt	405
 bondInfo[406].radius	0.15
 bondInfo[406].type	"single"
+bondInfo[406].jmol_order	"0x1"
 bondInfo[407].colix	0
 bondInfo[407].visible	true
 bondInfo[407].order	1.0
@@ -6952,6 +7358,7 @@ bondInfo[407].atom1.info	"[PHE]53:A.O #398"
 bondInfo[407]._bpt	406
 bondInfo[407].radius	0.15
 bondInfo[407].type	"single"
+bondInfo[407].jmol_order	"0x1"
 bondInfo[408].colix	0
 bondInfo[408].visible	true
 bondInfo[408].order	1.0
@@ -6969,6 +7376,7 @@ bondInfo[408].atom1.info	"[PHE]53:A.CB #399"
 bondInfo[408]._bpt	407
 bondInfo[408].radius	0.15
 bondInfo[408].type	"single"
+bondInfo[408].jmol_order	"0x1"
 bondInfo[409].colix	0
 bondInfo[409].visible	true
 bondInfo[409].order	1.0
@@ -6986,6 +7394,7 @@ bondInfo[409].atom1.info	"[PHE]53:A.CG #400"
 bondInfo[409]._bpt	408
 bondInfo[409].radius	0.15
 bondInfo[409].type	"single"
+bondInfo[409].jmol_order	"0x1"
 bondInfo[410].colix	0
 bondInfo[410].visible	true
 bondInfo[410].order	1.0
@@ -7003,6 +7412,7 @@ bondInfo[410].atom1.info	"[PHE]53:A.CD1 #401"
 bondInfo[410]._bpt	409
 bondInfo[410].radius	0.15
 bondInfo[410].type	"single"
+bondInfo[410].jmol_order	"0x1"
 bondInfo[411].colix	0
 bondInfo[411].visible	true
 bondInfo[411].order	1.0
@@ -7020,6 +7430,7 @@ bondInfo[411].atom1.info	"[PHE]53:A.CD1 #401"
 bondInfo[411]._bpt	410
 bondInfo[411].radius	0.15
 bondInfo[411].type	"single"
+bondInfo[411].jmol_order	"0x1"
 bondInfo[412].colix	0
 bondInfo[412].visible	true
 bondInfo[412].order	1.0
@@ -7037,6 +7448,7 @@ bondInfo[412].atom1.info	"[PHE]53:A.CD2 #402"
 bondInfo[412]._bpt	411
 bondInfo[412].radius	0.15
 bondInfo[412].type	"single"
+bondInfo[412].jmol_order	"0x1"
 bondInfo[413].colix	0
 bondInfo[413].visible	true
 bondInfo[413].order	1.0
@@ -7054,6 +7466,7 @@ bondInfo[413].atom1.info	"[PHE]53:A.CE1 #403"
 bondInfo[413]._bpt	412
 bondInfo[413].radius	0.15
 bondInfo[413].type	"single"
+bondInfo[413].jmol_order	"0x1"
 bondInfo[414].colix	0
 bondInfo[414].visible	true
 bondInfo[414].order	1.0
@@ -7071,6 +7484,7 @@ bondInfo[414].atom1.info	"[PHE]53:A.CZ #405"
 bondInfo[414]._bpt	413
 bondInfo[414].radius	0.15
 bondInfo[414].type	"single"
+bondInfo[414].jmol_order	"0x1"
 bondInfo[415].colix	0
 bondInfo[415].visible	true
 bondInfo[415].order	1.0
@@ -7088,6 +7502,7 @@ bondInfo[415].atom1.info	"[ILE]54:A.CA #407"
 bondInfo[415]._bpt	414
 bondInfo[415].radius	0.15
 bondInfo[415].type	"single"
+bondInfo[415].jmol_order	"0x1"
 bondInfo[416].colix	0
 bondInfo[416].visible	true
 bondInfo[416].order	1.0
@@ -7105,6 +7520,7 @@ bondInfo[416].atom1.info	"[ILE]54:A.CA #407"
 bondInfo[416]._bpt	415
 bondInfo[416].radius	0.15
 bondInfo[416].type	"single"
+bondInfo[416].jmol_order	"0x1"
 bondInfo[417].colix	0
 bondInfo[417].visible	true
 bondInfo[417].order	1.0
@@ -7122,6 +7538,7 @@ bondInfo[417].atom1.info	"[ILE]54:A.C #408"
 bondInfo[417]._bpt	416
 bondInfo[417].radius	0.15
 bondInfo[417].type	"single"
+bondInfo[417].jmol_order	"0x1"
 bondInfo[418].colix	0
 bondInfo[418].visible	true
 bondInfo[418].order	1.0
@@ -7139,6 +7556,7 @@ bondInfo[418].atom1.info	"[ILE]54:A.CB #410"
 bondInfo[418]._bpt	417
 bondInfo[418].radius	0.15
 bondInfo[418].type	"single"
+bondInfo[418].jmol_order	"0x1"
 bondInfo[419].colix	0
 bondInfo[419].visible	true
 bondInfo[419].order	1.0
@@ -7156,6 +7574,7 @@ bondInfo[419].atom1.info	"[ILE]54:A.CB #410"
 bondInfo[419]._bpt	418
 bondInfo[419].radius	0.15
 bondInfo[419].type	"single"
+bondInfo[419].jmol_order	"0x1"
 bondInfo[420].colix	0
 bondInfo[420].visible	true
 bondInfo[420].order	1.0
@@ -7173,6 +7592,7 @@ bondInfo[420].atom1.info	"[ILE]54:A.CG2 #412"
 bondInfo[420]._bpt	419
 bondInfo[420].radius	0.15
 bondInfo[420].type	"single"
+bondInfo[420].jmol_order	"0x1"
 bondInfo[421].colix	0
 bondInfo[421].visible	true
 bondInfo[421].order	1.0
@@ -7190,6 +7610,7 @@ bondInfo[421].atom1.info	"[ILE]54:A.CD1 #413"
 bondInfo[421]._bpt	420
 bondInfo[421].radius	0.15
 bondInfo[421].type	"single"
+bondInfo[421].jmol_order	"0x1"
 bondInfo[422].colix	0
 bondInfo[422].visible	true
 bondInfo[422].order	1.0
@@ -7207,6 +7628,7 @@ bondInfo[422].atom1.info	"[LYS]55:A.N #414"
 bondInfo[422]._bpt	421
 bondInfo[422].radius	0.15
 bondInfo[422].type	"single"
+bondInfo[422].jmol_order	"0x1"
 bondInfo[423].colix	0
 bondInfo[423].visible	true
 bondInfo[423].order	1.0
@@ -7224,6 +7646,7 @@ bondInfo[423].atom1.info	"[LYS]55:A.N #414"
 bondInfo[423]._bpt	422
 bondInfo[423].radius	0.15
 bondInfo[423].type	"single"
+bondInfo[423].jmol_order	"0x1"
 bondInfo[424].colix	0
 bondInfo[424].visible	true
 bondInfo[424].order	1.0
@@ -7241,6 +7664,7 @@ bondInfo[424].atom1.info	"[LYS]55:A.CA #415"
 bondInfo[424]._bpt	423
 bondInfo[424].radius	0.15
 bondInfo[424].type	"single"
+bondInfo[424].jmol_order	"0x1"
 bondInfo[425].colix	0
 bondInfo[425].visible	true
 bondInfo[425].order	1.0
@@ -7258,6 +7682,7 @@ bondInfo[425].atom1.info	"[LYS]55:A.C #416"
 bondInfo[425]._bpt	424
 bondInfo[425].radius	0.15
 bondInfo[425].type	"single"
+bondInfo[425].jmol_order	"0x1"
 bondInfo[426].colix	0
 bondInfo[426].visible	true
 bondInfo[426].order	1.0
@@ -7275,6 +7700,7 @@ bondInfo[426].atom1.info	"[LYS]55:A.O #417"
 bondInfo[426]._bpt	425
 bondInfo[426].radius	0.15
 bondInfo[426].type	"single"
+bondInfo[426].jmol_order	"0x1"
 bondInfo[427].colix	0
 bondInfo[427].visible	true
 bondInfo[427].order	1.0
@@ -7292,6 +7718,7 @@ bondInfo[427].atom1.info	"[LYS]55:A.CB #418"
 bondInfo[427]._bpt	426
 bondInfo[427].radius	0.15
 bondInfo[427].type	"single"
+bondInfo[427].jmol_order	"0x1"
 bondInfo[428].colix	0
 bondInfo[428].visible	true
 bondInfo[428].order	1.0
@@ -7309,6 +7736,7 @@ bondInfo[428].atom1.info	"[LYS]55:A.CG #419"
 bondInfo[428]._bpt	427
 bondInfo[428].radius	0.15
 bondInfo[428].type	"single"
+bondInfo[428].jmol_order	"0x1"
 bondInfo[429].colix	0
 bondInfo[429].visible	true
 bondInfo[429].order	1.0
@@ -7326,6 +7754,7 @@ bondInfo[429].atom1.info	"[LYS]55:A.CD #420"
 bondInfo[429]._bpt	428
 bondInfo[429].radius	0.15
 bondInfo[429].type	"single"
+bondInfo[429].jmol_order	"0x1"
 bondInfo[430].colix	0
 bondInfo[430].visible	true
 bondInfo[430].order	1.0
@@ -7343,6 +7772,7 @@ bondInfo[430].atom1.info	"[LYS]55:A.CD #420"
 bondInfo[430]._bpt	429
 bondInfo[430].radius	0.15
 bondInfo[430].type	"single"
+bondInfo[430].jmol_order	"0x1"
 bondInfo[431].colix	0
 bondInfo[431].visible	true
 bondInfo[431].order	1.0
@@ -7360,6 +7790,7 @@ bondInfo[431].atom1.info	"[LYS]55:A.NZ #422"
 bondInfo[431]._bpt	430
 bondInfo[431].radius	0.15
 bondInfo[431].type	"single"
+bondInfo[431].jmol_order	"0x1"
 bondInfo[432].colix	0
 bondInfo[432].visible	true
 bondInfo[432].order	1.0
@@ -7377,6 +7808,7 @@ bondInfo[432].atom1.info	"[VAL]56:A.N #423"
 bondInfo[432]._bpt	431
 bondInfo[432].radius	0.15
 bondInfo[432].type	"single"
+bondInfo[432].jmol_order	"0x1"
 bondInfo[433].colix	0
 bondInfo[433].visible	true
 bondInfo[433].order	1.0
@@ -7394,6 +7826,7 @@ bondInfo[433].atom1.info	"[VAL]56:A.CA #424"
 bondInfo[433]._bpt	432
 bondInfo[433].radius	0.15
 bondInfo[433].type	"single"
+bondInfo[433].jmol_order	"0x1"
 bondInfo[434].colix	0
 bondInfo[434].visible	true
 bondInfo[434].order	1.0
@@ -7411,6 +7844,7 @@ bondInfo[434].atom1.info	"[VAL]56:A.CA #424"
 bondInfo[434]._bpt	433
 bondInfo[434].radius	0.15
 bondInfo[434].type	"single"
+bondInfo[434].jmol_order	"0x1"
 bondInfo[435].colix	0
 bondInfo[435].visible	true
 bondInfo[435].order	1.0
@@ -7428,6 +7862,7 @@ bondInfo[435].atom1.info	"[VAL]56:A.C #425"
 bondInfo[435]._bpt	434
 bondInfo[435].radius	0.15
 bondInfo[435].type	"single"
+bondInfo[435].jmol_order	"0x1"
 bondInfo[436].colix	0
 bondInfo[436].visible	true
 bondInfo[436].order	1.0
@@ -7445,6 +7880,7 @@ bondInfo[436].atom1.info	"[VAL]56:A.C #425"
 bondInfo[436]._bpt	435
 bondInfo[436].radius	0.15
 bondInfo[436].type	"single"
+bondInfo[436].jmol_order	"0x1"
 bondInfo[437].colix	0
 bondInfo[437].visible	true
 bondInfo[437].order	1.0
@@ -7462,6 +7898,7 @@ bondInfo[437].atom1.info	"[VAL]56:A.CB #427"
 bondInfo[437]._bpt	436
 bondInfo[437].radius	0.15
 bondInfo[437].type	"single"
+bondInfo[437].jmol_order	"0x1"
 bondInfo[438].colix	0
 bondInfo[438].visible	true
 bondInfo[438].order	1.0
@@ -7479,6 +7916,7 @@ bondInfo[438].atom1.info	"[VAL]56:A.CG1 #428"
 bondInfo[438]._bpt	437
 bondInfo[438].radius	0.15
 bondInfo[438].type	"single"
+bondInfo[438].jmol_order	"0x1"
 bondInfo[439].colix	0
 bondInfo[439].visible	true
 bondInfo[439].order	1.0
@@ -7496,6 +7934,7 @@ bondInfo[439].atom1.info	"[ARG]57:A.N #430"
 bondInfo[439]._bpt	438
 bondInfo[439].radius	0.15
 bondInfo[439].type	"single"
+bondInfo[439].jmol_order	"0x1"
 bondInfo[440].colix	0
 bondInfo[440].visible	true
 bondInfo[440].order	1.0
@@ -7513,6 +7952,7 @@ bondInfo[440].atom1.info	"[ARG]57:A.CA #431"
 bondInfo[440]._bpt	439
 bondInfo[440].radius	0.15
 bondInfo[440].type	"single"
+bondInfo[440].jmol_order	"0x1"
 bondInfo[441].colix	0
 bondInfo[441].visible	true
 bondInfo[441].order	1.0
@@ -7530,6 +7970,7 @@ bondInfo[441].atom1.info	"[ARG]57:A.C #432"
 bondInfo[441]._bpt	440
 bondInfo[441].radius	0.15
 bondInfo[441].type	"single"
+bondInfo[441].jmol_order	"0x1"
 bondInfo[442].colix	0
 bondInfo[442].visible	true
 bondInfo[442].order	1.0
@@ -7547,6 +7988,7 @@ bondInfo[442].atom1.info	"[ARG]57:A.C #432"
 bondInfo[442]._bpt	441
 bondInfo[442].radius	0.15
 bondInfo[442].type	"single"
+bondInfo[442].jmol_order	"0x1"
 bondInfo[443].colix	0
 bondInfo[443].visible	true
 bondInfo[443].order	1.0
@@ -7564,6 +8006,7 @@ bondInfo[443].atom1.info	"[ARG]57:A.CB #434"
 bondInfo[443]._bpt	442
 bondInfo[443].radius	0.15
 bondInfo[443].type	"single"
+bondInfo[443].jmol_order	"0x1"
 bondInfo[444].colix	0
 bondInfo[444].visible	true
 bondInfo[444].order	1.0
@@ -7581,6 +8024,7 @@ bondInfo[444].atom1.info	"[ARG]57:A.CG #435"
 bondInfo[444]._bpt	443
 bondInfo[444].radius	0.15
 bondInfo[444].type	"single"
+bondInfo[444].jmol_order	"0x1"
 bondInfo[445].colix	0
 bondInfo[445].visible	true
 bondInfo[445].order	1.0
@@ -7598,6 +8042,7 @@ bondInfo[445].atom1.info	"[ARG]57:A.CD #436"
 bondInfo[445]._bpt	444
 bondInfo[445].radius	0.15
 bondInfo[445].type	"single"
+bondInfo[445].jmol_order	"0x1"
 bondInfo[446].colix	0
 bondInfo[446].visible	true
 bondInfo[446].order	1.0
@@ -7615,6 +8060,7 @@ bondInfo[446].atom1.info	"[ARG]57:A.CD #436"
 bondInfo[446]._bpt	445
 bondInfo[446].radius	0.15
 bondInfo[446].type	"single"
+bondInfo[446].jmol_order	"0x1"
 bondInfo[447].colix	0
 bondInfo[447].visible	true
 bondInfo[447].order	1.0
@@ -7632,6 +8078,7 @@ bondInfo[447].atom1.info	"[ARG]57:A.CZ #438"
 bondInfo[447]._bpt	446
 bondInfo[447].radius	0.15
 bondInfo[447].type	"single"
+bondInfo[447].jmol_order	"0x1"
 bondInfo[448].colix	0
 bondInfo[448].visible	true
 bondInfo[448].order	1.0
@@ -7649,6 +8096,7 @@ bondInfo[448].atom1.info	"[ARG]57:A.CZ #438"
 bondInfo[448]._bpt	447
 bondInfo[448].radius	0.15
 bondInfo[448].type	"single"
+bondInfo[448].jmol_order	"0x1"
 bondInfo[449].colix	0
 bondInfo[449].visible	true
 bondInfo[449].order	1.0
@@ -7666,6 +8114,7 @@ bondInfo[449].atom1.info	"[ARG]57:A.NH1 #439"
 bondInfo[449]._bpt	448
 bondInfo[449].radius	0.15
 bondInfo[449].type	"single"
+bondInfo[449].jmol_order	"0x1"
 bondInfo[450].colix	0
 bondInfo[450].visible	true
 bondInfo[450].order	1.0
@@ -7683,6 +8132,7 @@ bondInfo[450].atom1.info	"[GLN]58:A.N #441"
 bondInfo[450]._bpt	449
 bondInfo[450].radius	0.15
 bondInfo[450].type	"single"
+bondInfo[450].jmol_order	"0x1"
 bondInfo[451].colix	0
 bondInfo[451].visible	true
 bondInfo[451].order	1.0
@@ -7700,6 +8150,7 @@ bondInfo[451].atom1.info	"[GLN]58:A.CA #442"
 bondInfo[451]._bpt	450
 bondInfo[451].radius	0.15
 bondInfo[451].type	"single"
+bondInfo[451].jmol_order	"0x1"
 bondInfo[452].colix	0
 bondInfo[452].visible	true
 bondInfo[452].order	1.0
@@ -7717,6 +8168,7 @@ bondInfo[452].atom1.info	"[GLN]58:A.CA #442"
 bondInfo[452]._bpt	451
 bondInfo[452].radius	0.15
 bondInfo[452].type	"single"
+bondInfo[452].jmol_order	"0x1"
 bondInfo[453].colix	0
 bondInfo[453].visible	true
 bondInfo[453].order	1.0
@@ -7734,6 +8186,7 @@ bondInfo[453].atom1.info	"[GLN]58:A.C #443"
 bondInfo[453]._bpt	452
 bondInfo[453].radius	0.15
 bondInfo[453].type	"single"
+bondInfo[453].jmol_order	"0x1"
 bondInfo[454].colix	0
 bondInfo[454].visible	true
 bondInfo[454].order	1.0
@@ -7751,6 +8204,7 @@ bondInfo[454].atom1.info	"[GLN]58:A.C #443"
 bondInfo[454]._bpt	453
 bondInfo[454].radius	0.15
 bondInfo[454].type	"single"
+bondInfo[454].jmol_order	"0x1"
 bondInfo[455].colix	0
 bondInfo[455].visible	true
 bondInfo[455].order	1.0
@@ -7768,6 +8222,7 @@ bondInfo[455].atom1.info	"[GLN]58:A.CB #445"
 bondInfo[455]._bpt	454
 bondInfo[455].radius	0.15
 bondInfo[455].type	"single"
+bondInfo[455].jmol_order	"0x1"
 bondInfo[456].colix	0
 bondInfo[456].visible	true
 bondInfo[456].order	1.0
@@ -7785,6 +8240,7 @@ bondInfo[456].atom1.info	"[GLN]58:A.CG #446"
 bondInfo[456]._bpt	455
 bondInfo[456].radius	0.15
 bondInfo[456].type	"single"
+bondInfo[456].jmol_order	"0x1"
 bondInfo[457].colix	0
 bondInfo[457].visible	true
 bondInfo[457].order	1.0
@@ -7802,6 +8258,7 @@ bondInfo[457].atom1.info	"[GLN]58:A.CD #447"
 bondInfo[457]._bpt	456
 bondInfo[457].radius	0.15
 bondInfo[457].type	"single"
+bondInfo[457].jmol_order	"0x1"
 bondInfo[458].colix	0
 bondInfo[458].visible	true
 bondInfo[458].order	1.0
@@ -7819,6 +8276,7 @@ bondInfo[458].atom1.info	"[GLN]58:A.NE2 #449"
 bondInfo[458]._bpt	457
 bondInfo[458].radius	0.15
 bondInfo[458].type	"single"
+bondInfo[458].jmol_order	"0x1"
 bondInfo[459].colix	0
 bondInfo[459].visible	true
 bondInfo[459].order	1.0
@@ -7836,6 +8294,7 @@ bondInfo[459].atom1.info	"[TYR]59:A.N #450"
 bondInfo[459]._bpt	458
 bondInfo[459].radius	0.15
 bondInfo[459].type	"single"
+bondInfo[459].jmol_order	"0x1"
 bondInfo[460].colix	0
 bondInfo[460].visible	true
 bondInfo[460].order	1.0
@@ -7853,6 +8312,7 @@ bondInfo[460].atom1.info	"[TYR]59:A.CA #451"
 bondInfo[460]._bpt	459
 bondInfo[460].radius	0.15
 bondInfo[460].type	"single"
+bondInfo[460].jmol_order	"0x1"
 bondInfo[461].colix	0
 bondInfo[461].visible	true
 bondInfo[461].order	1.0
@@ -7870,6 +8330,7 @@ bondInfo[461].atom1.info	"[TYR]59:A.C #452"
 bondInfo[461]._bpt	460
 bondInfo[461].radius	0.15
 bondInfo[461].type	"single"
+bondInfo[461].jmol_order	"0x1"
 bondInfo[462].colix	0
 bondInfo[462].visible	true
 bondInfo[462].order	1.0
@@ -7887,6 +8348,7 @@ bondInfo[462].atom1.info	"[TYR]59:A.C #452"
 bondInfo[462]._bpt	461
 bondInfo[462].radius	0.15
 bondInfo[462].type	"single"
+bondInfo[462].jmol_order	"0x1"
 bondInfo[463].colix	0
 bondInfo[463].visible	true
 bondInfo[463].order	1.0
@@ -7904,6 +8366,7 @@ bondInfo[463].atom1.info	"[TYR]59:A.CB #454"
 bondInfo[463]._bpt	462
 bondInfo[463].radius	0.15
 bondInfo[463].type	"single"
+bondInfo[463].jmol_order	"0x1"
 bondInfo[464].colix	0
 bondInfo[464].visible	true
 bondInfo[464].order	1.0
@@ -7921,6 +8384,7 @@ bondInfo[464].atom1.info	"[TYR]59:A.CG #455"
 bondInfo[464]._bpt	463
 bondInfo[464].radius	0.15
 bondInfo[464].type	"single"
+bondInfo[464].jmol_order	"0x1"
 bondInfo[465].colix	0
 bondInfo[465].visible	true
 bondInfo[465].order	1.0
@@ -7938,6 +8402,7 @@ bondInfo[465].atom1.info	"[TYR]59:A.CD1 #456"
 bondInfo[465]._bpt	464
 bondInfo[465].radius	0.15
 bondInfo[465].type	"single"
+bondInfo[465].jmol_order	"0x1"
 bondInfo[466].colix	0
 bondInfo[466].visible	true
 bondInfo[466].order	1.0
@@ -7955,6 +8420,7 @@ bondInfo[466].atom1.info	"[TYR]59:A.CD2 #457"
 bondInfo[466]._bpt	465
 bondInfo[466].radius	0.15
 bondInfo[466].type	"single"
+bondInfo[466].jmol_order	"0x1"
 bondInfo[467].colix	0
 bondInfo[467].visible	true
 bondInfo[467].order	1.0
@@ -7972,6 +8438,7 @@ bondInfo[467].atom1.info	"[TYR]59:A.CE1 #458"
 bondInfo[467]._bpt	466
 bondInfo[467].radius	0.15
 bondInfo[467].type	"single"
+bondInfo[467].jmol_order	"0x1"
 bondInfo[468].colix	0
 bondInfo[468].visible	true
 bondInfo[468].order	1.0
@@ -7989,6 +8456,7 @@ bondInfo[468].atom1.info	"[TYR]59:A.CE2 #459"
 bondInfo[468]._bpt	467
 bondInfo[468].radius	0.15
 bondInfo[468].type	"single"
+bondInfo[468].jmol_order	"0x1"
 bondInfo[469].colix	0
 bondInfo[469].visible	true
 bondInfo[469].order	1.0
@@ -8006,6 +8474,7 @@ bondInfo[469].atom1.info	"[TYR]59:A.CZ #460"
 bondInfo[469]._bpt	468
 bondInfo[469].radius	0.15
 bondInfo[469].type	"single"
+bondInfo[469].jmol_order	"0x1"
 bondInfo[470].colix	0
 bondInfo[470].visible	true
 bondInfo[470].order	1.0
@@ -8023,6 +8492,7 @@ bondInfo[470].atom1.info	"[TYR]59:A.CZ #460"
 bondInfo[470]._bpt	469
 bondInfo[470].radius	0.15
 bondInfo[470].type	"single"
+bondInfo[470].jmol_order	"0x1"
 bondInfo[471].colix	0
 bondInfo[471].visible	true
 bondInfo[471].order	1.0
@@ -8040,6 +8510,7 @@ bondInfo[471].atom1.info	"[TYR]59:A.OH #461"
 bondInfo[471]._bpt	470
 bondInfo[471].radius	0.15
 bondInfo[471].type	"single"
+bondInfo[471].jmol_order	"0x1"
 bondInfo[472].colix	0
 bondInfo[472].visible	true
 bondInfo[472].order	1.0
@@ -8057,6 +8528,7 @@ bondInfo[472].atom1.info	"[ASP]60:A.N #462"
 bondInfo[472]._bpt	471
 bondInfo[472].radius	0.15
 bondInfo[472].type	"single"
+bondInfo[472].jmol_order	"0x1"
 bondInfo[473].colix	0
 bondInfo[473].visible	true
 bondInfo[473].order	1.0
@@ -8074,6 +8546,7 @@ bondInfo[473].atom1.info	"[ASP]60:A.CA #463"
 bondInfo[473]._bpt	472
 bondInfo[473].radius	0.15
 bondInfo[473].type	"single"
+bondInfo[473].jmol_order	"0x1"
 bondInfo[474].colix	0
 bondInfo[474].visible	true
 bondInfo[474].order	1.0
@@ -8091,6 +8564,7 @@ bondInfo[474].atom1.info	"[ASP]60:A.CA #463"
 bondInfo[474]._bpt	473
 bondInfo[474].radius	0.15
 bondInfo[474].type	"single"
+bondInfo[474].jmol_order	"0x1"
 bondInfo[475].colix	0
 bondInfo[475].visible	true
 bondInfo[475].order	1.0
@@ -8108,6 +8582,7 @@ bondInfo[475].atom1.info	"[ASP]60:A.C #464"
 bondInfo[475]._bpt	474
 bondInfo[475].radius	0.15
 bondInfo[475].type	"single"
+bondInfo[475].jmol_order	"0x1"
 bondInfo[476].colix	0
 bondInfo[476].visible	true
 bondInfo[476].order	1.0
@@ -8125,6 +8600,7 @@ bondInfo[476].atom1.info	"[ASP]60:A.O #465"
 bondInfo[476]._bpt	475
 bondInfo[476].radius	0.15
 bondInfo[476].type	"single"
+bondInfo[476].jmol_order	"0x1"
 bondInfo[477].colix	0
 bondInfo[477].visible	true
 bondInfo[477].order	1.0
@@ -8142,6 +8618,7 @@ bondInfo[477].atom1.info	"[ASP]60:A.CG #467"
 bondInfo[477]._bpt	476
 bondInfo[477].radius	0.15
 bondInfo[477].type	"single"
+bondInfo[477].jmol_order	"0x1"
 bondInfo[478].colix	0
 bondInfo[478].visible	true
 bondInfo[478].order	1.0
@@ -8159,6 +8636,7 @@ bondInfo[478].atom1.info	"[ASP]60:A.CG #467"
 bondInfo[478]._bpt	477
 bondInfo[478].radius	0.15
 bondInfo[478].type	"single"
+bondInfo[478].jmol_order	"0x1"
 bondInfo[479].colix	0
 bondInfo[479].visible	true
 bondInfo[479].order	1.0
@@ -8176,6 +8654,7 @@ bondInfo[479].atom1.info	"[ASP]60:A.OD1 #468"
 bondInfo[479]._bpt	478
 bondInfo[479].radius	0.15
 bondInfo[479].type	"single"
+bondInfo[479].jmol_order	"0x1"
 bondInfo[480].colix	0
 bondInfo[480].visible	true
 bondInfo[480].order	1.0
@@ -8193,6 +8672,7 @@ bondInfo[480].atom1.info	"[GLN]61:A.N #470"
 bondInfo[480]._bpt	479
 bondInfo[480].radius	0.15
 bondInfo[480].type	"single"
+bondInfo[480].jmol_order	"0x1"
 bondInfo[481].colix	0
 bondInfo[481].visible	true
 bondInfo[481].order	1.0
@@ -8210,6 +8690,7 @@ bondInfo[481].atom1.info	"[GLN]61:A.CA #471"
 bondInfo[481]._bpt	480
 bondInfo[481].radius	0.15
 bondInfo[481].type	"single"
+bondInfo[481].jmol_order	"0x1"
 bondInfo[482].colix	0
 bondInfo[482].visible	true
 bondInfo[482].order	1.0
@@ -8227,6 +8708,7 @@ bondInfo[482].atom1.info	"[GLN]61:A.C #472"
 bondInfo[482]._bpt	481
 bondInfo[482].radius	0.15
 bondInfo[482].type	"single"
+bondInfo[482].jmol_order	"0x1"
 bondInfo[483].colix	0
 bondInfo[483].visible	true
 bondInfo[483].order	1.0
@@ -8244,6 +8726,7 @@ bondInfo[483].atom1.info	"[GLN]61:A.C #472"
 bondInfo[483]._bpt	482
 bondInfo[483].radius	0.15
 bondInfo[483].type	"single"
+bondInfo[483].jmol_order	"0x1"
 bondInfo[484].colix	0
 bondInfo[484].visible	true
 bondInfo[484].order	1.0
@@ -8261,6 +8744,7 @@ bondInfo[484].atom1.info	"[GLN]61:A.CB #474"
 bondInfo[484]._bpt	483
 bondInfo[484].radius	0.15
 bondInfo[484].type	"single"
+bondInfo[484].jmol_order	"0x1"
 bondInfo[485].colix	0
 bondInfo[485].visible	true
 bondInfo[485].order	1.0
@@ -8278,6 +8762,7 @@ bondInfo[485].atom1.info	"[GLN]61:A.CG #475"
 bondInfo[485]._bpt	484
 bondInfo[485].radius	0.15
 bondInfo[485].type	"single"
+bondInfo[485].jmol_order	"0x1"
 bondInfo[486].colix	0
 bondInfo[486].visible	true
 bondInfo[486].order	1.0
@@ -8295,6 +8780,7 @@ bondInfo[486].atom1.info	"[GLN]61:A.CD #476"
 bondInfo[486]._bpt	485
 bondInfo[486].radius	0.15
 bondInfo[486].type	"single"
+bondInfo[486].jmol_order	"0x1"
 bondInfo[487].colix	0
 bondInfo[487].visible	true
 bondInfo[487].order	1.0
@@ -8312,6 +8798,7 @@ bondInfo[487].atom1.info	"[GLN]61:A.NE2 #478"
 bondInfo[487]._bpt	486
 bondInfo[487].radius	0.15
 bondInfo[487].type	"single"
+bondInfo[487].jmol_order	"0x1"
 bondInfo[488].colix	0
 bondInfo[488].visible	true
 bondInfo[488].order	1.0
@@ -8329,6 +8816,7 @@ bondInfo[488].atom1.info	"[ILE]62:A.N #479"
 bondInfo[488]._bpt	487
 bondInfo[488].radius	0.15
 bondInfo[488].type	"single"
+bondInfo[488].jmol_order	"0x1"
 bondInfo[489].colix	0
 bondInfo[489].visible	true
 bondInfo[489].order	1.0
@@ -8346,6 +8834,7 @@ bondInfo[489].atom1.info	"[ILE]62:A.CA #480"
 bondInfo[489]._bpt	488
 bondInfo[489].radius	0.15
 bondInfo[489].type	"single"
+bondInfo[489].jmol_order	"0x1"
 bondInfo[490].colix	0
 bondInfo[490].visible	true
 bondInfo[490].order	1.0
@@ -8363,6 +8852,7 @@ bondInfo[490].atom1.info	"[ILE]62:A.CA #480"
 bondInfo[490]._bpt	489
 bondInfo[490].radius	0.15
 bondInfo[490].type	"single"
+bondInfo[490].jmol_order	"0x1"
 bondInfo[491].colix	0
 bondInfo[491].visible	true
 bondInfo[491].order	1.0
@@ -8380,6 +8870,7 @@ bondInfo[491].atom1.info	"[ILE]62:A.C #481"
 bondInfo[491]._bpt	490
 bondInfo[491].radius	0.15
 bondInfo[491].type	"single"
+bondInfo[491].jmol_order	"0x1"
 bondInfo[492].colix	0
 bondInfo[492].visible	true
 bondInfo[492].order	1.0
@@ -8397,6 +8888,7 @@ bondInfo[492].atom1.info	"[ILE]62:A.CB #483"
 bondInfo[492]._bpt	491
 bondInfo[492].radius	0.15
 bondInfo[492].type	"single"
+bondInfo[492].jmol_order	"0x1"
 bondInfo[493].colix	0
 bondInfo[493].visible	true
 bondInfo[493].order	1.0
@@ -8414,6 +8906,7 @@ bondInfo[493].atom1.info	"[ILE]62:A.CG1 #484"
 bondInfo[493]._bpt	492
 bondInfo[493].radius	0.15
 bondInfo[493].type	"single"
+bondInfo[493].jmol_order	"0x1"
 bondInfo[494].colix	0
 bondInfo[494].visible	true
 bondInfo[494].order	1.0
@@ -8431,6 +8924,7 @@ bondInfo[494].atom1.info	"[ILE]62:A.CG1 #484"
 bondInfo[494]._bpt	493
 bondInfo[494].radius	0.15
 bondInfo[494].type	"single"
+bondInfo[494].jmol_order	"0x1"
 bondInfo[495].colix	0
 bondInfo[495].visible	true
 bondInfo[495].order	1.0
@@ -8448,6 +8942,7 @@ bondInfo[495].atom1.info	"[ILE]62:A.CG2 #485"
 bondInfo[495]._bpt	494
 bondInfo[495].radius	0.15
 bondInfo[495].type	"single"
+bondInfo[495].jmol_order	"0x1"
 bondInfo[496].colix	0
 bondInfo[496].visible	true
 bondInfo[496].order	1.0
@@ -8465,6 +8960,7 @@ bondInfo[496].atom1.info	"[LEU]63:A.N #487"
 bondInfo[496]._bpt	495
 bondInfo[496].radius	0.15
 bondInfo[496].type	"single"
+bondInfo[496].jmol_order	"0x1"
 bondInfo[497].colix	0
 bondInfo[497].visible	true
 bondInfo[497].order	1.0
@@ -8482,6 +8978,7 @@ bondInfo[497].atom1.info	"[LEU]63:A.N #487"
 bondInfo[497]._bpt	496
 bondInfo[497].radius	0.15
 bondInfo[497].type	"single"
+bondInfo[497].jmol_order	"0x1"
 bondInfo[498].colix	0
 bondInfo[498].visible	true
 bondInfo[498].order	1.0
@@ -8499,6 +8996,7 @@ bondInfo[498].atom1.info	"[LEU]63:A.CA #488"
 bondInfo[498]._bpt	497
 bondInfo[498].radius	0.15
 bondInfo[498].type	"single"
+bondInfo[498].jmol_order	"0x1"
 bondInfo[499].colix	0
 bondInfo[499].visible	true
 bondInfo[499].order	1.0
@@ -8516,6 +9014,7 @@ bondInfo[499].atom1.info	"[LEU]63:A.C #489"
 bondInfo[499]._bpt	498
 bondInfo[499].radius	0.15
 bondInfo[499].type	"single"
+bondInfo[499].jmol_order	"0x1"
 bondInfo[500].colix	0
 bondInfo[500].visible	true
 bondInfo[500].order	1.0
@@ -8533,6 +9032,7 @@ bondInfo[500].atom1.info	"[LEU]63:A.C #489"
 bondInfo[500]._bpt	499
 bondInfo[500].radius	0.15
 bondInfo[500].type	"single"
+bondInfo[500].jmol_order	"0x1"
 bondInfo[501].colix	0
 bondInfo[501].visible	true
 bondInfo[501].order	1.0
@@ -8550,6 +9050,7 @@ bondInfo[501].atom1.info	"[LEU]63:A.O #490"
 bondInfo[501]._bpt	500
 bondInfo[501].radius	0.15
 bondInfo[501].type	"single"
+bondInfo[501].jmol_order	"0x1"
 bondInfo[502].colix	0
 bondInfo[502].visible	true
 bondInfo[502].order	1.0
@@ -8567,6 +9068,7 @@ bondInfo[502].atom1.info	"[LEU]63:A.CB #491"
 bondInfo[502]._bpt	501
 bondInfo[502].radius	0.15
 bondInfo[502].type	"single"
+bondInfo[502].jmol_order	"0x1"
 bondInfo[503].colix	0
 bondInfo[503].visible	true
 bondInfo[503].order	1.0
@@ -8584,6 +9086,7 @@ bondInfo[503].atom1.info	"[LEU]63:A.CG #492"
 bondInfo[503]._bpt	502
 bondInfo[503].radius	0.15
 bondInfo[503].type	"single"
+bondInfo[503].jmol_order	"0x1"
 bondInfo[504].colix	0
 bondInfo[504].visible	true
 bondInfo[504].order	1.0
@@ -8601,6 +9104,7 @@ bondInfo[504].atom1.info	"[LEU]63:A.CG #492"
 bondInfo[504]._bpt	503
 bondInfo[504].radius	0.15
 bondInfo[504].type	"single"
+bondInfo[504].jmol_order	"0x1"
 bondInfo[505].colix	0
 bondInfo[505].visible	true
 bondInfo[505].order	1.0
@@ -8618,6 +9122,7 @@ bondInfo[505].atom1.info	"[ILE]64:A.CA #496"
 bondInfo[505]._bpt	504
 bondInfo[505].radius	0.15
 bondInfo[505].type	"single"
+bondInfo[505].jmol_order	"0x1"
 bondInfo[506].colix	0
 bondInfo[506].visible	true
 bondInfo[506].order	1.0
@@ -8635,6 +9140,7 @@ bondInfo[506].atom1.info	"[ILE]64:A.CA #496"
 bondInfo[506]._bpt	505
 bondInfo[506].radius	0.15
 bondInfo[506].type	"single"
+bondInfo[506].jmol_order	"0x1"
 bondInfo[507].colix	0
 bondInfo[507].visible	true
 bondInfo[507].order	1.0
@@ -8652,6 +9158,7 @@ bondInfo[507].atom1.info	"[ILE]64:A.C #497"
 bondInfo[507]._bpt	506
 bondInfo[507].radius	0.15
 bondInfo[507].type	"single"
+bondInfo[507].jmol_order	"0x1"
 bondInfo[508].colix	0
 bondInfo[508].visible	true
 bondInfo[508].order	1.0
@@ -8669,6 +9176,7 @@ bondInfo[508].atom1.info	"[ILE]64:A.CB #499"
 bondInfo[508]._bpt	507
 bondInfo[508].radius	0.15
 bondInfo[508].type	"single"
+bondInfo[508].jmol_order	"0x1"
 bondInfo[509].colix	0
 bondInfo[509].visible	true
 bondInfo[509].order	1.0
@@ -8686,6 +9194,7 @@ bondInfo[509].atom1.info	"[ILE]64:A.CB #499"
 bondInfo[509]._bpt	508
 bondInfo[509].radius	0.15
 bondInfo[509].type	"single"
+bondInfo[509].jmol_order	"0x1"
 bondInfo[510].colix	0
 bondInfo[510].visible	true
 bondInfo[510].order	1.0
@@ -8703,6 +9212,7 @@ bondInfo[510].atom1.info	"[ILE]64:A.CG1 #500"
 bondInfo[510]._bpt	509
 bondInfo[510].radius	0.15
 bondInfo[510].type	"single"
+bondInfo[510].jmol_order	"0x1"
 bondInfo[511].colix	0
 bondInfo[511].visible	true
 bondInfo[511].order	1.0
@@ -8720,6 +9230,7 @@ bondInfo[511].atom1.info	"[ILE]64:A.CD1 #502"
 bondInfo[511]._bpt	510
 bondInfo[511].radius	0.15
 bondInfo[511].type	"single"
+bondInfo[511].jmol_order	"0x1"
 bondInfo[512].colix	0
 bondInfo[512].visible	true
 bondInfo[512].order	1.0
@@ -8737,6 +9248,7 @@ bondInfo[512].atom1.info	"[GLU]65:A.N #503"
 bondInfo[512]._bpt	511
 bondInfo[512].radius	0.15
 bondInfo[512].type	"single"
+bondInfo[512].jmol_order	"0x1"
 bondInfo[513].colix	0
 bondInfo[513].visible	true
 bondInfo[513].order	1.0
@@ -8754,6 +9266,7 @@ bondInfo[513].atom1.info	"[GLU]65:A.N #503"
 bondInfo[513]._bpt	512
 bondInfo[513].radius	0.15
 bondInfo[513].type	"single"
+bondInfo[513].jmol_order	"0x1"
 bondInfo[514].colix	0
 bondInfo[514].visible	true
 bondInfo[514].order	1.0
@@ -8771,6 +9284,7 @@ bondInfo[514].atom1.info	"[GLU]65:A.C #505"
 bondInfo[514]._bpt	513
 bondInfo[514].radius	0.15
 bondInfo[514].type	"single"
+bondInfo[514].jmol_order	"0x1"
 bondInfo[515].colix	0
 bondInfo[515].visible	true
 bondInfo[515].order	1.0
@@ -8788,6 +9302,7 @@ bondInfo[515].atom1.info	"[GLU]65:A.C #505"
 bondInfo[515]._bpt	514
 bondInfo[515].radius	0.15
 bondInfo[515].type	"single"
+bondInfo[515].jmol_order	"0x1"
 bondInfo[516].colix	0
 bondInfo[516].visible	true
 bondInfo[516].order	1.0
@@ -8805,6 +9320,7 @@ bondInfo[516].atom1.info	"[GLU]65:A.O #506"
 bondInfo[516]._bpt	515
 bondInfo[516].radius	0.15
 bondInfo[516].type	"single"
+bondInfo[516].jmol_order	"0x1"
 bondInfo[517].colix	0
 bondInfo[517].visible	true
 bondInfo[517].order	1.0
@@ -8822,6 +9338,7 @@ bondInfo[517].atom1.info	"[GLU]65:A.CB #507"
 bondInfo[517]._bpt	516
 bondInfo[517].radius	0.15
 bondInfo[517].type	"single"
+bondInfo[517].jmol_order	"0x1"
 bondInfo[518].colix	0
 bondInfo[518].visible	true
 bondInfo[518].order	1.0
@@ -8839,6 +9356,7 @@ bondInfo[518].atom1.info	"[GLU]65:A.CB #507"
 bondInfo[518]._bpt	517
 bondInfo[518].radius	0.15
 bondInfo[518].type	"single"
+bondInfo[518].jmol_order	"0x1"
 bondInfo[519].colix	0
 bondInfo[519].visible	true
 bondInfo[519].order	1.0
@@ -8856,6 +9374,7 @@ bondInfo[519].atom1.info	"[GLU]65:A.CD #509"
 bondInfo[519]._bpt	518
 bondInfo[519].radius	0.15
 bondInfo[519].type	"single"
+bondInfo[519].jmol_order	"0x1"
 bondInfo[520].colix	0
 bondInfo[520].visible	true
 bondInfo[520].order	1.0
@@ -8873,6 +9392,7 @@ bondInfo[520].atom1.info	"[GLU]65:A.CD #509"
 bondInfo[520]._bpt	519
 bondInfo[520].radius	0.15
 bondInfo[520].type	"single"
+bondInfo[520].jmol_order	"0x1"
 bondInfo[521].colix	0
 bondInfo[521].visible	true
 bondInfo[521].order	1.0
@@ -8890,6 +9410,7 @@ bondInfo[521].atom1.info	"[GLU]65:A.OE2 #511"
 bondInfo[521]._bpt	520
 bondInfo[521].radius	0.15
 bondInfo[521].type	"single"
+bondInfo[521].jmol_order	"0x1"
 bondInfo[522].colix	0
 bondInfo[522].visible	true
 bondInfo[522].order	1.0
@@ -8907,6 +9428,7 @@ bondInfo[522].atom1.info	"[ILE]66:A.CA #513"
 bondInfo[522]._bpt	521
 bondInfo[522].radius	0.15
 bondInfo[522].type	"single"
+bondInfo[522].jmol_order	"0x1"
 bondInfo[523].colix	0
 bondInfo[523].visible	true
 bondInfo[523].order	1.0
@@ -8924,6 +9446,7 @@ bondInfo[523].atom1.info	"[ILE]66:A.CA #513"
 bondInfo[523]._bpt	522
 bondInfo[523].radius	0.15
 bondInfo[523].type	"single"
+bondInfo[523].jmol_order	"0x1"
 bondInfo[524].colix	0
 bondInfo[524].visible	true
 bondInfo[524].order	1.0
@@ -8941,6 +9464,7 @@ bondInfo[524].atom1.info	"[ILE]66:A.CA #513"
 bondInfo[524]._bpt	523
 bondInfo[524].radius	0.15
 bondInfo[524].type	"single"
+bondInfo[524].jmol_order	"0x1"
 bondInfo[525].colix	0
 bondInfo[525].visible	true
 bondInfo[525].order	1.0
@@ -8958,6 +9482,7 @@ bondInfo[525].atom1.info	"[ILE]66:A.C #514"
 bondInfo[525]._bpt	524
 bondInfo[525].radius	0.15
 bondInfo[525].type	"single"
+bondInfo[525].jmol_order	"0x1"
 bondInfo[526].colix	0
 bondInfo[526].visible	true
 bondInfo[526].order	1.0
@@ -8975,6 +9500,7 @@ bondInfo[526].atom1.info	"[ILE]66:A.CG1 #517"
 bondInfo[526]._bpt	525
 bondInfo[526].radius	0.15
 bondInfo[526].type	"single"
+bondInfo[526].jmol_order	"0x1"
 bondInfo[527].colix	0
 bondInfo[527].visible	true
 bondInfo[527].order	1.0
@@ -8992,6 +9518,7 @@ bondInfo[527].atom1.info	"[ILE]66:A.CG1 #517"
 bondInfo[527]._bpt	526
 bondInfo[527].radius	0.15
 bondInfo[527].type	"single"
+bondInfo[527].jmol_order	"0x1"
 bondInfo[528].colix	0
 bondInfo[528].visible	true
 bondInfo[528].order	1.0
@@ -9009,6 +9536,7 @@ bondInfo[528].atom1.info	"[ILE]66:A.CG2 #518"
 bondInfo[528]._bpt	527
 bondInfo[528].radius	0.15
 bondInfo[528].type	"single"
+bondInfo[528].jmol_order	"0x1"
 bondInfo[529].colix	0
 bondInfo[529].visible	true
 bondInfo[529].order	1.0
@@ -9026,6 +9554,7 @@ bondInfo[529].atom1.info	"[CYS]67:A.N #520"
 bondInfo[529]._bpt	528
 bondInfo[529].radius	0.15
 bondInfo[529].type	"single"
+bondInfo[529].jmol_order	"0x1"
 bondInfo[530].colix	0
 bondInfo[530].visible	true
 bondInfo[530].order	1.0
@@ -9043,6 +9572,7 @@ bondInfo[530].atom1.info	"[CYS]67:A.N #520"
 bondInfo[530]._bpt	529
 bondInfo[530].radius	0.15
 bondInfo[530].type	"single"
+bondInfo[530].jmol_order	"0x1"
 bondInfo[531].colix	0
 bondInfo[531].visible	true
 bondInfo[531].order	1.0
@@ -9060,6 +9590,7 @@ bondInfo[531].atom1.info	"[CYS]67:A.CA #521"
 bondInfo[531]._bpt	530
 bondInfo[531].radius	0.15
 bondInfo[531].type	"single"
+bondInfo[531].jmol_order	"0x1"
 bondInfo[532].colix	0
 bondInfo[532].visible	true
 bondInfo[532].order	1.0
@@ -9077,6 +9608,7 @@ bondInfo[532].atom1.info	"[CYS]67:A.CA #521"
 bondInfo[532]._bpt	531
 bondInfo[532].radius	0.15
 bondInfo[532].type	"single"
+bondInfo[532].jmol_order	"0x1"
 bondInfo[533].colix	0
 bondInfo[533].visible	true
 bondInfo[533].order	1.0
@@ -9094,6 +9626,7 @@ bondInfo[533].atom1.info	"[CYS]67:A.C #522"
 bondInfo[533]._bpt	532
 bondInfo[533].radius	0.15
 bondInfo[533].type	"single"
+bondInfo[533].jmol_order	"0x1"
 bondInfo[534].colix	0
 bondInfo[534].visible	true
 bondInfo[534].order	1.0
@@ -9111,6 +9644,7 @@ bondInfo[534].atom1.info	"[CYS]67:A.SG #525"
 bondInfo[534]._bpt	533
 bondInfo[534].radius	0.15
 bondInfo[534].type	"single"
+bondInfo[534].jmol_order	"0x1"
 bondInfo[535].colix	0
 bondInfo[535].visible	true
 bondInfo[535].order	1.0
@@ -9128,6 +9662,7 @@ bondInfo[535].atom1.info	"[GLY]68:A.N #526"
 bondInfo[535]._bpt	534
 bondInfo[535].radius	0.15
 bondInfo[535].type	"single"
+bondInfo[535].jmol_order	"0x1"
 bondInfo[536].colix	0
 bondInfo[536].visible	true
 bondInfo[536].order	1.0
@@ -9145,6 +9680,7 @@ bondInfo[536].atom1.info	"[GLY]68:A.N #526"
 bondInfo[536]._bpt	535
 bondInfo[536].radius	0.15
 bondInfo[536].type	"single"
+bondInfo[536].jmol_order	"0x1"
 bondInfo[537].colix	0
 bondInfo[537].visible	true
 bondInfo[537].order	1.0
@@ -9162,6 +9698,7 @@ bondInfo[537].atom1.info	"[GLY]68:A.CA #527"
 bondInfo[537]._bpt	536
 bondInfo[537].radius	0.15
 bondInfo[537].type	"single"
+bondInfo[537].jmol_order	"0x1"
 bondInfo[538].colix	0
 bondInfo[538].visible	true
 bondInfo[538].order	1.0
@@ -9179,6 +9716,7 @@ bondInfo[538].atom1.info	"[GLY]68:A.C #528"
 bondInfo[538]._bpt	537
 bondInfo[538].radius	0.15
 bondInfo[538].type	"single"
+bondInfo[538].jmol_order	"0x1"
 bondInfo[539].colix	0
 bondInfo[539].visible	true
 bondInfo[539].order	1.0
@@ -9196,6 +9734,7 @@ bondInfo[539].atom1.info	"[GLY]68:A.C #528"
 bondInfo[539]._bpt	538
 bondInfo[539].radius	0.15
 bondInfo[539].type	"single"
+bondInfo[539].jmol_order	"0x1"
 bondInfo[540].colix	0
 bondInfo[540].visible	true
 bondInfo[540].order	1.0
@@ -9213,6 +9752,7 @@ bondInfo[540].atom1.info	"[HIS]69:A.N #530"
 bondInfo[540]._bpt	539
 bondInfo[540].radius	0.15
 bondInfo[540].type	"single"
+bondInfo[540].jmol_order	"0x1"
 bondInfo[541].colix	0
 bondInfo[541].visible	true
 bondInfo[541].order	1.0
@@ -9230,6 +9770,7 @@ bondInfo[541].atom1.info	"[HIS]69:A.CA #531"
 bondInfo[541]._bpt	540
 bondInfo[541].radius	0.15
 bondInfo[541].type	"single"
+bondInfo[541].jmol_order	"0x1"
 bondInfo[542].colix	0
 bondInfo[542].visible	true
 bondInfo[542].order	1.0
@@ -9247,6 +9788,7 @@ bondInfo[542].atom1.info	"[HIS]69:A.C #532"
 bondInfo[542]._bpt	541
 bondInfo[542].radius	0.15
 bondInfo[542].type	"single"
+bondInfo[542].jmol_order	"0x1"
 bondInfo[543].colix	0
 bondInfo[543].visible	true
 bondInfo[543].order	1.0
@@ -9264,6 +9806,7 @@ bondInfo[543].atom1.info	"[HIS]69:A.C #532"
 bondInfo[543]._bpt	542
 bondInfo[543].radius	0.15
 bondInfo[543].type	"single"
+bondInfo[543].jmol_order	"0x1"
 bondInfo[544].colix	0
 bondInfo[544].visible	true
 bondInfo[544].order	1.0
@@ -9281,6 +9824,7 @@ bondInfo[544].atom1.info	"[HIS]69:A.O #533"
 bondInfo[544]._bpt	543
 bondInfo[544].radius	0.15
 bondInfo[544].type	"single"
+bondInfo[544].jmol_order	"0x1"
 bondInfo[545].colix	0
 bondInfo[545].visible	true
 bondInfo[545].order	1.0
@@ -9298,6 +9842,7 @@ bondInfo[545].atom1.info	"[HIS]69:A.CB #534"
 bondInfo[545]._bpt	544
 bondInfo[545].radius	0.15
 bondInfo[545].type	"single"
+bondInfo[545].jmol_order	"0x1"
 bondInfo[546].colix	0
 bondInfo[546].visible	true
 bondInfo[546].order	1.0
@@ -9315,6 +9860,7 @@ bondInfo[546].atom1.info	"[HIS]69:A.CG #535"
 bondInfo[546]._bpt	545
 bondInfo[546].radius	0.15
 bondInfo[546].type	"single"
+bondInfo[546].jmol_order	"0x1"
 bondInfo[547].colix	0
 bondInfo[547].visible	true
 bondInfo[547].order	1.0
@@ -9332,6 +9878,7 @@ bondInfo[547].atom1.info	"[HIS]69:A.ND1 #536"
 bondInfo[547]._bpt	546
 bondInfo[547].radius	0.15
 bondInfo[547].type	"single"
+bondInfo[547].jmol_order	"0x1"
 bondInfo[548].colix	0
 bondInfo[548].visible	true
 bondInfo[548].order	1.0
@@ -9349,6 +9896,7 @@ bondInfo[548].atom1.info	"[HIS]69:A.ND1 #536"
 bondInfo[548]._bpt	547
 bondInfo[548].radius	0.15
 bondInfo[548].type	"single"
+bondInfo[548].jmol_order	"0x1"
 bondInfo[549].colix	0
 bondInfo[549].visible	true
 bondInfo[549].order	1.0
@@ -9366,6 +9914,7 @@ bondInfo[549].atom1.info	"[HIS]69:A.CE1 #538"
 bondInfo[549]._bpt	548
 bondInfo[549].radius	0.15
 bondInfo[549].type	"single"
+bondInfo[549].jmol_order	"0x1"
 bondInfo[550].colix	0
 bondInfo[550].visible	true
 bondInfo[550].order	1.0
@@ -9383,6 +9932,7 @@ bondInfo[550].atom1.info	"[HIS]69:A.NE2 #539"
 bondInfo[550]._bpt	549
 bondInfo[550].radius	0.15
 bondInfo[550].type	"single"
+bondInfo[550].jmol_order	"0x1"
 bondInfo[551].colix	0
 bondInfo[551].visible	true
 bondInfo[551].order	1.0
@@ -9400,6 +9950,7 @@ bondInfo[551].atom1.info	"[LYS]70:A.CA #541"
 bondInfo[551]._bpt	550
 bondInfo[551].radius	0.15
 bondInfo[551].type	"single"
+bondInfo[551].jmol_order	"0x1"
 bondInfo[552].colix	0
 bondInfo[552].visible	true
 bondInfo[552].order	1.0
@@ -9417,6 +9968,7 @@ bondInfo[552].atom1.info	"[LYS]70:A.CA #541"
 bondInfo[552]._bpt	551
 bondInfo[552].radius	0.15
 bondInfo[552].type	"single"
+bondInfo[552].jmol_order	"0x1"
 bondInfo[553].colix	0
 bondInfo[553].visible	true
 bondInfo[553].order	1.0
@@ -9434,6 +9986,7 @@ bondInfo[553].atom1.info	"[LYS]70:A.CA #541"
 bondInfo[553]._bpt	552
 bondInfo[553].radius	0.15
 bondInfo[553].type	"single"
+bondInfo[553].jmol_order	"0x1"
 bondInfo[554].colix	0
 bondInfo[554].visible	true
 bondInfo[554].order	1.0
@@ -9451,6 +10004,7 @@ bondInfo[554].atom1.info	"[LYS]70:A.C #542"
 bondInfo[554]._bpt	553
 bondInfo[554].radius	0.15
 bondInfo[554].type	"single"
+bondInfo[554].jmol_order	"0x1"
 bondInfo[555].colix	0
 bondInfo[555].visible	true
 bondInfo[555].order	1.0
@@ -9468,6 +10022,7 @@ bondInfo[555].atom1.info	"[LYS]70:A.CG #545"
 bondInfo[555]._bpt	554
 bondInfo[555].radius	0.15
 bondInfo[555].type	"single"
+bondInfo[555].jmol_order	"0x1"
 bondInfo[556].colix	0
 bondInfo[556].visible	true
 bondInfo[556].order	1.0
@@ -9485,6 +10040,7 @@ bondInfo[556].atom1.info	"[LYS]70:A.CG #545"
 bondInfo[556]._bpt	555
 bondInfo[556].radius	0.15
 bondInfo[556].type	"single"
+bondInfo[556].jmol_order	"0x1"
 bondInfo[557].colix	0
 bondInfo[557].visible	true
 bondInfo[557].order	1.0
@@ -9502,6 +10058,7 @@ bondInfo[557].atom1.info	"[LYS]70:A.CE #547"
 bondInfo[557]._bpt	556
 bondInfo[557].radius	0.15
 bondInfo[557].type	"single"
+bondInfo[557].jmol_order	"0x1"
 bondInfo[558].colix	0
 bondInfo[558].visible	true
 bondInfo[558].order	1.0
@@ -9519,6 +10076,7 @@ bondInfo[558].atom1.info	"[LYS]70:A.NZ #548"
 bondInfo[558]._bpt	557
 bondInfo[558].radius	0.15
 bondInfo[558].type	"single"
+bondInfo[558].jmol_order	"0x1"
 bondInfo[559].colix	0
 bondInfo[559].visible	true
 bondInfo[559].order	1.0
@@ -9536,6 +10094,7 @@ bondInfo[559].atom1.info	"[ALA]71:A.N #549"
 bondInfo[559]._bpt	558
 bondInfo[559].radius	0.15
 bondInfo[559].type	"single"
+bondInfo[559].jmol_order	"0x1"
 bondInfo[560].colix	0
 bondInfo[560].visible	true
 bondInfo[560].order	1.0
@@ -9553,6 +10112,7 @@ bondInfo[560].atom1.info	"[ALA]71:A.N #549"
 bondInfo[560]._bpt	559
 bondInfo[560].radius	0.15
 bondInfo[560].type	"single"
+bondInfo[560].jmol_order	"0x1"
 bondInfo[561].colix	0
 bondInfo[561].visible	true
 bondInfo[561].order	1.0
@@ -9570,6 +10130,7 @@ bondInfo[561].atom1.info	"[ALA]71:A.C #551"
 bondInfo[561]._bpt	560
 bondInfo[561].radius	0.15
 bondInfo[561].type	"single"
+bondInfo[561].jmol_order	"0x1"
 bondInfo[562].colix	0
 bondInfo[562].visible	true
 bondInfo[562].order	1.0
@@ -9587,6 +10148,7 @@ bondInfo[562].atom1.info	"[ALA]71:A.C #551"
 bondInfo[562]._bpt	561
 bondInfo[562].radius	0.15
 bondInfo[562].type	"single"
+bondInfo[562].jmol_order	"0x1"
 bondInfo[563].colix	0
 bondInfo[563].visible	true
 bondInfo[563].order	1.0
@@ -9604,6 +10166,7 @@ bondInfo[563].atom1.info	"[ALA]71:A.O #552"
 bondInfo[563]._bpt	562
 bondInfo[563].radius	0.15
 bondInfo[563].type	"single"
+bondInfo[563].jmol_order	"0x1"
 bondInfo[564].colix	0
 bondInfo[564].visible	true
 bondInfo[564].order	1.0
@@ -9621,6 +10184,7 @@ bondInfo[564].atom1.info	"[ALA]71:A.CB #553"
 bondInfo[564]._bpt	563
 bondInfo[564].radius	0.15
 bondInfo[564].type	"single"
+bondInfo[564].jmol_order	"0x1"
 bondInfo[565].colix	0
 bondInfo[565].visible	true
 bondInfo[565].order	1.0
@@ -9638,6 +10202,7 @@ bondInfo[565].atom1.info	"[ILE]72:A.CA #555"
 bondInfo[565]._bpt	564
 bondInfo[565].radius	0.15
 bondInfo[565].type	"single"
+bondInfo[565].jmol_order	"0x1"
 bondInfo[566].colix	0
 bondInfo[566].visible	true
 bondInfo[566].order	1.0
@@ -9655,6 +10220,7 @@ bondInfo[566].atom1.info	"[ILE]72:A.CA #555"
 bondInfo[566]._bpt	565
 bondInfo[566].radius	0.15
 bondInfo[566].type	"single"
+bondInfo[566].jmol_order	"0x1"
 bondInfo[567].colix	0
 bondInfo[567].visible	true
 bondInfo[567].order	1.0
@@ -9672,6 +10238,7 @@ bondInfo[567].atom1.info	"[ILE]72:A.C #556"
 bondInfo[567]._bpt	566
 bondInfo[567].radius	0.15
 bondInfo[567].type	"single"
+bondInfo[567].jmol_order	"0x1"
 bondInfo[568].colix	0
 bondInfo[568].visible	true
 bondInfo[568].order	1.0
@@ -9689,6 +10256,7 @@ bondInfo[568].atom1.info	"[ILE]72:A.C #556"
 bondInfo[568]._bpt	567
 bondInfo[568].radius	0.15
 bondInfo[568].type	"single"
+bondInfo[568].jmol_order	"0x1"
 bondInfo[569].colix	0
 bondInfo[569].visible	true
 bondInfo[569].order	1.0
@@ -9706,6 +10274,7 @@ bondInfo[569].atom1.info	"[ILE]72:A.CB #558"
 bondInfo[569]._bpt	568
 bondInfo[569].radius	0.15
 bondInfo[569].type	"single"
+bondInfo[569].jmol_order	"0x1"
 bondInfo[570].colix	0
 bondInfo[570].visible	true
 bondInfo[570].order	1.0
@@ -9723,6 +10292,7 @@ bondInfo[570].atom1.info	"[ILE]72:A.CG1 #559"
 bondInfo[570]._bpt	569
 bondInfo[570].radius	0.15
 bondInfo[570].type	"single"
+bondInfo[570].jmol_order	"0x1"
 bondInfo[571].colix	0
 bondInfo[571].visible	true
 bondInfo[571].order	1.0
@@ -9740,6 +10310,7 @@ bondInfo[571].atom1.info	"[ILE]72:A.CG1 #559"
 bondInfo[571]._bpt	570
 bondInfo[571].radius	0.15
 bondInfo[571].type	"single"
+bondInfo[571].jmol_order	"0x1"
 bondInfo[572].colix	0
 bondInfo[572].visible	true
 bondInfo[572].order	1.0
@@ -9757,6 +10328,7 @@ bondInfo[572].atom1.info	"[GLY]73:A.N #562"
 bondInfo[572]._bpt	571
 bondInfo[572].radius	0.15
 bondInfo[572].type	"single"
+bondInfo[572].jmol_order	"0x1"
 bondInfo[573].colix	0
 bondInfo[573].visible	true
 bondInfo[573].order	1.0
@@ -9774,6 +10346,7 @@ bondInfo[573].atom1.info	"[GLY]73:A.CA #563"
 bondInfo[573]._bpt	572
 bondInfo[573].radius	0.15
 bondInfo[573].type	"single"
+bondInfo[573].jmol_order	"0x1"
 bondInfo[574].colix	0
 bondInfo[574].visible	true
 bondInfo[574].order	1.0
@@ -9791,6 +10364,7 @@ bondInfo[574].atom1.info	"[GLY]73:A.C #564"
 bondInfo[574]._bpt	573
 bondInfo[574].radius	0.15
 bondInfo[574].type	"single"
+bondInfo[574].jmol_order	"0x1"
 bondInfo[575].colix	0
 bondInfo[575].visible	true
 bondInfo[575].order	1.0
@@ -9808,6 +10382,7 @@ bondInfo[575].atom1.info	"[GLY]73:A.O #565"
 bondInfo[575]._bpt	574
 bondInfo[575].radius	0.15
 bondInfo[575].type	"single"
+bondInfo[575].jmol_order	"0x1"
 bondInfo[576].colix	0
 bondInfo[576].visible	true
 bondInfo[576].order	1.0
@@ -9825,6 +10400,7 @@ bondInfo[576].atom1.info	"[THR]74:A.N #566"
 bondInfo[576]._bpt	575
 bondInfo[576].radius	0.15
 bondInfo[576].type	"single"
+bondInfo[576].jmol_order	"0x1"
 bondInfo[577].colix	0
 bondInfo[577].visible	true
 bondInfo[577].order	1.0
@@ -9842,6 +10418,7 @@ bondInfo[577].atom1.info	"[THR]74:A.CA #567"
 bondInfo[577]._bpt	576
 bondInfo[577].radius	0.15
 bondInfo[577].type	"single"
+bondInfo[577].jmol_order	"0x1"
 bondInfo[578].colix	0
 bondInfo[578].visible	true
 bondInfo[578].order	1.0
@@ -9859,6 +10436,7 @@ bondInfo[578].atom1.info	"[THR]74:A.CA #567"
 bondInfo[578]._bpt	577
 bondInfo[578].radius	0.15
 bondInfo[578].type	"single"
+bondInfo[578].jmol_order	"0x1"
 bondInfo[579].colix	0
 bondInfo[579].visible	true
 bondInfo[579].order	1.0
@@ -9876,6 +10454,7 @@ bondInfo[579].atom1.info	"[THR]74:A.C #568"
 bondInfo[579]._bpt	578
 bondInfo[579].radius	0.15
 bondInfo[579].type	"single"
+bondInfo[579].jmol_order	"0x1"
 bondInfo[580].colix	0
 bondInfo[580].visible	true
 bondInfo[580].order	1.0
@@ -9893,6 +10472,7 @@ bondInfo[580].atom1.info	"[THR]74:A.C #568"
 bondInfo[580]._bpt	579
 bondInfo[580].radius	0.15
 bondInfo[580].type	"single"
+bondInfo[580].jmol_order	"0x1"
 bondInfo[581].colix	0
 bondInfo[581].visible	true
 bondInfo[581].order	1.0
@@ -9910,6 +10490,7 @@ bondInfo[581].atom1.info	"[THR]74:A.CB #570"
 bondInfo[581]._bpt	580
 bondInfo[581].radius	0.15
 bondInfo[581].type	"single"
+bondInfo[581].jmol_order	"0x1"
 bondInfo[582].colix	0
 bondInfo[582].visible	true
 bondInfo[582].order	1.0
@@ -9927,6 +10508,7 @@ bondInfo[582].atom1.info	"[THR]74:A.CG2 #572"
 bondInfo[582]._bpt	581
 bondInfo[582].radius	0.15
 bondInfo[582].type	"single"
+bondInfo[582].jmol_order	"0x1"
 bondInfo[583].colix	0
 bondInfo[583].visible	true
 bondInfo[583].order	1.0
@@ -9944,6 +10526,7 @@ bondInfo[583].atom1.info	"[VAL]75:A.N #573"
 bondInfo[583]._bpt	582
 bondInfo[583].radius	0.15
 bondInfo[583].type	"single"
+bondInfo[583].jmol_order	"0x1"
 bondInfo[584].colix	0
 bondInfo[584].visible	true
 bondInfo[584].order	1.0
@@ -9961,6 +10544,7 @@ bondInfo[584].atom1.info	"[VAL]75:A.CA #574"
 bondInfo[584]._bpt	583
 bondInfo[584].radius	0.15
 bondInfo[584].type	"single"
+bondInfo[584].jmol_order	"0x1"
 bondInfo[585].colix	0
 bondInfo[585].visible	true
 bondInfo[585].order	1.0
@@ -9978,6 +10562,7 @@ bondInfo[585].atom1.info	"[VAL]75:A.C #575"
 bondInfo[585]._bpt	584
 bondInfo[585].radius	0.15
 bondInfo[585].type	"single"
+bondInfo[585].jmol_order	"0x1"
 bondInfo[586].colix	0
 bondInfo[586].visible	true
 bondInfo[586].order	1.0
@@ -9995,6 +10580,7 @@ bondInfo[586].atom1.info	"[VAL]75:A.C #575"
 bondInfo[586]._bpt	585
 bondInfo[586].radius	0.15
 bondInfo[586].type	"single"
+bondInfo[586].jmol_order	"0x1"
 bondInfo[587].colix	0
 bondInfo[587].visible	true
 bondInfo[587].order	1.0
@@ -10012,6 +10598,7 @@ bondInfo[587].atom1.info	"[VAL]75:A.CB #577"
 bondInfo[587]._bpt	586
 bondInfo[587].radius	0.15
 bondInfo[587].type	"single"
+bondInfo[587].jmol_order	"0x1"
 bondInfo[588].colix	0
 bondInfo[588].visible	true
 bondInfo[588].order	1.0
@@ -10029,6 +10616,7 @@ bondInfo[588].atom1.info	"[VAL]75:A.CB #577"
 bondInfo[588]._bpt	587
 bondInfo[588].radius	0.15
 bondInfo[588].type	"single"
+bondInfo[588].jmol_order	"0x1"
 bondInfo[589].colix	0
 bondInfo[589].visible	true
 bondInfo[589].order	1.0
@@ -10046,6 +10634,7 @@ bondInfo[589].atom1.info	"[VAL]75:A.CG2 #579"
 bondInfo[589]._bpt	588
 bondInfo[589].radius	0.15
 bondInfo[589].type	"single"
+bondInfo[589].jmol_order	"0x1"
 bondInfo[590].colix	0
 bondInfo[590].visible	true
 bondInfo[590].order	1.0
@@ -10063,6 +10652,7 @@ bondInfo[590].atom1.info	"[LEU]76:A.N #580"
 bondInfo[590]._bpt	589
 bondInfo[590].radius	0.15
 bondInfo[590].type	"single"
+bondInfo[590].jmol_order	"0x1"
 bondInfo[591].colix	0
 bondInfo[591].visible	true
 bondInfo[591].order	1.0
@@ -10080,6 +10670,7 @@ bondInfo[591].atom1.info	"[LEU]76:A.CA #581"
 bondInfo[591]._bpt	590
 bondInfo[591].radius	0.15
 bondInfo[591].type	"single"
+bondInfo[591].jmol_order	"0x1"
 bondInfo[592].colix	0
 bondInfo[592].visible	true
 bondInfo[592].order	1.0
@@ -10097,6 +10688,7 @@ bondInfo[592].atom1.info	"[LEU]76:A.C #582"
 bondInfo[592]._bpt	591
 bondInfo[592].radius	0.15
 bondInfo[592].type	"single"
+bondInfo[592].jmol_order	"0x1"
 bondInfo[593].colix	0
 bondInfo[593].visible	true
 bondInfo[593].order	1.0
@@ -10114,6 +10706,7 @@ bondInfo[593].atom1.info	"[LEU]76:A.O #583"
 bondInfo[593]._bpt	592
 bondInfo[593].radius	0.15
 bondInfo[593].type	"single"
+bondInfo[593].jmol_order	"0x1"
 bondInfo[594].colix	0
 bondInfo[594].visible	true
 bondInfo[594].order	1.0
@@ -10131,6 +10724,7 @@ bondInfo[594].atom1.info	"[LEU]76:A.CB #584"
 bondInfo[594]._bpt	593
 bondInfo[594].radius	0.15
 bondInfo[594].type	"single"
+bondInfo[594].jmol_order	"0x1"
 bondInfo[595].colix	0
 bondInfo[595].visible	true
 bondInfo[595].order	1.0
@@ -10148,6 +10742,7 @@ bondInfo[595].atom1.info	"[LEU]76:A.CB #584"
 bondInfo[595]._bpt	594
 bondInfo[595].radius	0.15
 bondInfo[595].type	"single"
+bondInfo[595].jmol_order	"0x1"
 bondInfo[596].colix	0
 bondInfo[596].visible	true
 bondInfo[596].order	1.0
@@ -10165,6 +10760,7 @@ bondInfo[596].atom1.info	"[LEU]76:A.CG #585"
 bondInfo[596]._bpt	595
 bondInfo[596].radius	0.15
 bondInfo[596].type	"single"
+bondInfo[596].jmol_order	"0x1"
 bondInfo[597].colix	0
 bondInfo[597].visible	true
 bondInfo[597].order	1.0
@@ -10182,6 +10778,7 @@ bondInfo[597].atom1.info	"[LEU]76:A.CD1 #586"
 bondInfo[597]._bpt	596
 bondInfo[597].radius	0.15
 bondInfo[597].type	"single"
+bondInfo[597].jmol_order	"0x1"
 bondInfo[598].colix	0
 bondInfo[598].visible	true
 bondInfo[598].order	1.0
@@ -10199,6 +10796,7 @@ bondInfo[598].atom1.info	"[VAL]77:A.N #588"
 bondInfo[598]._bpt	597
 bondInfo[598].radius	0.15
 bondInfo[598].type	"single"
+bondInfo[598].jmol_order	"0x1"
 bondInfo[599].colix	0
 bondInfo[599].visible	true
 bondInfo[599].order	1.0
@@ -10216,6 +10814,7 @@ bondInfo[599].atom1.info	"[VAL]77:A.CA #589"
 bondInfo[599]._bpt	598
 bondInfo[599].radius	0.15
 bondInfo[599].type	"single"
+bondInfo[599].jmol_order	"0x1"
 bondInfo[600].colix	0
 bondInfo[600].visible	true
 bondInfo[600].order	1.0
@@ -10233,6 +10832,7 @@ bondInfo[600].atom1.info	"[VAL]77:A.CA #589"
 bondInfo[600]._bpt	599
 bondInfo[600].radius	0.15
 bondInfo[600].type	"single"
+bondInfo[600].jmol_order	"0x1"
 bondInfo[601].colix	0
 bondInfo[601].visible	true
 bondInfo[601].order	1.0
@@ -10250,6 +10850,7 @@ bondInfo[601].atom1.info	"[VAL]77:A.C #590"
 bondInfo[601]._bpt	600
 bondInfo[601].radius	0.15
 bondInfo[601].type	"single"
+bondInfo[601].jmol_order	"0x1"
 bondInfo[602].colix	0
 bondInfo[602].visible	true
 bondInfo[602].order	1.0
@@ -10267,6 +10868,7 @@ bondInfo[602].atom1.info	"[VAL]77:A.C #590"
 bondInfo[602]._bpt	601
 bondInfo[602].radius	0.15
 bondInfo[602].type	"single"
+bondInfo[602].jmol_order	"0x1"
 bondInfo[603].colix	0
 bondInfo[603].visible	true
 bondInfo[603].order	1.0
@@ -10284,6 +10886,7 @@ bondInfo[603].atom1.info	"[VAL]77:A.CB #592"
 bondInfo[603]._bpt	602
 bondInfo[603].radius	0.15
 bondInfo[603].type	"single"
+bondInfo[603].jmol_order	"0x1"
 bondInfo[604].colix	0
 bondInfo[604].visible	true
 bondInfo[604].order	1.0
@@ -10301,6 +10904,7 @@ bondInfo[604].atom1.info	"[VAL]77:A.CG1 #593"
 bondInfo[604]._bpt	603
 bondInfo[604].radius	0.15
 bondInfo[604].type	"single"
+bondInfo[604].jmol_order	"0x1"
 bondInfo[605].colix	0
 bondInfo[605].visible	true
 bondInfo[605].order	1.0
@@ -10318,6 +10922,7 @@ bondInfo[605].atom1.info	"[GLY]78:A.N #595"
 bondInfo[605]._bpt	604
 bondInfo[605].radius	0.15
 bondInfo[605].type	"single"
+bondInfo[605].jmol_order	"0x1"
 bondInfo[606].colix	0
 bondInfo[606].visible	true
 bondInfo[606].order	1.0
@@ -10335,6 +10940,7 @@ bondInfo[606].atom1.info	"[GLY]78:A.CA #596"
 bondInfo[606]._bpt	605
 bondInfo[606].radius	0.15
 bondInfo[606].type	"single"
+bondInfo[606].jmol_order	"0x1"
 bondInfo[607].colix	0
 bondInfo[607].visible	true
 bondInfo[607].order	1.0
@@ -10352,6 +10958,7 @@ bondInfo[607].atom1.info	"[GLY]78:A.C #597"
 bondInfo[607]._bpt	606
 bondInfo[607].radius	0.15
 bondInfo[607].type	"single"
+bondInfo[607].jmol_order	"0x1"
 bondInfo[608].colix	0
 bondInfo[608].visible	true
 bondInfo[608].order	1.0
@@ -10369,6 +10976,7 @@ bondInfo[608].atom1.info	"[GLY]78:A.C #597"
 bondInfo[608]._bpt	607
 bondInfo[608].radius	0.15
 bondInfo[608].type	"single"
+bondInfo[608].jmol_order	"0x1"
 bondInfo[609].colix	0
 bondInfo[609].visible	true
 bondInfo[609].order	1.0
@@ -10386,6 +10994,7 @@ bondInfo[609].atom1.info	"[PRO]79:A.N #599"
 bondInfo[609]._bpt	608
 bondInfo[609].radius	0.15
 bondInfo[609].type	"single"
+bondInfo[609].jmol_order	"0x1"
 bondInfo[610].colix	0
 bondInfo[610].visible	true
 bondInfo[610].order	1.0
@@ -10403,6 +11012,7 @@ bondInfo[610].atom1.info	"[PRO]79:A.CA #600"
 bondInfo[610]._bpt	609
 bondInfo[610].radius	0.15
 bondInfo[610].type	"single"
+bondInfo[610].jmol_order	"0x1"
 bondInfo[611].colix	0
 bondInfo[611].visible	true
 bondInfo[611].order	1.0
@@ -10420,6 +11030,7 @@ bondInfo[611].atom1.info	"[PRO]79:A.CA #600"
 bondInfo[611]._bpt	610
 bondInfo[611].radius	0.15
 bondInfo[611].type	"single"
+bondInfo[611].jmol_order	"0x1"
 bondInfo[612].colix	0
 bondInfo[612].visible	true
 bondInfo[612].order	1.0
@@ -10437,6 +11048,7 @@ bondInfo[612].atom1.info	"[PRO]79:A.C #601"
 bondInfo[612]._bpt	611
 bondInfo[612].radius	0.15
 bondInfo[612].type	"single"
+bondInfo[612].jmol_order	"0x1"
 bondInfo[613].colix	0
 bondInfo[613].visible	true
 bondInfo[613].order	1.0
@@ -10454,6 +11066,7 @@ bondInfo[613].atom1.info	"[PRO]79:A.O #602"
 bondInfo[613]._bpt	612
 bondInfo[613].radius	0.15
 bondInfo[613].type	"single"
+bondInfo[613].jmol_order	"0x1"
 bondInfo[614].colix	0
 bondInfo[614].visible	true
 bondInfo[614].order	1.0
@@ -10471,6 +11084,7 @@ bondInfo[614].atom1.info	"[PRO]79:A.CB #603"
 bondInfo[614]._bpt	613
 bondInfo[614].radius	0.15
 bondInfo[614].type	"single"
+bondInfo[614].jmol_order	"0x1"
 bondInfo[615].colix	0
 bondInfo[615].visible	true
 bondInfo[615].order	1.0
@@ -10488,6 +11102,7 @@ bondInfo[615].atom1.info	"[PRO]79:A.CB #603"
 bondInfo[615]._bpt	614
 bondInfo[615].radius	0.15
 bondInfo[615].type	"single"
+bondInfo[615].jmol_order	"0x1"
 bondInfo[616].colix	0
 bondInfo[616].visible	true
 bondInfo[616].order	1.0
@@ -10505,6 +11120,7 @@ bondInfo[616].atom1.info	"[PRO]79:A.CG #604"
 bondInfo[616]._bpt	615
 bondInfo[616].radius	0.15
 bondInfo[616].type	"single"
+bondInfo[616].jmol_order	"0x1"
 bondInfo[617].colix	0
 bondInfo[617].visible	true
 bondInfo[617].order	1.0
@@ -10522,6 +11138,7 @@ bondInfo[617].atom1.info	"[PRO]79:A.CD #605"
 bondInfo[617]._bpt	616
 bondInfo[617].radius	0.15
 bondInfo[617].type	"single"
+bondInfo[617].jmol_order	"0x1"
 bondInfo[618].colix	0
 bondInfo[618].visible	true
 bondInfo[618].order	1.0
@@ -10539,6 +11156,7 @@ bondInfo[618].atom1.info	"[THR]80:A.N #606"
 bondInfo[618]._bpt	617
 bondInfo[618].radius	0.15
 bondInfo[618].type	"single"
+bondInfo[618].jmol_order	"0x1"
 bondInfo[619].colix	0
 bondInfo[619].visible	true
 bondInfo[619].order	1.0
@@ -10556,6 +11174,7 @@ bondInfo[619].atom1.info	"[THR]80:A.CA #607"
 bondInfo[619]._bpt	618
 bondInfo[619].radius	0.15
 bondInfo[619].type	"single"
+bondInfo[619].jmol_order	"0x1"
 bondInfo[620].colix	0
 bondInfo[620].visible	true
 bondInfo[620].order	1.0
@@ -10573,6 +11192,7 @@ bondInfo[620].atom1.info	"[THR]80:A.C #608"
 bondInfo[620]._bpt	619
 bondInfo[620].radius	0.15
 bondInfo[620].type	"single"
+bondInfo[620].jmol_order	"0x1"
 bondInfo[621].colix	0
 bondInfo[621].visible	true
 bondInfo[621].order	1.0
@@ -10590,6 +11210,7 @@ bondInfo[621].atom1.info	"[THR]80:A.O #609"
 bondInfo[621]._bpt	620
 bondInfo[621].radius	0.15
 bondInfo[621].type	"single"
+bondInfo[621].jmol_order	"0x1"
 bondInfo[622].colix	0
 bondInfo[622].visible	true
 bondInfo[622].order	1.0
@@ -10607,6 +11228,7 @@ bondInfo[622].atom1.info	"[THR]80:A.CB #610"
 bondInfo[622]._bpt	621
 bondInfo[622].radius	0.15
 bondInfo[622].type	"single"
+bondInfo[622].jmol_order	"0x1"
 bondInfo[623].colix	0
 bondInfo[623].visible	true
 bondInfo[623].order	1.0
@@ -10624,6 +11246,7 @@ bondInfo[623].atom1.info	"[THR]80:A.CB #610"
 bondInfo[623]._bpt	622
 bondInfo[623].radius	0.15
 bondInfo[623].type	"single"
+bondInfo[623].jmol_order	"0x1"
 bondInfo[624].colix	0
 bondInfo[624].visible	true
 bondInfo[624].order	1.0
@@ -10641,6 +11264,7 @@ bondInfo[624].atom1.info	"[PRO]81:A.N #613"
 bondInfo[624]._bpt	623
 bondInfo[624].radius	0.15
 bondInfo[624].type	"single"
+bondInfo[624].jmol_order	"0x1"
 bondInfo[625].colix	0
 bondInfo[625].visible	true
 bondInfo[625].order	1.0
@@ -10658,6 +11282,7 @@ bondInfo[625].atom1.info	"[PRO]81:A.N #613"
 bondInfo[625]._bpt	624
 bondInfo[625].radius	0.15
 bondInfo[625].type	"single"
+bondInfo[625].jmol_order	"0x1"
 bondInfo[626].colix	0
 bondInfo[626].visible	true
 bondInfo[626].order	1.0
@@ -10675,6 +11300,7 @@ bondInfo[626].atom1.info	"[PRO]81:A.CA #614"
 bondInfo[626]._bpt	625
 bondInfo[626].radius	0.15
 bondInfo[626].type	"single"
+bondInfo[626].jmol_order	"0x1"
 bondInfo[627].colix	0
 bondInfo[627].visible	true
 bondInfo[627].order	1.0
@@ -10692,6 +11318,7 @@ bondInfo[627].atom1.info	"[PRO]81:A.CA #614"
 bondInfo[627]._bpt	626
 bondInfo[627].radius	0.15
 bondInfo[627].type	"single"
+bondInfo[627].jmol_order	"0x1"
 bondInfo[628].colix	0
 bondInfo[628].visible	true
 bondInfo[628].order	1.0
@@ -10709,6 +11336,7 @@ bondInfo[628].atom1.info	"[PRO]81:A.C #615"
 bondInfo[628]._bpt	627
 bondInfo[628].radius	0.15
 bondInfo[628].type	"single"
+bondInfo[628].jmol_order	"0x1"
 bondInfo[629].colix	0
 bondInfo[629].visible	true
 bondInfo[629].order	1.0
@@ -10726,6 +11354,7 @@ bondInfo[629].atom1.info	"[PRO]81:A.O #616"
 bondInfo[629]._bpt	628
 bondInfo[629].radius	0.15
 bondInfo[629].type	"single"
+bondInfo[629].jmol_order	"0x1"
 bondInfo[630].colix	0
 bondInfo[630].visible	true
 bondInfo[630].order	1.0
@@ -10743,6 +11372,7 @@ bondInfo[630].atom1.info	"[PRO]81:A.CB #617"
 bondInfo[630]._bpt	629
 bondInfo[630].radius	0.15
 bondInfo[630].type	"single"
+bondInfo[630].jmol_order	"0x1"
 bondInfo[631].colix	0
 bondInfo[631].visible	true
 bondInfo[631].order	1.0
@@ -10760,6 +11390,7 @@ bondInfo[631].atom1.info	"[PRO]81:A.CB #617"
 bondInfo[631]._bpt	630
 bondInfo[631].radius	0.15
 bondInfo[631].type	"single"
+bondInfo[631].jmol_order	"0x1"
 bondInfo[632].colix	0
 bondInfo[632].visible	true
 bondInfo[632].order	1.0
@@ -10777,6 +11408,7 @@ bondInfo[632].atom1.info	"[PRO]81:A.CG #618"
 bondInfo[632]._bpt	631
 bondInfo[632].radius	0.15
 bondInfo[632].type	"single"
+bondInfo[632].jmol_order	"0x1"
 bondInfo[633].colix	0
 bondInfo[633].visible	true
 bondInfo[633].order	1.0
@@ -10794,6 +11426,7 @@ bondInfo[633].atom1.info	"[VAL]82:A.N #620"
 bondInfo[633]._bpt	632
 bondInfo[633].radius	0.15
 bondInfo[633].type	"single"
+bondInfo[633].jmol_order	"0x1"
 bondInfo[634].colix	0
 bondInfo[634].visible	true
 bondInfo[634].order	1.0
@@ -10811,6 +11444,7 @@ bondInfo[634].atom1.info	"[VAL]82:A.CA #621"
 bondInfo[634]._bpt	633
 bondInfo[634].radius	0.15
 bondInfo[634].type	"single"
+bondInfo[634].jmol_order	"0x1"
 bondInfo[635].colix	0
 bondInfo[635].visible	true
 bondInfo[635].order	1.0
@@ -10828,6 +11462,7 @@ bondInfo[635].atom1.info	"[VAL]82:A.CA #621"
 bondInfo[635]._bpt	634
 bondInfo[635].radius	0.15
 bondInfo[635].type	"single"
+bondInfo[635].jmol_order	"0x1"
 bondInfo[636].colix	0
 bondInfo[636].visible	true
 bondInfo[636].order	1.0
@@ -10845,6 +11480,7 @@ bondInfo[636].atom1.info	"[VAL]82:A.C #622"
 bondInfo[636]._bpt	635
 bondInfo[636].radius	0.15
 bondInfo[636].type	"single"
+bondInfo[636].jmol_order	"0x1"
 bondInfo[637].colix	0
 bondInfo[637].visible	true
 bondInfo[637].order	1.0
@@ -10862,6 +11498,7 @@ bondInfo[637].atom1.info	"[VAL]82:A.C #622"
 bondInfo[637]._bpt	636
 bondInfo[637].radius	0.15
 bondInfo[637].type	"single"
+bondInfo[637].jmol_order	"0x1"
 bondInfo[638].colix	0
 bondInfo[638].visible	true
 bondInfo[638].order	1.0
@@ -10879,6 +11516,7 @@ bondInfo[638].atom1.info	"[VAL]82:A.CB #624"
 bondInfo[638]._bpt	637
 bondInfo[638].radius	0.15
 bondInfo[638].type	"single"
+bondInfo[638].jmol_order	"0x1"
 bondInfo[639].colix	0
 bondInfo[639].visible	true
 bondInfo[639].order	1.0
@@ -10896,6 +11534,7 @@ bondInfo[639].atom1.info	"[VAL]82:A.CB #624"
 bondInfo[639]._bpt	638
 bondInfo[639].radius	0.15
 bondInfo[639].type	"single"
+bondInfo[639].jmol_order	"0x1"
 bondInfo[640].colix	0
 bondInfo[640].visible	true
 bondInfo[640].order	1.0
@@ -10913,6 +11552,7 @@ bondInfo[640].atom1.info	"[ASN]83:A.N #627"
 bondInfo[640]._bpt	639
 bondInfo[640].radius	0.15
 bondInfo[640].type	"single"
+bondInfo[640].jmol_order	"0x1"
 bondInfo[641].colix	0
 bondInfo[641].visible	true
 bondInfo[641].order	1.0
@@ -10930,6 +11570,7 @@ bondInfo[641].atom1.info	"[ASN]83:A.CA #628"
 bondInfo[641]._bpt	640
 bondInfo[641].radius	0.15
 bondInfo[641].type	"single"
+bondInfo[641].jmol_order	"0x1"
 bondInfo[642].colix	0
 bondInfo[642].visible	true
 bondInfo[642].order	1.0
@@ -10947,6 +11588,7 @@ bondInfo[642].atom1.info	"[ASN]83:A.CA #628"
 bondInfo[642]._bpt	641
 bondInfo[642].radius	0.15
 bondInfo[642].type	"single"
+bondInfo[642].jmol_order	"0x1"
 bondInfo[643].colix	0
 bondInfo[643].visible	true
 bondInfo[643].order	1.0
@@ -10964,6 +11606,7 @@ bondInfo[643].atom1.info	"[ASN]83:A.C #629"
 bondInfo[643]._bpt	642
 bondInfo[643].radius	0.15
 bondInfo[643].type	"single"
+bondInfo[643].jmol_order	"0x1"
 bondInfo[644].colix	0
 bondInfo[644].visible	true
 bondInfo[644].order	1.0
@@ -10981,6 +11624,7 @@ bondInfo[644].atom1.info	"[ASN]83:A.C #629"
 bondInfo[644]._bpt	643
 bondInfo[644].radius	0.15
 bondInfo[644].type	"single"
+bondInfo[644].jmol_order	"0x1"
 bondInfo[645].colix	0
 bondInfo[645].visible	true
 bondInfo[645].order	1.0
@@ -10998,6 +11642,7 @@ bondInfo[645].atom1.info	"[ASN]83:A.CG #632"
 bondInfo[645]._bpt	644
 bondInfo[645].radius	0.15
 bondInfo[645].type	"single"
+bondInfo[645].jmol_order	"0x1"
 bondInfo[646].colix	0
 bondInfo[646].visible	true
 bondInfo[646].order	1.0
@@ -11015,6 +11660,7 @@ bondInfo[646].atom1.info	"[ASN]83:A.OD1 #633"
 bondInfo[646]._bpt	645
 bondInfo[646].radius	0.15
 bondInfo[646].type	"single"
+bondInfo[646].jmol_order	"0x1"
 bondInfo[647].colix	0
 bondInfo[647].visible	true
 bondInfo[647].order	1.0
@@ -11032,6 +11678,7 @@ bondInfo[647].atom1.info	"[ASN]83:A.ND2 #634"
 bondInfo[647]._bpt	646
 bondInfo[647].radius	0.15
 bondInfo[647].type	"single"
+bondInfo[647].jmol_order	"0x1"
 bondInfo[648].colix	0
 bondInfo[648].visible	true
 bondInfo[648].order	1.0
@@ -11049,6 +11696,7 @@ bondInfo[648].atom1.info	"[ILE]84:A.N #635"
 bondInfo[648]._bpt	647
 bondInfo[648].radius	0.15
 bondInfo[648].type	"single"
+bondInfo[648].jmol_order	"0x1"
 bondInfo[649].colix	0
 bondInfo[649].visible	true
 bondInfo[649].order	1.0
@@ -11066,6 +11714,7 @@ bondInfo[649].atom1.info	"[ILE]84:A.CA #636"
 bondInfo[649]._bpt	648
 bondInfo[649].radius	0.15
 bondInfo[649].type	"single"
+bondInfo[649].jmol_order	"0x1"
 bondInfo[650].colix	0
 bondInfo[650].visible	true
 bondInfo[650].order	1.0
@@ -11083,6 +11732,7 @@ bondInfo[650].atom1.info	"[ILE]84:A.C #637"
 bondInfo[650]._bpt	649
 bondInfo[650].radius	0.15
 bondInfo[650].type	"single"
+bondInfo[650].jmol_order	"0x1"
 bondInfo[651].colix	0
 bondInfo[651].visible	true
 bondInfo[651].order	1.0
@@ -11100,6 +11750,7 @@ bondInfo[651].atom1.info	"[ILE]84:A.C #637"
 bondInfo[651]._bpt	650
 bondInfo[651].radius	0.15
 bondInfo[651].type	"single"
+bondInfo[651].jmol_order	"0x1"
 bondInfo[652].colix	0
 bondInfo[652].visible	true
 bondInfo[652].order	1.0
@@ -11117,6 +11768,7 @@ bondInfo[652].atom1.info	"[ILE]84:A.CB #639"
 bondInfo[652]._bpt	651
 bondInfo[652].radius	0.15
 bondInfo[652].type	"single"
+bondInfo[652].jmol_order	"0x1"
 bondInfo[653].colix	0
 bondInfo[653].visible	true
 bondInfo[653].order	1.0
@@ -11134,6 +11786,7 @@ bondInfo[653].atom1.info	"[ILE]84:A.CB #639"
 bondInfo[653]._bpt	652
 bondInfo[653].radius	0.15
 bondInfo[653].type	"single"
+bondInfo[653].jmol_order	"0x1"
 bondInfo[654].colix	0
 bondInfo[654].visible	true
 bondInfo[654].order	1.0
@@ -11151,6 +11804,7 @@ bondInfo[654].atom1.info	"[ILE]84:A.CG1 #640"
 bondInfo[654]._bpt	653
 bondInfo[654].radius	0.15
 bondInfo[654].type	"single"
+bondInfo[654].jmol_order	"0x1"
 bondInfo[655].colix	0
 bondInfo[655].visible	true
 bondInfo[655].order	1.0
@@ -11168,6 +11822,7 @@ bondInfo[655].atom1.info	"[ILE]84:A.CD1 #642"
 bondInfo[655]._bpt	654
 bondInfo[655].radius	0.15
 bondInfo[655].type	"single"
+bondInfo[655].jmol_order	"0x1"
 bondInfo[656].colix	0
 bondInfo[656].visible	true
 bondInfo[656].order	1.0
@@ -11185,6 +11840,7 @@ bondInfo[656].atom1.info	"[ILE]85:A.N #643"
 bondInfo[656]._bpt	655
 bondInfo[656].radius	0.15
 bondInfo[656].type	"single"
+bondInfo[656].jmol_order	"0x1"
 bondInfo[657].colix	0
 bondInfo[657].visible	true
 bondInfo[657].order	1.0
@@ -11202,6 +11858,7 @@ bondInfo[657].atom1.info	"[ILE]85:A.CA #644"
 bondInfo[657]._bpt	656
 bondInfo[657].radius	0.15
 bondInfo[657].type	"single"
+bondInfo[657].jmol_order	"0x1"
 bondInfo[658].colix	0
 bondInfo[658].visible	true
 bondInfo[658].order	1.0
@@ -11219,6 +11876,7 @@ bondInfo[658].atom1.info	"[ILE]85:A.CA #644"
 bondInfo[658]._bpt	657
 bondInfo[658].radius	0.15
 bondInfo[658].type	"single"
+bondInfo[658].jmol_order	"0x1"
 bondInfo[659].colix	0
 bondInfo[659].visible	true
 bondInfo[659].order	1.0
@@ -11236,6 +11894,7 @@ bondInfo[659].atom1.info	"[ILE]85:A.C #645"
 bondInfo[659]._bpt	658
 bondInfo[659].radius	0.15
 bondInfo[659].type	"single"
+bondInfo[659].jmol_order	"0x1"
 bondInfo[660].colix	0
 bondInfo[660].visible	true
 bondInfo[660].order	1.0
@@ -11253,6 +11912,7 @@ bondInfo[660].atom1.info	"[ILE]85:A.C #645"
 bondInfo[660]._bpt	659
 bondInfo[660].radius	0.15
 bondInfo[660].type	"single"
+bondInfo[660].jmol_order	"0x1"
 bondInfo[661].colix	0
 bondInfo[661].visible	true
 bondInfo[661].order	1.0
@@ -11270,6 +11930,7 @@ bondInfo[661].atom1.info	"[ILE]85:A.CB #647"
 bondInfo[661]._bpt	660
 bondInfo[661].radius	0.15
 bondInfo[661].type	"single"
+bondInfo[661].jmol_order	"0x1"
 bondInfo[662].colix	0
 bondInfo[662].visible	true
 bondInfo[662].order	1.0
@@ -11287,6 +11948,7 @@ bondInfo[662].atom1.info	"[ILE]85:A.CG1 #648"
 bondInfo[662]._bpt	661
 bondInfo[662].radius	0.15
 bondInfo[662].type	"single"
+bondInfo[662].jmol_order	"0x1"
 bondInfo[663].colix	0
 bondInfo[663].visible	true
 bondInfo[663].order	1.0
@@ -11304,6 +11966,7 @@ bondInfo[663].atom1.info	"[ILE]85:A.CD1 #650"
 bondInfo[663]._bpt	662
 bondInfo[663].radius	0.15
 bondInfo[663].type	"single"
+bondInfo[663].jmol_order	"0x1"
 bondInfo[664].colix	0
 bondInfo[664].visible	true
 bondInfo[664].order	1.0
@@ -11321,6 +11984,7 @@ bondInfo[664].atom1.info	"[GLY]86:A.N #651"
 bondInfo[664]._bpt	663
 bondInfo[664].radius	0.15
 bondInfo[664].type	"single"
+bondInfo[664].jmol_order	"0x1"
 bondInfo[665].colix	0
 bondInfo[665].visible	true
 bondInfo[665].order	1.0
@@ -11338,6 +12002,7 @@ bondInfo[665].atom1.info	"[GLY]86:A.CA #652"
 bondInfo[665]._bpt	664
 bondInfo[665].radius	0.15
 bondInfo[665].type	"single"
+bondInfo[665].jmol_order	"0x1"
 bondInfo[666].colix	0
 bondInfo[666].visible	true
 bondInfo[666].order	1.0
@@ -11355,6 +12020,7 @@ bondInfo[666].atom1.info	"[GLY]86:A.C #653"
 bondInfo[666]._bpt	665
 bondInfo[666].radius	0.15
 bondInfo[666].type	"single"
+bondInfo[666].jmol_order	"0x1"
 bondInfo[667].colix	0
 bondInfo[667].visible	true
 bondInfo[667].order	1.0
@@ -11372,6 +12038,7 @@ bondInfo[667].atom1.info	"[GLY]86:A.C #653"
 bondInfo[667]._bpt	666
 bondInfo[667].radius	0.15
 bondInfo[667].type	"single"
+bondInfo[667].jmol_order	"0x1"
 bondInfo[668].colix	0
 bondInfo[668].visible	true
 bondInfo[668].order	1.0
@@ -11389,6 +12056,7 @@ bondInfo[668].atom1.info	"[ARG]87:A.N #655"
 bondInfo[668]._bpt	667
 bondInfo[668].radius	0.15
 bondInfo[668].type	"single"
+bondInfo[668].jmol_order	"0x1"
 bondInfo[669].colix	0
 bondInfo[669].visible	true
 bondInfo[669].order	1.0
@@ -11406,6 +12074,7 @@ bondInfo[669].atom1.info	"[ARG]87:A.CA #656"
 bondInfo[669]._bpt	668
 bondInfo[669].radius	0.15
 bondInfo[669].type	"single"
+bondInfo[669].jmol_order	"0x1"
 bondInfo[670].colix	0
 bondInfo[670].visible	true
 bondInfo[670].order	1.0
@@ -11423,6 +12092,7 @@ bondInfo[670].atom1.info	"[ARG]87:A.CA #656"
 bondInfo[670]._bpt	669
 bondInfo[670].radius	0.15
 bondInfo[670].type	"single"
+bondInfo[670].jmol_order	"0x1"
 bondInfo[671].colix	0
 bondInfo[671].visible	true
 bondInfo[671].order	1.0
@@ -11440,6 +12110,7 @@ bondInfo[671].atom1.info	"[ARG]87:A.C #657"
 bondInfo[671]._bpt	670
 bondInfo[671].radius	0.15
 bondInfo[671].type	"single"
+bondInfo[671].jmol_order	"0x1"
 bondInfo[672].colix	0
 bondInfo[672].visible	true
 bondInfo[672].order	1.0
@@ -11457,6 +12128,7 @@ bondInfo[672].atom1.info	"[ARG]87:A.CG #660"
 bondInfo[672]._bpt	671
 bondInfo[672].radius	0.15
 bondInfo[672].type	"single"
+bondInfo[672].jmol_order	"0x1"
 bondInfo[673].colix	0
 bondInfo[673].visible	true
 bondInfo[673].order	1.0
@@ -11474,6 +12146,7 @@ bondInfo[673].atom1.info	"[ARG]87:A.CG #660"
 bondInfo[673]._bpt	672
 bondInfo[673].radius	0.15
 bondInfo[673].type	"single"
+bondInfo[673].jmol_order	"0x1"
 bondInfo[674].colix	0
 bondInfo[674].visible	true
 bondInfo[674].order	1.0
@@ -11491,6 +12164,7 @@ bondInfo[674].atom1.info	"[ARG]87:A.CD #661"
 bondInfo[674]._bpt	673
 bondInfo[674].radius	0.15
 bondInfo[674].type	"single"
+bondInfo[674].jmol_order	"0x1"
 bondInfo[675].colix	0
 bondInfo[675].visible	true
 bondInfo[675].order	1.0
@@ -11508,6 +12182,7 @@ bondInfo[675].atom1.info	"[ARG]87:A.CZ #663"
 bondInfo[675]._bpt	674
 bondInfo[675].radius	0.15
 bondInfo[675].type	"single"
+bondInfo[675].jmol_order	"0x1"
 bondInfo[676].colix	0
 bondInfo[676].visible	true
 bondInfo[676].order	1.0
@@ -11525,6 +12200,7 @@ bondInfo[676].atom1.info	"[ARG]87:A.CZ #663"
 bondInfo[676]._bpt	675
 bondInfo[676].radius	0.15
 bondInfo[676].type	"single"
+bondInfo[676].jmol_order	"0x1"
 bondInfo[677].colix	0
 bondInfo[677].visible	true
 bondInfo[677].order	1.0
@@ -11542,6 +12218,7 @@ bondInfo[677].atom1.info	"[ARG]87:A.NH1 #664"
 bondInfo[677]._bpt	676
 bondInfo[677].radius	0.15
 bondInfo[677].type	"single"
+bondInfo[677].jmol_order	"0x1"
 bondInfo[678].colix	0
 bondInfo[678].visible	true
 bondInfo[678].order	1.0
@@ -11559,6 +12236,7 @@ bondInfo[678].atom1.info	"[ASN]88:A.N #666"
 bondInfo[678]._bpt	677
 bondInfo[678].radius	0.15
 bondInfo[678].type	"single"
+bondInfo[678].jmol_order	"0x1"
 bondInfo[679].colix	0
 bondInfo[679].visible	true
 bondInfo[679].order	1.0
@@ -11576,6 +12254,7 @@ bondInfo[679].atom1.info	"[ASN]88:A.N #666"
 bondInfo[679]._bpt	678
 bondInfo[679].radius	0.15
 bondInfo[679].type	"single"
+bondInfo[679].jmol_order	"0x1"
 bondInfo[680].colix	0
 bondInfo[680].visible	true
 bondInfo[680].order	1.0
@@ -11593,6 +12272,7 @@ bondInfo[680].atom1.info	"[ASN]88:A.CA #667"
 bondInfo[680]._bpt	679
 bondInfo[680].radius	0.15
 bondInfo[680].type	"single"
+bondInfo[680].jmol_order	"0x1"
 bondInfo[681].colix	0
 bondInfo[681].visible	true
 bondInfo[681].order	1.0
@@ -11610,6 +12290,7 @@ bondInfo[681].atom1.info	"[ASN]88:A.C #668"
 bondInfo[681]._bpt	680
 bondInfo[681].radius	0.15
 bondInfo[681].type	"single"
+bondInfo[681].jmol_order	"0x1"
 bondInfo[682].colix	0
 bondInfo[682].visible	true
 bondInfo[682].order	1.0
@@ -11627,6 +12308,7 @@ bondInfo[682].atom1.info	"[ASN]88:A.CB #670"
 bondInfo[682]._bpt	681
 bondInfo[682].radius	0.15
 bondInfo[682].type	"single"
+bondInfo[682].jmol_order	"0x1"
 bondInfo[683].colix	0
 bondInfo[683].visible	true
 bondInfo[683].order	1.0
@@ -11644,6 +12326,7 @@ bondInfo[683].atom1.info	"[ASN]88:A.CG #671"
 bondInfo[683]._bpt	682
 bondInfo[683].radius	0.15
 bondInfo[683].type	"single"
+bondInfo[683].jmol_order	"0x1"
 bondInfo[684].colix	0
 bondInfo[684].visible	true
 bondInfo[684].order	1.0
@@ -11661,6 +12344,7 @@ bondInfo[684].atom1.info	"[ASN]88:A.OD1 #672"
 bondInfo[684]._bpt	683
 bondInfo[684].radius	0.15
 bondInfo[684].type	"single"
+bondInfo[684].jmol_order	"0x1"
 bondInfo[685].colix	0
 bondInfo[685].visible	true
 bondInfo[685].order	1.0
@@ -11678,6 +12362,7 @@ bondInfo[685].atom1.info	"[ASN]88:A.ND2 #673"
 bondInfo[685]._bpt	684
 bondInfo[685].radius	0.15
 bondInfo[685].type	"single"
+bondInfo[685].jmol_order	"0x1"
 bondInfo[686].colix	0
 bondInfo[686].visible	true
 bondInfo[686].order	1.0
@@ -11695,6 +12380,7 @@ bondInfo[686].atom1.info	"[LEU]89:A.N #674"
 bondInfo[686]._bpt	685
 bondInfo[686].radius	0.15
 bondInfo[686].type	"single"
+bondInfo[686].jmol_order	"0x1"
 bondInfo[687].colix	0
 bondInfo[687].visible	true
 bondInfo[687].order	1.0
@@ -11712,6 +12398,7 @@ bondInfo[687].atom1.info	"[LEU]89:A.N #674"
 bondInfo[687]._bpt	686
 bondInfo[687].radius	0.15
 bondInfo[687].type	"single"
+bondInfo[687].jmol_order	"0x1"
 bondInfo[688].colix	0
 bondInfo[688].visible	true
 bondInfo[688].order	1.0
@@ -11729,6 +12416,7 @@ bondInfo[688].atom1.info	"[LEU]89:A.CA #675"
 bondInfo[688]._bpt	687
 bondInfo[688].radius	0.15
 bondInfo[688].type	"single"
+bondInfo[688].jmol_order	"0x1"
 bondInfo[689].colix	0
 bondInfo[689].visible	true
 bondInfo[689].order	1.0
@@ -11746,6 +12434,7 @@ bondInfo[689].atom1.info	"[LEU]89:A.C #676"
 bondInfo[689]._bpt	688
 bondInfo[689].radius	0.15
 bondInfo[689].type	"single"
+bondInfo[689].jmol_order	"0x1"
 bondInfo[690].colix	0
 bondInfo[690].visible	true
 bondInfo[690].order	1.0
@@ -11763,6 +12452,7 @@ bondInfo[690].atom1.info	"[LEU]89:A.CB #678"
 bondInfo[690]._bpt	689
 bondInfo[690].radius	0.15
 bondInfo[690].type	"single"
+bondInfo[690].jmol_order	"0x1"
 bondInfo[691].colix	0
 bondInfo[691].visible	true
 bondInfo[691].order	1.0
@@ -11780,6 +12470,7 @@ bondInfo[691].atom1.info	"[LEU]89:A.CG #679"
 bondInfo[691]._bpt	690
 bondInfo[691].radius	0.15
 bondInfo[691].type	"single"
+bondInfo[691].jmol_order	"0x1"
 bondInfo[692].colix	0
 bondInfo[692].visible	true
 bondInfo[692].order	1.0
@@ -11797,6 +12488,7 @@ bondInfo[692].atom1.info	"[LEU]89:A.CG #679"
 bondInfo[692]._bpt	691
 bondInfo[692].radius	0.15
 bondInfo[692].type	"single"
+bondInfo[692].jmol_order	"0x1"
 bondInfo[693].colix	0
 bondInfo[693].visible	true
 bondInfo[693].order	1.0
@@ -11814,6 +12506,7 @@ bondInfo[693].atom1.info	"[LEU]89:A.CD2 #681"
 bondInfo[693]._bpt	692
 bondInfo[693].radius	0.15
 bondInfo[693].type	"single"
+bondInfo[693].jmol_order	"0x1"
 bondInfo[694].colix	0
 bondInfo[694].visible	true
 bondInfo[694].order	1.0
@@ -11831,6 +12524,7 @@ bondInfo[694].atom1.info	"[LEU]90:A.N #682"
 bondInfo[694]._bpt	693
 bondInfo[694].radius	0.15
 bondInfo[694].type	"single"
+bondInfo[694].jmol_order	"0x1"
 bondInfo[695].colix	0
 bondInfo[695].visible	true
 bondInfo[695].order	1.0
@@ -11848,6 +12542,7 @@ bondInfo[695].atom1.info	"[LEU]90:A.N #682"
 bondInfo[695]._bpt	694
 bondInfo[695].radius	0.15
 bondInfo[695].type	"single"
+bondInfo[695].jmol_order	"0x1"
 bondInfo[696].colix	0
 bondInfo[696].visible	true
 bondInfo[696].order	1.0
@@ -11865,6 +12560,7 @@ bondInfo[696].atom1.info	"[LEU]90:A.CA #683"
 bondInfo[696]._bpt	695
 bondInfo[696].radius	0.15
 bondInfo[696].type	"single"
+bondInfo[696].jmol_order	"0x1"
 bondInfo[697].colix	0
 bondInfo[697].visible	true
 bondInfo[697].order	1.0
@@ -11882,6 +12578,7 @@ bondInfo[697].atom1.info	"[LEU]90:A.C #684"
 bondInfo[697]._bpt	696
 bondInfo[697].radius	0.15
 bondInfo[697].type	"single"
+bondInfo[697].jmol_order	"0x1"
 bondInfo[698].colix	0
 bondInfo[698].visible	true
 bondInfo[698].order	1.0
@@ -11899,6 +12596,7 @@ bondInfo[698].atom1.info	"[LEU]90:A.C #684"
 bondInfo[698]._bpt	697
 bondInfo[698].radius	0.15
 bondInfo[698].type	"single"
+bondInfo[698].jmol_order	"0x1"
 bondInfo[699].colix	0
 bondInfo[699].visible	true
 bondInfo[699].order	1.0
@@ -11916,6 +12614,7 @@ bondInfo[699].atom1.info	"[LEU]90:A.CB #686"
 bondInfo[699]._bpt	698
 bondInfo[699].radius	0.15
 bondInfo[699].type	"single"
+bondInfo[699].jmol_order	"0x1"
 bondInfo[700].colix	0
 bondInfo[700].visible	true
 bondInfo[700].order	1.0
@@ -11933,6 +12632,7 @@ bondInfo[700].atom1.info	"[LEU]90:A.CG #687"
 bondInfo[700]._bpt	699
 bondInfo[700].radius	0.15
 bondInfo[700].type	"single"
+bondInfo[700].jmol_order	"0x1"
 bondInfo[701].colix	0
 bondInfo[701].visible	true
 bondInfo[701].order	1.0
@@ -11950,6 +12650,7 @@ bondInfo[701].atom1.info	"[LEU]90:A.CD1 #688"
 bondInfo[701]._bpt	700
 bondInfo[701].radius	0.15
 bondInfo[701].type	"single"
+bondInfo[701].jmol_order	"0x1"
 bondInfo[702].colix	0
 bondInfo[702].visible	true
 bondInfo[702].order	1.0
@@ -11967,6 +12668,7 @@ bondInfo[702].atom1.info	"[LEU]90:A.CD2 #689"
 bondInfo[702]._bpt	701
 bondInfo[702].radius	0.15
 bondInfo[702].type	"single"
+bondInfo[702].jmol_order	"0x1"
 bondInfo[703].colix	0
 bondInfo[703].visible	true
 bondInfo[703].order	1.0
@@ -11984,6 +12686,7 @@ bondInfo[703].atom1.info	"[THR]91:A.N #690"
 bondInfo[703]._bpt	702
 bondInfo[703].radius	0.15
 bondInfo[703].type	"single"
+bondInfo[703].jmol_order	"0x1"
 bondInfo[704].colix	0
 bondInfo[704].visible	true
 bondInfo[704].order	1.0
@@ -12001,6 +12704,7 @@ bondInfo[704].atom1.info	"[THR]91:A.CA #691"
 bondInfo[704]._bpt	703
 bondInfo[704].radius	0.15
 bondInfo[704].type	"single"
+bondInfo[704].jmol_order	"0x1"
 bondInfo[705].colix	0
 bondInfo[705].visible	true
 bondInfo[705].order	1.0
@@ -12018,6 +12722,7 @@ bondInfo[705].atom1.info	"[THR]91:A.C #692"
 bondInfo[705]._bpt	704
 bondInfo[705].radius	0.15
 bondInfo[705].type	"single"
+bondInfo[705].jmol_order	"0x1"
 bondInfo[706].colix	0
 bondInfo[706].visible	true
 bondInfo[706].order	1.0
@@ -12035,6 +12740,7 @@ bondInfo[706].atom1.info	"[THR]91:A.CB #694"
 bondInfo[706]._bpt	705
 bondInfo[706].radius	0.15
 bondInfo[706].type	"single"
+bondInfo[706].jmol_order	"0x1"
 bondInfo[707].colix	0
 bondInfo[707].visible	true
 bondInfo[707].order	1.0
@@ -12052,6 +12758,7 @@ bondInfo[707].atom1.info	"[THR]91:A.CB #694"
 bondInfo[707]._bpt	706
 bondInfo[707].radius	0.15
 bondInfo[707].type	"single"
+bondInfo[707].jmol_order	"0x1"
 bondInfo[708].colix	0
 bondInfo[708].visible	true
 bondInfo[708].order	1.0
@@ -12069,6 +12776,7 @@ bondInfo[708].atom1.info	"[THR]91:A.OG1 #695"
 bondInfo[708]._bpt	707
 bondInfo[708].radius	0.15
 bondInfo[708].type	"single"
+bondInfo[708].jmol_order	"0x1"
 bondInfo[709].colix	0
 bondInfo[709].visible	true
 bondInfo[709].order	1.0
@@ -12086,6 +12794,7 @@ bondInfo[709].atom1.info	"[GLN]92:A.N #697"
 bondInfo[709]._bpt	708
 bondInfo[709].radius	0.15
 bondInfo[709].type	"single"
+bondInfo[709].jmol_order	"0x1"
 bondInfo[710].colix	0
 bondInfo[710].visible	true
 bondInfo[710].order	1.0
@@ -12103,6 +12812,7 @@ bondInfo[710].atom1.info	"[GLN]92:A.N #697"
 bondInfo[710]._bpt	709
 bondInfo[710].radius	0.15
 bondInfo[710].type	"single"
+bondInfo[710].jmol_order	"0x1"
 bondInfo[711].colix	0
 bondInfo[711].visible	true
 bondInfo[711].order	1.0
@@ -12120,6 +12830,7 @@ bondInfo[711].atom1.info	"[GLN]92:A.C #699"
 bondInfo[711]._bpt	710
 bondInfo[711].radius	0.15
 bondInfo[711].type	"single"
+bondInfo[711].jmol_order	"0x1"
 bondInfo[712].colix	0
 bondInfo[712].visible	true
 bondInfo[712].order	1.0
@@ -12137,6 +12848,7 @@ bondInfo[712].atom1.info	"[GLN]92:A.C #699"
 bondInfo[712]._bpt	711
 bondInfo[712].radius	0.15
 bondInfo[712].type	"single"
+bondInfo[712].jmol_order	"0x1"
 bondInfo[713].colix	0
 bondInfo[713].visible	true
 bondInfo[713].order	1.0
@@ -12154,6 +12866,7 @@ bondInfo[713].atom1.info	"[GLN]92:A.CB #701"
 bondInfo[713]._bpt	712
 bondInfo[713].radius	0.15
 bondInfo[713].type	"single"
+bondInfo[713].jmol_order	"0x1"
 bondInfo[714].colix	0
 bondInfo[714].visible	true
 bondInfo[714].order	1.0
@@ -12171,6 +12884,7 @@ bondInfo[714].atom1.info	"[GLN]92:A.CB #701"
 bondInfo[714]._bpt	713
 bondInfo[714].radius	0.15
 bondInfo[714].type	"single"
+bondInfo[714].jmol_order	"0x1"
 bondInfo[715].colix	0
 bondInfo[715].visible	true
 bondInfo[715].order	1.0
@@ -12188,6 +12902,7 @@ bondInfo[715].atom1.info	"[GLN]92:A.CG #702"
 bondInfo[715]._bpt	714
 bondInfo[715].radius	0.15
 bondInfo[715].type	"single"
+bondInfo[715].jmol_order	"0x1"
 bondInfo[716].colix	0
 bondInfo[716].visible	true
 bondInfo[716].order	1.0
@@ -12205,6 +12920,7 @@ bondInfo[716].atom1.info	"[GLN]92:A.CD #703"
 bondInfo[716]._bpt	715
 bondInfo[716].radius	0.15
 bondInfo[716].type	"single"
+bondInfo[716].jmol_order	"0x1"
 bondInfo[717].colix	0
 bondInfo[717].visible	true
 bondInfo[717].order	1.0
@@ -12222,6 +12938,7 @@ bondInfo[717].atom1.info	"[GLN]92:A.CD #703"
 bondInfo[717]._bpt	716
 bondInfo[717].radius	0.15
 bondInfo[717].type	"single"
+bondInfo[717].jmol_order	"0x1"
 bondInfo[718].colix	0
 bondInfo[718].visible	true
 bondInfo[718].order	1.0
@@ -12239,6 +12956,7 @@ bondInfo[718].atom1.info	"[ILE]93:A.N #706"
 bondInfo[718]._bpt	717
 bondInfo[718].radius	0.15
 bondInfo[718].type	"single"
+bondInfo[718].jmol_order	"0x1"
 bondInfo[719].colix	0
 bondInfo[719].visible	true
 bondInfo[719].order	1.0
@@ -12256,6 +12974,7 @@ bondInfo[719].atom1.info	"[ILE]93:A.CA #707"
 bondInfo[719]._bpt	718
 bondInfo[719].radius	0.15
 bondInfo[719].type	"single"
+bondInfo[719].jmol_order	"0x1"
 bondInfo[720].colix	0
 bondInfo[720].visible	true
 bondInfo[720].order	1.0
@@ -12273,6 +12992,7 @@ bondInfo[720].atom1.info	"[ILE]93:A.CA #707"
 bondInfo[720]._bpt	719
 bondInfo[720].radius	0.15
 bondInfo[720].type	"single"
+bondInfo[720].jmol_order	"0x1"
 bondInfo[721].colix	0
 bondInfo[721].visible	true
 bondInfo[721].order	1.0
@@ -12290,6 +13010,7 @@ bondInfo[721].atom1.info	"[ILE]93:A.C #708"
 bondInfo[721]._bpt	720
 bondInfo[721].radius	0.15
 bondInfo[721].type	"single"
+bondInfo[721].jmol_order	"0x1"
 bondInfo[722].colix	0
 bondInfo[722].visible	true
 bondInfo[722].order	1.0
@@ -12307,6 +13028,7 @@ bondInfo[722].atom1.info	"[ILE]93:A.C #708"
 bondInfo[722]._bpt	721
 bondInfo[722].radius	0.15
 bondInfo[722].type	"single"
+bondInfo[722].jmol_order	"0x1"
 bondInfo[723].colix	0
 bondInfo[723].visible	true
 bondInfo[723].order	1.0
@@ -12324,6 +13046,7 @@ bondInfo[723].atom1.info	"[ILE]93:A.CB #710"
 bondInfo[723]._bpt	722
 bondInfo[723].radius	0.15
 bondInfo[723].type	"single"
+bondInfo[723].jmol_order	"0x1"
 bondInfo[724].colix	0
 bondInfo[724].visible	true
 bondInfo[724].order	1.0
@@ -12341,6 +13064,7 @@ bondInfo[724].atom1.info	"[ILE]93:A.CG1 #711"
 bondInfo[724]._bpt	723
 bondInfo[724].radius	0.15
 bondInfo[724].type	"single"
+bondInfo[724].jmol_order	"0x1"
 bondInfo[725].colix	0
 bondInfo[725].visible	true
 bondInfo[725].order	1.0
@@ -12358,6 +13082,7 @@ bondInfo[725].atom1.info	"[ILE]93:A.CG2 #712"
 bondInfo[725]._bpt	724
 bondInfo[725].radius	0.15
 bondInfo[725].type	"single"
+bondInfo[725].jmol_order	"0x1"
 bondInfo[726].colix	0
 bondInfo[726].visible	true
 bondInfo[726].order	1.0
@@ -12375,6 +13100,7 @@ bondInfo[726].atom1.info	"[ILE]93:A.CD1 #713"
 bondInfo[726]._bpt	725
 bondInfo[726].radius	0.15
 bondInfo[726].type	"single"
+bondInfo[726].jmol_order	"0x1"
 bondInfo[727].colix	0
 bondInfo[727].visible	true
 bondInfo[727].order	1.0
@@ -12392,6 +13118,7 @@ bondInfo[727].atom1.info	"[GLY]94:A.N #714"
 bondInfo[727]._bpt	726
 bondInfo[727].radius	0.15
 bondInfo[727].type	"single"
+bondInfo[727].jmol_order	"0x1"
 bondInfo[728].colix	0
 bondInfo[728].visible	true
 bondInfo[728].order	1.0
@@ -12409,6 +13136,7 @@ bondInfo[728].atom1.info	"[GLY]94:A.C #716"
 bondInfo[728]._bpt	727
 bondInfo[728].radius	0.15
 bondInfo[728].type	"single"
+bondInfo[728].jmol_order	"0x1"
 bondInfo[729].colix	0
 bondInfo[729].visible	true
 bondInfo[729].order	1.0
@@ -12426,6 +13154,7 @@ bondInfo[729].atom1.info	"[GLY]94:A.C #716"
 bondInfo[729]._bpt	728
 bondInfo[729].radius	0.15
 bondInfo[729].type	"single"
+bondInfo[729].jmol_order	"0x1"
 bondInfo[730].colix	0
 bondInfo[730].visible	true
 bondInfo[730].order	1.0
@@ -12443,6 +13172,7 @@ bondInfo[730].atom1.info	"[CYS]95:A.N #718"
 bondInfo[730]._bpt	729
 bondInfo[730].radius	0.15
 bondInfo[730].type	"single"
+bondInfo[730].jmol_order	"0x1"
 bondInfo[731].colix	0
 bondInfo[731].visible	true
 bondInfo[731].order	1.0
@@ -12460,6 +13190,7 @@ bondInfo[731].atom1.info	"[CYS]95:A.CA #719"
 bondInfo[731]._bpt	730
 bondInfo[731].radius	0.15
 bondInfo[731].type	"single"
+bondInfo[731].jmol_order	"0x1"
 bondInfo[732].colix	0
 bondInfo[732].visible	true
 bondInfo[732].order	1.0
@@ -12477,6 +13208,7 @@ bondInfo[732].atom1.info	"[CYS]95:A.CA #719"
 bondInfo[732]._bpt	731
 bondInfo[732].radius	0.15
 bondInfo[732].type	"single"
+bondInfo[732].jmol_order	"0x1"
 bondInfo[733].colix	0
 bondInfo[733].visible	true
 bondInfo[733].order	1.0
@@ -12494,6 +13226,7 @@ bondInfo[733].atom1.info	"[CYS]95:A.C #720"
 bondInfo[733]._bpt	732
 bondInfo[733].radius	0.15
 bondInfo[733].type	"single"
+bondInfo[733].jmol_order	"0x1"
 bondInfo[734].colix	0
 bondInfo[734].visible	true
 bondInfo[734].order	1.0
@@ -12511,6 +13244,7 @@ bondInfo[734].atom1.info	"[CYS]95:A.CB #722"
 bondInfo[734]._bpt	733
 bondInfo[734].radius	0.15
 bondInfo[734].type	"single"
+bondInfo[734].jmol_order	"0x1"
 bondInfo[735].colix	0
 bondInfo[735].visible	true
 bondInfo[735].order	1.0
@@ -12528,6 +13262,7 @@ bondInfo[735].atom1.info	"[CYS]95:A.SG #723"
 bondInfo[735]._bpt	734
 bondInfo[735].radius	0.15
 bondInfo[735].type	"single"
+bondInfo[735].jmol_order	"0x1"
 bondInfo[736].colix	0
 bondInfo[736].visible	true
 bondInfo[736].order	1.0
@@ -12545,6 +13280,7 @@ bondInfo[736].atom1.info	"[THR]96:A.N #724"
 bondInfo[736]._bpt	735
 bondInfo[736].radius	0.15
 bondInfo[736].type	"single"
+bondInfo[736].jmol_order	"0x1"
 bondInfo[737].colix	0
 bondInfo[737].visible	true
 bondInfo[737].order	1.0
@@ -12562,6 +13298,7 @@ bondInfo[737].atom1.info	"[THR]96:A.N #724"
 bondInfo[737]._bpt	736
 bondInfo[737].radius	0.15
 bondInfo[737].type	"single"
+bondInfo[737].jmol_order	"0x1"
 bondInfo[738].colix	0
 bondInfo[738].visible	true
 bondInfo[738].order	1.0
@@ -12579,6 +13316,7 @@ bondInfo[738].atom1.info	"[THR]96:A.CA #725"
 bondInfo[738]._bpt	737
 bondInfo[738].radius	0.15
 bondInfo[738].type	"single"
+bondInfo[738].jmol_order	"0x1"
 bondInfo[739].colix	0
 bondInfo[739].visible	true
 bondInfo[739].order	1.0
@@ -12596,6 +13334,7 @@ bondInfo[739].atom1.info	"[THR]96:A.C #726"
 bondInfo[739]._bpt	738
 bondInfo[739].radius	0.15
 bondInfo[739].type	"single"
+bondInfo[739].jmol_order	"0x1"
 bondInfo[740].colix	0
 bondInfo[740].visible	true
 bondInfo[740].order	1.0
@@ -12613,6 +13352,7 @@ bondInfo[740].atom1.info	"[THR]96:A.O #727"
 bondInfo[740]._bpt	739
 bondInfo[740].radius	0.15
 bondInfo[740].type	"single"
+bondInfo[740].jmol_order	"0x1"
 bondInfo[741].colix	0
 bondInfo[741].visible	true
 bondInfo[741].order	1.0
@@ -12630,6 +13370,7 @@ bondInfo[741].atom1.info	"[THR]96:A.CB #728"
 bondInfo[741]._bpt	740
 bondInfo[741].radius	0.15
 bondInfo[741].type	"single"
+bondInfo[741].jmol_order	"0x1"
 bondInfo[742].colix	0
 bondInfo[742].visible	true
 bondInfo[742].order	1.0
@@ -12647,6 +13388,7 @@ bondInfo[742].atom1.info	"[THR]96:A.OG1 #729"
 bondInfo[742]._bpt	741
 bondInfo[742].radius	0.15
 bondInfo[742].type	"single"
+bondInfo[742].jmol_order	"0x1"
 bondInfo[743].colix	0
 bondInfo[743].visible	true
 bondInfo[743].order	1.0
@@ -12664,6 +13406,7 @@ bondInfo[743].atom1.info	"[LEU]97:A.N #731"
 bondInfo[743]._bpt	742
 bondInfo[743].radius	0.15
 bondInfo[743].type	"single"
+bondInfo[743].jmol_order	"0x1"
 bondInfo[744].colix	0
 bondInfo[744].visible	true
 bondInfo[744].order	1.0
@@ -12681,6 +13424,7 @@ bondInfo[744].atom1.info	"[LEU]97:A.CA #732"
 bondInfo[744]._bpt	743
 bondInfo[744].radius	0.15
 bondInfo[744].type	"single"
+bondInfo[744].jmol_order	"0x1"
 bondInfo[745].colix	0
 bondInfo[745].visible	true
 bondInfo[745].order	1.0
@@ -12698,6 +13442,7 @@ bondInfo[745].atom1.info	"[LEU]97:A.CA #732"
 bondInfo[745]._bpt	744
 bondInfo[745].radius	0.15
 bondInfo[745].type	"single"
+bondInfo[745].jmol_order	"0x1"
 bondInfo[746].colix	0
 bondInfo[746].visible	true
 bondInfo[746].order	1.0
@@ -12715,6 +13460,7 @@ bondInfo[746].atom1.info	"[LEU]97:A.C #733"
 bondInfo[746]._bpt	745
 bondInfo[746].radius	0.15
 bondInfo[746].type	"single"
+bondInfo[746].jmol_order	"0x1"
 bondInfo[747].colix	0
 bondInfo[747].visible	true
 bondInfo[747].order	1.0
@@ -12732,6 +13478,7 @@ bondInfo[747].atom1.info	"[LEU]97:A.CB #735"
 bondInfo[747]._bpt	746
 bondInfo[747].radius	0.15
 bondInfo[747].type	"single"
+bondInfo[747].jmol_order	"0x1"
 bondInfo[748].colix	0
 bondInfo[748].visible	true
 bondInfo[748].order	1.0
@@ -12749,6 +13496,7 @@ bondInfo[748].atom1.info	"[LEU]97:A.CG #736"
 bondInfo[748]._bpt	747
 bondInfo[748].radius	0.15
 bondInfo[748].type	"single"
+bondInfo[748].jmol_order	"0x1"
 bondInfo[749].colix	0
 bondInfo[749].visible	true
 bondInfo[749].order	1.0
@@ -12766,6 +13514,7 @@ bondInfo[749].atom1.info	"[LEU]97:A.CD1 #737"
 bondInfo[749]._bpt	748
 bondInfo[749].radius	0.15
 bondInfo[749].type	"single"
+bondInfo[749].jmol_order	"0x1"
 bondInfo[750].colix	0
 bondInfo[750].visible	true
 bondInfo[750].order	1.0
@@ -12783,6 +13532,7 @@ bondInfo[750].atom1.info	"[LEU]97:A.CD2 #738"
 bondInfo[750]._bpt	749
 bondInfo[750].radius	0.15
 bondInfo[750].type	"single"
+bondInfo[750].jmol_order	"0x1"
 bondInfo[751].colix	0
 bondInfo[751].visible	true
 bondInfo[751].order	1.0
@@ -12800,6 +13550,7 @@ bondInfo[751].atom1.info	"[ASN]98:A.N #739"
 bondInfo[751]._bpt	750
 bondInfo[751].radius	0.15
 bondInfo[751].type	"single"
+bondInfo[751].jmol_order	"0x1"
 bondInfo[752].colix	0
 bondInfo[752].visible	true
 bondInfo[752].order	1.0
@@ -12817,6 +13568,7 @@ bondInfo[752].atom1.info	"[ASN]98:A.N #739"
 bondInfo[752]._bpt	751
 bondInfo[752].radius	0.15
 bondInfo[752].type	"single"
+bondInfo[752].jmol_order	"0x1"
 bondInfo[753].colix	0
 bondInfo[753].visible	true
 bondInfo[753].order	1.0
@@ -12834,6 +13586,7 @@ bondInfo[753].atom1.info	"[ASN]98:A.CA #740"
 bondInfo[753]._bpt	752
 bondInfo[753].radius	0.15
 bondInfo[753].type	"single"
+bondInfo[753].jmol_order	"0x1"
 bondInfo[754].colix	0
 bondInfo[754].visible	true
 bondInfo[754].order	1.0
@@ -12851,6 +13604,7 @@ bondInfo[754].atom1.info	"[ASN]98:A.C #741"
 bondInfo[754]._bpt	753
 bondInfo[754].radius	0.15
 bondInfo[754].type	"single"
+bondInfo[754].jmol_order	"0x1"
 bondInfo[755].colix	0
 bondInfo[755].visible	true
 bondInfo[755].order	1.0
@@ -12868,6 +13622,7 @@ bondInfo[755].atom1.info	"[ASN]98:A.C #741"
 bondInfo[755]._bpt	754
 bondInfo[755].radius	0.15
 bondInfo[755].type	"single"
+bondInfo[755].jmol_order	"0x1"
 bondInfo[756].colix	0
 bondInfo[756].visible	true
 bondInfo[756].order	1.0
@@ -12885,6 +13640,7 @@ bondInfo[756].atom1.info	"[ASN]98:A.O #742"
 bondInfo[756]._bpt	755
 bondInfo[756].radius	0.15
 bondInfo[756].type	"single"
+bondInfo[756].jmol_order	"0x1"
 bondInfo[757].colix	0
 bondInfo[757].visible	true
 bondInfo[757].order	1.0
@@ -12902,6 +13658,7 @@ bondInfo[757].atom1.info	"[ASN]98:A.CB #743"
 bondInfo[757]._bpt	756
 bondInfo[757].radius	0.15
 bondInfo[757].type	"single"
+bondInfo[757].jmol_order	"0x1"
 bondInfo[758].colix	0
 bondInfo[758].visible	true
 bondInfo[758].order	1.0
@@ -12919,6 +13676,7 @@ bondInfo[758].atom1.info	"[ASN]98:A.CG #744"
 bondInfo[758]._bpt	757
 bondInfo[758].radius	0.15
 bondInfo[758].type	"single"
+bondInfo[758].jmol_order	"0x1"
 bondInfo[759].colix	0
 bondInfo[759].visible	true
 bondInfo[759].order	1.0
@@ -12936,6 +13694,7 @@ bondInfo[759].atom1.info	"[ASN]98:A.ND2 #746"
 bondInfo[759]._bpt	758
 bondInfo[759].radius	0.15
 bondInfo[759].type	"single"
+bondInfo[759].jmol_order	"0x1"
 bondInfo[760].colix	0
 bondInfo[760].visible	true
 bondInfo[760].order	1.0
@@ -12953,6 +13712,7 @@ bondInfo[760].atom1.info	"[PHE]99:A.CA #748"
 bondInfo[760]._bpt	759
 bondInfo[760].radius	0.15
 bondInfo[760].type	"single"
+bondInfo[760].jmol_order	"0x1"
 bondInfo[761].colix	0
 bondInfo[761].visible	true
 bondInfo[761].order	1.0
@@ -12970,6 +13730,7 @@ bondInfo[761].atom1.info	"[PHE]99:A.CA #748"
 bondInfo[761]._bpt	760
 bondInfo[761].radius	0.15
 bondInfo[761].type	"single"
+bondInfo[761].jmol_order	"0x1"
 bondInfo[762].colix	0
 bondInfo[762].visible	true
 bondInfo[762].order	1.0
@@ -12987,6 +13748,7 @@ bondInfo[762].atom1.info	"[PHE]99:A.C #749"
 bondInfo[762]._bpt	761
 bondInfo[762].radius	0.15
 bondInfo[762].type	"single"
+bondInfo[762].jmol_order	"0x1"
 bondInfo[763].colix	0
 bondInfo[763].visible	true
 bondInfo[763].order	1.0
@@ -13004,6 +13766,7 @@ bondInfo[763].atom1.info	"[PHE]99:A.CB #751"
 bondInfo[763]._bpt	762
 bondInfo[763].radius	0.15
 bondInfo[763].type	"single"
+bondInfo[763].jmol_order	"0x1"
 bondInfo[764].colix	0
 bondInfo[764].visible	true
 bondInfo[764].order	1.0
@@ -13021,6 +13784,7 @@ bondInfo[764].atom1.info	"[PHE]99:A.CB #751"
 bondInfo[764]._bpt	763
 bondInfo[764].radius	0.15
 bondInfo[764].type	"single"
+bondInfo[764].jmol_order	"0x1"
 bondInfo[765].colix	0
 bondInfo[765].visible	true
 bondInfo[765].order	1.0
@@ -13038,6 +13802,7 @@ bondInfo[765].atom1.info	"[PHE]99:A.CG #752"
 bondInfo[765]._bpt	764
 bondInfo[765].radius	0.15
 bondInfo[765].type	"single"
+bondInfo[765].jmol_order	"0x1"
 bondInfo[766].colix	0
 bondInfo[766].visible	true
 bondInfo[766].order	1.0
@@ -13055,6 +13820,7 @@ bondInfo[766].atom1.info	"[PHE]99:A.CD1 #753"
 bondInfo[766]._bpt	765
 bondInfo[766].radius	0.15
 bondInfo[766].type	"single"
+bondInfo[766].jmol_order	"0x1"
 bondInfo[767].colix	0
 bondInfo[767].visible	true
 bondInfo[767].order	1.0
@@ -13072,6 +13838,7 @@ bondInfo[767].atom1.info	"[PHE]99:A.CD1 #753"
 bondInfo[767]._bpt	766
 bondInfo[767].radius	0.15
 bondInfo[767].type	"single"
+bondInfo[767].jmol_order	"0x1"
 bondInfo[768].colix	0
 bondInfo[768].visible	true
 bondInfo[768].order	1.0
@@ -13089,6 +13856,7 @@ bondInfo[768].atom1.info	"[PHE]99:A.CD2 #754"
 bondInfo[768]._bpt	767
 bondInfo[768].radius	0.15
 bondInfo[768].type	"single"
+bondInfo[768].jmol_order	"0x1"
 bondInfo[769].colix	0
 bondInfo[769].visible	true
 bondInfo[769].order	1.0
@@ -13106,6 +13874,7 @@ bondInfo[769].atom1.info	"[PHE]99:A.CE1 #755"
 bondInfo[769]._bpt	768
 bondInfo[769].radius	0.15
 bondInfo[769].type	"single"
+bondInfo[769].jmol_order	"0x1"
 bondInfo[770].colix	0
 bondInfo[770].visible	true
 bondInfo[770].order	1.0
@@ -13123,6 +13892,7 @@ bondInfo[770].atom1.info	"[PHE]99:A.CZ #757"
 bondInfo[770]._bpt	769
 bondInfo[770].radius	0.15
 bondInfo[770].type	"single"
+bondInfo[770].jmol_order	"0x1"
 bondInfo[771].colix	0
 bondInfo[771].visible	true
 bondInfo[771].order	1.0
@@ -13140,3 +13910,5 @@ bondInfo[771].atom1.info	"[PHE]99:A.OXT #758"
 bondInfo[771]._bpt	770
 bondInfo[771].radius	0.15
 bondInfo[771].type	"single"
+bondInfo[771].jmol_order	"0x1"
+
