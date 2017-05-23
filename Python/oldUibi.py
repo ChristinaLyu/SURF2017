@@ -95,8 +95,7 @@ root = Element('molecule')
 
 #bond.bnd
 bondInfo = bondInfofile.read()
-try:
-
+if bondInfo.find('*List') != -1:
     indS = 0
     indE = 0
     bondInfo = bondInfo.splitlines()
@@ -113,7 +112,6 @@ try:
             line = line.replace(string2, '')
             bondnum.set('nrBonds', line)
             nrBonds = int(line)
-
             startlineb = indexb
         if line.find('bondInfo[1].colix') != -1:
             indS = indexb-1
@@ -121,14 +119,11 @@ try:
             indE = indexb -1
     bondInfo = bondInfo[startlineb:]
     nrItems = indE - indS
-
     for k in range(nrBonds):
-       
         atom2n = 'bondInfo[' + str(k + 1) + '].atom2.atomno	'
         atom1n = 'bondInfo[' + str(k + 1) + '].atom1.atomno	'
         atom2in = 'bondInfo[' + str(k + 1) + '].atom2.atomIndex	'
         atom1in = 'bondInfo[' + str(k + 1) + '].atom1.atomIndex	'
-        
         atom2no = bondInfo[5].replace(atom2n, '')
         atom2ind = bondInfo[6].replace(atom2in, '')
         atom1no = bondInfo[10].replace(atom1n, '')
@@ -141,11 +136,8 @@ try:
         bondIn.set('atom2ind', atom2ind)
         if len(bondInfo) > nrItems - 1:
             bondInfo = bondInfo[nrItems:]
-except bondInfo.find('*List') == -1:
-    sys.stderr.write("empty bond list")
+else:
     sys.exit(1)
-
-
 ##atomInfofile.close()
 bondInfofile.close()
 

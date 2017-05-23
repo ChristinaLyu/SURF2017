@@ -30,9 +30,9 @@ for crtInputFile in os.listdir(inputDataFolderPath):
     
     crtInputFilePath = inputDataFolderPath + '/' + crtInputFile + ' '
     fileName = crtInputFile.split('.')[0]
-    outFilePath = outputFolderPath + '/test' + fileName + '.txt'
+    outFilePath = outputFolderPath + '/test' + fileName + '.xml'
     command = 'python ' + inputPythonFilePath + ' ' + crtInputFilePath + outFilePath
-
+    
     child = subprocess.Popen(command, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, shell=True)
     streamdata = child.communicate()[0]
     rc = child.returncode
