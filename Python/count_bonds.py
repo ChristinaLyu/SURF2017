@@ -19,22 +19,21 @@ outputFileName = sys.argv[2]
 
 jmolPath = '../External/JmolData.jar '
 tempFolderPath = '/'.join(outputFileName.split('/')[:-1]) + '/temp'
-print outputFileName
+inputFile = inputFileName.split('/')[-1].split('.')[0]
 try:
     if not os.path.exists(tempFolderPath):   
         os.mkdir(tempFolderPath)
-    command = 'java -jar ' + jmolPath + '-no -j "load ' + inputFileName + ' ; select protein; getproperty bondInfo;" > ' + tempFolderPath + '/bondInfo.txt'
+    command = 'java -jar ' + jmolPath + '-no -j "load ' + inputFileName + ' ; select protein; getproperty bondInfo;" > ' + tempFolderPath + '/bondInfo' + inputFile + '.txt'
     
     child = subprocess.Popen(command, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, shell=True)
     streamdata = child.communicate()[0]
     rc = child.returncode
+    
     if 'ERROR' in streamdata:
         sys.stderr.write('Error in jmol')
         sys.exit(2)
     if rc == 0:
-        command_bond = 'python ../Python/OldUibi.py ' + tempFolderPath + '/bondInfo.txt ' + outputFileName
-        print command_bond
-
+        command_bond = 'python ../Python/oldUibi.py ' + tempFolderPath +'/bondInfo' + inputFile + '.txt ' + outputFileName
         child_bond = subprocess.Popen(command_bond, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, shell=True)
         stream_bond = child_bond.communicate()[0]
         rc_bond = child_bond.returncode

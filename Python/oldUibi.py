@@ -139,7 +139,7 @@ if bondInfo.find('*List') != -1:
         if len(bondInfo) > nrItems - 1:
             bondInfo = bondInfo[nrItems:]
 else:
-    sys.exit(1)
+    sys.exit(5)
 ##atomInfofile.close()
 bondInfofile.close()
 
