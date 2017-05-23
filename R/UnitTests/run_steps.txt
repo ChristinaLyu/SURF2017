@@ -1,0 +1,3 @@
+# Unit tests for generateTimingsPlot.R
+# Run from within the R/UnitTests directory
+Rscript ../generateTimingsPlot.R programTimings.csv experimentInfo.csv ../UnitTests/Output

@@ -1,5 +1,5 @@
 '''
-    File:           test_count.py
+    File:           tester.py
     Author:         Ileana Streinu with Christina Lyu
     Date created:   5/19/17
     Updates: 	    
@@ -21,20 +21,24 @@ outputFolderPath = sys.argv[3]
 if not os.path.exists(outputFolderPath):
     os.system('mkdir '+ outputFolderPath)
 
-print "Testing start:"
+# print "Testing start:"
 
 k = 0
 for crtInputFile in os.listdir(inputDataFolderPath):
-    print "testing file: " + crtInputFile
+    print "--- File: " + crtInputFile
     k = k + 1
     crtInputFilePath = inputDataFolderPath + '/' + crtInputFile + ' '
     fileName = crtInputFile.split('.')[0]
     outFilePath = outputFolderPath + '/test' + fileName + '.txt'
     command = 'python ' + inputPythonFilePath + ' ' + crtInputFilePath + outFilePath
 
-    err = subprocess.check_output(command, stderr = subprocess.STDOUT, shell = True)
-    if err != "":
-        print "Output:" + err
+    # err = subprocess.check_output(command, stderr = subprocess.STDOUT, shell = True)
+    # err = subprocess.check_output(command, stderr = subprocess.STDERR, shell = True)
+    err = subprocess.check_output(command, ,shell = True)
+    print "In tester.py: err = " + err
+    
+    if err != '0':
+        print "Error:" + err
     else:
-        print "no error!"
+        print "No error!"
 
