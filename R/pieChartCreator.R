@@ -21,21 +21,30 @@ args <- commandArgs(trailingOnly = TRUE)
 csvFilePath <- args[1]			# path to surveyResults.csv file
 outputFolderPath <- args[2]		# path to "plots" folder in step folder
 
-print("===================== START pieChartCreator.R ")
-
+#print("===================== START pieChartCreator.R ")
+#print("input file = ")
+#print(csvFilePath)
 execution_data <- read.table(csvFilePath,header=T, sep=",")
+#print("execution data = ")
+#print(execution_data)
 outputFile <- "pieChart.png"
-setwd(outputFolderPath);
+#print("output folder path = ")
+#print(outputFolderPath)
+setwd(outputFolderPath)
 
 # Start PNG device driver to save output to plot.png
 png(filename=outputFile)
 # png(filename=outputFile,height=295, width=300, bg="white")
 
-returnCodes <- execution_data$Return.Code
+returnCodes <- execution_data$exitCode
+#print("return codes = ")
+#print(returnCodes)
 totalNumTrials <- length(returnCodes)
+#print("total number trials = ")
+#print(totalNumTrials)
 
 types <- c()
-
+#print(types)
 # create pie chart
 library(MASS)
 listsForEachError <- split(returnCodes, factor(returnCodes), drop=TRUE)

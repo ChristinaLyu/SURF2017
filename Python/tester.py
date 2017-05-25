@@ -36,8 +36,11 @@ def main():
     if not os.path.exists(outputFolderPath):
         os.system('mkdir '+ outputFolderPath)
     testerResultFile = open(testerResult, 'w')
+    testerResultFile.write('fileName,exitCode' + '\n')
     badResultFile = open(badResult, 'w')
+    badResultFile.write('fileName,exitCode' + '\n')
     timingFile = open(timing, 'w')
+    timingFile.write('fileName,runTime' + '\n')
     print "Testing start:"
     signal.signal(signal.SIGALRM, timeout_handler)
 

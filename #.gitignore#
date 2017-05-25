@@ -1,0 +1,9 @@
+!.gitignore
+.DS_Store
+*/.DS_Store
+Data
+External
+.idea
+*~
+PythonLocal
+Run/Output
