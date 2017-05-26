@@ -1,0 +1,2 @@
+#run png_producer.py
+python /Users/ChristinaLyu/Git/christina_summer_2017/PythonLocal/png_producer.py /Users/ChristinaLyu/Git/christina_summer_2017/Python/count_bonds.py /Users/ChristinaLyu/Git/christina_summer_2017/Data/Test_xml 20 /Users/ChristinaLyu/Git/christina_summer_2017/Run/Output/Xml

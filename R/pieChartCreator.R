@@ -2,7 +2,7 @@
 ##  Filename    :   pieChartCreator.R 
 ##  Author      :   Rebecca Rohrlich & Ileana streinu
 ##  Date		: 	3 March 2017
-##  Updated		:   16 March 2017 by Ileana
+##  Updated		:   25 June 2017 by Ileana & Christina
 #*****************************************************************
 #
 # Basic filename vs. runtime plot script
@@ -19,22 +19,27 @@
 args <- commandArgs(trailingOnly = TRUE)
 
 csvFilePath <- args[1]			# path to surveyResults.csv file
-outputFolderPath <- args[2]		# path to "plots" folder in step folder
+outputFilePath <- args[2]		# path to "plots" folder in step folder
 
-#print("===================== START pieChartCreator.R ")
+print("===================== START pieChartCreator.R ")
 #print("input file = ")
 #print(csvFilePath)
 execution_data <- read.table(csvFilePath,header=T, sep=",")
 #print("execution data = ")
 #print(execution_data)
-outputFile <- "pieChart.png"
-#print("output folder path = ")
-#print(outputFolderPath)
+#outputFile <- "pieChart.png"
+#print("output file path = ")
+#print(outputFilePath)
+doubleV <- strsplit(outputFilePath, '/')
+singleV <- doubleV[[length(doubleV)]]
+outputFile <- singleV[length(singleV)]
+outputList <- singleV[length(singleV) - (length(singleV):1)]
+outputFolderPath <- paste(outputList, collapse = '/')
 setwd(outputFolderPath)
 
 # Start PNG device driver to save output to plot.png
-png(filename=outputFile)
-# png(filename=outputFile,height=295, width=300, bg="white")
+#png(filename=outputFile)
+png(filename=outputFile,height=295, width=300, bg="white")
 
 returnCodes <- execution_data$exitCode
 #print("return codes = ")

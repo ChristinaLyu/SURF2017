@@ -14,7 +14,7 @@ print("===================== Start basicRuntimePlot.R ")
 args <- commandArgs(trailingOnly = TRUE)
 
 csvFilePath <- args[1]			# path to surveyResults.csv file
-outputFolderPath <- args[2]		# path to "plots" folder in step folder
+outputFilePath <- args[2]		# path to "plots" folder in step folder
 
 # csv_file_contents <- read.csv(csvFilePath)
 execution_data <- read.table(csvFilePath,header=T, sep=",")
@@ -23,18 +23,22 @@ execution_data <- read.table(csvFilePath,header=T, sep=",")
 # print(execution_data)
 # print("=========================")
 
-outputFile <- "plot.png"
-
+#outputFile <- "plot.png"
+doubleV <- strsplit(outputFilePath, '/')
+singleV <- doubleV[[length(doubleV)]]
+outputFile <- singleV[length(singleV)]
+outputList <- singleV[length(singleV) - (length(singleV):1)]
+outputFolderPath <- paste(outputList, collapse = '/')
 setwd(outputFolderPath);
 
 # Start PNG device driver to save output to plot.png		
-png(filename=outputFile)
-# png(filename=outputFile,height=295, width=300, bg="white")
+#png(filename=outputFile)
+png(filename=outputFile,height=295, width=300, bg="white")
 
-max_y <- max(execution_data$Execution.Time)
-xlabs <- execution_data$Filename
+max_y <- max(execution_data$runTime)
+xlabs <- execution_data$fileName
 
-yticks <- execution_data$Execution.Time
+yticks <- execution_data$runTime
 
 round2 <- function(x){
 	rx <- round(x,digits=2)
@@ -50,7 +54,7 @@ round_and_eliminate_duplicates <- function(list){
 
 yticks_rounded_unique <- round_and_eliminate_duplicates(yticks)
 
-plot(execution_data$Execution.Time, type="o", col="blue", 
+plot(execution_data$runTime, type="o", col="blue", 
    ylim=c(0,max_y), axes=FALSE, ann=FALSE)
    
 axis(1, las=2, at=1:length(xlabs), lab=xlabs)

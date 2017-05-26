@@ -14,7 +14,7 @@ print("===================== Start basicSuccessPlot.R ")
 args <- commandArgs(trailingOnly = TRUE)
 
 csvFilePath <- args[1]			# path to surveyResults.csv file
-outputFolderPath <- args[2]		# path to "plots" folder in step folder
+outputFilePath <- args[2]		# path to "plots" folder in step folder
 
 # csv_file_contents <- read.csv(csvFilePath)
 execution_data <- read.table(csvFilePath,header=T, sep=",")
@@ -23,21 +23,25 @@ print("========== Contents of the input surveyResults.csv file = ")
 print(execution_data)
 print("=========================")
 
-outputFile <- "plotPie.png"
-
+#outputFile <- "plotPie.png"
+doubleV <- strsplit(outputFilePath, '/')
+singleV <- doubleV[[length(doubleV)]]
+outputFile <- singleV[length(singleV)]
+outputList <- singleV[length(singleV) - (length(singleV):1)]
+outputFolderPath <- paste(outputList, collapse = '/')
 setwd(outputFolderPath);
 
 # Start PNG device driver to save output to plot.png		
-png(filename=outputFile)
-# png(filename=outputFile,height=295, width=300, bg="white")
+#png(filename=outputFile)
+png(filename=outputFile,height=295, width=300, bg="white")
 
-max_y <- max(execution_data$Return.Code)
+max_y <- max(execution_data$exitCode)
 if (max_y < 1) max_y <- 1
-min_y <- min(execution_data$Return.Code)
+min_y <- min(execution_data$exitCode)
 if (min_y > -1) min_y <- -1
-xlabs <- execution_data$Filename
+xlabs <- execution_data$fileName
 
-yticks <- execution_data$Return.Code
+yticks <- execution_data$exitCode
 
 # round2 <- function(x){
 # 	rx <- round(x,digits=2)
@@ -52,7 +56,7 @@ eliminate_duplicates <- function(list){
 
 yticks_unique <- eliminate_duplicates(yticks)
 
-plot(execution_data$Return.Code, type="o", col="blue", 
+plot(execution_data$exitCode, type="o", col="blue", 
    ylim=c(min_y,max_y), axes=FALSE, ann=FALSE)
    
 axis(1, las=2, at=1:length(xlabs), lab=xlabs)

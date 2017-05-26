@@ -3,12 +3,12 @@
     Author:         Ileana Streinu with Christina Lyu
     Date created:   5/19/17
     Updates: 	    
-    Last modified:  5/23/17
+    Last modified:  5/25/17
     Python Version: 3.2
 
     Description:    takes a counting python file and runs on its own dataset to check if it runs correctly
-    Run format:     python test_count.py pathToInputPythonFile pathToOutputFile
-    Run example:    python test_count.py /Users/xxx/abc.py /Users/xxx/abc.txt
+    Run format:     python tester.py pathToInputPythonFile interruptTime pathToOutputFile
+    Run example:    python tester.py /Users/xxx/abc.py 20 /Users/xxx/abc.txt
 '''
 import os
 import sys
@@ -26,8 +26,8 @@ def timeout_handler(signum, frame):   # Custom signal handler
 def main():
     inputPythonFilePath = sys.argv[1]
     inputDataFolderPath = sys.argv[2]
-    outputFolderPath = sys.argv[3]
-    executeTime = int(sys.argv[4])
+    executeTime = int(sys.argv[3])
+    outputFolderPath = sys.argv[4]
 
 
     testerResult = outputFolderPath + '/testerResult.csv'
@@ -36,9 +36,9 @@ def main():
     if not os.path.exists(outputFolderPath):
         os.system('mkdir '+ outputFolderPath)
     testerResultFile = open(testerResult, 'w')
-    testerResultFile.write('fileName,exitCode' + '\n')
+    testerResultFile.write('fileName,exitCode,meaning' + '\n')
     badResultFile = open(badResult, 'w')
-    badResultFile.write('fileName,exitCode' + '\n')
+    badResultFile.write('fileName,exitCode,meaning' + '\n')
     timingFile = open(timing, 'w')
     timingFile.write('fileName,runTime' + '\n')
     print "Testing start:"
@@ -62,16 +62,20 @@ def main():
             rc = child.returncode
             t1 = time.clock()
             t = t1 - t0
- 
-            testerResultFile.write(crtInputFile + ',' + str(rc) + '\n')
-            if rc != 0:
-                badResultFile.write(crtInputFile + ',' + str(rc) + '\n')
-            else:
+            if rc == 0:
+                testerResultFile.write(crtInputFile + ',' + str(rc) + ',no_error' + '\n')
                 timingFile.write(crtInputFile + ',' + str(t) + '\n')
-                
+            if rc == 1:
+                testerResultFile.write(crtInputFile + ',' + str(rc) + ',error_in_given_file' + '\n')
+                badResultFile.write(crtInputFile + ',' + str(rc) + ',error_in_given_file' + '\n')
+
+            if rc == 2:
+                testerResultFile.write(crtInputFile + ',' + str(rc) + ',error_in_Jmol' + '\n')
+                badResultFile.write(crtInputFile + ',' + str(rc) + ',error_in_Jmol' + '\n')
+
         except TimeoutException:
-            testerResultFile.write(crtInputFile + ',3' + '\n')
-            badResultFile.write(crtInputFile + ',3' + '\n')
+            testerResultFile.write(crtInputFile + ',3' + ',program_killed' + '\n')
+            badResultFile.write(crtInputFile + ',3' + ',program_killed' + '\n')
             print 'continue'
             continue
     print "Testing finished"

@@ -1,0 +1,68 @@
+x <- 1:10
+b <- x[length(x) - (4:0)]
+b
+c <- x[length(x) - (8:0)]
+c
+c <- x[length(x) - (1:0)]
+c
+c <- x[length(x) - (0:0)]
+c
+s <- '/Users/ChristinaLyu/Git/christina_summer_2017/Run/Output/Xml/PNG/pieChart.png'
+l <- strsplit(s, '/')
+l
+outputFile <- l[length(l) - (0:0)]
+outputFile
+outputFile <- l[length(l) - (9:0)]
+outputFile <- l[length(l) - (-1:0)]
+outputFile
+k <- l[length(l)]
+k
+length(l)
+s
+k <- strsplit(s, '/')
+k
+k[length(k[length(k)])]
+k[[length(k)]]
+m <- k[[length(k)]]
+m
+j <- m[length(m)]
+j
+n <- m[length(m) - (1:0)]
+n
+n <- m[length(m) - (-1:0)]
+n
+n <- m[length(m) - (0:length(m)-1)]
+n
+x
+q <- x[length(x) - (0:1)]
+q
+q <- x[length(x) - (0:-1)]
+q
+q <- x[length(x) - (0:-2)]
+q
+q <- x[length(x) - (2:0)]
+1
+q
+q <- x[length(x) - (-1:0)]
+q
+q <- x[length(x) - (length(x)-1:0)]
+q
+q <- x[length(x) - (length(x):0)]
+q
+q <- x[length(x) - (length(x):1)]
+q
+outputFilePath <- '/Users/ChristinaLyu/Git/christina_summer_2017/Run/Output/Xml/PNG/testerResult.png'
+doubleV <- strsplit(outputFilePath, '/')#
+singleV <- doubleV[[length(doubleV)]]#
+outputFile <- singleV[length(singleV)]#
+outputFolderPath <- singleV[length(singleV) - (length(singleV):1)]
+outputFolderPath
+outputFile <- paste(outputFolderPath, sep = '/')
+outputFile
+outputFolderPath
+paste(outputFolderPath, sep = "/")
+paste("a", "b", sep = "/")
+paste(c(outputFolderPath), sep = "/")
+paste(outputFolderPath, sep = "/", collapse = " ")
+paste(outputFolderPath, sep = "/", collapse = "/")
+paste(outputFolderPath, collapse = "/")
