@@ -50,25 +50,31 @@ if __name__ == "__main__":
     
     try:
        
-        index_1 = pdb_file.find('ATOM      1')
+        index_1 = pdb_file.find('MODEL        1')
         atoms = pdb_file[index_1: ]
-        while atoms.find('ATOM  ') != -1 and atoms.find('TER  ') != -1:
-            index_2 = atoms.find('TER  ')
-            chain = atoms[ :index_2]
+        while atoms.find('MODEL      ') != -1 and atoms.find('ENDMDL ') != -1:
+            index_2 = atoms.find('ENDMDL')
+            model = atoms[ :index_2]
             atoms = atoms[index_2: ]
-            index_3 = atoms.find('ATOM  ')
-            chain = chain + atoms[ :index_3]
-            atoms = atoms[index_3: ]
-            chainName = chain
-            chainName = chain.splitlines()
-            first = chainName[0]
+            if atoms.find('MODEL    ') != -1:
+                index_3 = atoms.find('MODEL    ')
+                model = model + atoms[ :index_3]
+                atoms = atoms[index_3: ]
+            else:
+                atoms = atoms.splitlines()
+                endmdl = atoms[0]
+                model = model + endmdl
+                atoms = '\n'.join(atoms)
+            modelName = model
+            modelName = model.splitlines()
+            first = modelName[0]
             first = first.split(' ')
             while first.count('') != 0:
                 first.remove('')
-            chain_ind = first[4].lower()
-            filename = os.path.join(output_folder,file_name+"_" + chain_ind + ".pdb")
+            model_ind = first[1]
+            filename = os.path.join(output_folder,file_name+"_" + model_ind + ".pdb")
             outfile = open(filename, 'w')
-            outfile.write(chain)
+            outfile.write(model)
             outfile.close()
         # os.system('java -XX:-UseGCOverheadLimit -jar '+JMOL_JAR+' -n -j '+"'"+'load '+input_file+'; select :*; x=write("PDB"); write VAR x "'+output_file+'";'+"'")
     except IOError:
