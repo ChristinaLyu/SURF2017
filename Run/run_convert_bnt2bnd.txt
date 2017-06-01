@@ -1,0 +1,2 @@
+#run convert_bnt2bnd.py
+python ../Python/convert_bnt2bnd.py ../Python/BntToBnd/Bnt/K.bnt /Output 
