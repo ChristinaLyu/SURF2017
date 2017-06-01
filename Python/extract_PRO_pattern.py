@@ -29,7 +29,7 @@ for line in inFile:
     splited = line.split(' ')
     while splited.count('') != 0:
         splited.remove('')
-
+    
     label = splited[2]
     outFile.write(label + '\n')
 
