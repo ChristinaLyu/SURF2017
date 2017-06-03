@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     file_name = ntpath.basename(os.path.splitext(input_file)[0])
     # output_dir = os.path.dirname(output_file)
-    output_file = os.path.join(output_folder,file_name+"_pr.pdb")
+    output_file = os.path.join(output_folder,file_name+"_not_solvent.pdb")
     print "output_file = " + output_file
 
     try:
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     # run jmol to get the _pr.pdb file
     
     try:
-        os.system('java -XX:-UseGCOverheadLimit -jar '+JMOL_JAR+' -n -j '+"'"+'load '+input_file+'; select not solvent; x=write("PDB"); write VAR x "'+output_file+'";'+"'")
+        os.system('java -XX:-UseGCOverheadLimit -jar '+JMOL_JAR+' -n -j '+"'"+'load '+input_file+'; select not solvent; write '+output_file+';'+"'")
     except IOError:
         print "ERROR:extractProtein_jmol: error while running JMol and writing to file " + output_file
         sys.exit(-1)
