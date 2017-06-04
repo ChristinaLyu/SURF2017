@@ -15,10 +15,12 @@ import os
 # TODO: check if it retains the SEQRES and other lines from the input pdb file
 # --------------------------------------------------------------------
 
-JMOL_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/Jmol.jar'
+# JMOL_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/Jmol.jar'
+from pathDependencies import JMOLDATA_JAR
 
 pdbPath = sys.argv[1]
 folderPath = sys.argv[2]
+
 
 pdbName = pdbPath.split('/')[-1]
 pdbInd = pdbName.split('.')[0]
@@ -31,7 +33,7 @@ residueList = ['ALA', 'ARG', 'ASN', 'ASP', 'CYS', 'GLN', 'GLU', 'GLY', 'HIS', 'I
 try:
     for residue in residueList:
         outFile = folderPath + '/' + pdbInd + '_' + residue + '.pdb'
-        os.system('java -XX:-UseGCOverheadLimit -jar ' + JMOL_JAR + ' -n -j ' + "'" + 'load ' + pdbPath + '; select ' + residue + '; x=write("PDB"); write VAR x "' + outFile + '";' + "'")
+        os.system('java -XX:-UseGCOverheadLimit -jar ' + JMOLDATA_JAR + ' -n -j ' + "'" + 'load ' + pdbPath + '; select ' + residue + '; x=write("PDB"); write VAR x "' + outFile + '";' + "'")
         file = open(outFile, 'r')
         newfile = file.read()
         if newfile == '':
