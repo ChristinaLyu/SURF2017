@@ -35,9 +35,7 @@ for a in range(len(atoms)):
     if line[ :6] == 'HETATM':
         atomIn.append(a)
 splited = atoms[atomIn[0]:atomIn[-1] + 1]
-##ind1 = pdbFile.find('ATOM      1')
-##atoms = pdbFile[ind1: ]
-##splited = atoms.splitlines()
+
 
 lis = []
 for line in splited:

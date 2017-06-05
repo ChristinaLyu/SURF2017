@@ -74,15 +74,23 @@ for n in range(len(splited)):
 residule = '0'
 Num = 0
 
-
 for j in range(len(listR)):
     residue = listR[j]
     startIn = listI[2*j]
     endIn = listI[2*j + 1]
     previousL = listR[ :j]
-    index = previousL.count(residue) + 1
-    newFile = folderPath + '/' + pdbInd + '_' + residue + '_' + str(index) + '.pdb'
-    newFile = open(newFile, 'w')
-    atomlist = '\n'.join(splited[startIn:endIn + 1])
-    newFile.write(atomlist)
+    resFile = folderPath + '/' + pdbInd + '_' + residue + '.pdb'
+    if previousL.count(residue) == 0:
+        newFile = open(resFile, 'w')
+        atomlist = '\n'.join(splited[startIn:endIn + 1])
+        newFile.write(atomlist)
+    else:
+        existFile = open(resFile, 'a')
+        atomlist = '\n'.join(splited[startIn:endIn + 1])
+        existFile.write(atomlist)
+##    index = previousL.count(residue) + 1
+##    newFile = folderPath + '/' + pdbInd + '_' + residue + '_' + str(index) + '.pdb'
+##    newFile = open(newFile, 'w')
+##    atomlist = '\n'.join(splited[startIn:endIn + 1])
+##    newFile.write(atomlist)
 
