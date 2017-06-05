@@ -18,6 +18,7 @@ import os
 
 pdbPath = sys.argv[1]
 folderPath = sys.argv[2]
+residueName = sys.argv[3]
 
 pdbName = pdbPath.split('/')[-1]
 pdbInd = pdbName.split('.')[0]
@@ -25,66 +26,38 @@ pdbInd = pdbName.split('.')[0]
 pdbFile = open(pdbPath, 'r')
 pdbFile = pdbFile.read()
 
-ind1 = pdbFile.find('ATOM      1')
-atoms = pdbFile[ind1: ]
+atoms = pdbFile.splitlines()
+atomIn = []
+for a in range(len(atoms)):
+    line = atoms[a]
+    if line[ :4] == 'ATOM':
+        atomIn.append(a)
+    if line[ :6] == 'HETATM':
+        atomIn.append(a)
+splited = atoms[atomIn[0]:atomIn[-1] + 1]
 
-splited = atoms.splitlines()
-m = 0
-for k in range(len(splited)):
-    if splited[k].find('ATOM') == -1 and splited[k].find('HETATM') == -1:
-        if k != len(splited) - 1:
-            if splited[k+1].find('ATOM') == -1 and splited[k+1].find('HETATM') == -1:
-                m = k
-                break
-        else:
-            m = k
-splited = splited[ : m]
-listR = []
-listI = [0]
-
-for n in range(len(splited)):
-
-    if splited[n].find('ATOM') != -1 and n != 0 and n != len(splited)-1:
-        line = splited[n]
-        nextline = splited[n + 1]
-
-        cleanL = line.split(' ')
-        while cleanL.count('') != 0:
-            cleanL.remove('')
-        cleanN = nextline.split(' ')
-        while cleanN.count('') != 0:
-            cleanN.remove('')
-
-        crtRes = cleanL[3]
-        nxtRes = cleanN[3]
-        if crtRes != nxtRes:
-            listI.append(n)
-            listI.append(n + 1)
-            listR.append(crtRes)
-
-    if n == len(splited) - 1:
-        line = splited[n]
-        cleanL = line.split(' ')
-        while cleanL.count('') != 0:
-            cleanL.remove('')
-        res = cleanL[3]
-        listR.append(res)
-        listI.append(n)
+lis = []
+for line in splited:
+    if line.find('ATOM') != -1 and line.find(residueName) != -1:
+        lis.append(line)
 
 residule = '0'
 Num = 0
-
-print len(listI)
-print len(listR)
-
-for j in range(len(listR)):
-    residue = listR[j]
-    startIn = listI[2*j]
-    endIn = listI[2*j + 1]
-    previousL = listR[ :j]
-    index = previousL.count(residue) + 1
-    newFile = folderPath + '/' + pdbInd + '_' + residue + '_' + str(index) + '.pdb'
-    newFile = open(newFile, 'w')
-    atomlist = '\n'.join(splited[startIn:endIn + 1])
-    newFile.write(atomlist)
-
+newFile = folderPath + '/' + pdbInd + '_' + residueName.upper() + '_' + str(Num) + '.pdb'
+while len(lis) != 0:
+    first = lis[0]
+    cleaned = first.split(' ')
+    while cleaned.count('') != 0:
+        cleaned.remove('')
+    
+    if cleaned[5] != residule:
+        residule = cleaned[5]
+        Num = Num + 1
+        newFile = folderPath + '/' + pdbInd + '_' + residueName.upper() + '_' + str(Num) + '.pdb'
+        File = open(newFile, 'w')
+        File.write(first + '\n')
+        lis.remove(first)
+    else:
+        File = open(newFile, 'a')
+        File.write(first + '\n')
+        lis.remove(first)
