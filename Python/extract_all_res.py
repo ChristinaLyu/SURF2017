@@ -25,20 +25,43 @@ pdbInd = pdbName.split('.')[0]
 pdbFile = open(pdbPath, 'r')
 pdbFile = pdbFile.read()
 
-ind1 = pdbFile.find('ATOM      1')
-atoms = pdbFile[ind1: ]
+atoms = pdbFile.splitlines()
+atomIn = []
+seList = []
+splited = []
+for a in range(len(atoms)):
+    line = atoms[a]
+    if line[ :4] == 'ATOM':
+        atomIn.append(a)
+    if line[ :6] == 'HETATM':
+        atomIn.append(a)
+    if line[ :6] == 'SEQRES':
+        seList.append(a)
 
-splited = atoms.splitlines()
-m = 0
-for k in range(len(splited)):
-    if splited[k].find('ATOM') == -1 and splited[k].find('HETATM') == -1:
-        if k != len(splited) - 1:
-            if splited[k+1].find('ATOM') == -1 and splited[k+1].find('HETATM') == -1:
-                m = k
-                break
-        else:
-            m = k
-splited = splited[ : m]
+for c in atomIn:
+    splited.append(atoms[c])
+
+seqres = atoms[seList[0]:seList[-1] + 1]
+
+resList = []
+chainList = []
+resIndex = []
+resIn = 0
+for line in seqres:
+    clear = line.split(' ')
+    while clear.count('') != 0:
+        clear.remove('')
+    chain = ' '.join(clear[1:3])
+    if len(chain) == 3:
+        chain = ' ' + chain
+    if chain.count(' 1 ') != 0:
+        resIn = 0
+    for resid in clear[4:]:
+        resList.append(resid)
+        chainList.append(chain)
+        resIn = resIn + 1
+        resIndex.append(resIn)
+
 listR = []
 listI = [0]
 
@@ -56,7 +79,9 @@ for n in range(len(splited)):
             cleanN.remove('')
 
         crtRes = cleanL[3]
+        
         nxtRes = cleanN[3]
+        
         if crtRes != nxtRes:
             listI.append(n)
             listI.append(n + 1)
@@ -74,7 +99,6 @@ for n in range(len(splited)):
 residule = '0'
 Num = 0
 
-
 for j in range(len(listR)):
     residue = listR[j]
     startIn = listI[2*j]
@@ -83,6 +107,11 @@ for j in range(len(listR)):
     index = previousL.count(residue) + 1
     newFile = folderPath + '/' + pdbInd + '_' + residue + '_' + str(index) + '.pdb'
     newFile = open(newFile, 'w')
+
+    if j < len(resList):
+        seqLine = 'SEQRES  ' + chainList[j] + '  ' + str(resIndex[j]) + '  ' + residue
+        newFile.write(seqLine + '\n')
     atomlist = '\n'.join(splited[startIn:endIn + 1])
     newFile.write(atomlist)
+    newFile.close()
 

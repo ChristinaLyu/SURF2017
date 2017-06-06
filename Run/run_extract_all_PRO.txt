@@ -1,4 +1,4 @@
 #run extract_all_PRO.py
 #InputFolder: a new folder in Data called PDB, with 1hhp.pdb, 1dc0.pdb and 5jp5.pdb
 #outputFolder: a new folder in output called PRO
-python ../Python/extract_all_PRO.py ../Data/PDB /Output/PRO 
+python ../Python/extract_all_PRO.py ../Data/PDB Output/PRO 

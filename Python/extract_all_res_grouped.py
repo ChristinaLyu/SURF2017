@@ -25,10 +25,16 @@ pdbInd = pdbName.split('.')[0]
 pdbFile = open(pdbPath, 'r')
 pdbFile = pdbFile.read()
 
-ind1 = pdbFile.find('ATOM      1')
-atoms = pdbFile[ind1: ]
+atoms = pdbFile.splitlines()
+atomIn = []
+for a in range(len(atoms)):
+    line = atoms[a]
+    if line[ :4] == 'ATOM':
+        atomIn.append(a)
+    if line[ :6] == 'HETATM':
+        atomIn.append(a)
+splited = atoms[atomIn[0]:atomIn[-1] + 1]
 
-splited = atoms.splitlines()
 m = 0
 for k in range(len(splited)):
     if splited[k].find('ATOM') == -1 and splited[k].find('HETATM') == -1:

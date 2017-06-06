@@ -19,6 +19,7 @@ import os
 pdbPath = sys.argv[1]
 folderPath = sys.argv[2]
 residueName = sys.argv[3]
+seqCode = sys.argv[4]
 
 pdbName = pdbPath.split('/')[-1]
 pdbInd = pdbName.split('.')[0]
@@ -28,18 +29,52 @@ pdbFile = pdbFile.read()
 
 atoms = pdbFile.splitlines()
 atomIn = []
+seList = []
+splited = []
 for a in range(len(atoms)):
     line = atoms[a]
     if line[ :4] == 'ATOM':
         atomIn.append(a)
-    if line[ :6] == 'HETATM':
-        atomIn.append(a)
-splited = atoms[atomIn[0]:atomIn[-1] + 1]
+
+    if line[ :6] == 'SEQRES':
+        seList.append(a)
+
+for c in atomIn:
+    splited.append(atoms[c])
+
+seqres = atoms[seList[0]:seList[-1] + 1]
+
+resList = []
+chainList = []
+resIndex = []
+resIn = 0
+for line in seqres:
+    clear = line.split(' ')
+    while clear.count('') != 0:
+        clear.remove('')
+    chain = ' '.join(clear[1:3])
+    if len(chain) == 3:
+        chain = ' ' + chain
+    if chain.count(' 1 ') != 0:
+        resIn = 0
+    for resid in clear[4:]:
+        resList.append(resid)
+        chainList.append(chain)
+        resIn = resIn + 1
+        resIndex.append(resIn)
 
 lis = []
+
 for line in splited:
-    if line.find('ATOM') != -1 and line.find(residueName) != -1:
+    if line[17:20] == residueName.upper():
         lis.append(line)
+
+newChainList = []
+for resIndex in range(len(resList)):
+    res = resList[resIndex]
+    if res == residueName.upper():
+        newChain = chainList[resIndex]
+        newChainList.append(newChain)
 
 residule = '0'
 Num = 0
@@ -55,6 +90,11 @@ while len(lis) != 0:
         Num = Num + 1
         newFile = folderPath + '/' + pdbInd + '_' + residueName.upper() + '_' + str(Num) + '.pdb'
         File = open(newFile, 'w')
+        if seqCode == 'seqres':
+            chain = newChainList[0]
+            seqLine = 'SEQRES  ' + chain + '  ' + residule + '  ' + residueName.upper()
+            File.write(seqLine + '\n')
+            newChainList.remove(chain)
         File.write(first + '\n')
         lis.remove(first)
     else:

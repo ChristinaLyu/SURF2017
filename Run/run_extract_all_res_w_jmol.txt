@@ -1,0 +1,2 @@
+#run extract_res.py
+python ../Python/extract_all_res_w_jmol.py ../Data/PDB/5jp5.pdb Output 

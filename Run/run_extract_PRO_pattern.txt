@@ -1,2 +1,2 @@
 #run extract_PRO_pattern.py
-python ../Python/extract_PRO_pattern.py /Output/1hhp_PRO_2.pdb /Output 
+python ../Python/extract_PRO_pattern.py /Output/1hhp_PRO_2.pdb Output 
