@@ -33,18 +33,11 @@ for a in range(len(atoms)):
         atomIn.append(a)
     if line[ :6] == 'HETATM':
         atomIn.append(a)
-splited = atoms[atomIn[0]:atomIn[-1] + 1]
 
-m = 0
-for k in range(len(splited)):
-    if splited[k].find('ATOM') == -1 and splited[k].find('HETATM') == -1:
-        if k != len(splited) - 1:
-            if splited[k+1].find('ATOM') == -1 and splited[k+1].find('HETATM') == -1:
-                m = k
-                break
-        else:
-            m = k
-splited = splited[ : m]
+for c in atomIn:
+    splited.append(atoms[c])
+
+
 listR = []
 listI = [0]
 
@@ -94,9 +87,5 @@ for j in range(len(listR)):
         existFile = open(resFile, 'a')
         atomlist = '\n'.join(splited[startIn:endIn + 1])
         existFile.write(atomlist)
-##    index = previousL.count(residue) + 1
-##    newFile = folderPath + '/' + pdbInd + '_' + residue + '_' + str(index) + '.pdb'
-##    newFile = open(newFile, 'w')
-##    atomlist = '\n'.join(splited[startIn:endIn + 1])
-##    newFile.write(atomlist)
+
 
