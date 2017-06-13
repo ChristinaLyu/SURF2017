@@ -1,2 +1,2 @@
 #run extract_res.py
-python ../Python/extract_res.py ../Data/PDB/5jp5.pdb Output Ala
+python ../Python/extract_res.py ../Data/PDB/5jp5.pdb Output Ala seqres
