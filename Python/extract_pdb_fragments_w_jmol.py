@@ -18,8 +18,8 @@ import os
 # TODO: check if it retains the SEQRES and other lines from the input pdb file
 # --------------------------------------------------------------------
 
-JMOLDATA_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/JmolData.jar'
-#from pathDependencies import JMOLDATA_JAR
+#JMOLDATA_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/JmolData.jar'
+from pathDependencies import JMOLDATA_JAR
 
 pdbPath = sys.argv[1]
 folderPath = sys.argv[2]
