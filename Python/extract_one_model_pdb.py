@@ -22,7 +22,7 @@ import ntpath
 # TODO: check if it retains the SEQRES and other lines from the input pdb file
 #       in principle, it should. It should just discard the non-CA atom lines.
 # --------------------------------------------------------------------
-JMOL_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/Jmol.jar'
+#JMOL_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/Jmol.jar'
 
 if __name__ == "__main__":
 
@@ -56,46 +56,35 @@ if __name__ == "__main__":
         outFileName = output_folder + '/' + pdbInd + '_' + modelId + '.pdb'
         outFile = open(outFileName, 'w')
 
-        index_1 = 
+        index_1 = 0 
         for n in range(len(splited)):
             line = splited[n]
             if line[ :6] == 'ATOM ':
-                index
+                index_1 = n
+        atoms = splited[index_1: ]
+        
         modL = []
         endModL = []
-        for m in range(len(splited)):
-            line = splited[m]
+        for m in range(len(atoms)):
+            line = atoms[m]
             if line[ :6] == 'MODEL ':
                 modL.append(m)
             if line[ :7] == 'ENDMDL':
                 endModL.append(m)
-            
-        atoms = pdb_file[index_1: ]
-        while atoms.find('MODEL      ') != -1 and atoms.find('ENDMDL ') != -1:
-            index_2 = atoms.find('ENDMDL')
-            model = atoms[ :index_2]
-            atoms = atoms[index_2: ]
-            if atoms.find('MODEL    ') != -1:
-                index_3 = atoms.find('MODEL    ')
-                model = model + atoms[ :index_3]
-                atoms = atoms[index_3: ]
-            else:
-                atoms = atoms.splitlines()
-                endmdl = atoms[0]
-                model = model + endmdl
-                atoms = '\n'.join(atoms)
-            modelName = model
-            modelName = model.splitlines()
-            first = modelName[0]
-            first = first.split(' ')
-            while first.count('') != 0:
-                first.remove('')
-            model_ind = first[1]
-            filename = os.path.join(output_folder,file_name+"_" + model_ind + ".pdb")
-            outfile = open(filename, 'w')
-            outfile.write(model)
-            outfile.close()
-        # os.system('java -XX:-UseGCOverheadLimit -jar '+JMOL_JAR+' -n -j '+"'"+'load '+input_file+'; select :*; x=write("PDB"); write VAR x "'+output_file+'";'+"'")
+
+        index = 0
+        for k in range(len(modL)):
+            line = atoms[modL[k]]
+            clean = line.split(' ')
+            while clean.count('') != 0:
+                clean.remove('')
+            if clean[1] == modelId:
+                index = k
+
+        model = atoms[modL[k]:endModL[k] + 1]
+        model = '\n'.join(model)
+        outFile.write(model)
+        outFile.close()
     except IOError:
         print "ERROR:extractProtein_jmol: error while running JMol and writing to file " + output_file
         sys.exit(-1)

@@ -81,7 +81,6 @@ try:
                 resId = clean[ :spaceInd]
                 if resNo != resId:
                     resNo = resId
-                    fileNo = int(resNo)
                     newFileName = folderPath + '/' + pdbInd + '_' + resNo + '.pdb'
                     newFile = open(newFileName, 'w')
                     newFile.write(atom + '\n')
