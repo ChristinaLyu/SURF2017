@@ -26,22 +26,20 @@ import ntpath
 
 if __name__ == "__main__":
 
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 3:
         print 'ERROR:extractProtein_jmol: usage: python extractProtein.py input_pdb_file output_folder'
         sys.exit(-1)
 
     input_file = sys.argv[1]
     output_folder = sys.argv[2]
-    modelId = sys.argv[3]
+    
     pdb_file = open(input_file, 'r')
     pdb_file = pdb_file.read()
     splited = pdb_file.splitlines()
+    
     file_name = ntpath.basename(os.path.splitext(input_file)[0])
     pdbFile = input_file.split('/')[-1]
     pdbInd = pdbFile.split('.')[0]
-    # output_dir = os.path.dirname(output_file)
-    
-    # print "output_file = " + output_file
 
     try:
         if not os.path.exists(output_folder):
@@ -49,42 +47,43 @@ if __name__ == "__main__":
     except OSError:
         print "ERROR:extractProtein_jmol: output folder does not exist and it could not be created."
         sys.exit(-1)
-
-    # run jmol to get the _pr.pdb file
     
     try:
-        outFileName = output_folder + '/' + pdbInd + '_' + modelId + '.pdb'
+        outFileName = output_folder + '/' + pdbInd + '_DNA.pdb'
         outFile = open(outFileName, 'w')
+        outFile.close()
 
-        index_1 = 0 
+        index_1 = 0
+        resL = ['DA', 'DT', 'DG', 'DC']
+
+
+        dnaAtoms = []
         for n in range(len(splited)):
             line = splited[n]
             if line[ :5] == 'ATOM ':
-                index_1 = n
-        atoms = splited[index_1: ]
-        
-        modL = []
-        endModL = []
-        for m in range(len(atoms)):
-            line = atoms[m]
-            if line[ :6] == 'MODEL ':
-                modL.append(m)
-            if line[ :7] == 'ENDMDL':
-                endModL.append(m)
+                res = line[18:20]
+                if resL.count(res) != 0:
+                    dnaAtoms.append(line)
+        atomNo = 0
+        for m in range(len(dnaAtoms)):
+            line = dnaAtoms[m]
+            outFile = open(outFileName, 'a')
+            atomNo = atomNo + 1
+            atomIn = str(atomNo)
+            line = line[ :5] + (6-len(atomIn)) * ' ' + atomIn + line[11:]
+            outFile.write(line + '\n')
+            chainId = line[21]
+            if m != len(dnaAtoms) -1:
+                nextL = dnaAtoms[m + 1]
+                nextChain = nextL[21]
+            lineRes = line[18:26]
+            if chainId != nextChain or m == len(dnaAtoms) - 1:
+                atomNo = atomNo + 1
+                atomIn = str(atomNo)
+                terLine = 'TER  ' + (6 - len(atomIn)) * ' ' + atomIn + 7 * ' ' + lineRes
+                outFile.write(terLine + '\n')
 
-        index = 0
-        for k in range(len(modL)):
-            line = atoms[modL[k]]
-            clean = line.split(' ')
-            while clean.count('') != 0:
-                clean.remove('')
-            if clean[1] == modelId:
-                index = k
 
-        model = atoms[modL[k]:endModL[k] + 1]
-        model = '\n'.join(model)
-        outFile.write(model)
-        outFile.close()
     except IOError:
         print "ERROR:extractProtein_jmol: error while running JMol and writing to file " + output_file
         sys.exit(-1)
