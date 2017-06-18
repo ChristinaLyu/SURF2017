@@ -49,12 +49,12 @@ if __name__ == "__main__":
         sys.exit(-1)
     
     try:
-        outFileName = output_folder + '/' + pdbInd + '_DNA.pdb'
+        outFileName = output_folder + '/' + pdbInd + '_RNA.pdb'
         outFile = open(outFileName, 'w')
         outFile.close()
 
         index_1 = 0
-        resL = ['DA', 'DT', 'DG', 'DC']
+        resL = ['A', 'U', 'G', 'C']
                
         dnaAtoms = []
         for n in range(len(splited)):

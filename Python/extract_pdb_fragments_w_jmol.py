@@ -38,15 +38,26 @@ if (output_type != 'Single' and output_type != 'Dataset') or (fragment_type != '
     sys.exit(-1)
 
 try:
+    resNr = 0
+    splitFile = pdbFile.splitlines()
+    for line in splitFile:
+        if line[:7] == 'SEQRES ':
+            clean = line.split(' ')
+            while clean.count('') != 0:
+                clean.remove('')
+            resNr = clean[3]
+            break
     if output_type == 'Single':
-        outFile = folderPath + '/' + pdbInd + '_' + begin_id + '_' + end_id + '.pdb'
         if fragment_type == 'Prefix':
+            outFile = folderPath + '/' + pdbInd + '_' '1_' + end_id + '.pdb'
             command = 'java -XX:-UseGCOverheadLimit -jar ' + JMOLDATA_JAR + ' -n -j ' + "'" + 'load ' + pdbPath + '; select ' + '1-' + end_id + '; x=write("PDB"); write VAR x "' + outFile + '";' + "'"
             os.system(command)
         if fragment_type == 'Suffix':
+            outFile = folderPath + '/' + pdbInd + '_' + begin_id + '_' + resNr + '.pdb'
             command = 'java -XX:-UseGCOverheadLimit -jar ' + JMOLDATA_JAR + ' -n -j ' + "'" + 'load ' + pdbPath + '; select ' + begin_id + '- :* and protein' + '; x=write("PDB"); write VAR x "' + outFile + '";' + "'"
             os.system(command)
         if fragment_type == 'Interval':
+            outFile = folderPath + '/' + pdbInd + '_' + begin_id + '_' + end_id + '.pdb'
             command = 'java -XX:-UseGCOverheadLimit -jar ' + JMOLDATA_JAR + ' -n -j ' + "'" + 'load ' + pdbPath + '; select ' + begin_id + '-' + end_id + '; x=write("PDB"); write VAR x "' + outFile + '";' + "'"
             os.system(command)
 

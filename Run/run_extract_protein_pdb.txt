@@ -1,0 +1,2 @@
+#run extract_protein_pdb.py
+python ../Python/extract_protein_pdb.py ../Data/PDB/4ndf.pdb Output 
