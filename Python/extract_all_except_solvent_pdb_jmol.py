@@ -48,7 +48,7 @@ if __name__ == "__main__":
     # run jmol to get the _pr.pdb file
     
     try:
-        os.system('java -XX:-UseGCOverheadLimit -jar '+JMOL_JAR+' -n -j '+"'"+'load '+input_file+'; select not solvent; write '+output_file+';'+"'")
+        os.system('java -XX:-UseGCOverheadLimit -jar '+JMOLDATA_JAR+' -n -j '+"'"+'load '+input_file+'; select not solvent; write '+output_file+';'+"'")
     except IOError:
         print "ERROR:extractProtein_jmol: error while running JMol and writing to file " + output_file
         sys.exit(-1)

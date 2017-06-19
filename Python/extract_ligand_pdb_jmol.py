@@ -40,7 +40,7 @@ if __name__ == "__main__":
         sys.exit(-1)
 
     try:
-        os.system('java -XX:-UseGCOverheadLimit -jar '+JMOL_JAR+' -n -j '+"'"+'load '+input_file+'; select ligand; x=write("PDB"); write VAR x "'+output_file+'";'+"'")
+        os.system('java -XX:-UseGCOverheadLimit -jar '+JMOLDATA_JAR+' -n -j '+"'"+'load '+input_file+'; select ligand; x=write("PDB"); write VAR x "'+output_file+'";'+"'")
     except IOError:
         print "ERROR:extractProtein_jmol: error while running JMol and writing to file " + output_file
         sys.exit(-1)

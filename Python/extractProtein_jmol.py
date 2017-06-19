@@ -22,7 +22,7 @@ import ntpath
 # TODO: check if it retains the SEQRES and other lines from the input pdb file
 #       in principle, it should. It should just discard the non-CA atom lines.
 # --------------------------------------------------------------------
-#JMOL_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/Jmol.jar'
+#JMOLData_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/JmolData.jar'
 from pathDependencies import JMOLDATA_JAR
 if __name__ == "__main__":
 
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     # run jmol to get the _pr.pdb file
     
     try:
-        os.system('java -XX:-UseGCOverheadLimit -jar '+JMOL_JAR+' -n -j '+"'"+'load '+input_file+'; select protein; x=write("PDB"); write VAR x "'+output_file+'";'+"'")
+        os.system('java -XX:-UseGCOverheadLimit -jar '+JMOLDATA_JAR+' -n -j '+"'"+'load '+input_file+'; select protein; x=write("PDB"); write VAR x "'+output_file+'";'+"'")
     except IOError:
         print "ERROR:extractProtein_jmol: error while running JMol and writing to file " + output_file
         sys.exit(-1)
