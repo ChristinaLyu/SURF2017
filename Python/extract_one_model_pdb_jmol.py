@@ -22,8 +22,8 @@ import ntpath
 # TODO: check if it retains the SEQRES and other lines from the input pdb file
 #       in principle, it should. It should just discard the non-CA atom lines.
 # --------------------------------------------------------------------
-JMOL_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/Jmol.jar'
-
+#JMOL_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/Jmol.jar'
+from pathDependencies import JMOLDATA_JAR
 if __name__ == "__main__":
 
     if len(sys.argv) != 3:

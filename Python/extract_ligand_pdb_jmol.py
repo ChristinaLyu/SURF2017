@@ -18,8 +18,8 @@ import ntpath
 #       outputFolder: path to the output folder where a _pr.pdb file will be created
 # TODO: check what happens if there is no ligand in the input file, or for dna, rna etc.
 # --------------------------------------------------------------------
-JMOL_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/Jmol.jar'
-
+#JMOL_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/Jmol.jar'
+from pathDependencies import JMOLDATA_JAR
 if __name__ == "__main__":
     if len(sys.argv) != 3:
         print 'ERROR:extractProtein_jmol: usage: python extractProtein.py input_pdb_file output_folder'
