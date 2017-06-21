@@ -23,7 +23,7 @@ import ntpath
 #       in principle, it should. It should just discard the non-CA atom lines.
 # --------------------------------------------------------------------
 #JMOL_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/Jmol.jar'
-
+from pathDependencies import JMOLDATA_JAR
 if __name__ == "__main__":
 
     if len(sys.argv) != 3:
@@ -32,14 +32,11 @@ if __name__ == "__main__":
 
     input_file = sys.argv[1]
     output_folder = sys.argv[2]
-    
-    pdb_file = open(input_file, 'r')
-    pdb_file = pdb_file.read()
-    splited = pdb_file.splitlines()
-    
+
     file_name = ntpath.basename(os.path.splitext(input_file)[0])
-    pdbFile = input_file.split('/')[-1]
-    pdbInd = pdbFile.split('.')[0]
+    # output_dir = os.path.dirname(output_file)
+    output_file = os.path.join(output_folder,file_name+"_dna.pdb")
+    print "output_file = " + output_file
 
     try:
         if not os.path.exists(output_folder):
@@ -47,42 +44,11 @@ if __name__ == "__main__":
     except OSError:
         print "ERROR:extractProtein_jmol: output folder does not exist and it could not be created."
         sys.exit(-1)
+
+    # run jmol to get the _pr.pdb file
     
     try:
-        outFileName = output_folder + '/' + pdbInd + '_dna.pdb'
-        outFile = open(outFileName, 'w')
-        outFile.close()
-
-        index_1 = 0
-        resL = ['DA', 'DT', 'DG', 'DC']
-               
-        dnaAtoms = []
-        for n in range(len(splited)):
-            line = splited[n]
-            if line[ :5] == 'ATOM ':
-                res = line[18:20]
-                if resL.count(res) != 0:
-                    dnaAtoms.append(line)
-        atomNo = 0
-        for m in range(len(dnaAtoms)):
-            line = dnaAtoms[m]
-            outFile = open(outFileName, 'a')
-            atomNo = atomNo + 1
-            atomIn = str(atomNo)
-            line = line[ :5] + (6-len(atomIn)) * ' ' + atomIn + line[11:]
-            outFile.write(line + '\n')
-            chainId = line[21]
-            if m != len(dnaAtoms) -1:
-                nextL = dnaAtoms[m + 1]
-                nextChain = nextL[21]
-            lineRes = line[18:26]
-            if chainId != nextChain or m == len(dnaAtoms) - 1:
-                atomNo = atomNo + 1
-                atomIn = str(atomNo)
-                terLine = 'TER  ' + (6 - len(atomIn)) * ' ' + atomIn + 7 * ' ' + lineRes
-                outFile.write(terLine + '\n')
-
-
+        os.system('java -XX:-UseGCOverheadLimit -jar '+JMOLDATA_JAR+' -n -j '+"'"+'load '+input_file+'; select DNA; x=write("PDB"); write VAR x "'+output_file+'";'+"'")
     except IOError:
         print "ERROR:extractProtein_jmol: error while running JMol and writing to file " + output_file
         sys.exit(-1)

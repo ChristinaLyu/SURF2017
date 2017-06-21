@@ -25,7 +25,7 @@ pdbInd = pdbName.split('.')[0]
 pdbFile = open(pdbPath, 'r')
 pdbFile = pdbFile.read()
 
-newFileName = folderPath + '/' + pdbInd + '_not_sol.pdb'
+newFileName = folderPath + '/' + pdbInd + '_sol.pdb'
 newFile = open(newFileName, 'w')
 
 
@@ -45,6 +45,6 @@ for c in atomIn:
 for n in range(len(splited)):
     line = splited[n]
     res = line[16:20]
-    if res.find('HOH') == -1:
+    if res.find('HOH') != -1:
         newFile.write(line + '\n')
 newFile.close()

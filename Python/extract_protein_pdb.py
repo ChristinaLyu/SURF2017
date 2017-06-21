@@ -25,7 +25,7 @@ pdbInd = pdbName.split('.')[0]
 pdbFile = open(pdbPath, 'r')
 pdbFile = pdbFile.read()
 
-newFile = folderPath + '/' + pdbInd + '_protein.pdb'
+newFile = folderPath + '/' + pdbInd + '_pro.pdb'
 newFile = open(newFile, 'w')
 newFile.close()
 
