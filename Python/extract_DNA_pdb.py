@@ -63,24 +63,31 @@ if __name__ == "__main__":
                 res = line[18:20]
                 if resL.count(res) != 0:
                     dnaAtoms.append(line)
+            if line[ :7] == 'MODEL ':
+                dnaAtoms.append(line)
+            if line[ :8] == 'ENDMOL ':
+                dnaAtoms.append(line)
         atomNo = 0
         for m in range(len(dnaAtoms)):
             line = dnaAtoms[m]
             outFile = open(outFileName, 'a')
-            atomNo = atomNo + 1
-            atomIn = str(atomNo)
-            line = line[ :5] + (6-len(atomIn)) * ' ' + atomIn + line[11:]
-            outFile.write(line + '\n')
-            chainId = line[21]
-            if m != len(dnaAtoms) -1:
-                nextL = dnaAtoms[m + 1]
-                nextChain = nextL[21]
-            lineRes = line[18:26]
-            if chainId != nextChain or m == len(dnaAtoms) - 1:
+            if line[ :5] == 'ATOM ':
                 atomNo = atomNo + 1
                 atomIn = str(atomNo)
-                terLine = 'TER  ' + (6 - len(atomIn)) * ' ' + atomIn + 7 * ' ' + lineRes
-                outFile.write(terLine + '\n')
+                line = line[ :5] + (6-len(atomIn)) * ' ' + atomIn + line[11:]
+                outFile.write(line + '\n')
+                chainId = line[21]
+                if m != len(dnaAtoms) -1:
+                    nextL = dnaAtoms[m + 1]
+                    nextChain = nextL[21]
+                lineRes = line[18:26]
+                if chainId != nextChain or m == len(dnaAtoms) - 1:
+                    atomNo = atomNo + 1
+                    atomIn = str(atomNo)
+                    terLine = 'TER  ' + (6 - len(atomIn)) * ' ' + atomIn + 7 * ' ' + lineRes
+                    outFile.write(terLine + '\n')
+            else:
+                outFile.write(line)
 
 
     except IOError:

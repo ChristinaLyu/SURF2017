@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     file_name = ntpath.basename(os.path.splitext(input_file)[0])
     # output_dir = os.path.dirname(output_file)
-    output_file = os.path.join(output_folder,file_name+"_pr.pdb")
+    output_file = os.path.join(output_folder,file_name+"_rna.pdb")
     print "output_file = " + output_file
 
     try:

@@ -47,4 +47,8 @@ for n in range(len(splited)):
     res = line[16:20]
     if res.find('HOH') != -1:
         newFile.write(line + '\n')
+    if res.find('WAT') != -1:
+        newFile.write(line + '\n')
+    if res.find('DOD') != -1:
+        newFile.write(line + '\n')
 newFile.close()

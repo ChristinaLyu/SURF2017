@@ -94,7 +94,7 @@ for j in range(len(listR)):
     endIn = listI[2*j + 1]
     previousL = listR[ :j]
     element = listE[j]
-    newFile = folderPath + '/' + pdbInd + '_protein.pdb'
+    newFile = folderPath + '/' + pdbInd + '_pro.pdb'
     newFile = open(newFile, 'a')
     if element.find('NCACO') != -1:
         atomlist = '\n'.join(splited[startIn:endIn + 1]) + '\n'
