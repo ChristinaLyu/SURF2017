@@ -1,9 +1,0 @@
-
-# Runs JmolData on 3jcp1.pdb.gz, selects all
-java -jar /Users/ChristinaLyu/Desktop/Summer2017/External/JmolData.jar -no  -j "load /Users/ChristinaLyu/Desktop/Summer2017/Data/PDB_large/pdbx/3jcp1.pdb.gz ; select all ; getproperty atomInfo;"  > /Users/ChristinaLyu/Desktop/Summer2017/Data/test/atominfo_gz_1.txt
-
-
-# Runs JmolData on 3jcp1.cif, selects all
-java -jar /Users/ChristinaLyu/Desktop/Summer2017/External/JmolData.jar -no  -j "load /Users/ChristinaLyu/Desktop/Summer2017/Data/PDB_large/mmCIF/3jcp.cif ; select all ; getproperty atomInfo;"  > /Users/ChristinaLyu/Desktop/Summer2017/Data/test/atominfom_cif_1.txt
-
-

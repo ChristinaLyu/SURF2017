@@ -1,2 +1,0 @@
-#run extract_DNA_pdb.py
-python ../Python/extract_DNA_pdb.py ../Data/PDB/4ndf.pdb Output

@@ -1,1 +1,0 @@
-python ../Python/extract_PRO.py ../Data/PDB_basicTests/1hhp.pdb Output 

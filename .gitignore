@@ -8,6 +8,8 @@ External
 .idea
 *~
 PythonLocal
-Run/Output
+Run/*/Output
+Old
+*/Old
 KFAW
 Settings

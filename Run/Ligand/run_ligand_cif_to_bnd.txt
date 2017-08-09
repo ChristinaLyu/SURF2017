@@ -1,0 +1,5 @@
+#run 
+# python ligand_cif_to_bnd.py inputFile  outputFolder
+#Input file: a cif file of a ligand. For demo, in Data/LigandCif
+#outputFolder: Output
+python ../../Python/Ligand/ligand_cif_to_bnd.py ../../Data/LigandCif/XK2.cif Output/

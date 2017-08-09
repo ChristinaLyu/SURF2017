@@ -1,1 +1,0 @@
-python /Users/ChristinaLyu/Desktop/ChristinaCode/Python/summary_bnd2json.py /Users/ChristinaLyu/Desktop/ChristinaCode/Data/atmBnd.xml /Users/ChristinaLyu/Desktop/ChristinaCode/Data/atm.json

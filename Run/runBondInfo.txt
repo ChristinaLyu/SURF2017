@@ -1,1 +1,0 @@
-python /Users/ChristinaLyu/Desktop/ChristinaCode/Python/bondInfo.py /Users/ChristinaLyu/Desktop/ChristinaCode/Data/bondInfo2.txt > /Users/ChristinaLyu/Desktop/ChristinaCode/Data/output.txt

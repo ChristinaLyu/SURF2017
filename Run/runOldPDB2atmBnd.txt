@@ -1,2 +1,0 @@
-#need to find the storage location for JMol.jar and edit the path in PDB2atmbnd.py
-python oldPDB2atmbnd.py /Users/ChristinaLyu/Desktop/ChristinaCode/Data/1hhp.pdb /Users/ChristinaLyu/Desktop/ChristinaCode/Data

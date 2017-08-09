@@ -1,2 +1,0 @@
-#run extract_all_except_solvent_pdb.py
-python ../Python/extract_all_except_solvent_pdb.py ../Data/PDB/4ndf.pdb Output 

@@ -1,2 +1,0 @@
-#run extract_one_chain_pdb.py
-python ../Python/extract_one_chain_pdb.py ../Data/PDB/5jp5.pdb Output B
