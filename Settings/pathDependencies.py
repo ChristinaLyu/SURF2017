@@ -20,3 +20,5 @@ EXTERNAL_PATH = KINARISVR_PATH + "/External/"
 
 JMOL_PATH = EXTERNAL_PATH + "jmol/"
 JMOLDATA_JAR = JMOL_PATH + "JmolData.jar"
+
+LIB = KINARISVR_PATH + "/Mojtaba/pebble/python/code/lib/"
