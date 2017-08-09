@@ -1,5 +1,7 @@
 !.gitignore
 .DS_Store
+Python/.DS_Store
+Python/Old/
 */.DS_Store
 Data
 External
@@ -8,3 +10,4 @@ External
 PythonLocal
 Run/Output
 KFAW
+Settings
