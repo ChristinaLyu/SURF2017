@@ -24,10 +24,7 @@ def getAtoms(atomInfoLines):
     i=0
     atomNos=[]
     atomIds=[]
-    atomSyms=[]
-    atomXs = []
-    atomYs = []
-    atomZs = []
+ 
     for line in atomInfoLines:
         i=i+1
         splited = line.split(' ')
@@ -37,16 +34,8 @@ def getAtoms(atomInfoLines):
         atomNos.append(atomNo)
         atomId = splited[1]
         atomIds.append(atomId)
-        atomSym = splited[3]
-        atomSyms.append(atomSym)
-        atomX = splited[9]
-        atomXs.append(atomX)
-        atomY = splited[10]
-        atomYs.append(atomY)
-        atomZ = splited[11]
-        atomZs.append(atomZ)
-    
-    return atomNos,atomIds, atomSyms,atomXs,atomYs,atomZs
+
+    return atomNos,atomIds
 #-----------------------------------------------------------------      getBonds   ------
 def getBonds(bondInfoLines, atomNos, atomIds):
     i=0
@@ -71,23 +60,6 @@ def getBonds(bondInfoLines, atomNos, atomIds):
         bondSyms.append(bondSym)
     
     return bondNo1s,bondNo2s,bondSyms
-#-----------------------------------------------------------------     makeAtomXml   ------
-def makeAtomXml(root,atomNos,atomSyms,atomXs,atomYs,atomZs):
-    nrAtoms=len(atomNos)
-
-    atomList = SubElement(root, "atoms")
-    atomList.set('nrAtoms',str(nrAtoms))
-    
-    for i in range(nrAtoms):
-        atom = SubElement(atomList, 'atom')
-        # atom.set('atomId', str(atomIds[i]))
-        atom.set('atomNo', str(atomNos[i]))
-        atom.set('sym', atomSyms[i])
-        atom.set('x', str(atomXs[i]))
-        atom.set('y', str(atomYs[i]))
-        atom.set('z', str(atomZs[i]))
-    
-    return root
 
 #-----------------------------------------------------------------     makeBondXml   ------
 def makeBondXml(root,bondNo1s,bondNo2s,bondSyms):
@@ -117,10 +89,17 @@ def myPrettify(elem):
 #-----------------------------------------------------------------      main   ------
 
 def main():
-    inputFileName = sys.argv[1]
-    outputFilePath = sys.argv[2]
+    inputFilePath = sys.argv[1]
+    outputFolderPath = sys.argv[2]
 
-    atomFile = open(inputFileName, 'r')
+    index1 = inputFilePath.rfind('/')
+    inputFileName = inputFilePath[index1 + 1: ]
+    print inputFileName
+    index2 = inputFileName.split('.')
+    inputLigandId = index2[0]
+    outputFilePath = outputFolderPath + inputLigandId + '.bnd'
+
+    atomFile = open(inputFilePath, 'r')
     infoLines = atomFile.read().splitlines()
     atomFile.close()
     
@@ -159,12 +138,12 @@ def main():
     bondInfoLines = bondInfoLines[ :endLineId2]
     
     
-    atomNos,atomIds, atomSyms,atomXs,atomYs,atomZs = getAtoms(atomInfoLines)
+    atomNos,atomIds = getAtoms(atomInfoLines)
 
     bondNo1s,bondNo2s,bondSyms = getBonds(bondInfoLines, atomNos, atomIds)
         
     root = Element('bnd')
-    root = makeAtomXml(root,atomNos,atomSyms,atomXs,atomYs,atomZs)
+
     root = makeBondXml(root,bondNo1s,bondNo2s,bondSyms)
     
 
