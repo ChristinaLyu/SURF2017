@@ -1,0 +1,7 @@
+#run 
+# python extract_solvent_pdb_w_jmol.py inputFile  outputFolder
+#Input file: a pdf file with solvent, in demo: Data/PDB
+#outputFolder: Output
+python ../../Python/Extract/extract_solvent_pdb_w_jmol.py ../../Data/PDB/1zir.pdb Output/
+python ../../Python/Extract/extract_solvent_pdb_w_jmol.py ../../Data/PDB/1zie.pdb Output/
+python ../../Python/Extract/extract_solvent_pdb_w_jmol.py ../../Data/PDB/1ziq.pdb Output/
