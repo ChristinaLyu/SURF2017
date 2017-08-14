@@ -1,0 +1,6 @@
+#run 
+# python ligand_pdb_to_bnd.py inputFile  outputFolder
+#Input file: a cif file of a ligand. For demo, in Data/PDB
+#outputFolder: Output
+python ../../Python/Ligand/ligand_pdb_to_bnd.py ../../Data/PDB/1hvr.pdb Output/
+python ../../Python/Ligand/ligand_pdb_to_bnd.py ../../Data/PDB/5gpq.pdb Output/
