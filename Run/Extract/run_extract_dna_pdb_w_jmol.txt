@@ -1,0 +1,7 @@
+#run 
+# python extract_dna_pdb_w_jmol.py inputFile  outputFolder
+#Input file: a pdf file with dna, in demo: Data/PDB
+#outputFolder: Output
+python ../../Python/Extract/extract_dna_pdb_w_jmol.py ../../Data/PDB/5eos.pdb Output/
+python ../../Python/Extract/extract_dna_pdb_w_jmol.py ../../Data/PDB/5u07.pdb Output/
+python ../../Python/Extract/extract_dna_pdb_w_jmol.py ../../Data/PDB/5gq9.pdb Output/
