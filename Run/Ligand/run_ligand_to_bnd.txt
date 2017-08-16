@@ -4,3 +4,4 @@
 #outputFolder: Output
 python ../../Python/Ligand/ligand_to_bnd.py ../../Data/PDB/1hvr2.pdb Output/
 python ../../Python/Ligand/ligand_to_bnd.py ../../Data/PDB/5gpq2.pdb Output/
+
