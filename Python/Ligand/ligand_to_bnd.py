@@ -1,9 +1,9 @@
 '''
     File:           xk2_cif_bnd.py
     Author:         Christina Lyu
-    Date created:   8/01/17
-    Updates: 	    8/01/17
-    Last modified:  8/01/17
+    Date created:   8/9/17
+    Updates: 	    8/18/17
+    Last modified:  8/18/17
     Python Version: 2.7
 
     Description:    extracts the atoms from xk2.cif

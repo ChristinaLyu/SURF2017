@@ -1,0 +1,6 @@
+#run 
+# python extract_cell_cif.py inputFile  outputFolder
+#Input file: a pdf file with solvent, in demo: Data/PDB
+#outputFolder: Output
+python ../../Python/Extract/extract_cell_cif.py ../../Data/mmCIF/2002926.cif Output/
+
