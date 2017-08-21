@@ -294,6 +294,7 @@ def main():
     bondNo1s,bondNo2s, atomList, conectBonds = getBonds(CON, atomNos, atomIds)
     root = Element('bnd')
     root.set('type', 'finite')
+    root.set('file', inputFileName)
 
     rootC = makeChainXml(root, ligands, ligandChains)
 ##    for i in range(len(ligands)):

@@ -70,7 +70,7 @@ def main():
                 atomQ.append(atom)
             else:
                 atomL.append(atom)
-    print len(atomL)
+
     labelInd = atomQ.index('_atom_site_label\r')
     xInd = atomQ.index('_atom_site_fract_x\r')
     yInd = atomQ.index('_atom_site_fract_y\r')
