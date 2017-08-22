@@ -48,7 +48,10 @@ def main():
             lineL = lines.splitlines()
             for line in lineL:
                 if line.find('_cell_angle_alpha') != -1:
-                    splited = line.split(' ')
+                    if line.find('\t') != -1:
+                        splited = line.split(t)
+                    else:
+                        splited = line.split(' ')
 
                     while splited.count('') != 0:
                         splited.remove('')
@@ -59,7 +62,10 @@ def main():
                     else:
                         alpha = second
                 elif line.find('_cell_angle_beta') != -1:
-                    splited = line.split(' ')
+                    if line.find('\t') != -1:
+                        splited = line.split(t)
+                    else:
+                        splited = line.split(' ')
                     while splited.count('') != 0:
                         splited.remove('')
                     second = splited[1]
@@ -69,7 +75,10 @@ def main():
                     else:
                         beta = second
                 elif line.find('_cell_angle_gamma') != -1:
-                    splited = line.split(' ')
+                    if line.find('\t') != -1:
+                        splited = line.split(t)
+                    else:
+                        splited = line.split(' ')
                     while splited.count('') != 0:
                         splited.remove('')
                     second = splited[1]
@@ -79,9 +88,13 @@ def main():
                     else:
                         gamma = second
                 elif line.find('_cell_length_a') != -1:
-                    splited = line.split(' ')
+                    if line.find('\t') != -1:
+                        splited = line.split(t)
+                    else:
+                        splited = line.split(' ')
                     while splited.count('') != 0:
                         splited.remove('')
+                    
                     second = splited[1]
                     if second.find('(') != -1:
                         left = second.find('(')
@@ -89,7 +102,10 @@ def main():
                     else:
                         a = second
                 elif line.find('_cell_length_b') != -1:
-                    splited = line.split(' ')
+                    if line.find('\t') != -1:
+                        splited = line.split(t)
+                    else:
+                        splited = line.split(' ')
                     while splited.count('') != 0:
                         splited.remove('')
                     second = splited[1]
@@ -99,7 +115,10 @@ def main():
                     else:
                         b = second
                 elif line.find('_cell_length_c') != -1:
-                    splited = line.split(' ')
+                    if line.find('\t') != -1:
+                        splited = line.split(t)
+                    else:
+                        splited = line.split(' ')
                     while splited.count('') != 0:
                         splited.remove('')
                     second = splited[1]
