@@ -2,7 +2,7 @@
 # python extract_cell_cif.py inputFile  outputFolder
 #Input file: a pdf file with solvent, in demo: Data/PDB
 #outputFolder: Output
-python ../../Python/Crystals/cif2out.py ../../Data/mmCIF/2002926.cif Output/
-python ../../Python/Crystals/cif2out.py ../../Data/mmCIF/ABW.cif Output/
-python ../../Python/Crystals/cif2out.py ../../Data/mmCIF/YUG.cif Output/
+python ../../Python/Crystals/cif2out.py ../../Data/Cif/2002926.cif Output/
+python ../../Python/Crystals/cif2out.py ../../Data/Cif/ABW.cif Output/
+python ../../Python/Crystals/cif2out.py ../../Data/Cif/YUG.cif Output/
 
