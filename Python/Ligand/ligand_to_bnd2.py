@@ -120,7 +120,6 @@ def makeAtomXml(root, atomNos, atomIds,atomSyms,atomXs,atomYs,atomZs, atomNames,
         atomZ = atomZs[k]
         for i in range(len(atomNo)):
             atomI = atomId[i]
-
             ind = atomList.index(atomI)
             bondCount = conectBonds[ind]
             atom = SubElement(atomL, 'atom')
@@ -155,18 +154,11 @@ def getBonds(conect, atomNos, atomIds):
 
     for line in conect:
         i=i+1
-        atoms = []
-        atomsList = line[6: ]
-        length = len(atomsList)
-        number = length/5
-        for j in range(number):
-            withSpace = atomsList[j * 5:(j + 1) * 5]
-            withSpace = withSpace.replace(' ', '')
-            if len(withSpace) != withSpace.count(' '):
-                atoms.append(withSpace)
-
+        splited = line.split(' ')
+        while splited.count('') != 0:
+            splited.remove('')
         find = False
-
+        atoms = splited[1: ]
         atom1 = atoms[0]
         atomList.append(atom1)
         conectBonds.append(len(atoms[1: ]))

@@ -23,10 +23,20 @@ JMOLDATA_JAR = '/Users/ChristinaLyu/Git/christina_summer_2017/External/Jmol.jar'
 def getAtoms(atomInfoLines,conect, infoLines):
     bondList = []
     for line in conect:
-        splited = line.split(' ')
-        while splited.count('') != 0:
-            splited.remove('')
-        atoms = splited[1: ]
+        atoms = []
+        atomsList = line[6: ]
+        length = len(atomsList)
+        number = length/5
+        for j in range(number):
+            withSpace = atomsList[j * 5:(j + 1) * 5]
+            withSpace = withSpace.replace(' ', '')
+            if len(withSpace) != withSpace.count(' '):
+                atoms.append(withSpace)
+
+##        splited = line.split(' ')
+##        while splited.count('') != 0:
+##            splited.remove('')
+##        atoms = splited[1: ]
         for atom in atoms:
             if bondList.count(atom) == 0:
                 bondList.append(atom)
@@ -43,7 +53,8 @@ def getAtoms(atomInfoLines,conect, infoLines):
         splited = line.split(' ')
         while splited.count('') != 0:
             splited.remove('')
-        atomId = splited[1]
+        atomId = line[6:11]
+        atomId = atomId.replace(' ', '')
         atomIds.append(atomId)
         atomSym = splited[-1]
         atomSyms.append(atomSym)
@@ -54,15 +65,18 @@ def getAtoms(atomInfoLines,conect, infoLines):
         atomZ = splited[8]
         atomZs.append(atomZ)
         ligand = splited[3]
-        if splited[0] == 'HETATM':
+        if line[ :6] == 'HETATM':
             ligands.append(ligand)
+
     i = 0
     newAtomSyms = []
     newAtomXs = []
     newAtomYs = []
     newAtomZs = []
     newLigands = []
+
     for atId in bondList:
+        
         i = i + 1
         atomNo = str(i)
         atomNos.append(atomNo)
@@ -84,6 +98,7 @@ def getAtoms(atomInfoLines,conect, infoLines):
                     while newS.count('') != 0:
                         newS.remove('')
                     newAtomSym = newS[-1]
+
                     newAtomSyms.append(newAtomSym)
                     newAtomX = newS[6]
                     newAtomXs.append(newAtomX)
@@ -120,11 +135,19 @@ def getBonds(bondInfoLines, infoLines, atomNos, atomIds):
 
     for line in bondInfoLines:
         i=i+1
-        splited = line.split(' ')
-        while splited.count('') != 0:
-            splited.remove('')
+        atoms = []
+        atomsList = line[6: ]
+        length = len(atomsList)
+        number = length/5
+        for j in range(number):
+            withSpace = atomsList[j * 5:(j + 1) * 5]
+            withSpace = withSpace.replace(' ', '')
+            if len(withSpace) != withSpace.count(' '):
+                atoms.append(withSpace)
+
+
         find = False
-        atoms = splited[1: ]
+
         atom1 = atoms[0]
 
         ind1 = atomIds.index(atom1)
