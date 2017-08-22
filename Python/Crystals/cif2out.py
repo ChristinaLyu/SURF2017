@@ -1,14 +1,14 @@
 '''
-    File:           ligand_to_bnd.py
+    File:           cif2out.py
     Author:         Christina Lyu
     Date created:   8/18/17
     Updates: 	    8/18/17
-    Last modified:  8/18/17
+    Last modified:  8/22/17
     Python Version: 2.7
 
-    Description:    extracts the atoms and bonds from pdb file
-    Run format:     python xk2_cif_bnd.py pathToInputPDBFile pathToOutputBndFile
-    Run example:    python xk2_cif_bnd.py /Users/xxx/ligand.pdb /Users/xxx/abc.bnd
+    Description:    extracts cell angles, lengths, the atoms and bonds from cif file
+    Run format:     python cif2out.py pathToInputCifFile pathToOutputFolder
+    Run example:    python cif2out.py /Users/xxx/ABW.cif /Users/Output/
 '''
 import os
 import sys
