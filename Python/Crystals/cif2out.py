@@ -215,20 +215,20 @@ def main():
         atomLabel = splited[labelInd]
         if atomLabel.find('(') != -1:
             ind = atomLabel.find('(')
-            atomLabel = atomLabel[ :ind] + '000'
+            atomLabel = atomLabel[ :ind]
         atomId.append(atomLabel)
         atomX = splited[xInd]
         if atomX.find('(') != -1:
             ind = atomX.find('(')
-            atomX = atomX[ :ind] + '000'
+            atomX = atomX[ :ind]
         atomY = splited[yInd]
         if atomY.find('(') != -1:
             ind = atomY.find('(')
-            atomY = atomY[ :ind] + '000'
+            atomY = atomY[ :ind]
         atomZ = splited[zInd]
         if atomZ.find('(') != -1:
             ind = atomZ.find('(')
-            atomZ = atomZ[ :ind] + '000'
+            atomZ = atomZ[ :ind]
         atomSym = ''
         if symInd != -1:
             atomSym = splited[symInd]
