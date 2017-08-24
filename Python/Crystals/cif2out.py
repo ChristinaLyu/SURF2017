@@ -3,7 +3,7 @@
     Author:         Christina Lyu
     Date created:   8/18/17
     Updates: 	    8/18/17
-    Last modified:  8/22/17
+    Last modified:  8/23/17
     Python Version: 2.7
 
     Description:    extracts cell angles, lengths, the atoms and bonds from cif file
@@ -16,175 +16,115 @@ from xml.etree.ElementTree import Element, SubElement, Comment
 from xml.etree import ElementTree
 from xml.dom import minidom
 
+#-----------------------------------------------------------------      strim   ------
+def strim(splited, index):
+    item = splited[index]
+    if item.find('(') != -1:
+        ind = item.find('(')
+        item = item[ :ind]
+    return item
+
+#-----------------------------------------------------------------      getIndex   ------
+def getIndex(queue, keyword):
+    if queue.count(keyword) != 0:
+        Index = queue.index(keyword)
+    else:
+        Index = queue.index(keyword + '\r')
+    return Index
+
+#-----------------------------------------------------------------      getCellInfo   ------
+def getCellInfo(line):
+    if line.find('\t') != -1:
+        splited = line.split('\t')
+    else:
+        splited = line.split(' ')
+    while splited.count('') != 0:
+        splited.remove('')
+    second = splited[1]
+    if second.find('(') != -1:
+        left = second.find('(')
+        cellInfo = second[ :left]
+    else:
+        cellInfo = second
+    return cellInfo
+
+#-----------------------------------------------------------------      getOutputFilePath   ------
+def getOutputFilePath(inputFilePath, outputFolder, extension):
+    index1 = inputFilePath.rfind('/')
+    inputFileWExtension = inputFilePath[index1 + 1: ]
+    index2 = inputFileWExtension.rfind('.')
+    inputFileWtExtension = inputFileWExtension[ :index2]
+    outputFilePath = outputFolder + inputFileWtExtension + extension
+    return outputFilePath
+
+#-----------------------------------------------------------------      main   ------
 def main():
-    
+    # get input file and output path, then get output file
     inputFilePath = sys.argv[1]
     outputFolderPath = sys.argv[2]
-
-    index1 = inputFilePath.rfind('/')
-    inputFileName = inputFilePath[index1 + 1: ]
-
-    index2 = inputFileName.split('.')
-    inputLigandId = index2[0]
-    outputFilePath = outputFolderPath + inputLigandId + '.out'
-
+    outputFilePath = getOutputFilePath(inputFilePath, outputFolderPath, '.out')
     atomFile = open(inputFilePath, 'r')
-    infoLines = atomFile.read()
-    infoList = infoLines.split(';')
-
+    lines = atomFile.read()
     outputFile = open(outputFilePath, 'w')
-
+    # try to get the lines with cell infomations
     t = '\t'
-    containAtoms = ''
-    alpha = ''
-    beta = ''
-    gamma = ''
-    a = ''
-    b = ''
-    c = ''
-    for k in range(len(infoList)):
-        lines = infoList[k]
-        if lines.find('_cell_angle_alpha') != -1:
-            lineL = lines.splitlines()
-            for line in lineL:
-                if line.find('_cell_angle_alpha') != -1:
-                    if line.find('\t') != -1:
-                        splited = line.split(t)
-                    else:
-                        splited = line.split(' ')
-
-                    while splited.count('') != 0:
-                        splited.remove('')
-                    second = splited[1]
-                    if second.find('(') != -1:
-                        left = second.find('(')
-                        alpha = second[ :left] + '000'
-                    else:
-                        alpha = second
-                elif line.find('_cell_angle_beta') != -1:
-                    if line.find('\t') != -1:
-                        splited = line.split(t)
-                    else:
-                        splited = line.split(' ')
-                    while splited.count('') != 0:
-                        splited.remove('')
-                    second = splited[1]
-                    if second.find('(') != -1:
-                        left = second.find('(')
-                        beta = second[ :left] + '000'
-                    else:
-                        beta = second
-                elif line.find('_cell_angle_gamma') != -1:
-                    if line.find('\t') != -1:
-                        splited = line.split(t)
-                    else:
-                        splited = line.split(' ')
-                    while splited.count('') != 0:
-                        splited.remove('')
-                    second = splited[1]
-                    if second.find('(') != -1:
-                        left = second.find('(')
-                        gamma = second[ :left] + '000'
-                    else:
-                        gamma = second
-                elif line.find('_cell_length_a') != -1:
-                    if line.find('\t') != -1:
-                        splited = line.split(t)
-                    else:
-                        splited = line.split(' ')
-                    while splited.count('') != 0:
-                        splited.remove('')
-                    
-                    second = splited[1]
-                    if second.find('(') != -1:
-                        left = second.find('(')
-                        a = second[: left] + '000'
-                    else:
-                        a = second
-                elif line.find('_cell_length_b') != -1:
-                    if line.find('\t') != -1:
-                        splited = line.split(t)
-                    else:
-                        splited = line.split(' ')
-                    while splited.count('') != 0:
-                        splited.remove('')
-                    second = splited[1]
-                    if second.find('(') != -1:
-                        left = second.find('(')
-                        b = second[: left] + '000'
-                    else:
-                        b = second
-                elif line.find('_cell_length_c') != -1:
-                    if line.find('\t') != -1:
-                        splited = line.split(t)
-                    else:
-                        splited = line.split(' ')
-                    while splited.count('') != 0:
-                        splited.remove('')
-                    second = splited[1]
-                    if second.find('(') != -1:
-                        left = second.find('(')
-                        c = second[ :left] + '000'
-                    else:
-                        c = second
-            cellLine = a + t + b + t + c + t + alpha + t + beta + t + gamma + '\n'
-            outputFile.write(cellLine)
-        if lines.find('_atom_site') != -1:
-            containAtoms = lines
-    bondS = ''
+    lineL = lines.splitlines()
+    for line in lineL:
+        if line.find('_cell_angle_alpha') != -1:
+            alpha = getCellInfo(line)
+        elif line.find('_cell_angle_beta') != -1:
+            beta = getCellInfo(line)
+        elif line.find('_cell_angle_gamma') != -1:
+            gamma = getCellInfo(line)
+        elif line.find('_cell_length_a') != -1:
+            a = getCellInfo(line)
+        elif line.find('_cell_length_b') != -1:
+            b = getCellInfo(line)
+        elif line.find('_cell_length_c') != -1:
+            c = getCellInfo(line)
+    # write cell info line
+    cellLine = a + t + b + t + c + t + alpha + t + beta + t + gamma + '\n'
+    outputFile.write(cellLine)
+    # split up the file by "loop_" into different sections
     bondQ = []
     bondL = []
     atomQ = []
     atomL = []
-    if containAtoms != '':
-        atomS = ''
-        atoms = containAtoms.split('loop_')
-        for k in atoms:
-            dashInd = k.find('_')
-            if k[dashInd:dashInd + 16] == '_atom_site_label':
-                atomS = k
-
-            elif k[dashInd:dashInd + 28] == '_geom_bond_atom_site_label_1':
-
-                bondS = k
-        if bondS.find('\n') != -1:
-            bondS = bondS.split('\n')
+    atoms = lines.split('loop_')
+    for k in atoms:
+        dashInd = k.find('_')
+        # find the atoms section
+        if k[dashInd:dashInd + 16] == '_atom_site_label':
+            atomS = k
+        # find the bonds section
+        elif k[dashInd:dashInd + 28] == '_geom_bond_atom_site_label_1':
+            bondS = k
+    # remove spaces
+    if bondS.find('\n') != -1:
+        bondS = bondS.split('\n')
+    else:
+        bondS = bondS.split('\r')
+    if atomS.find('\n') != -1:
+        atomS = atomS.split('\n')
+    else:
+        atomS = atomS.split('\r')
+    # put the labels into one list and actual atoms and bonds into another
+    for atom in atomS:
+        if atom.find('atom') != -1:
+            atomQ.append(atom)
         else:
-            bondS = bondS.split('\r')
-        for bond in bondS:
-            if bond.find('bond') != -1:
-                bondQ.append(bond)
-            else:
-                bondL.append(bond)
-        if atomS.find('\n') != -1:
-            atomS = atomS.split('\n')
+            atomL.append(atom)
+    for bond in bondS:
+        if bond.find('bond') != -1:
+            bondQ.append(bond)
         else:
-            atomS = atomS.split('\r')
-        for atom in atomS:
-            if atom.find('atom') != -1:
-                atomQ.append(atom)
-            else:
-                atomL.append(atom)
-    labelInd = -1
-    xInd = -1
-    yInd = -1
-    zInd = -1
-    if atomQ.count('_atom_site_label') != 0:
-        labelInd = atomQ.index('_atom_site_label')
-    else:
-        labelInd = atomQ.index('_atom_site_label\r')
-    if atomQ.count('_atom_site_fract_x') != 0:
-        xInd = atomQ.index('_atom_site_fract_x')
-    else:
-        xInd = atomQ.index('_atom_site_fract_x\r')
-    if atomQ.count('_atom_site_fract_y') != 0:
-        yInd = atomQ.index('_atom_site_fract_y')
-    else:
-        yInd = atomQ.index('_atom_site_fract_y\r')
-    if atomQ.count('_atom_site_fract_z') != 0:
-        zInd = atomQ.index('_atom_site_fract_z')
-    else:
-        zInd = atomQ.index('_atom_site_fract_z\r')
+            bondL.append(bond)
+    # get the index of infomation in the list
+    labelInd = getIndex(atomQ, '_atom_site_label')
+    xInd = getIndex(atomQ, '_atom_site_fract_x')
+    yInd = getIndex(atomQ, '_atom_site_fract_y')
+    zInd = getIndex(atomQ, '_atom_site_fract_z')
+    # find the symbol
     symInd = -1
     atomNo = []
     atomId = []
@@ -205,30 +145,18 @@ def main():
         atomL.remove('')
     while atomL.count('\r') != 0:
         atomL.remove('\r')
+    # get atom information from each line of the atom list
     for atommm in atomL:
         splited = atommm.split(' ')
         while splited.count('') != 0:
             splited.remove('')
-    
         i = i + 1
         atomNo.append(str(i))
-        atomLabel = splited[labelInd]
-        if atomLabel.find('(') != -1:
-            ind = atomLabel.find('(')
-            atomLabel = atomLabel[ :ind]
+        atomLabel = strim(splited, labelInd)
         atomId.append(atomLabel)
-        atomX = splited[xInd]
-        if atomX.find('(') != -1:
-            ind = atomX.find('(')
-            atomX = atomX[ :ind]
-        atomY = splited[yInd]
-        if atomY.find('(') != -1:
-            ind = atomY.find('(')
-            atomY = atomY[ :ind]
-        atomZ = splited[zInd]
-        if atomZ.find('(') != -1:
-            ind = atomZ.find('(')
-            atomZ = atomZ[ :ind]
+        atomX = strim(splited, xInd)
+        atomY = strim(splited, yInd)
+        atomZ = strim(splited, zInd)
         atomSym = ''
         if symInd != -1:
             atomSym = splited[symInd]
@@ -237,18 +165,11 @@ def main():
                 atomSym = atomSym[ :ind]
         newLine = str(i) + t + atomLabel + '\t' + atomX + '\t' + atomY + '\t' + atomZ + '\t' + atomSym + '\n'
         outputFile.write(newLine)
-
+    # write bond information with indexes and the lines with bonds
     label1 = -1
     label2 = -1
-    if bondQ.count('_geom_bond_atom_site_label_1') != 0:
-        label1 = bondQ.index('_geom_bond_atom_site_label_1')
-    else:
-        label1 = bondQ.index('_geom_bond_atom_site_label_1\r')
-    if bondQ.count('_geom_bond_atom_site_label_2') != 0:
-        label2 = bondQ.index('_geom_bond_atom_site_label_2')
-    else:
-        label2 = bondQ.index('_geom_bond_atom_site_label_2\r')
-
+    label1 = getIndex(bondQ, '_geom_bond_atom_site_label_1')
+    label2 = getIndex(bondQ, '_geom_bond_atom_site_label_2')
     while bondL.count('') != 0:
         bondL.remove('')
     while bondL.count('\r') != 0:
@@ -266,4 +187,5 @@ def main():
         bondLine = bondNo1 + t + bondNo2 + t + bondId1 + t + bondId2 + '\n'
         outputFile.write(bondLine)
     atomFile.close()
+    outputFile.close()
 main()
