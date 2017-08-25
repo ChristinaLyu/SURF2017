@@ -117,20 +117,17 @@ def parseBondHeadersAndLinesWriteToOutput(bondHeaderLines,bondLines,atomIdList,c
     t='\t'
     
     for line in bondLines:
-        if line!='':
-            print line
-            splitedLine = line.split(' ')
-            print splitedLine
-            while splitedLine.count('') != 0:
-                splitedLine.remove('')
-            bondId1 = splitedLine[label1]
-            bondId2 = splitedLine[label2]
-            ind1 = cifAtomLabelList.index(bondId1)
-            ind2 = cifAtomLabelList.index(bondId2)
-            bondNo1 = atomIdList[ind1]
-            bondNo2 = atomIdList[ind2]
-            bondLine = bondNo1 + t + bondNo2 + t + bondId1 + t + bondId2 + '\n'
-            openOutputOutFile.write(bondLine)
+        splitedLine = line.split(' ')
+        while splitedLine.count('') != 0:
+            splitedLine.remove('')
+        bondId1 = splitedLine[label1]
+        bondId2 = splitedLine[label2]
+        ind1 = cifAtomLabelList.index(bondId1)
+        ind2 = cifAtomLabelList.index(bondId2)
+        bondNo1 = atomIdList[ind1]
+        bondNo2 = atomIdList[ind2]
+        bondLine = bondNo1 + t + bondNo2 + t + bondId1 + t + bondId2 + '\n'
+        openOutputOutFile.write(bondLine)
         
 
 #------------------------------------- extract atom headers and lines --------
@@ -159,7 +156,7 @@ def extractBondHeadersAndLines(bondSectionString):
         stripped_bond_line=bondLine.strip('\n\r')
         if stripped_bond_line.find('bond') != -1:
             bondHeaderLines.append(stripped_bond_line)
-        else:
+        elif stripped_bond_line != '':
             bondLines.append(stripped_bond_line)
 
     return bondHeaderLines,bondLines
@@ -213,13 +210,14 @@ def getOutputFilePath(inputFilePath, outputFolder, extension):
     inputFileWExtension = inputFilePath[index1 + 1: ]
     index2 = inputFileWExtension.rfind('.')
     inputFileWtExtension = inputFileWExtension[ :index2]
+    inputExtension = inputFileWExtension[index2: ]
     outputFilePath = outputFolder + inputFileWtExtension + extension
-    return outputFilePath
+    return outputFilePath, inputExtension
 
 #-----------------------------------------------------------------      main   ------
 def main(inputFilePath,outputFolderPath):
     # get output file path    
-    outputFilePath = getOutputFilePath(inputFilePath, outputFolderPath, '.out')
+    outputFilePath, inputExtension = getOutputFilePath(inputFilePath, outputFolderPath, '.out')
     # open input and output files
     openInputCifFile = open(inputFilePath, 'r')
     openOutputOutFile = open(outputFilePath, 'w')
@@ -228,11 +226,18 @@ def main(inputFilePath,outputFolderPath):
     
     # parse the lines with cell info and write to output
     lineList = fileContentsString.splitlines()
+    firstLine = lineList[0]
+    if firstLine[ :5] == 'data_':
+        data = firstLine[5: ] + inputExtension
+        openOutputOutFile.write(data + '\n')
+
+        
     cellLine=makeCellLineFromCifLineList(lineList)
     openOutputOutFile.write(cellLine)
 
     # split input lines into sections separated by loop_
     loopSeparatedSections = fileContentsString.split('loop_')
+            
     # ASSUMPTION: there should be exactly one atom section and one bond section
     # TO CHECK
     atomSectionString, bondSectionString = extractAtomSectionAndBondSection(loopSeparatedSections)
@@ -244,30 +249,6 @@ def main(inputFilePath,outputFolderPath):
     atomIdList,cifAtomLabelList = parseAtomHeadersAndLinesWriteToOutput(atomHeaderLines,atomLines,openOutputOutFile)
     
     parseBondHeadersAndLinesWriteToOutput(bondHeaderLines,bondLines,atomIdList,cifAtomLabelList,openOutputOutFile)
-        
-        
-    # # write bond information with indexes and the lines with bonds
-    # label1 = -1
-    # label2 = -1
-    # label1 = getIndex(bondQ, '_geom_bond_atom_site_label_1')
-    # label2 = getIndex(bondQ, '_geom_bond_atom_site_label_2')
-    # while bondL.count('') != 0:
-    #     bondL.remove('')
-    # while bondL.count('\r') != 0:
-    #     bondL.remove('\r')
-    # for bondd in bondL:
-    #     splited = bondd.split(' ')
-    #     while splited.count('') != 0:
-    #         splited.remove('')
-    #     bondId1 = splited[label1]
-    #     bondId2 = splited[label2]
-    #     ind1 = atomId.index(bondId1)
-    #     ind2 = atomId.index(bondId2)
-    #     bondNo1 = atomNo[ind1]
-    #     bondNo2 = atomNo[ind2]
-    #     bondLine = bondNo1 + t + bondNo2 + t + bondId1 + t + bondId2 + '\n'
-    #     openOutputOutFile.write(bondLine)
-    
     openInputCifFile.close()
     openOutputOutFile.close()
 
