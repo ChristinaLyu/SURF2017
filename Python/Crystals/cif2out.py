@@ -16,9 +16,14 @@ from xml.etree.ElementTree import Element, SubElement, Comment
 from xml.etree import ElementTree
 from xml.dom import minidom
 
+# --------------------------------------------------------------------
+PYFILE_NAME = 'cif2out.py'
+# --------------------------------------------------------------------
+ERROR_PREFIX = 'ERROR:' + PYFILE_NAME + ': '
+ERROR_1 = ERROR_PREFIX + 'Usage: python ' + PYFILE_NAME + ' inputCifFile outputFolderPath'
+
 #-----------------------------------------------------------------      strim   ------
-def strim(splited, index):
-    item = splited[index]
+def strim(item):
     if item.find('(') != -1:
         ind = item.find('(')
         item = item[ :ind]
@@ -48,7 +53,161 @@ def getCellInfo(line):
         cellInfo = second
     return cellInfo
 
-#-----------------------------------------------------------------      getOutputFilePath   ------
+
+
+#------------------------------------- parse atom headers and lines --------
+def parseAtomHeadersAndLinesWriteToOutput(atomHeaderLines,atomLines,openOutputOutFile):
+    # input lines are already stripped of \n and \r
+    
+    # get the positions (indices) of information in the header list
+    labelInd = getIndex(atomHeaderLines, '_atom_site_label')
+    xInd = getIndex(atomHeaderLines, '_atom_site_fract_x')
+    yInd = getIndex(atomHeaderLines, '_atom_site_fract_y')
+    zInd = getIndex(atomHeaderLines, '_atom_site_fract_z')
+    # the atom symbol may be named differently, so try several possibilities
+    symInd = -1   
+    if atomHeaderLines.count('_atom_site_type_symbol') != 0:
+        symInd = atomHeaderLines.index('_atom_site_type_symbol')
+    elif atomHeaderLines.count('_atom_site_type') != 0:
+        symInd = atomHeaderLines.index('_atom_site_type')
+    elif atomHeaderLines.count('_atom_site_symbol') != 0:
+        symInd = atomHeaderLines.index('_atom_site_symbol')
+        
+    # each line corresponds to an atom; give it a new atom id
+    id = 0
+    # create lists of atomIds and labels for future use
+    atomIdList = []
+    cifAtomLabelList = []
+    
+    # get atom information from each line of the atom list
+    for line in atomLines:
+        splitedLine = line.split(' ')
+        while splitedLine.count('') != 0:
+            splitedLine.remove('')
+        id = id + 1
+        atomIdList.append(str(id))
+        
+        # remove the () in numbers
+        atomLabel = strim(splitedLine[labelInd])
+        cifAtomLabelList.append(atomLabel)
+        
+        # remove the () in numbers
+        atomX = strim(splitedLine[xInd])
+        atomY = strim(splitedLine[yInd])
+        atomZ = strim(splitedLine[zInd])
+        
+        atomSym = ''
+        if symInd != -1:
+            atomSym = strim(splitedLine[symInd])
+        
+        t = '\t'
+        newLine = str(id) + t + atomLabel + t + atomX + t + atomY + t + atomZ + t + atomSym + '\n'
+        openOutputOutFile.write(newLine)
+        
+    return atomIdList,cifAtomLabelList
+
+#------------------------------------- parse bond headers and lines --------
+def parseBondHeadersAndLinesWriteToOutput(bondHeaderLines,bondLines,atomIdList,cifAtomLabelList,openOutputOutFile):
+
+    # write bond information with indexes and the lines with bonds
+    label1 = -1
+    label2 = -1
+    label1 = getIndex(bondHeaderLines, '_geom_bond_atom_site_label_1')
+    label2 = getIndex(bondHeaderLines, '_geom_bond_atom_site_label_2')
+    t='\t'
+    
+    for line in bondLines:
+        if line!='':
+            print line
+            splitedLine = line.split(' ')
+            print splitedLine
+            while splitedLine.count('') != 0:
+                splitedLine.remove('')
+            bondId1 = splitedLine[label1]
+            bondId2 = splitedLine[label2]
+            ind1 = cifAtomLabelList.index(bondId1)
+            ind2 = cifAtomLabelList.index(bondId2)
+            bondNo1 = atomIdList[ind1]
+            bondNo2 = atomIdList[ind2]
+            bondLine = bondNo1 + t + bondNo2 + t + bondId1 + t + bondId2 + '\n'
+            openOutputOutFile.write(bondLine)
+        
+
+#------------------------------------- extract atom headers and lines --------
+def extractAtomHeadersAndLines(atomSectionString):
+    
+    atomLineList = atomSectionString.splitlines()
+    
+    atomHeaders=[]
+    atomLines=[]
+    # put the headers into one list and actual atoms into another
+    for atomLine in atomLineList:
+        stripped_atom_line=atomLine.strip('\n\r')
+        if stripped_atom_line.find('atom') != -1:
+            atomHeaders.append(stripped_atom_line)
+        elif stripped_atom_line!='':
+            atomLines.append(stripped_atom_line)
+    return atomHeaders, atomLines
+    
+#------------------------------------- extract bond headers and lines --------
+def extractBondHeadersAndLines(bondSectionString):           
+    bondLineList = bondSectionString.splitlines()
+    
+    bondHeaderLines=[]
+    bondLines=[]
+    for bondLine in bondLineList:
+        stripped_bond_line=bondLine.strip('\n\r')
+        if stripped_bond_line.find('bond') != -1:
+            bondHeaderLines.append(stripped_bond_line)
+        else:
+            bondLines.append(stripped_bond_line)
+
+    return bondHeaderLines,bondLines
+            
+#------------------------------------- extract atom section and bond section --------
+def extractAtomSectionAndBondSection(loopSeparatedSections):
+    for section in loopSeparatedSections:
+        dashInd = section.find('_')
+        # find the loopSeparatedSections section
+        if section[dashInd:dashInd + 16] == '_atom_site_label':
+            atomS = section
+        # find the bonds section
+        elif section[dashInd:dashInd + 28] == '_geom_bond_atom_site_label_1':
+            bondS = section
+    return atomS,bondS
+            
+#------------------------------------- extract cell and data info from cif file --------
+def makeCellLineFromCifLineList(lineListInCifFile):
+    
+    alpha = ''; beta = ''; gamma = ''; a = ''; b = ''; c = ''; data_info = '';
+    
+    for line in lineListInCifFile:
+        stripped_line=line.strip('\n\r \t')
+        if len(stripped_line)>=5 and stripped_line[0:5]=='_cell':
+            split_line=stripped_line.split()
+            if len(split_line)>=2:
+                line_header=split_line[0]
+                line_info=split_line[1]
+                # eliminate approx. part of each number, enclosed in parentheses
+                if line_header == '_cell_length_a':
+                    a = line_info.split('(')[0]
+                elif line_header == '_cell_length_b':
+                    b = line_info.split('(')[0]
+                elif line_header == '_cell_length_c':
+                    c = line_info.split('(')[0]
+                elif line_header == '_cell_angle_alpha':
+                    alpha = line_info.split('(')[0]
+                elif line_header == '_cell_angle_beta':
+                    beta = line_info.split('(')[0]
+                elif line_header == '_cell_angle_gamma':
+                    gamma = line_info.split('(')[0]                
+    t = '\t'
+    cellLine = a + t + b + t + c + t + alpha + t + beta + t + gamma + '\n'
+    
+    return cellLine
+
+
+#-----------------------------------------------      getOutputFilePath   ------
 def getOutputFilePath(inputFilePath, outputFolder, extension):
     index1 = inputFilePath.rfind('/')
     inputFileWExtension = inputFilePath[index1 + 1: ]
@@ -58,134 +217,71 @@ def getOutputFilePath(inputFilePath, outputFolder, extension):
     return outputFilePath
 
 #-----------------------------------------------------------------      main   ------
-def main():
-    # get input file and output path, then get output file
+def main(inputFilePath,outputFolderPath):
+    # get output file path    
+    outputFilePath = getOutputFilePath(inputFilePath, outputFolderPath, '.out')
+    # open input and output files
+    openInputCifFile = open(inputFilePath, 'r')
+    openOutputOutFile = open(outputFilePath, 'w')
+    
+    fileContentsString = openInputCifFile.read()
+    
+    # parse the lines with cell info and write to output
+    lineList = fileContentsString.splitlines()
+    cellLine=makeCellLineFromCifLineList(lineList)
+    openOutputOutFile.write(cellLine)
+
+    # split input lines into sections separated by loop_
+    loopSeparatedSections = fileContentsString.split('loop_')
+    # ASSUMPTION: there should be exactly one atom section and one bond section
+    # TO CHECK
+    atomSectionString, bondSectionString = extractAtomSectionAndBondSection(loopSeparatedSections)
+    
+    
+    atomHeaderLines, atomLines = extractAtomHeadersAndLines(atomSectionString)
+    bondHeaderLines, bondLines = extractBondHeadersAndLines(bondSectionString)
+
+    atomIdList,cifAtomLabelList = parseAtomHeadersAndLinesWriteToOutput(atomHeaderLines,atomLines,openOutputOutFile)
+    
+    parseBondHeadersAndLinesWriteToOutput(bondHeaderLines,bondLines,atomIdList,cifAtomLabelList,openOutputOutFile)
+        
+        
+    # # write bond information with indexes and the lines with bonds
+    # label1 = -1
+    # label2 = -1
+    # label1 = getIndex(bondQ, '_geom_bond_atom_site_label_1')
+    # label2 = getIndex(bondQ, '_geom_bond_atom_site_label_2')
+    # while bondL.count('') != 0:
+    #     bondL.remove('')
+    # while bondL.count('\r') != 0:
+    #     bondL.remove('\r')
+    # for bondd in bondL:
+    #     splited = bondd.split(' ')
+    #     while splited.count('') != 0:
+    #         splited.remove('')
+    #     bondId1 = splited[label1]
+    #     bondId2 = splited[label2]
+    #     ind1 = atomId.index(bondId1)
+    #     ind2 = atomId.index(bondId2)
+    #     bondNo1 = atomNo[ind1]
+    #     bondNo2 = atomNo[ind2]
+    #     bondLine = bondNo1 + t + bondNo2 + t + bondId1 + t + bondId2 + '\n'
+    #     openOutputOutFile.write(bondLine)
+    
+    openInputCifFile.close()
+    openOutputOutFile.close()
+
+#----------------------------------------------- top call to MAIN ---------------
+
+
+if __name__ == "__main__":
+
+    if len(sys.argv) != 3:
+        print ERROR_1
+        sys.exit(-1)
+        
+    # get input file and output folder paths
     inputFilePath = sys.argv[1]
     outputFolderPath = sys.argv[2]
-    outputFilePath = getOutputFilePath(inputFilePath, outputFolderPath, '.out')
-    atomFile = open(inputFilePath, 'r')
-    lines = atomFile.read()
-    outputFile = open(outputFilePath, 'w')
-    # try to get the lines with cell infomations
-    t = '\t'
-    lineL = lines.splitlines()
-    for line in lineL:
-        if line.find('_cell_angle_alpha') != -1:
-            alpha = getCellInfo(line)
-        elif line.find('_cell_angle_beta') != -1:
-            beta = getCellInfo(line)
-        elif line.find('_cell_angle_gamma') != -1:
-            gamma = getCellInfo(line)
-        elif line.find('_cell_length_a') != -1:
-            a = getCellInfo(line)
-        elif line.find('_cell_length_b') != -1:
-            b = getCellInfo(line)
-        elif line.find('_cell_length_c') != -1:
-            c = getCellInfo(line)
-    # write cell info line
-    cellLine = a + t + b + t + c + t + alpha + t + beta + t + gamma + '\n'
-    outputFile.write(cellLine)
-    # split up the file by "loop_" into different sections
-    bondQ = []
-    bondL = []
-    atomQ = []
-    atomL = []
-    atoms = lines.split('loop_')
-    for k in atoms:
-        dashInd = k.find('_')
-        # find the atoms section
-        if k[dashInd:dashInd + 16] == '_atom_site_label':
-            atomS = k
-        # find the bonds section
-        elif k[dashInd:dashInd + 28] == '_geom_bond_atom_site_label_1':
-            bondS = k
-    # remove spaces
-    if bondS.find('\n') != -1:
-        bondS = bondS.split('\n')
-    else:
-        bondS = bondS.split('\r')
-    if atomS.find('\n') != -1:
-        atomS = atomS.split('\n')
-    else:
-        atomS = atomS.split('\r')
-    # put the labels into one list and actual atoms and bonds into another
-    for atom in atomS:
-        if atom.find('atom') != -1:
-            atomQ.append(atom)
-        else:
-            atomL.append(atom)
-    for bond in bondS:
-        if bond.find('bond') != -1:
-            bondQ.append(bond)
-        else:
-            bondL.append(bond)
-    # get the index of infomation in the list
-    labelInd = getIndex(atomQ, '_atom_site_label')
-    xInd = getIndex(atomQ, '_atom_site_fract_x')
-    yInd = getIndex(atomQ, '_atom_site_fract_y')
-    zInd = getIndex(atomQ, '_atom_site_fract_z')
-    # find the symbol
-    symInd = -1
-    atomNo = []
-    atomId = []
-    i = 0
-    if atomQ.count('_atom_site_type_symbol') != 0:
-        symInd = atomQ.index('_atom_site_type_symbol')
-    elif atomQ.count('_atom_site_type_symbol\r') != 0:
-        symInd = atomQ.index('_atom_site_type_symbol\r')
-    elif atomQ.count('_atom_site_type') != 0:
-        symInd = atomQ.index('_atom_site_type')
-    elif atomQ.count('_atom_site_type\r') != 0:
-        symInd = atomQ.index('_atom_site_type\r')
-    elif atomQ.count('_atom_site_symbol') != 0:
-        symInd = atomQ.index('_atom_site_symbol')
-    elif atomQ.count('_atom_site_symbol\r') != 0:
-        symInd = atomQ.index('_atom_site_symbol\r')
-    while atomL.count('') != 0:
-        atomL.remove('')
-    while atomL.count('\r') != 0:
-        atomL.remove('\r')
-    # get atom information from each line of the atom list
-    for atommm in atomL:
-        splited = atommm.split(' ')
-        while splited.count('') != 0:
-            splited.remove('')
-        i = i + 1
-        atomNo.append(str(i))
-        atomLabel = strim(splited, labelInd)
-        atomId.append(atomLabel)
-        atomX = strim(splited, xInd)
-        atomY = strim(splited, yInd)
-        atomZ = strim(splited, zInd)
-        atomSym = ''
-        if symInd != -1:
-            atomSym = splited[symInd]
-            if atomSym.find('(') != -1:
-                ind = atomSym.find('(')
-                atomSym = atomSym[ :ind]
-        newLine = str(i) + t + atomLabel + '\t' + atomX + '\t' + atomY + '\t' + atomZ + '\t' + atomSym + '\n'
-        outputFile.write(newLine)
-    # write bond information with indexes and the lines with bonds
-    label1 = -1
-    label2 = -1
-    label1 = getIndex(bondQ, '_geom_bond_atom_site_label_1')
-    label2 = getIndex(bondQ, '_geom_bond_atom_site_label_2')
-    while bondL.count('') != 0:
-        bondL.remove('')
-    while bondL.count('\r') != 0:
-        bondL.remove('\r')
-    for bondd in bondL:
-        splited = bondd.split(' ')
-        while splited.count('') != 0:
-            splited.remove('')
-        bondId1 = splited[label1]
-        bondId2 = splited[label2]
-        ind1 = atomId.index(bondId1)
-        ind2 = atomId.index(bondId2)
-        bondNo1 = atomNo[ind1]
-        bondNo2 = atomNo[ind2]
-        bondLine = bondNo1 + t + bondNo2 + t + bondId1 + t + bondId2 + '\n'
-        outputFile.write(bondLine)
-    atomFile.close()
-    outputFile.close()
-main()
+
+    main(inputFilePath,outputFolderPath)
