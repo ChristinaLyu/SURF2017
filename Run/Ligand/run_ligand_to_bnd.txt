@@ -1,7 +1,0 @@
-#run 
-# python ligand_to_bnd.py inputFile  outputFolder
-#Input file: a pdb file of a ligand. For demo, in Data/PDB
-#outputFolder: Output
-python ../../Python/Ligand/ligand_to_bnd.py ../../Data/PDB/1hvr2.pdb Output/
-python ../../Python/Ligand/ligand_to_bnd.py ../../Data/PDB/5gpq2.pdb Output/
-

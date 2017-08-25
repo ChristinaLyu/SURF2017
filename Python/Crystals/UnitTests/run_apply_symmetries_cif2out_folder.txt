@@ -1,0 +1,7 @@
+#run 
+# python apply_symmetries_cif2out_folder.py inputFile  outputFolder
+#Input file: a pdf file with solvent, in demo: Data/PDB
+#outputFolder: Output
+python ../apply_symmetries_cif2out_folder.py ../../../Data/Cif/ABW2.cif Output/
+python ../apply_symmetries_cif2out_folder.py ../../../Data/Cif/YUG2.cif Output/
+

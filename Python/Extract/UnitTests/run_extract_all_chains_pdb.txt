@@ -1,0 +1,8 @@
+#run 
+# python extract_all_chains_pdb.py inputFile  outputFolder
+#Input file: a pdf file with chains, in demo: Data/PDB
+#outputFolder: Output
+python ../extract_all_chains_pdb.py ../../../Data/PDB/1dc0.pdb Output/
+python ../extract_all_chains_pdb.py ../../../Data/PDB/2n62.pdb Output/
+python ../extract_all_chains_pdb.py ../../../Data/PDB/4ndf.pdb Output/
+python ../extract_all_chains_pdb.py ../../../Data/PDB/5v1l.pdb Output/

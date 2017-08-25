@@ -1,0 +1,8 @@
+#run 
+# python extract_dna_pdb.py inputFile  outputFolder
+#Input file: a pdf file with dna, in demo: Data/PDB
+#outputFolder: Output
+python ../extract_dna_pdb.py ../../../Data/PDB/5eos.pdb Output/
+python ../extract_dna_pdb.py ../../../Data/PDB/5u07.pdb Output/
+python ../extract_dna_pdb.py ../../../Data/PDB/5gq9.pdb Output/
+

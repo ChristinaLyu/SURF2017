@@ -1,0 +1,6 @@
+#run 
+# python extract_rna_pdb.py inputFile  outputFolder
+#Input file: a pdf file with rna, in demo: Data/PDB
+#outputFolder: Output
+python ../extract_rna_pdb_w_jmol.py ../../../Data/PDB/5nrg.pdb Output/
+python ../extract_rna_pdb_w_jmol.py ../../../Data/PDB/5oa3.pdb Output/

@@ -1,7 +1,0 @@
-#run 
-# python cif2crystal.py inputFile  outputFolder
-#Input file: a pdf file with solvent, in demo: Data/PDB
-#outputFolder: Output
-python ../../Python/Crystals/cif2crystal.py ../../Data/Cif/ABW2.cif Output/
-python ../../Python/Crystals/cif2crystal.py ../../Data/Cif/YUG2.cif Output/
-

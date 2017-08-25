@@ -1,7 +1,0 @@
-#run 
-# python extract_protein_pdb_w_jmol.py inputFile  outputFolder
-#Input file: a pdf file with protein, in demo: Data/PDB
-#outputFolder: Output
-python ../../Python/Extract/extract_protein_pdb_w_jmol.py ../../Data/PDB/5gpq.pdb Output/
-python ../../Python/Extract/extract_protein_pdb_w_jmol.py ../../Data/PDB/5gpo.pdb Output/
-

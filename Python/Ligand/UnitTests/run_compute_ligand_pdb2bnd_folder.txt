@@ -1,0 +1,6 @@
+#run 
+# python compute_ligand_bonds_pdb2bnd_folder.py inputFile  outputFolder
+#Input file: a cif file of a ligand. For demo, in Data/PDB
+#outputFolder: Output
+python ../compute_ligand_bonds_pdb2bnd_folder.py ../../../Data/PDB/1hvr.pdb Output/
+python ../compute_ligand_bonds_pdb2bnd_folder.py ../../../Data/PDB/5gpq.pdb Output/

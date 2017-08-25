@@ -1,8 +1,0 @@
-#run 
-# python extract_one_chain_pdb_w_jmol.py inputFile  outputFolder
-#Input file: a pdf file with chains, in demo: Data/PDB
-#outputFolder: Output
-python ../../Python/Extract/extract_one_chain_pdb_w_jmol.py ../../Data/PDB/1dc0.pdb Output/
-python ../../Python/Extract/extract_one_chain_pdb_w_jmol.py ../../Data/PDB/2n62.pdb Output/
-python ../../Python/Extract/extract_one_chain_pdb_w_jmol.py ../../Data/PDB/4ndf.pdb Output/
-python ../../Python/Extract/extract_one_chain_pdb_w_jmol.py ../../Data/PDB/5v1l.pdb Output/

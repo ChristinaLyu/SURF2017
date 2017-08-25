@@ -1,0 +1,8 @@
+#run 
+# python compute_ligand_bonds_cif2bnd_folder.py inputFile  outputFolder
+#Input file: a cif file of a ligand. For demo, in Data/LigandCif
+#outputFolder: Output
+python ../compute_ligand_bonds_cif2bnd_folder.py ../../../Data/LigandCif/XK2.cif Output/
+python ../compute_ligand_bonds_cif2bnd_folder.py ../../../Data/LigandCif/03C.cif Output/
+python ../compute_ligand_bonds_cif2bnd_folder.py ../../../Data/LigandCif/04K.cif Output/
+python ../compute_ligand_bonds_cif2bnd_folder.py ../../../Data/LigandCif/8HW.cif Output/
