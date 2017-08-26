@@ -1,5 +1,5 @@
 '''
-    File:           apply_symmetries_cif2out_folder.py
+    File:           cif2crystal.py
     Author:         Christina Lyu
     Date created:   8/24/17
     Updates: 	    8/24/17
@@ -7,8 +7,8 @@
     Python Version: 2.7
 
     Description:    extracts atoms and write into crystal
-    Run format:     python apply_symmetries_cif2out_folder.py pathToInputCifFile pathToOutputFolder
-    Run example:    python apply_symmetries_cif2out_folder.py /Users/xxx/ABW.cif /Users/Output/
+    Run format:     python cif2crystal.py pathToInputCifFile pathToOutputFolder
+    Run example:    python cif2crystal.py /Users/xxx/ABW.cif /Users/Output/
 '''
 import os
 import sys
@@ -17,7 +17,7 @@ from xml.etree import ElementTree
 from xml.dom import minidom
 
 # --------------------------------------------------------------------
-PYFILE_NAME = 'apply_symmetries_cif2out_folder.py'
+PYFILE_NAME = 'cif2crystal.py'
 # --------------------------------------------------------------------
 ERROR_PREFIX = 'ERROR:' + PYFILE_NAME + ': '
 ERROR_1 = ERROR_PREFIX + 'Usage: python ' + PYFILE_NAME + ' inputCifFile outputFolderPath'

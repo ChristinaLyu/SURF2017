@@ -1,5 +1,5 @@
 '''
-    File:           convert_cif2out_folder.py
+    File:           cif2out.py
     Author:         Christina Lyu
     Date created:   8/18/17
     Updates: 	    8/18/17
@@ -7,8 +7,8 @@
     Python Version: 2.7
 
     Description:    extracts cell angles, lengths, the atoms and bonds from cif file
-    Run format:     python convert_cif2out_folder.py pathToInputCifFile pathToOutputFolder
-    Run example:    python convert_cif2out_folder.py /Users/xxx/ABW.cif /Users/Output/
+    Run format:     python cif2out.py pathToInputCifFile pathToOutputFolder
+    Run example:    python cif2out.py /Users/xxx/ABW.cif /Users/Output/
 '''
 import os
 import sys
@@ -17,7 +17,7 @@ from xml.etree import ElementTree
 from xml.dom import minidom
 
 # --------------------------------------------------------------------
-PYFILE_NAME = 'convert_cif2out_folder.py'
+PYFILE_NAME = 'cif2out.py'
 # --------------------------------------------------------------------
 ERROR_PREFIX = 'ERROR:' + PYFILE_NAME + ': '
 ERROR_1 = ERROR_PREFIX + 'Usage: python ' + PYFILE_NAME + ' inputCifFile outputFolderPath'
