@@ -1,9 +1,9 @@
 '''
-    File:           apply_symmetries_cif2out_folder.py
+    File:           apply_certain_symmetries_cif2out_folder.py
     Author:         Christina Lyu
-    Date created:   8/24/17
-    Updates: 	    8/25/17
-    Last modified:  8/25/17
+    Date created:   8/27/17
+    Updates: 	    8/27/17
+    Last modified:  8/27/17
     Python Version: 2.7
 
     Description:    extracts atoms and write into crystal
@@ -123,7 +123,7 @@ def extractAtomHeadersAndLines(atomSectionString):
     return atomHeaders, atomLines
 
 #-----------------------------------------------------------------      main   ------
-def main(inputFilePath,outputFolderPath):
+def main(inputFilePath,outputFolderPath, wantedSymmetries):
     # get output file path
     outputFilePath = getOutputFilePath(inputFilePath, outputFolderPath, '.out')
     # open input and output files
@@ -174,18 +174,34 @@ def main(inputFilePath,outputFolderPath):
         atomX = atomXList[n]
         atomY = atomYList[n]
         atomZ = atomZList[n]
-        for symm in symmetryList:
-            symmetry = '[' + symm[1:-1] + ']'
-            function = lambda x, y, z: eval('[' + symm[1:-1] + ']')
-            xx=float(atomX)
-            yy=float(atomY)
-            zz=float(atomZ)
-            newCoords = function(xx, yy, zz)
+        for sym in wantedSymmetries:
+            if sym == '0':
+                for symm in symmetryList:
+                    symmetry = '[' + symm[1:-1] + ']'
+                    function = lambda x, y, z: eval('[' + symm[1:-1] + ']')
+                    xx=float(atomX)
+                    yy=float(atomY)
+                    zz=float(atomZ)
+                    newCoords = function(xx, yy, zz)
 
-            if newAtomCoordsList.count(newCoords) == 0:
-                newAtomCoordsList.append(newCoords)
-                newAtomSymList.append(atomSym)
-                newAtomLabelList.append(atomLabel)
+                    if newAtomCoordsList.count(newCoords) == 0:
+                        newAtomCoordsList.append(newCoords)
+                        newAtomSymList.append(atomSym)
+                        newAtomLabelList.append(atomLabel)
+            else:
+                symm = symmetryList[int(sym) - 1]
+                symmetry = '[' + symm[1:-1] + ']'
+                function = lambda x, y, z: eval('[' + symm[1:-1] + ']')
+                xx=float(atomX)
+                yy=float(atomY)
+                zz=float(atomZ)
+                newCoords = function(xx, yy, zz)
+
+                if newAtomCoordsList.count(newCoords) == 0:
+                    newAtomCoordsList.append(newCoords)
+                    newAtomSymList.append(atomSym)
+                    newAtomLabelList.append(atomLabel)
+            
 
     t = '\t'
 
@@ -212,12 +228,16 @@ def main(inputFilePath,outputFolderPath):
 #----------------------------------------------- top call to MAIN ---------------
 if __name__ == "__main__":
 
-    if len(sys.argv) != 3:
+    if len(sys.argv) < 3:
         print ERROR_1
         sys.exit(-1)
         
     # get input file and output folder paths
     inputFilePath = sys.argv[1]
     outputFolderPath = sys.argv[2]
+    if len(sys.argv) > 3:
+        wantedSymmetries = sys.argv[3: ]
+    else:
+        wantedSymmetries = ['0']
 
-    main(inputFilePath,outputFolderPath)
+    main(inputFilePath,outputFolderPath, wantedSymmetries)

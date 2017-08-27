@@ -126,7 +126,7 @@ def parseBondHeadersAndLinesWriteToOutput(bondHeaderLines,bondLines,atomIdList,c
         ind2 = cifAtomLabelList.index(bondId2)
         bondNo1 = atomIdList[ind1]
         bondNo2 = atomIdList[ind2]
-        bondLine = bondNo1 + t + bondNo2 + t + bondId1 + t + bondId2 + '\n'
+        bondLine = bondNo1 + t + bondNo2 + t + bondId1 + t + bondId2 + t + 'COV' +  '\n'
         openOutputOutFile.write(bondLine)
         
 

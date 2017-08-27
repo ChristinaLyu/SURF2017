@@ -71,7 +71,8 @@ def getBonds(bondInfoLines, atomNos, atomIds):
     bondNo1s=[]
     bondNo2s=[]
     bondSyms=[]
-
+    bondId1 = []
+    bondId2 = []
     for line in bondInfoLines:
         i=i+1
         splited = line.split(' ')
@@ -87,7 +88,7 @@ def getBonds(bondInfoLines, atomNos, atomIds):
         bondNo2s.append(bondNo2)
         bondSym = splited[3]
         bondSyms.append(bondSym)
-    
+
     return bondNo1s,bondNo2s,bondSyms
 
 #-----------------------------------------------------------------     makeBondXml   ------

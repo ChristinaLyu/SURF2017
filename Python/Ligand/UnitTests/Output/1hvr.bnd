@@ -1,147 +1,147 @@
 <?xml version="1.0" ?>
-<bnd file="1hvr.pdb" type="finite">
-	<chains nrChains="2">
-		<chain id="1" name="A">
-			<residue id="1" name="CSO"/>
-		</chain>
-		<chain id="2" name="A">
-			<residue id="1" name="XK2"/>
-		</chain>
-	</chains>
-	<atoms nrAtoms="64" nrProperAtoms="64" nrVirtualAtoms="0">
-		<atom id="1" pdbAtomId="631" pdbAtomName="N" pdbBondCount="3" pdbChainId="A" pdbChainId2="1" pdbElement="N" pdbResidueId="1" pdbResidueName="CSO" seqValency="3" virtual="False" x="-5.503" y="34.809" z="36.078"/>
-		<atom id="2" pdbAtomId="632" pdbAtomName="CA" pdbBondCount="3" pdbChainId="A" pdbChainId2="1" pdbElement="C" pdbResidueId="1" pdbResidueName="CSO" seqValency="3" virtual="False" x="-5.606" y="36.288" z="35.944"/>
-		<atom id="3" pdbAtomId="633" pdbAtomName="CB" pdbBondCount="2" pdbChainId="A" pdbChainId2="1" pdbElement="C" pdbResidueId="1" pdbResidueName="CSO" seqValency="2" virtual="False" x="-6.855" y="36.771" z="35.127"/>
-		<atom id="4" pdbAtomId="634" pdbAtomName="SG" pdbBondCount="2" pdbChainId="A" pdbChainId2="1" pdbElement="S" pdbResidueId="1" pdbResidueName="CSO" seqValency="2" virtual="False" x="-6.954" y="36.583" z="33.304"/>
-		<atom id="5" pdbAtomId="635" pdbAtomName="C" pdbBondCount="3" pdbChainId="A" pdbChainId2="1" pdbElement="C" pdbResidueId="1" pdbResidueName="CSO" seqValency="3" virtual="False" x="-5.591" y="36.967" z="37.350"/>
-		<atom id="6" pdbAtomId="636" pdbAtomName="O" pdbBondCount="1" pdbChainId="A" pdbChainId2="1" pdbElement="O" pdbResidueId="1" pdbResidueName="CSO" seqValency="1" virtual="False" x="-5.087" y="36.408" z="38.311"/>
-		<atom id="7" pdbAtomId="637" pdbAtomName="OD" pdbBondCount="2" pdbChainId="A" pdbChainId2="1" pdbElement="O" pdbResidueId="1" pdbResidueName="CSO" seqValency="2" virtual="False" x="-6.606" y="38.059" z="32.857"/>
-		<atom id="8" pdbAtomId="638" pdbAtomName="H" pdbBondCount="1" pdbChainId="A" pdbChainId2="1" pdbElement="H" pdbResidueId="1" pdbResidueName="CSO" seqValency="1" virtual="False" x="-4.674" y="34.344" z="35.760"/>
-		<atom id="9" pdbAtomId="639" pdbAtomName="HD" pdbBondCount="1" pdbChainId="A" pdbChainId2="1" pdbElement="H" pdbResidueId="1" pdbResidueName="CSO" seqValency="1" virtual="False" x="-7.407" y="38.609" z="32.791"/>
-		<atom id="10" pdbAtomId="1554" pdbAtomName="N" pdbBondCount="3" pdbChainId="B" pdbChainId2="1" pdbElement="N" pdbResidueId="1" pdbResidueName="CSO" seqValency="3" virtual="False" x="-27.195" y="21.982" z="19.836"/>
-		<atom id="11" pdbAtomId="1555" pdbAtomName="CA" pdbBondCount="3" pdbChainId="B" pdbChainId2="1" pdbElement="C" pdbResidueId="1" pdbResidueName="CSO" seqValency="3" virtual="False" x="-28.271" y="22.803" z="20.401"/>
-		<atom id="12" pdbAtomId="1556" pdbAtomName="CB" pdbBondCount="2" pdbChainId="B" pdbChainId2="1" pdbElement="C" pdbResidueId="1" pdbResidueName="CSO" seqValency="2" virtual="False" x="-27.736" y="23.706" z="21.580"/>
-		<atom id="13" pdbAtomId="1557" pdbAtomName="SG" pdbBondCount="2" pdbChainId="B" pdbChainId2="1" pdbElement="S" pdbResidueId="1" pdbResidueName="CSO" seqValency="2" virtual="False" x="-28.959" y="24.335" z="22.824"/>
-		<atom id="14" pdbAtomId="1558" pdbAtomName="C" pdbBondCount="3" pdbChainId="B" pdbChainId2="1" pdbElement="C" pdbResidueId="1" pdbResidueName="CSO" seqValency="3" virtual="False" x="-29.035" y="23.593" z="19.318"/>
-		<atom id="15" pdbAtomId="1559" pdbAtomName="O" pdbBondCount="1" pdbChainId="B" pdbChainId2="1" pdbElement="O" pdbResidueId="1" pdbResidueName="CSO" seqValency="1" virtual="False" x="-29.314" y="24.775" z="19.410"/>
-		<atom id="16" pdbAtomId="1560" pdbAtomName="OD" pdbBondCount="2" pdbChainId="B" pdbChainId2="1" pdbElement="O" pdbResidueId="1" pdbResidueName="CSO" seqValency="2" virtual="False" x="-28.527" y="23.445" z="24.058"/>
-		<atom id="17" pdbAtomId="1561" pdbAtomName="H" pdbBondCount="1" pdbChainId="B" pdbChainId2="1" pdbElement="H" pdbResidueId="1" pdbResidueName="CSO" seqValency="1" virtual="False" x="-27.163" y="21.000" z="20.039"/>
-		<atom id="18" pdbAtomId="1562" pdbAtomName="HD" pdbBondCount="1" pdbChainId="B" pdbChainId2="1" pdbElement="H" pdbResidueId="1" pdbResidueName="CSO" seqValency="1" virtual="False" x="-27.859" y="23.903" z="24.590"/>
-		<atom id="19" pdbAtomId="1847" pdbAtomName="C1" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-8.611" y="15.060" z="27.954"/>
-		<atom id="20" pdbAtomId="1848" pdbAtomName="O1" pdbBondCount="1" pdbChainId="A" pdbChainId2="2" pdbElement="O" pdbResidueId="1" pdbResidueName="XK2" seqValency="1" virtual="False" x="-7.939" y="14.039" z="27.941"/>
-		<atom id="21" pdbAtomId="1849" pdbAtomName="N2" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="N" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-8.461" y="15.923" z="26.905"/>
-		<atom id="22" pdbAtomId="1850" pdbAtomName="C2" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-7.854" y="15.351" z="25.696"/>
-		<atom id="23" pdbAtomId="1851" pdbAtomName="C3" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-8.627" y="17.388" z="27.011"/>
-		<atom id="24" pdbAtomId="1852" pdbAtomName="C4" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-10.029" y="17.910" z="27.298"/>
-		<atom id="25" pdbAtomId="1853" pdbAtomName="O4" pdbBondCount="1" pdbChainId="A" pdbChainId2="2" pdbElement="O" pdbResidueId="1" pdbResidueName="XK2" seqValency="1" virtual="False" x="-9.929" y="19.274" z="26.998"/>
-		<atom id="26" pdbAtomId="1854" pdbAtomName="C5" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-10.461" y="17.645" z="28.733"/>
-		<atom id="27" pdbAtomId="1855" pdbAtomName="O5" pdbBondCount="1" pdbChainId="A" pdbChainId2="2" pdbElement="O" pdbResidueId="1" pdbResidueName="XK2" seqValency="1" virtual="False" x="-11.692" y="18.254" z="29.020"/>
-		<atom id="28" pdbAtomId="1856" pdbAtomName="C6" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-10.657" y="16.152" z="28.964"/>
-		<atom id="29" pdbAtomId="1857" pdbAtomName="N7" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="N" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-9.461" y="15.294" z="29.004"/>
-		<atom id="30" pdbAtomId="1858" pdbAtomName="C7" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-9.271" y="14.491" z="30.215"/>
-		<atom id="31" pdbAtomId="1859" pdbAtomName="C20" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-8.381" y="15.730" z="24.336"/>
-		<atom id="32" pdbAtomId="1860" pdbAtomName="C21" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-9.769" y="15.712" z="24.022"/>
-		<atom id="33" pdbAtomId="1861" pdbAtomName="C22" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-10.195" y="15.919" z="22.694"/>
-		<atom id="34" pdbAtomId="1862" pdbAtomName="C23" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-9.219" y="16.152" z="21.693"/>
-		<atom id="35" pdbAtomId="1863" pdbAtomName="C24" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-9.608" y="16.304" z="20.349"/>
-		<atom id="36" pdbAtomId="1864" pdbAtomName="C25" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-8.626" y="16.508" z="19.349"/>
-		<atom id="37" pdbAtomId="1865" pdbAtomName="C26" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-7.263" y="16.562" z="19.662"/>
-		<atom id="38" pdbAtomId="1866" pdbAtomName="C27" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-6.860" y="16.403" z="21.006"/>
-		<atom id="39" pdbAtomId="1867" pdbAtomName="C28" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-7.828" y="16.192" z="22.022"/>
-		<atom id="40" pdbAtomId="1868" pdbAtomName="C29" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-7.408" y="15.983" z="23.346"/>
-		<atom id="41" pdbAtomId="1869" pdbAtomName="C31" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-7.476" y="17.972" z="27.894"/>
-		<atom id="42" pdbAtomId="1870" pdbAtomName="C32" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-6.124" y="17.890" z="27.193"/>
-		<atom id="43" pdbAtomId="1871" pdbAtomName="C33" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-5.226" y="16.826" z="27.494"/>
-		<atom id="44" pdbAtomId="1872" pdbAtomName="C34" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-4.029" y="16.667" z="26.750"/>
-		<atom id="45" pdbAtomId="1873" pdbAtomName="C35" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-3.730" y="17.585" z="25.723"/>
-		<atom id="46" pdbAtomId="1874" pdbAtomName="C36" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-4.607" y="18.660" z="25.432"/>
-		<atom id="47" pdbAtomId="1875" pdbAtomName="C37" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-5.803" y="18.811" z="26.163"/>
-		<atom id="48" pdbAtomId="1876" pdbAtomName="C61" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-11.712" y="15.451" z="28.079"/>
-		<atom id="49" pdbAtomId="1877" pdbAtomName="C62" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-12.310" y="14.248" z="28.779"/>
-		<atom id="50" pdbAtomId="1878" pdbAtomName="C63" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-13.167" y="14.422" z="29.898"/>
-		<atom id="51" pdbAtomId="1879" pdbAtomName="C64" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-13.700" y="13.281" z="30.542"/>
-		<atom id="52" pdbAtomId="1880" pdbAtomName="C65" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-13.374" y="11.982" z="30.058"/>
-		<atom id="53" pdbAtomId="1881" pdbAtomName="C66" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-12.529" y="11.814" z="28.944"/>
-		<atom id="54" pdbAtomId="1882" pdbAtomName="C67" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-11.992" y="12.954" z="28.304"/>
-		<atom id="55" pdbAtomId="1883" pdbAtomName="C70" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-9.374" y="15.148" z="31.571"/>
-		<atom id="56" pdbAtomId="1884" pdbAtomName="C71" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-10.228" y="14.492" z="32.477"/>
-		<atom id="57" pdbAtomId="1885" pdbAtomName="C72" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-10.272" y="14.926" z="33.800"/>
-		<atom id="58" pdbAtomId="1886" pdbAtomName="C73" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-11.156" y="14.282" z="34.709"/>
-		<atom id="59" pdbAtomId="1887" pdbAtomName="C74" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-11.245" y="14.748" z="36.044"/>
-		<atom id="60" pdbAtomId="1888" pdbAtomName="C75" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-10.435" y="15.837" z="36.451"/>
-		<atom id="61" pdbAtomId="1889" pdbAtomName="C76" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-9.540" y="16.475" z="35.553"/>
-		<atom id="62" pdbAtomId="1890" pdbAtomName="C77" pdbBondCount="3" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="3" virtual="False" x="-9.455" y="16.028" z="34.212"/>
-		<atom id="63" pdbAtomId="1891" pdbAtomName="C78" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-8.605" y="16.691" z="33.288"/>
-		<atom id="64" pdbAtomId="1892" pdbAtomName="C79" pdbBondCount="2" pdbChainId="A" pdbChainId2="2" pdbElement="C" pdbResidueId="1" pdbResidueName="XK2" seqValency="2" virtual="False" x="-8.574" y="16.252" z="31.962"/>
+<bnd file="1hvr" id="CSOXK2">
+	<atoms nrAtoms="68">
+		<atom atomId="624" atomNo="1" sym="C" x="-6.300" y="34.230" z="36.974"/>
+		<atom atomId="631" atomNo="2" sym="N" x="-5.503" y="34.809" z="36.078"/>
+		<atom atomId="632" atomNo="3" sym="C" x="-5.606" y="36.288" z="35.944"/>
+		<atom atomId="638" atomNo="4" sym="H" x="-4.674" y="34.344" z="35.760"/>
+		<atom atomId="633" atomNo="5" sym="C" x="-6.855" y="36.771" z="35.127"/>
+		<atom atomId="635" atomNo="6" sym="C" x="-5.591" y="36.967" z="37.350"/>
+		<atom atomId="634" atomNo="7" sym="S" x="-6.954" y="36.583" z="33.304"/>
+		<atom atomId="637" atomNo="8" sym="O" x="-6.606" y="38.059" z="32.857"/>
+		<atom atomId="636" atomNo="9" sym="O" x="-5.087" y="36.408" z="38.311"/>
+		<atom atomId="640" atomNo="10" sym="N" x="-6.185" y="38.152" z="37.510"/>
+		<atom atomId="639" atomNo="11" sym="H" x="-7.407" y="38.609" z="32.791"/>
+		<atom atomId="1547" atomNo="12" sym="C" x="-26.368" y="22.519" z="18.984"/>
+		<atom atomId="1554" atomNo="13" sym="N" x="-27.195" y="21.982" z="19.836"/>
+		<atom atomId="1555" atomNo="14" sym="C" x="-28.271" y="22.803" z="20.401"/>
+		<atom atomId="1561" atomNo="15" sym="H" x="-27.163" y="21.000" z="20.039"/>
+		<atom atomId="1556" atomNo="16" sym="C" x="-27.736" y="23.706" z="21.580"/>
+		<atom atomId="1558" atomNo="17" sym="C" x="-29.035" y="23.593" z="19.318"/>
+		<atom atomId="1557" atomNo="18" sym="S" x="-28.959" y="24.335" z="22.824"/>
+		<atom atomId="1560" atomNo="19" sym="O" x="-28.527" y="23.445" z="24.058"/>
+		<atom atomId="1559" atomNo="20" sym="O" x="-29.314" y="24.775" z="19.410"/>
+		<atom atomId="1563" atomNo="21" sym="N" x="-29.381" y="22.882" z="18.245"/>
+		<atom atomId="1562" atomNo="22" sym="H" x="-27.859" y="23.903" z="24.590"/>
+		<atom atomId="1847" atomNo="23" sym="C" x="-8.611" y="15.060" z="27.954"/>
+		<atom atomId="1848" atomNo="24" sym="O" x="-7.939" y="14.039" z="27.941"/>
+		<atom atomId="1849" atomNo="25" sym="N" x="-8.461" y="15.923" z="26.905"/>
+		<atom atomId="1857" atomNo="26" sym="N" x="-9.461" y="15.294" z="29.004"/>
+		<atom atomId="1850" atomNo="27" sym="C" x="-7.854" y="15.351" z="25.696"/>
+		<atom atomId="1851" atomNo="28" sym="C" x="-8.627" y="17.388" z="27.011"/>
+		<atom atomId="1859" atomNo="29" sym="C" x="-8.381" y="15.730" z="24.336"/>
+		<atom atomId="1852" atomNo="30" sym="C" x="-10.029" y="17.910" z="27.298"/>
+		<atom atomId="1869" atomNo="31" sym="C" x="-7.476" y="17.972" z="27.894"/>
+		<atom atomId="1853" atomNo="32" sym="O" x="-9.929" y="19.274" z="26.998"/>
+		<atom atomId="1854" atomNo="33" sym="C" x="-10.461" y="17.645" z="28.733"/>
+		<atom atomId="1855" atomNo="34" sym="O" x="-11.692" y="18.254" z="29.020"/>
+		<atom atomId="1856" atomNo="35" sym="C" x="-10.657" y="16.152" z="28.964"/>
+		<atom atomId="1876" atomNo="36" sym="C" x="-11.712" y="15.451" z="28.079"/>
+		<atom atomId="1858" atomNo="37" sym="C" x="-9.271" y="14.491" z="30.215"/>
+		<atom atomId="1883" atomNo="38" sym="C" x="-9.374" y="15.148" z="31.571"/>
+		<atom atomId="1860" atomNo="39" sym="C" x="-9.769" y="15.712" z="24.022"/>
+		<atom atomId="1868" atomNo="40" sym="C" x="-7.408" y="15.983" z="23.346"/>
+		<atom atomId="1861" atomNo="41" sym="C" x="-10.195" y="15.919" z="22.694"/>
+		<atom atomId="1862" atomNo="42" sym="C" x="-9.219" y="16.152" z="21.693"/>
+		<atom atomId="1863" atomNo="43" sym="C" x="-9.608" y="16.304" z="20.349"/>
+		<atom atomId="1867" atomNo="44" sym="C" x="-7.828" y="16.192" z="22.022"/>
+		<atom atomId="1864" atomNo="45" sym="C" x="-8.626" y="16.508" z="19.349"/>
+		<atom atomId="1865" atomNo="46" sym="C" x="-7.263" y="16.562" z="19.662"/>
+		<atom atomId="1866" atomNo="47" sym="C" x="-6.860" y="16.403" z="21.006"/>
+		<atom atomId="1870" atomNo="48" sym="C" x="-6.124" y="17.890" z="27.193"/>
+		<atom atomId="1871" atomNo="49" sym="C" x="-5.226" y="16.826" z="27.494"/>
+		<atom atomId="1875" atomNo="50" sym="C" x="-5.803" y="18.811" z="26.163"/>
+		<atom atomId="1872" atomNo="51" sym="C" x="-4.029" y="16.667" z="26.750"/>
+		<atom atomId="1873" atomNo="52" sym="C" x="-3.730" y="17.585" z="25.723"/>
+		<atom atomId="1874" atomNo="53" sym="C" x="-4.607" y="18.660" z="25.432"/>
+		<atom atomId="1877" atomNo="54" sym="C" x="-12.310" y="14.248" z="28.779"/>
+		<atom atomId="1878" atomNo="55" sym="C" x="-13.167" y="14.422" z="29.898"/>
+		<atom atomId="1882" atomNo="56" sym="C" x="-11.992" y="12.954" z="28.304"/>
+		<atom atomId="1879" atomNo="57" sym="C" x="-13.700" y="13.281" z="30.542"/>
+		<atom atomId="1880" atomNo="58" sym="C" x="-13.374" y="11.982" z="30.058"/>
+		<atom atomId="1881" atomNo="59" sym="C" x="-12.529" y="11.814" z="28.944"/>
+		<atom atomId="1884" atomNo="60" sym="C" x="-10.228" y="14.492" z="32.477"/>
+		<atom atomId="1892" atomNo="61" sym="C" x="-8.574" y="16.252" z="31.962"/>
+		<atom atomId="1885" atomNo="62" sym="C" x="-10.272" y="14.926" z="33.800"/>
+		<atom atomId="1886" atomNo="63" sym="C" x="-11.156" y="14.282" z="34.709"/>
+		<atom atomId="1890" atomNo="64" sym="C" x="-9.455" y="16.028" z="34.212"/>
+		<atom atomId="1887" atomNo="65" sym="C" x="-11.245" y="14.748" z="36.044"/>
+		<atom atomId="1888" atomNo="66" sym="C" x="-10.435" y="15.837" z="36.451"/>
+		<atom atomId="1889" atomNo="67" sym="C" x="-9.540" y="16.475" z="35.553"/>
+		<atom atomId="1891" atomNo="68" sym="C" x="-8.605" y="16.691" z="33.288"/>
 	</atoms>
-	<bonds nrBonds="68" nrProperBonds="68" nrVirtualBonds="0">
-		<bond atomNo1="1" atomNo2="2" chainId="1" id="1" virtual="False"/>
-		<bond atomNo1="1" atomNo2="8" chainId="1" id="2" virtual="False"/>
-		<bond atomNo1="2" atomNo2="3" chainId="1" id="3" virtual="False"/>
-		<bond atomNo1="2" atomNo2="5" chainId="1" id="4" virtual="False"/>
-		<bond atomNo1="3" atomNo2="4" chainId="1" id="5" virtual="False"/>
-		<bond atomNo1="4" atomNo2="7" chainId="1" id="6" virtual="False"/>
-		<bond atomNo1="5" atomNo2="6" chainId="1" id="7" virtual="False"/>
-		<bond atomNo1="7" atomNo2="9" chainId="1" id="8" virtual="False"/>
-		<bond atomNo1="10" atomNo2="11" chainId="1" id="9" virtual="False"/>
-		<bond atomNo1="10" atomNo2="17" chainId="1" id="10" virtual="False"/>
-		<bond atomNo1="11" atomNo2="12" chainId="1" id="11" virtual="False"/>
-		<bond atomNo1="11" atomNo2="14" chainId="1" id="12" virtual="False"/>
-		<bond atomNo1="12" atomNo2="13" chainId="1" id="13" virtual="False"/>
-		<bond atomNo1="13" atomNo2="16" chainId="1" id="14" virtual="False"/>
-		<bond atomNo1="14" atomNo2="15" chainId="1" id="15" virtual="False"/>
-		<bond atomNo1="16" atomNo2="18" chainId="1" id="16" virtual="False"/>
-		<bond atomNo1="19" atomNo2="20" chainId="2" id="1" virtual="False"/>
-		<bond atomNo1="19" atomNo2="21" chainId="2" id="2" virtual="False"/>
-		<bond atomNo1="19" atomNo2="29" chainId="2" id="3" virtual="False"/>
-		<bond atomNo1="21" atomNo2="22" chainId="2" id="4" virtual="False"/>
-		<bond atomNo1="21" atomNo2="23" chainId="2" id="5" virtual="False"/>
-		<bond atomNo1="22" atomNo2="31" chainId="2" id="6" virtual="False"/>
-		<bond atomNo1="23" atomNo2="24" chainId="2" id="7" virtual="False"/>
-		<bond atomNo1="23" atomNo2="41" chainId="2" id="8" virtual="False"/>
-		<bond atomNo1="24" atomNo2="25" chainId="2" id="9" virtual="False"/>
-		<bond atomNo1="24" atomNo2="26" chainId="2" id="10" virtual="False"/>
-		<bond atomNo1="26" atomNo2="27" chainId="2" id="11" virtual="False"/>
-		<bond atomNo1="26" atomNo2="28" chainId="2" id="12" virtual="False"/>
-		<bond atomNo1="28" atomNo2="29" chainId="2" id="13" virtual="False"/>
-		<bond atomNo1="28" atomNo2="48" chainId="2" id="14" virtual="False"/>
-		<bond atomNo1="29" atomNo2="30" chainId="2" id="15" virtual="False"/>
-		<bond atomNo1="30" atomNo2="55" chainId="2" id="16" virtual="False"/>
-		<bond atomNo1="31" atomNo2="32" chainId="2" id="17" virtual="False"/>
-		<bond atomNo1="31" atomNo2="40" chainId="2" id="18" virtual="False"/>
-		<bond atomNo1="32" atomNo2="33" chainId="2" id="19" virtual="False"/>
-		<bond atomNo1="33" atomNo2="34" chainId="2" id="20" virtual="False"/>
-		<bond atomNo1="34" atomNo2="35" chainId="2" id="21" virtual="False"/>
-		<bond atomNo1="34" atomNo2="39" chainId="2" id="22" virtual="False"/>
-		<bond atomNo1="35" atomNo2="36" chainId="2" id="23" virtual="False"/>
-		<bond atomNo1="36" atomNo2="37" chainId="2" id="24" virtual="False"/>
-		<bond atomNo1="37" atomNo2="38" chainId="2" id="25" virtual="False"/>
-		<bond atomNo1="38" atomNo2="39" chainId="2" id="26" virtual="False"/>
-		<bond atomNo1="39" atomNo2="40" chainId="2" id="27" virtual="False"/>
-		<bond atomNo1="41" atomNo2="42" chainId="2" id="28" virtual="False"/>
-		<bond atomNo1="42" atomNo2="43" chainId="2" id="29" virtual="False"/>
-		<bond atomNo1="42" atomNo2="47" chainId="2" id="30" virtual="False"/>
-		<bond atomNo1="43" atomNo2="44" chainId="2" id="31" virtual="False"/>
-		<bond atomNo1="44" atomNo2="45" chainId="2" id="32" virtual="False"/>
-		<bond atomNo1="45" atomNo2="46" chainId="2" id="33" virtual="False"/>
-		<bond atomNo1="46" atomNo2="47" chainId="2" id="34" virtual="False"/>
-		<bond atomNo1="48" atomNo2="49" chainId="2" id="35" virtual="False"/>
-		<bond atomNo1="49" atomNo2="50" chainId="2" id="36" virtual="False"/>
-		<bond atomNo1="49" atomNo2="54" chainId="2" id="37" virtual="False"/>
-		<bond atomNo1="50" atomNo2="51" chainId="2" id="38" virtual="False"/>
-		<bond atomNo1="51" atomNo2="52" chainId="2" id="39" virtual="False"/>
-		<bond atomNo1="52" atomNo2="53" chainId="2" id="40" virtual="False"/>
-		<bond atomNo1="53" atomNo2="54" chainId="2" id="41" virtual="False"/>
-		<bond atomNo1="55" atomNo2="56" chainId="2" id="42" virtual="False"/>
-		<bond atomNo1="55" atomNo2="64" chainId="2" id="43" virtual="False"/>
-		<bond atomNo1="56" atomNo2="57" chainId="2" id="44" virtual="False"/>
-		<bond atomNo1="57" atomNo2="58" chainId="2" id="45" virtual="False"/>
-		<bond atomNo1="57" atomNo2="62" chainId="2" id="46" virtual="False"/>
-		<bond atomNo1="58" atomNo2="59" chainId="2" id="47" virtual="False"/>
-		<bond atomNo1="59" atomNo2="60" chainId="2" id="48" virtual="False"/>
-		<bond atomNo1="60" atomNo2="61" chainId="2" id="49" virtual="False"/>
-		<bond atomNo1="61" atomNo2="62" chainId="2" id="50" virtual="False"/>
-		<bond atomNo1="62" atomNo2="63" chainId="2" id="51" virtual="False"/>
-		<bond atomNo1="63" atomNo2="64" chainId="2" id="52" virtual="False"/>
+	<bonds nrBonds="72">
+		<bond atomId1="1" atomId2="2" bondType="COV" id="1" pdbAtomId1="624" pdbAtomId2="631"/>
+		<bond atomId1="2" atomId2="3" bondType="COV" id="2" pdbAtomId1="631" pdbAtomId2="632"/>
+		<bond atomId1="2" atomId2="4" bondType="COV" id="3" pdbAtomId1="631" pdbAtomId2="638"/>
+		<bond atomId1="3" atomId2="5" bondType="COV" id="4" pdbAtomId1="632" pdbAtomId2="633"/>
+		<bond atomId1="3" atomId2="6" bondType="COV" id="5" pdbAtomId1="632" pdbAtomId2="635"/>
+		<bond atomId1="5" atomId2="7" bondType="COV" id="6" pdbAtomId1="633" pdbAtomId2="634"/>
+		<bond atomId1="7" atomId2="8" bondType="COV" id="7" pdbAtomId1="634" pdbAtomId2="637"/>
+		<bond atomId1="6" atomId2="9" bondType="COV" id="8" pdbAtomId1="635" pdbAtomId2="636"/>
+		<bond atomId1="6" atomId2="10" bondType="COV" id="9" pdbAtomId1="635" pdbAtomId2="640"/>
+		<bond atomId1="8" atomId2="11" bondType="COV" id="10" pdbAtomId1="637" pdbAtomId2="639"/>
+		<bond atomId1="12" atomId2="13" bondType="COV" id="11" pdbAtomId1="1547" pdbAtomId2="1554"/>
+		<bond atomId1="13" atomId2="14" bondType="COV" id="12" pdbAtomId1="1554" pdbAtomId2="1555"/>
+		<bond atomId1="13" atomId2="15" bondType="COV" id="13" pdbAtomId1="1554" pdbAtomId2="1561"/>
+		<bond atomId1="14" atomId2="16" bondType="COV" id="14" pdbAtomId1="1555" pdbAtomId2="1556"/>
+		<bond atomId1="14" atomId2="17" bondType="COV" id="15" pdbAtomId1="1555" pdbAtomId2="1558"/>
+		<bond atomId1="16" atomId2="18" bondType="COV" id="16" pdbAtomId1="1556" pdbAtomId2="1557"/>
+		<bond atomId1="18" atomId2="19" bondType="COV" id="17" pdbAtomId1="1557" pdbAtomId2="1560"/>
+		<bond atomId1="17" atomId2="20" bondType="COV" id="18" pdbAtomId1="1558" pdbAtomId2="1559"/>
+		<bond atomId1="17" atomId2="21" bondType="COV" id="19" pdbAtomId1="1558" pdbAtomId2="1563"/>
+		<bond atomId1="19" atomId2="22" bondType="COV" id="20" pdbAtomId1="1560" pdbAtomId2="1562"/>
+		<bond atomId1="23" atomId2="24" bondType="COV" id="21" pdbAtomId1="1847" pdbAtomId2="1848"/>
+		<bond atomId1="23" atomId2="25" bondType="COV" id="22" pdbAtomId1="1847" pdbAtomId2="1849"/>
+		<bond atomId1="23" atomId2="26" bondType="COV" id="23" pdbAtomId1="1847" pdbAtomId2="1857"/>
+		<bond atomId1="25" atomId2="27" bondType="COV" id="24" pdbAtomId1="1849" pdbAtomId2="1850"/>
+		<bond atomId1="25" atomId2="28" bondType="COV" id="25" pdbAtomId1="1849" pdbAtomId2="1851"/>
+		<bond atomId1="27" atomId2="29" bondType="COV" id="26" pdbAtomId1="1850" pdbAtomId2="1859"/>
+		<bond atomId1="28" atomId2="30" bondType="COV" id="27" pdbAtomId1="1851" pdbAtomId2="1852"/>
+		<bond atomId1="28" atomId2="31" bondType="COV" id="28" pdbAtomId1="1851" pdbAtomId2="1869"/>
+		<bond atomId1="30" atomId2="32" bondType="COV" id="29" pdbAtomId1="1852" pdbAtomId2="1853"/>
+		<bond atomId1="30" atomId2="33" bondType="COV" id="30" pdbAtomId1="1852" pdbAtomId2="1854"/>
+		<bond atomId1="33" atomId2="34" bondType="COV" id="31" pdbAtomId1="1854" pdbAtomId2="1855"/>
+		<bond atomId1="33" atomId2="35" bondType="COV" id="32" pdbAtomId1="1854" pdbAtomId2="1856"/>
+		<bond atomId1="35" atomId2="26" bondType="COV" id="33" pdbAtomId1="1856" pdbAtomId2="1857"/>
+		<bond atomId1="35" atomId2="36" bondType="COV" id="34" pdbAtomId1="1856" pdbAtomId2="1876"/>
+		<bond atomId1="26" atomId2="37" bondType="COV" id="35" pdbAtomId1="1857" pdbAtomId2="1858"/>
+		<bond atomId1="37" atomId2="38" bondType="COV" id="36" pdbAtomId1="1858" pdbAtomId2="1883"/>
+		<bond atomId1="29" atomId2="39" bondType="COV" id="37" pdbAtomId1="1859" pdbAtomId2="1860"/>
+		<bond atomId1="29" atomId2="40" bondType="COV" id="38" pdbAtomId1="1859" pdbAtomId2="1868"/>
+		<bond atomId1="39" atomId2="41" bondType="COV" id="39" pdbAtomId1="1860" pdbAtomId2="1861"/>
+		<bond atomId1="41" atomId2="42" bondType="COV" id="40" pdbAtomId1="1861" pdbAtomId2="1862"/>
+		<bond atomId1="42" atomId2="43" bondType="COV" id="41" pdbAtomId1="1862" pdbAtomId2="1863"/>
+		<bond atomId1="42" atomId2="44" bondType="COV" id="42" pdbAtomId1="1862" pdbAtomId2="1867"/>
+		<bond atomId1="43" atomId2="45" bondType="COV" id="43" pdbAtomId1="1863" pdbAtomId2="1864"/>
+		<bond atomId1="45" atomId2="46" bondType="COV" id="44" pdbAtomId1="1864" pdbAtomId2="1865"/>
+		<bond atomId1="46" atomId2="47" bondType="COV" id="45" pdbAtomId1="1865" pdbAtomId2="1866"/>
+		<bond atomId1="47" atomId2="44" bondType="COV" id="46" pdbAtomId1="1866" pdbAtomId2="1867"/>
+		<bond atomId1="44" atomId2="40" bondType="COV" id="47" pdbAtomId1="1867" pdbAtomId2="1868"/>
+		<bond atomId1="31" atomId2="48" bondType="COV" id="48" pdbAtomId1="1869" pdbAtomId2="1870"/>
+		<bond atomId1="48" atomId2="49" bondType="COV" id="49" pdbAtomId1="1870" pdbAtomId2="1871"/>
+		<bond atomId1="48" atomId2="50" bondType="COV" id="50" pdbAtomId1="1870" pdbAtomId2="1875"/>
+		<bond atomId1="49" atomId2="51" bondType="COV" id="51" pdbAtomId1="1871" pdbAtomId2="1872"/>
+		<bond atomId1="51" atomId2="52" bondType="COV" id="52" pdbAtomId1="1872" pdbAtomId2="1873"/>
+		<bond atomId1="52" atomId2="53" bondType="COV" id="53" pdbAtomId1="1873" pdbAtomId2="1874"/>
+		<bond atomId1="53" atomId2="50" bondType="COV" id="54" pdbAtomId1="1874" pdbAtomId2="1875"/>
+		<bond atomId1="36" atomId2="54" bondType="COV" id="55" pdbAtomId1="1876" pdbAtomId2="1877"/>
+		<bond atomId1="54" atomId2="55" bondType="COV" id="56" pdbAtomId1="1877" pdbAtomId2="1878"/>
+		<bond atomId1="54" atomId2="56" bondType="COV" id="57" pdbAtomId1="1877" pdbAtomId2="1882"/>
+		<bond atomId1="55" atomId2="57" bondType="COV" id="58" pdbAtomId1="1878" pdbAtomId2="1879"/>
+		<bond atomId1="57" atomId2="58" bondType="COV" id="59" pdbAtomId1="1879" pdbAtomId2="1880"/>
+		<bond atomId1="58" atomId2="59" bondType="COV" id="60" pdbAtomId1="1880" pdbAtomId2="1881"/>
+		<bond atomId1="59" atomId2="56" bondType="COV" id="61" pdbAtomId1="1881" pdbAtomId2="1882"/>
+		<bond atomId1="38" atomId2="60" bondType="COV" id="62" pdbAtomId1="1883" pdbAtomId2="1884"/>
+		<bond atomId1="38" atomId2="61" bondType="COV" id="63" pdbAtomId1="1883" pdbAtomId2="1892"/>
+		<bond atomId1="60" atomId2="62" bondType="COV" id="64" pdbAtomId1="1884" pdbAtomId2="1885"/>
+		<bond atomId1="62" atomId2="63" bondType="COV" id="65" pdbAtomId1="1885" pdbAtomId2="1886"/>
+		<bond atomId1="62" atomId2="64" bondType="COV" id="66" pdbAtomId1="1885" pdbAtomId2="1890"/>
+		<bond atomId1="63" atomId2="65" bondType="COV" id="67" pdbAtomId1="1886" pdbAtomId2="1887"/>
+		<bond atomId1="65" atomId2="66" bondType="COV" id="68" pdbAtomId1="1887" pdbAtomId2="1888"/>
+		<bond atomId1="66" atomId2="67" bondType="COV" id="69" pdbAtomId1="1888" pdbAtomId2="1889"/>
+		<bond atomId1="67" atomId2="64" bondType="COV" id="70" pdbAtomId1="1889" pdbAtomId2="1890"/>
+		<bond atomId1="64" atomId2="68" bondType="COV" id="71" pdbAtomId1="1890" pdbAtomId2="1891"/>
+		<bond atomId1="68" atomId2="61" bondType="COV" id="72" pdbAtomId1="1891" pdbAtomId2="1892"/>
 	</bonds>
 </bnd>

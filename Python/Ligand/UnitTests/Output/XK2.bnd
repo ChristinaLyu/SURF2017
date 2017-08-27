@@ -1,0 +1,181 @@
+<?xml version="1.0" ?>
+<bnd>
+	<atoms nrAtoms="84">
+		<atom atomNo="1" sym="C" x="-8.611" y="15.060" z="27.954"/>
+		<atom atomNo="2" sym="O" x="-7.939" y="14.039" z="27.941"/>
+		<atom atomNo="3" sym="N" x="-8.461" y="15.923" z="26.905"/>
+		<atom atomNo="4" sym="C" x="-7.854" y="15.351" z="25.696"/>
+		<atom atomNo="5" sym="C" x="-8.627" y="17.388" z="27.011"/>
+		<atom atomNo="6" sym="C" x="-10.029" y="17.910" z="27.298"/>
+		<atom atomNo="7" sym="O" x="-9.929" y="19.274" z="26.998"/>
+		<atom atomNo="8" sym="C" x="-10.461" y="17.645" z="28.733"/>
+		<atom atomNo="9" sym="O" x="-11.692" y="18.254" z="29.020"/>
+		<atom atomNo="10" sym="C" x="-10.657" y="16.152" z="28.964"/>
+		<atom atomNo="11" sym="N" x="-9.461" y="15.294" z="29.004"/>
+		<atom atomNo="12" sym="C" x="-9.271" y="14.491" z="30.215"/>
+		<atom atomNo="13" sym="C" x="-8.381" y="15.730" z="24.336"/>
+		<atom atomNo="14" sym="C" x="-9.769" y="15.712" z="24.022"/>
+		<atom atomNo="15" sym="C" x="-10.195" y="15.919" z="22.694"/>
+		<atom atomNo="16" sym="C" x="-9.219" y="16.152" z="21.693"/>
+		<atom atomNo="17" sym="C" x="-9.608" y="16.304" z="20.349"/>
+		<atom atomNo="18" sym="C" x="-8.626" y="16.508" z="19.349"/>
+		<atom atomNo="19" sym="C" x="-7.263" y="16.562" z="19.662"/>
+		<atom atomNo="20" sym="C" x="-6.860" y="16.403" z="21.006"/>
+		<atom atomNo="21" sym="C" x="-7.828" y="16.192" z="22.022"/>
+		<atom atomNo="22" sym="C" x="-7.408" y="15.983" z="23.346"/>
+		<atom atomNo="23" sym="C" x="-7.476" y="17.972" z="27.894"/>
+		<atom atomNo="24" sym="C" x="-6.124" y="17.890" z="27.193"/>
+		<atom atomNo="25" sym="C" x="-5.226" y="16.826" z="27.494"/>
+		<atom atomNo="26" sym="C" x="-4.029" y="16.667" z="26.750"/>
+		<atom atomNo="27" sym="C" x="-3.730" y="17.585" z="25.723"/>
+		<atom atomNo="28" sym="C" x="-4.607" y="18.660" z="25.432"/>
+		<atom atomNo="29" sym="C" x="-5.803" y="18.811" z="26.163"/>
+		<atom atomNo="30" sym="C" x="-11.712" y="15.451" z="28.079"/>
+		<atom atomNo="31" sym="C" x="-12.310" y="14.248" z="28.779"/>
+		<atom atomNo="32" sym="C" x="-13.167" y="14.422" z="29.898"/>
+		<atom atomNo="33" sym="C" x="-13.700" y="13.281" z="30.542"/>
+		<atom atomNo="34" sym="C" x="-13.374" y="11.982" z="30.058"/>
+		<atom atomNo="35" sym="C" x="-12.529" y="11.814" z="28.944"/>
+		<atom atomNo="36" sym="C" x="-11.992" y="12.954" z="28.304"/>
+		<atom atomNo="37" sym="C" x="-9.374" y="15.148" z="31.571"/>
+		<atom atomNo="38" sym="C" x="-10.228" y="14.492" z="32.477"/>
+		<atom atomNo="39" sym="C" x="-10.272" y="14.926" z="33.800"/>
+		<atom atomNo="40" sym="C" x="-11.156" y="14.282" z="34.709"/>
+		<atom atomNo="41" sym="C" x="-11.245" y="14.748" z="36.044"/>
+		<atom atomNo="42" sym="C" x="-10.435" y="15.837" z="36.451"/>
+		<atom atomNo="43" sym="C" x="-9.540" y="16.475" z="35.553"/>
+		<atom atomNo="44" sym="C" x="-9.455" y="16.028" z="34.212"/>
+		<atom atomNo="45" sym="C" x="-8.605" y="16.691" z="33.288"/>
+		<atom atomNo="46" sym="C" x="-8.574" y="16.252" z="31.962"/>
+		<atom atomNo="47" sym="H" x="-6.758" y="15.558" z="25.719"/>
+		<atom atomNo="48" sym="H" x="-7.872" y="14.239" z="25.784"/>
+		<atom atomNo="49" sym="H" x="-8.518" y="17.803" z="25.982"/>
+		<atom atomNo="50" sym="H" x="-10.817" y="17.400" z="26.696"/>
+		<atom atomNo="51" sym="H" x="-10.803" y="19.599" z="27.177"/>
+		<atom atomNo="52" sym="H" x="-9.657" y="18.058" z="29.385"/>
+		<atom atomNo="53" sym="H" x="-11.961" y="18.088" z="29.915"/>
+		<atom atomNo="54" sym="H" x="-11.043" y="16.236" z="30.006"/>
+		<atom atomNo="55" sym="H" x="-9.977" y="13.629" z="30.183"/>
+		<atom atomNo="56" sym="H" x="-8.286" y="13.972" z="30.145"/>
+		<atom atomNo="57" sym="H" x="-10.518" y="15.536" z="24.812"/>
+		<atom atomNo="58" sym="H" x="-11.269" y="15.899" z="22.443"/>
+		<atom atomNo="59" sym="H" x="-10.677" y="16.263" z="20.080"/>
+		<atom atomNo="60" sym="H" x="-8.931" y="16.628" z="18.296"/>
+		<atom atomNo="61" sym="H" x="-6.519" y="16.726" z="18.863"/>
+		<atom atomNo="62" sym="H" x="-5.788" y="16.443" z="21.262"/>
+		<atom atomNo="63" sym="H" x="-6.335" y="16.016" z="23.603"/>
+		<atom atomNo="64" sym="H" x="-7.702" y="19.014" z="28.217"/>
+		<atom atomNo="65" sym="H" x="-7.444" y="17.481" z="28.894"/>
+		<atom atomNo="66" sym="H" x="-5.459" y="16.120" z="28.308"/>
+		<atom atomNo="67" sym="H" x="-3.336" y="15.836" z="26.968"/>
+		<atom atomNo="68" sym="H" x="-2.800" y="17.461" z="25.141"/>
+		<atom atomNo="69" sym="H" x="-4.358" y="19.380" z="24.634"/>
+		<atom atomNo="70" sym="H" x="-6.484" y="19.646" z="25.930"/>
+		<atom atomNo="71" sym="H" x="-12.501" y="16.162" z="27.743"/>
+		<atom atomNo="72" sym="H" x="-11.292" y="15.177" z="27.082"/>
+		<atom atomNo="73" sym="H" x="-13.416" y="15.432" z="30.263"/>
+		<atom atomNo="74" sym="H" x="-14.364" y="13.403" z="31.414"/>
+		<atom atomNo="75" sym="H" x="-13.784" y="11.087" z="30.556"/>
+		<atom atomNo="76" sym="H" x="-12.290" y="10.801" z="28.577"/>
+		<atom atomNo="77" sym="H" x="-11.324" y="12.833" z="27.433"/>
+		<atom atomNo="78" sym="H" x="-10.856" y="13.645" z="32.153"/>
+		<atom atomNo="79" sym="H" x="-11.769" y="13.426" z="34.380"/>
+		<atom atomNo="80" sym="H" x="-11.936" y="14.268" z="36.757"/>
+		<atom atomNo="81" sym="H" x="-10.502" y="16.196" z="37.491"/>
+		<atom atomNo="82" sym="H" x="-8.912" y="17.315" z="35.896"/>
+		<atom atomNo="83" sym="H" x="-7.973" y="17.540" z="33.597"/>
+		<atom atomNo="84" sym="H" x="-7.927" y="16.769" z="31.234"/>
+	</atoms>
+	<bonds nrBonds="90">
+		<bond atomNo1="1" atomNo2="2" id="1" type="DOUB"/>
+		<bond atomNo1="1" atomNo2="3" id="2" type="SING"/>
+		<bond atomNo1="1" atomNo2="11" id="3" type="SING"/>
+		<bond atomNo1="3" atomNo2="4" id="4" type="SING"/>
+		<bond atomNo1="3" atomNo2="5" id="5" type="SING"/>
+		<bond atomNo1="4" atomNo2="13" id="6" type="SING"/>
+		<bond atomNo1="4" atomNo2="47" id="7" type="SING"/>
+		<bond atomNo1="4" atomNo2="48" id="8" type="SING"/>
+		<bond atomNo1="5" atomNo2="6" id="9" type="SING"/>
+		<bond atomNo1="5" atomNo2="23" id="10" type="SING"/>
+		<bond atomNo1="5" atomNo2="49" id="11" type="SING"/>
+		<bond atomNo1="6" atomNo2="7" id="12" type="SING"/>
+		<bond atomNo1="6" atomNo2="8" id="13" type="SING"/>
+		<bond atomNo1="6" atomNo2="50" id="14" type="SING"/>
+		<bond atomNo1="7" atomNo2="51" id="15" type="SING"/>
+		<bond atomNo1="8" atomNo2="9" id="16" type="SING"/>
+		<bond atomNo1="8" atomNo2="10" id="17" type="SING"/>
+		<bond atomNo1="8" atomNo2="52" id="18" type="SING"/>
+		<bond atomNo1="9" atomNo2="53" id="19" type="SING"/>
+		<bond atomNo1="10" atomNo2="11" id="20" type="SING"/>
+		<bond atomNo1="10" atomNo2="30" id="21" type="SING"/>
+		<bond atomNo1="10" atomNo2="54" id="22" type="SING"/>
+		<bond atomNo1="11" atomNo2="12" id="23" type="SING"/>
+		<bond atomNo1="12" atomNo2="37" id="24" type="SING"/>
+		<bond atomNo1="12" atomNo2="55" id="25" type="SING"/>
+		<bond atomNo1="12" atomNo2="56" id="26" type="SING"/>
+		<bond atomNo1="13" atomNo2="14" id="27" type="DOUB"/>
+		<bond atomNo1="13" atomNo2="22" id="28" type="SING"/>
+		<bond atomNo1="14" atomNo2="15" id="29" type="SING"/>
+		<bond atomNo1="14" atomNo2="57" id="30" type="SING"/>
+		<bond atomNo1="15" atomNo2="16" id="31" type="DOUB"/>
+		<bond atomNo1="15" atomNo2="58" id="32" type="SING"/>
+		<bond atomNo1="16" atomNo2="17" id="33" type="SING"/>
+		<bond atomNo1="16" atomNo2="21" id="34" type="SING"/>
+		<bond atomNo1="17" atomNo2="18" id="35" type="DOUB"/>
+		<bond atomNo1="17" atomNo2="59" id="36" type="SING"/>
+		<bond atomNo1="18" atomNo2="19" id="37" type="SING"/>
+		<bond atomNo1="18" atomNo2="60" id="38" type="SING"/>
+		<bond atomNo1="19" atomNo2="20" id="39" type="DOUB"/>
+		<bond atomNo1="19" atomNo2="61" id="40" type="SING"/>
+		<bond atomNo1="20" atomNo2="21" id="41" type="SING"/>
+		<bond atomNo1="20" atomNo2="62" id="42" type="SING"/>
+		<bond atomNo1="21" atomNo2="22" id="43" type="DOUB"/>
+		<bond atomNo1="22" atomNo2="63" id="44" type="SING"/>
+		<bond atomNo1="23" atomNo2="24" id="45" type="SING"/>
+		<bond atomNo1="23" atomNo2="64" id="46" type="SING"/>
+		<bond atomNo1="23" atomNo2="65" id="47" type="SING"/>
+		<bond atomNo1="24" atomNo2="25" id="48" type="DOUB"/>
+		<bond atomNo1="24" atomNo2="29" id="49" type="SING"/>
+		<bond atomNo1="25" atomNo2="26" id="50" type="SING"/>
+		<bond atomNo1="25" atomNo2="66" id="51" type="SING"/>
+		<bond atomNo1="26" atomNo2="27" id="52" type="DOUB"/>
+		<bond atomNo1="26" atomNo2="67" id="53" type="SING"/>
+		<bond atomNo1="27" atomNo2="28" id="54" type="SING"/>
+		<bond atomNo1="27" atomNo2="68" id="55" type="SING"/>
+		<bond atomNo1="28" atomNo2="29" id="56" type="DOUB"/>
+		<bond atomNo1="28" atomNo2="69" id="57" type="SING"/>
+		<bond atomNo1="29" atomNo2="70" id="58" type="SING"/>
+		<bond atomNo1="30" atomNo2="31" id="59" type="SING"/>
+		<bond atomNo1="30" atomNo2="71" id="60" type="SING"/>
+		<bond atomNo1="30" atomNo2="72" id="61" type="SING"/>
+		<bond atomNo1="31" atomNo2="32" id="62" type="DOUB"/>
+		<bond atomNo1="31" atomNo2="36" id="63" type="SING"/>
+		<bond atomNo1="32" atomNo2="33" id="64" type="SING"/>
+		<bond atomNo1="32" atomNo2="73" id="65" type="SING"/>
+		<bond atomNo1="33" atomNo2="34" id="66" type="DOUB"/>
+		<bond atomNo1="33" atomNo2="74" id="67" type="SING"/>
+		<bond atomNo1="34" atomNo2="35" id="68" type="SING"/>
+		<bond atomNo1="34" atomNo2="75" id="69" type="SING"/>
+		<bond atomNo1="35" atomNo2="36" id="70" type="DOUB"/>
+		<bond atomNo1="35" atomNo2="76" id="71" type="SING"/>
+		<bond atomNo1="36" atomNo2="77" id="72" type="SING"/>
+		<bond atomNo1="37" atomNo2="38" id="73" type="DOUB"/>
+		<bond atomNo1="37" atomNo2="46" id="74" type="SING"/>
+		<bond atomNo1="38" atomNo2="39" id="75" type="SING"/>
+		<bond atomNo1="38" atomNo2="78" id="76" type="SING"/>
+		<bond atomNo1="39" atomNo2="40" id="77" type="DOUB"/>
+		<bond atomNo1="39" atomNo2="44" id="78" type="SING"/>
+		<bond atomNo1="40" atomNo2="41" id="79" type="SING"/>
+		<bond atomNo1="40" atomNo2="79" id="80" type="SING"/>
+		<bond atomNo1="41" atomNo2="42" id="81" type="DOUB"/>
+		<bond atomNo1="41" atomNo2="80" id="82" type="SING"/>
+		<bond atomNo1="42" atomNo2="43" id="83" type="SING"/>
+		<bond atomNo1="42" atomNo2="81" id="84" type="SING"/>
+		<bond atomNo1="43" atomNo2="44" id="85" type="DOUB"/>
+		<bond atomNo1="43" atomNo2="82" id="86" type="SING"/>
+		<bond atomNo1="44" atomNo2="45" id="87" type="SING"/>
+		<bond atomNo1="45" atomNo2="46" id="88" type="DOUB"/>
+		<bond atomNo1="45" atomNo2="83" id="89" type="SING"/>
+		<bond atomNo1="46" atomNo2="84" id="90" type="SING"/>
+	</bonds>
+</bnd>

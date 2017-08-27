@@ -33,10 +33,6 @@ def getAtoms(atomInfoLines,conect, infoLines):
             if len(withSpace) != withSpace.count(' '):
                 atoms.append(withSpace)
 
-##        splited = line.split(' ')
-##        while splited.count('') != 0:
-##            splited.remove('')
-##        atoms = splited[1: ]
         for atom in atoms:
             if bondList.count(atom) == 0:
                 bondList.append(atom)
@@ -131,6 +127,8 @@ def getBonds(bondInfoLines, infoLines, atomNos, atomIds):
     i=0
     bondNo1s=[]
     bondNo2s=[]
+    bondId1s = []
+    bondId2s = []
     bondSyms=[]
 
     for line in bondInfoLines:
@@ -165,14 +163,16 @@ def getBonds(bondInfoLines, infoLines, atomNos, atomIds):
                 else:
                     find = False
             if find == False:
+                bondId1s.append(atom1)
+                bondId2s.append(atom2)
                 bondNo1s.append(bondNo1)
                 bondNo2s.append(bondNo2)
 
 
-    return bondNo1s,bondNo2s
+    return bondNo1s,bondNo2s, bondId1s, bondId2s
 
 #-----------------------------------------------------------------     makeBondXml   ------
-def makeBondXml(root,bondNo1s,bondNo2s):
+def makeBondXml(root,bondNo1s,bondNo2s, bondId1s, bondId2s):
     nrBonds=len(bondNo1s)
 
     bondList = SubElement(root, "bonds")
@@ -181,8 +181,11 @@ def makeBondXml(root,bondNo1s,bondNo2s):
     for i in range(nrBonds):
         bond = SubElement(bondList, 'bond')
         bond.set('id', str(i+1))
-        bond.set('atomNo1', str(bondNo1s[i]))
-        bond.set('atomNo2', str(bondNo2s[i]))
+        bond.set('atomId1', str(bondNo1s[i]))
+        bond.set('atomId2', str(bondNo2s[i]))
+        bond.set('pdbAtomId1', bondId1s[i])
+        bond.set('pdbAtomId2', bondId2s[i])
+        bond.set('bondType', 'COV')
         #bond.set('type', bondSyms[i])
     
     return root
@@ -234,7 +237,7 @@ def main():
    
     atomNos,atomIds,atomSyms, atomXs,atomYs,atomZs, ligands = getAtoms(HET,CON, infoLines)
 
-    bondNo1s,bondNo2s = getBonds(CON, infoLines, atomNos, atomIds)
+    bondNo1s,bondNo2s, bondId1s, bondId2s = getBonds(CON, infoLines, atomNos, atomIds)
         
     root = Element('bnd')
     newLigand = ''
@@ -243,7 +246,7 @@ def main():
     root.set('id', newLigand)
     root.set('file', inputLigandId)
     root = makeAtomXml(root,atomNos,atomIds,atomSyms,atomXs,atomYs,atomZs)
-    root = makeBondXml(root,bondNo1s,bondNo2s)
+    root = makeBondXml(root,bondNo1s,bondNo2s, bondId1s, bondId2s)
     
 
     myStr=myPrettify(root)

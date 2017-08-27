@@ -187,11 +187,17 @@ def getBonds(conect, atomNos, atomIds):
 
     newBondNo1s = []
     newBondNo2s = []
+    newBondId1s = []
+    newBondId2s = []
     for atom in atomIds:
         bondList1 = []
         bondList2 = []
+        bondList3 = []
+        bondList4 = []
         newBondNo1s.append(bondList1)
         newBondNo2s.append(bondList2)
+        newBondId1s.append(bondList3)
+        newBondId2s.append(bondList4)
 
     
     for i in range(len(bondNo1s)):
@@ -203,6 +209,8 @@ def getBonds(conect, atomNos, atomIds):
             atomNo = atomNos[k]
             newBondNo1 = newBondNo1s[k]
             newBondNo2 = newBondNo2s[k]
+            newBondId1 = newBondId1s[k]
+            newBondId2 = newBondId2s[k]
 
             if atomId.count(bnd1) != 0 and atomId.count(bnd2) != 0:
 
@@ -212,12 +220,13 @@ def getBonds(conect, atomNos, atomIds):
                 bndNo2 = atomNo[ind2]
 
                 newBondNo1.append(bndNo1)
-
                 newBondNo2.append(bndNo2)
-                
+                newBondId1.append(bnd1)
+                newBondId2.append(bnd2)
+
                 break
 
-    return newBondNo1s,newBondNo2s, atomList, conectBonds
+    return newBondNo1s,newBondNo2s, newBondId1s, newBondId2s, atomList, conectBonds
 
 #-----------------------------------------------------------------     makeChainXml   ------
 def makeChainXml(root,ligands,ligandChains):
@@ -237,7 +246,7 @@ def makeChainXml(root,ligands,ligandChains):
     
     return root
 #-----------------------------------------------------------------     makeBondXml   ------
-def makeBondXml(root,bondNo1s,bondNo2s):
+def makeBondXml(root,bondNo1s,bondNo2s, bondId1s, bondId2s):
     nrBonds = 0
     for k in range(len(bondNo1s)):
         
@@ -250,13 +259,18 @@ def makeBondXml(root,bondNo1s,bondNo2s):
     for k in range(len(bondNo1s)):
         bondNo1 = bondNo1s[k]
         bondNo2 = bondNo2s[k]
+        bondId1 = bondId1s[k]
+        bondId2 = bondId2s[k]
         chainId = k + 1
         for i in range(len(bondNo1)):
             bond = SubElement(bondList, 'bond')
-            bond.set('id', str(i+1))
-            bond.set('atomNo1', str(bondNo1[i]))
-            bond.set('atomNo2', str(bondNo2[i]))
+            bond.set('bondId', str(i+1))
+            bond.set('atomId1', str(bondNo1[i]))
+            bond.set('atomId2', str(bondNo2[i]))
+            bond.set('pdbAtomId1', str(bondId1[i]))
+            bond.set('pdbAtomId2', str(bondId2[i]))
             bond.set('chainId', str(chainId))
+            bond.set('bondType', 'COV')
             bond.set('virtual', "False")
         #bond.set('type', bondSyms[i])
     
@@ -299,28 +313,15 @@ def main():
    
     atomNos, atomIds, atomSyms, atomXs,atomYs,atomZs, atomNames, chains, ligands, ligandChains = getAtoms(HET,CON, infoLines)
     
-    bondNo1s,bondNo2s, atomList, conectBonds = getBonds(CON, atomNos, atomIds)
+    bondNo1s,bondNo2s, bondId1s, bondId2s, atomList, conectBonds = getBonds(CON, atomNos, atomIds)
     root = Element('bnd')
     root.set('type', 'finite')
     root.set('file', inputFileName)
 
     rootC = makeChainXml(root, ligands, ligandChains)
-##    for i in range(len(ligands)):
-##        atomNo = atomNos[i]
-##        atomId = atomIds[i]
-##        ligand = ligands[i]
-##        atomSym = atomSyms[i]
-##        atomName = atomNames[i]
-##        atomX = atomXs[i]
-##        atomY = atomYs[i]
-##        atomZ = atomZs[i]
-##        bondNo1 = bondNo1s[i]
-##        bondNo2 = bondNo2s[i]
-##        ligandChain = ligandChains[i]
-##        chain = chains[i]
 
     rootA = makeAtomXml(root,atomNos, atomIds,atomSyms,atomXs,atomYs,atomZs, atomNames, chains,atomList, conectBonds, ligands)
-    rootB = makeBondXml(root,bondNo1s,bondNo2s)
+    rootB = makeBondXml(root,bondNo1s,bondNo2s, bondId1s, bondId2s)
     
 
     myStr=myPrettify(root)
